@@ -1,11 +1,3 @@
-# Sample gitconfig
-#
-# I've pulled this out of version control because 1) I don't want my email
-# and GitHub token on my public repo, and 2) I tried using the system-wide
-# etc/gitconfig and it seems other clients don't always respect it (not to
-# mention dealing with it in homebrew sucks). Don't let that stop you; you
-# can symlink ~/.gitconfig to this file and go rock out with your git out!
-
 [user]
 		name = Gordon Fontenot
 		email = gordon.fontenot@gmail.com
