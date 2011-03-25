@@ -9,6 +9,33 @@
         wtf     = !$ZSH/bin/git-wtf
         rank-contributers = !$ZSH/bin/git-rank-contributers
         count   = !git shortlog -sn
+		
+		# Commit aliases
+		c = commit
+		cm = commit -m
+		cam = commit -a -m
+		ca = commit --amend
+		caa = commit -a --amend -C HEAD
+		
+		# resets
+		# -- soft --
+		r = reset
+		r1 = reset HEAD^
+		r2 = reset HEAD^^
+		# -- hard --
+		rh = reset --hard
+		rh1 = reset HEAD^ --hard
+		rh2 = reset HEAD^^ --hard
+		
+		# commands
+		s = status
+		d = diff
+		a = add
+		b = branch
+		l = log
+		f = fetch
+		p = push
+		
 [color]
         diff = auto
         status = auto
