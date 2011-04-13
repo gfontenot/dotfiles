@@ -4,6 +4,9 @@
 *~
 *.swp
 
+# Jekyll
+_site
+
 
 # Xcode
 build/*
