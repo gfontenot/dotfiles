@@ -4,7 +4,16 @@ if [ "$tag" == "" ]; then
 	echo "No tag specified"
 	exit
 fi
-agvtool new-version -all $tag
+
+st=$(/usr/bin/git status 2>/dev/null | tail -n 1)
+if [[ $st != "nothing to commit (working directory clean)" ]]
+then
+  echo "%{$fg_bold[red]%}Working directory dirty!%{$reset_color%}"
+  exit
+fi
+
+agvtool next-version -all
+agvtool new-marketing-version $tag
 git commit -a -m "Increment CFBundleVersion for $tag"
 git tag -m "Tag for $tag" -a $tag
 git push origin master
