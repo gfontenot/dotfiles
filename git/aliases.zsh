@@ -1,7 +1,7 @@
 # Use `hub` as our git wrapper:
 #   http://defunkt.github.com/hub/
 
-alias g=hub
+alias git=hub
 
 # I use JRuby substantially, and we want to make sure hub is run using MRI
 # regardless of which Ruby you're using or else the `git status` in your prompt

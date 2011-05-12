@@ -63,7 +63,12 @@ directory_name(){
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(rvm_prompt) in $(directory_name) $(project_name_color)$(git_dirty) $(need_push)\n› '
+host_name(){
+  host_short=$(echo $HOST | cut -d"." -f1)
+  echo "%{$fg_bold[yellow]%}$host_short%{$reset_color%}"
+}
+
+export PROMPT=$'\n$(host_name) : $(directory_name) $(project_name_color)$(git_dirty) $(need_push)\n› '
 set_prompt () {
   export RPROMPT=""
 }

@@ -6,7 +6,6 @@
 - http://gems.rubyforge.org
 - http://gems.github.com
 - http://gemcutter.org
-- http://gems.github.com
 :update_sources: true
 :verbose: true
 gem: --no-ri --no-rdoc
