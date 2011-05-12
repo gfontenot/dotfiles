@@ -68,7 +68,12 @@ host_name(){
   echo "%{$fg_bold[yellow]%}$host_short%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(host_name) : $(directory_name) $(project_name_color)$(git_dirty) $(need_push)\n› '
+user_at(){
+  user=$(echo $USER)
+  echo "%{$fg[yellow]%}$user@%{$reset_color%}"
+}
+
+export PROMPT=$'\n$(user_at)$(host_name) : $(directory_name) $(project_name_color)$(git_dirty) $(need_push)\n› '
 set_prompt () {
   export RPROMPT=""
 }
