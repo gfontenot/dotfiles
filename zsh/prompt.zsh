@@ -60,7 +60,7 @@ rvm_prompt(){
 }
 
 directory_name(){
-  echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
+  echo "%{$fg_bold[cyan]%}%1/%{$reset_color%}"
 }
 
 host_name(){
