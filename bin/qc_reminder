@@ -1,0 +1,68 @@
+#!/usr/bin/env /usr/local/bin/ruby
+
+require 'rubygems'
+require 'pony'
+
+Pony.options = { :from => "production@wheelstv.net", :via => :smtp, :via_options => {
+  :address => "smtp.1and1.com",
+  :port => "25", 
+  :user_name => "production@wheelstv.net", 
+  :password => "wheelstv123", 
+  :authentication => :plain,
+  :domain => "localhost.localdomain", 
+  } }
+
+found_files = false
+
+base_dir =  "/Volumes/VideoRaid/Exported items/"
+product_array = {"1onONE" => "Ryan", "Top 200" => "Kipp", "POV" => "Leo", "AutoTrader" => "Gordon"}
+qc_array = {"1_Technical_" => "George", "2_Visual_" => "Leo", "3_Creative_" => "Jim", "4_Final Review_" => "Collin"}
+@email_array = {"Gordon" => "gfontenot@wheelstv.net",
+  "Nick" => "nbrecken@wheelstv.net",
+  "Leo" => "lbonarrigo@wheelstv.net",
+  "Kipp" => "kreynolds@wheelstv.net",
+  "George" => "gkennedy@wheelstv.net",
+  "Ryan" => "rnichols@wheelstv.net",
+  "Collin" => "cdavis@wheelstv.net",
+  "Jim" => "jimbar@wheelstv.net"}
+
+
+def send_email(person, product, count)
+  msg = "Hi #{person},\n\nThis is a friendly notification to let you know that you currently have #{count} #{product} videos ready for QC.\n\nThanks,\nThe Management"
+  subject = "You have #{count} videos ready for QC"
+
+  Pony.mail(:to => @email_array[person], :subject => subject, :body => msg)
+end
+
+
+product_array.each_pair do |product, editor|
+
+  qc_dir = File.join(base_dir, product, "/Latest Batch/QC/")
+  begin
+    count = Dir.entries("#{qc_dir}0_Editor Review_#{editor}").delete_if {|file| /^\./.match(file)}.size
+    unless count == 0
+      puts "#{editor} has #{count} #{product} ready to pass to QC"
+      
+       send_email(editor, product, count)
+      
+      found_files = true
+    end
+
+    qc_array.each_pair do |dir, person|
+      count = Dir.entries("#{qc_dir}#{dir}#{person}").delete_if {|file| /^\./.match(file)}.size
+      unless count == 0
+        puts "#{person} has #{count} #{product} videos to QC"
+        
+        send_email(person, product, count)
+        
+        found_files = true
+      end
+    end
+  rescue Exception => e
+    puts e
+  end
+end
+
+# unless found_files
+#   puts "QC status is clean"
+# end
