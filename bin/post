@@ -1,0 +1,39 @@
+#!/usr/bin/env ruby
+require 'fileutils'
+
+
+draft = ARGV.delete("-d")
+post = ARGV.delete("-p")
+link = ARGV.delete("-l")
+
+if (draft && post)
+  puts "Can't be a draft and a post. Pick one."
+  exit
+elsif (!draft && !post)
+  puts "Must be either a draft (-d) or a post (-p)"
+  exit
+end
+
+name = ARGV.join(" ")
+file_name = ARGV.join("-").downcase
+
+if draft
+  dir = "drafts"
+else
+  dir = "_posts"
+end
+
+FileUtils.touch("#{dir}/#{name}.markdown")
+
+open("#{dir}/#{name}.markdown", "a") do |f|
+  f.puts "---"
+  f.puts "layout: post"
+  f.puts "title: #{name}"
+  if link
+    f.puts "type: link"
+    f.puts "source: #{`pbpaste`}"
+  else
+    f.puts "type: post"
+  end
+  f.puts "---"
+end

@@ -6,6 +6,7 @@
 
 # Jekyll
 _site
+drafts
 
 
 # Xcode
@@ -22,3 +23,6 @@ build/*
 xcuserdata
 profile
 *.moved-aside
+
+#general
+submodules
