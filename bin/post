@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require 'fileutils'
-
+require 'date'
 
 draft = ARGV.delete("-d")
 post = ARGV.delete("-p")
@@ -21,11 +21,12 @@ if draft
   dir = "drafts"
 else
   dir = "_posts"
+  file_name = "#{Date.today.to_s}-#{file_name}"
 end
 
-FileUtils.touch("#{dir}/#{name}.markdown")
+FileUtils.touch("#{dir}/#{file_name}.markdown")
 
-open("#{dir}/#{name}.markdown", "a") do |f|
+open("#{dir}/#{file_name}.markdown", "a") do |f|
   f.puts "---"
   f.puts "layout: post"
   f.puts "title: #{name}"
