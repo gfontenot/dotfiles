@@ -3,6 +3,10 @@
 require 'fileutils'
 require 'date'
 
+unless File.exists?('_site') && File.directory?('_site')
+  puts "This does not appear to be a Jekyll site."
+  exit
+end
 
 unless ARGV[0]
   puts "You need to tell me which file to publish!"

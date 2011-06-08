@@ -2,6 +2,12 @@
 require 'fileutils'
 require 'date'
 
+unless File.exists?('_site') && File.directory?('_site')
+  puts "This does not appear to be a Jekyll site."
+  exit
+end
+
+
 draft = ARGV.delete("-d")
 post = ARGV.delete("-p")
 link = ARGV.delete("-l")
