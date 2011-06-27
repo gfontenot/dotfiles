@@ -29,7 +29,7 @@ qc_array = {"1_Technical_" => "George", "2_Visual_" => "Leo", "3_Creative_" => "
 
 def send_email(person, product, count)
   msg = "Hi #{person},\n\nThis is a friendly notification to let you know that you currently have #{count} #{product} videos ready for QC.\n\nThanks,\nThe Management"
-  subject = "You have #{count} videos ready for QC"
+  subject = "You have #{count} #{product} videos ready for QC"
 
   Pony.mail(:to => @email_array[person], :subject => subject, :body => msg)
 end
@@ -41,9 +41,12 @@ product_array.each_pair do |product, editor|
   begin
     count = Dir.entries("#{qc_dir}0_Editor Review_#{editor}").delete_if {|file| /^\./.match(file)}.size
     unless count == 0
-      puts "#{editor} has #{count} #{product} ready to pass to QC"
       
-       send_email(editor, product, count)
+      send_email(editor, product, count)
+      
+      if product == "AutoTrader"
+        send_email("Nick", product, count)
+      end
       
       found_files = true
     end
