@@ -11,8 +11,6 @@ fpath=($ZSH/zsh/functions $fpath)
 
 autoload -U $ZSH/zsh/functions/*(:t)
 
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
-
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
