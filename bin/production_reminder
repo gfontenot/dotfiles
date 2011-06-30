@@ -1,4 +1,12 @@
-#!/usr/bin/env /usr/local/bin/ruby
+#!/usr/bin/env ruby
+#
+# production_reminder
+# 
+# Created by Gordon Fontenot for WheelsTV
+# 
+# Simple script sends an email at a specific time
+# (governed by a cron job) to WTV employees to remind
+# them to fill out their production reports
 
 require 'rubygems'
 require 'pony'

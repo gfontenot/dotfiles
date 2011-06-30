@@ -1,4 +1,14 @@
-#!/usr/bin/env /usr/local/bin/ruby
+#!/usr/bin/env ruby
+# 
+# qc_reminder
+# 
+# Created by Gordon Fontenot for WheelsTV
+# 
+# Scans a set of folders used for Quality Control,
+# and if it finds videos, emails the employee responsible
+# for that stage of the QC process to let them know they
+# have videos ready to QC.
+
 
 require 'rubygems'
 require 'pony'

@@ -1,4 +1,18 @@
 #!/usr/bin/env ruby
+# 
+# 
+# publish
+# 
+# Created by Gordon Fontenot
+# 
+# useage: publish <path/to/file>
+# 
+# Designed to be used alongside the post command
+# To use, when you are inside the root of your Jekyll website,
+# invoke publish <path/to/draft> (usually drafts/post-title.md)
+# The script will move the file to your _posts directory, and assign the
+# current date per Jekyll specs.
+
 
 require 'fileutils'
 require 'date'

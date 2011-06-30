@@ -1,4 +1,20 @@
 #!/bin/sh
+# 
+# release
+# 
+# Created by Gordon Fontenot
+# Contact: gordon.fontenot@me.com
+# 
+# Useage: release <version number>
+# 
+# 
+# When in a git repository for a properly set up Xcode project,
+# this script will set the marketing version number to the tag provided,
+# increment the build number, and create a git tag with
+# the marketing version number.
+# Only works if the directory is clean.
+
+
 tag=$1
 if [ "$tag" == "" ]; then
 	echo "No tag specified"

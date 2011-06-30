@@ -1,4 +1,29 @@
 #!/usr/bin/env ruby
+# 
+# post
+# 
+# Created by Gordon Fontenot
+# Contact: gordon.fontenot@me.com
+# 
+# useage: post [options] <post name>
+# 
+# Options:
+#   -d    Create draft
+#   -p    Create post (will be published on push)
+#   -l    Designate the post as a link
+# 
+# For use inside a Jekyll website to create new blog posts
+# since creating them manually basically sucks.
+# 
+# To use, you must be inside your jekyll website.
+# If you use the -p flag, the post will be created inside
+# the _posts directory. If you use -d, the post will be created
+# inside the drafts directory (And will not be assigned a date)
+# The -l flag is for creating a "link" post. Your clipboard will be
+# pasted into the source field in the header.
+# Designed to be used alongside the publish command
+
+
 require 'fileutils'
 require 'date'
 

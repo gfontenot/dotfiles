@@ -11,7 +11,7 @@
 [alias]
   co = checkout
   wtf     = !$ZSH/bin/git-wtf
-  rank-contributers = !$ZSH/bin/git-rank-contributers
+  rank = !$ZSH/bin/git-rank-contributers
   count   = !git shortlog -sn
 	
 		
