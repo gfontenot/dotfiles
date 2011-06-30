@@ -5,4 +5,3 @@ alias notes='mate $NOTES'
 alias notecd='cd $NOTES'
 
 alias reload!='. ~/.zshrc'
-alias post='nocorrect post'
