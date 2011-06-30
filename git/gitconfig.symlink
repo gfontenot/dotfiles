@@ -1,53 +1,58 @@
 [user]
 	name = Gordon Fontenot
-		email = gordon.fontenot@me.com
-		username = GFontenot
-		user = GFontenot
+	email = gordon.fontenot@me.com
+	username = GFontenot
+	user = GFontenot
+
+[github]
+	user = gfontenot
+	token = 6f57d6862b2406454ba3d8ea1cd4474a
+	
 [alias]
-        co = checkout
-        promote = !$ZSH/bin/git-promote
-        wtf     = !$ZSH/bin/git-wtf
-        rank-contributers = !$ZSH/bin/git-rank-contributers
-        count   = !git shortlog -sn
+  co = checkout
+  promote = !$ZSH/bin/git-promote
+  wtf     = !$ZSH/bin/git-wtf
+  rank-contributers = !$ZSH/bin/git-rank-contributers
+  count   = !git shortlog -sn
 		
-		# Commit aliases
-		c = commit
-		cm = commit -m
-		cam = commit -a -m
-		cav = commit -a -v
-		ca = commit --amend
-		caa = commit -a --amend -C HEAD
-		
-		# resets
-		# -- soft --
-		r = reset
-		r1 = reset HEAD^
-		r2 = reset HEAD^^
-		# -- hard --
-		rh = reset --hard
-		rh1 = reset HEAD^ --hard
-		rh2 = reset HEAD^^ --hard
-		
-		# commands
-		s = status
-		d = diff
-		a = add
-		b = branch
-		l = log
-		f = fetch
-		p = push
+	# Commit aliases
+	c = commit
+	cm = commit -m
+	cam = commit -a -m
+	cav = commit -a -v
+	ca = commit --amend
+	caa = commit -a --amend -C HEAD
+	
+	# resets
+	# -- soft --
+	r = reset
+	r1 = reset HEAD^
+	r2 = reset HEAD^^
+	# -- hard --
+	rh = reset --hard
+	rh1 = reset HEAD^ --hard
+	rh2 = reset HEAD^^ --hard
+	
+	# commands
+	s = status
+	d = diff
+	a = add
+	b = branch
+	l = log
+	f = fetch
+	p = push
 		
 [color]
-        diff = auto
-        status = auto
-        branch = auto
+  diff = auto
+  status = auto
+  branch = auto
+
 [core]
-        excludesfile = ~/.gitignore
-	    editor = mate -w
+  excludesfile = ~/.gitignore
+  editor = mate -w
+
 [apply]
-	    whitespace = nowarn
-[github]
-		user = gfontenot
-		token = 6f57d6862b2406454ba3d8ea1cd4474a
+  whitespace = nowarn
+  
 [mergetool]
         keepBackup = false
