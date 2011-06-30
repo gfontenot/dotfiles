@@ -13,6 +13,7 @@
   wtf     = !$ZSH/bin/git-wtf
   rank-contributers = !$ZSH/bin/git-rank-contributers
   count   = !git shortlog -sn
+	
 		
 	# Commit aliases
 	c = commit
@@ -30,6 +31,8 @@
 	r = reset
 	r1 = reset HEAD^
 	r2 = reset HEAD^^
+	
+	undo = reset --soft HEAD^
 	
 	# -- hard --
 	rh = reset --hard
