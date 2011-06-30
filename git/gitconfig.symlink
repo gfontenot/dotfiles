@@ -10,7 +10,6 @@
 	
 [alias]
   co = checkout
-  promote = !$ZSH/bin/git-promote
   wtf     = !$ZSH/bin/git-wtf
   rank-contributers = !$ZSH/bin/git-rank-contributers
   count   = !git shortlog -sn
@@ -20,27 +19,35 @@
 	cm = commit -m
 	cam = commit -a -m
 	cav = commit -a -v
-	ca = commit --amend
 	caa = commit -a --amend -C HEAD
 	
+	amend = commit --amend -C HEAD
+	credit = commit --amend --author "$1 <$2>" -C HEAD
+	
 	# resets
+	
 	# -- soft --
 	r = reset
 	r1 = reset HEAD^
 	r2 = reset HEAD^^
+	
 	# -- hard --
 	rh = reset --hard
 	rh1 = reset HEAD^ --hard
 	rh2 = reset HEAD^^ --hard
 	
+	prune = pull --rebase --prune
+	
 	# commands
-	s = status
-	d = diff
+	s = status -sb
+	d = diff --word-diff
 	a = add
 	b = branch
 	l = log
 	f = fetch
 	p = push
+	
+	graph = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 		
 [color]
   diff = auto
