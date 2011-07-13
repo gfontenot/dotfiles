@@ -64,7 +64,7 @@ product_array.each_pair do |product, editor|
     qc_array.each_pair do |dir, person|
       count = Dir.entries("#{qc_dir}#{dir}#{person}").delete_if {|file| /^\./.match(file)}.size
       unless count == 0
-        puts "#{person} has #{count} #{product} videos to QC"
+        # puts "#{person} has #{count} #{product} videos to QC"
         
         send_email(person, product, count)
         
