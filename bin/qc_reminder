@@ -25,8 +25,8 @@ Pony.options = { :from => "production@wheelstv.net", :via => :smtp, :via_options
 found_files = false
 
 base_dir =  "/Volumes/Exported items/"
-product_array = {"1onONE" => "Ryan", "Top 200" => "Kipp", "POV" => "Leo", "AutoTrader" => "Gordon"}
-qc_array = {"1_Technical_" => "George", "2_Visual_" => "Leo", "3_Creative_" => "Jim", "4_Final Review_" => "Collin"}
+product_array = {"1onONE" => "Ryan", "Top 200" => "Kipp", "POV" => "Leo", "AutoTrader" => "Nick"}
+qc_array = {"1_Technical_" => "George", "2_Visual_" => "Leo", "3_Creative_" => "Jim", "4_Final Review_" => "Gordon"}
 @email_array = {"Gordon" => "gfontenot@wheelstv.net",
   "Nick" => "nbrecken@wheelstv.net",
   "Leo" => "lbonarrigo@wheelstv.net",
