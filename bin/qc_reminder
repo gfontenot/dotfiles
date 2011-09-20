@@ -88,9 +88,9 @@ product_array.each_pair do |product, editor|
       
       notify_user(editor, product, count)
       
-      if product == "AutoTrader"
-        notify_user("Gordon", product, count)
-      end
+#       if product == "AutoTrader"
+#         notify_user("Gordon", product, count)
+#       end
       
       found_files = true
     end
