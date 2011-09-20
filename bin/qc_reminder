@@ -12,6 +12,7 @@
 
 require 'rubygems'
 require 'pony'
+require 'tinder'
 
 Pony.options = { :from => "production@wheelstv.net", :via => :smtp, :via_options => {
   :address => "smtp.1and1.com",
@@ -25,8 +26,8 @@ Pony.options = { :from => "production@wheelstv.net", :via => :smtp, :via_options
 found_files = false
 
 base_dir =  "/Volumes/Exported items/"
-product_array = {"1onONE" => "Ryan", "Top 200" => "Kipp", "POV" => "Leo", "AutoTrader" => "Nick"}
-qc_array = {"1_Technical_" => "George", "2_Visual_" => "Leo", "3_Creative_" => "Jim", "4_Final Review_" => "Gordon"}
+product_array = {"1onONE" => "Ryan", "Top200" => "Kipp", "POV" => "Leo", "AutoTrader" => "Nick"}
+qc_array = {"1_Technical_" => "George", "2_Creative_" => "Jim", "3_Final Review_" => "Gordon"}
 @email_array = {"Gordon" => "gfontenot@wheelstv.net",
   "Nick" => "nbrecken@wheelstv.net",
   "Leo" => "lbonarrigo@wheelstv.net",
@@ -37,11 +38,41 @@ qc_array = {"1_Technical_" => "George", "2_Visual_" => "Leo", "3_Creative_" => "
   "Jim" => "jimbar@wheelstv.net"}
 
 
-def send_email(person, product, count)
+def notify_user(person, product, count)
+  if user_on_campfire? person
+    msg_user(person, product, count)
+  else
+    email_user(person, product, count)
+  end
+end
+
+def email_user(person, product, count)
   msg = "Hi #{person},\n\nThis is a friendly notification to let you know that you currently have #{count} #{product} videos ready for QC.\n\nThanks,\nThe Management"
   subject = "You have #{count} #{product} videos ready for QC"
 
   Pony.mail(:to => @email_array[person], :subject => subject, :body => msg)
+  
+  time_stamp = Time.now.strftime("%D - %r")
+  
+  puts "#{time_stamp} - Email sent to #{person} (#{count} #{product} videos)"
+end
+
+def user_on_campfire? user_name
+  campfire = Tinder::Campfire.new 'wheelstv', :token => 'b00ffa07d0e3e9ad47ba809ccad4ee34b51e2e44'
+  room = campfire.find_room_by_name "The Office"
+  room.users.each do |user|
+    if user.name == user_name
+      return true
+    end
+  end
+  
+  return false
+end
+
+def msg_user (person, product, count)
+  campfire = Tinder::Campfire.new 'wheelstv', :token => 'b00ffa07d0e3e9ad47ba809ccad4ee34b51e2e44'
+  room = campfire.find_room_by_name "The Office"
+  room.speak "#{person}: You have #{count} #{product} videos ready for QC"
 end
 
 
@@ -52,10 +83,10 @@ product_array.each_pair do |product, editor|
     count = Dir.entries("#{qc_dir}0_Editor Review_#{editor}").delete_if {|file| /^\./.match(file)}.size
     unless count == 0
       
-      send_email(editor, product, count)
+      notify_user(editor, product, count)
       
       if product == "AutoTrader"
-        send_email("Nick", product, count)
+        notify_user("Gordon", product, count)
       end
       
       found_files = true
@@ -66,7 +97,7 @@ product_array.each_pair do |product, editor|
       unless count == 0
         # puts "#{person} has #{count} #{product} videos to QC"
         
-        send_email(person, product, count)
+        notify_user(person, product, count)
         
         found_files = true
       end
