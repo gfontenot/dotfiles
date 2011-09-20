@@ -73,6 +73,9 @@ def msg_user (person, product, count)
   campfire = Tinder::Campfire.new 'wheelstv', :token => 'b00ffa07d0e3e9ad47ba809ccad4ee34b51e2e44'
   room = campfire.find_room_by_name "The Office"
   room.speak "#{person}: You have #{count} #{product} videos ready for QC"
+
+  puts "#{time_stamp} - #{person} Notified via Campfire (#{count} #{product} videos)"
+
 end
 
 
