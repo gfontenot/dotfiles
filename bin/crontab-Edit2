@@ -1,4 +1,4 @@
-MAILTO=gfontenot@wheelstv.net
 
 0	17	*	*	4	/Users/Gordon/Dropbox/Personal/dotfiles/bin/production_reminder >> /dev/null
 0	9-17/2	*	*	1-5	/Users/Gordon/Dropbox/Personal/dotfiles/bin/qc_reminder >> ~/.qc_log.txt
+0	18	*	*	5	/Users/Gordon/Dropbox/Personal/dotfiles/bin/qc_log_cleanup >> /dev/null

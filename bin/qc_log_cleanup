@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'FileUtils'
+
+date = Time.now.strftime("%Y%m%d")
+
+FileUtils.mv("/Users/Gordon/.qc_log.txt", "/Users/Gordon/Dropbox/WTV DropBox/QC Logs/#{date}.txt")
