@@ -1,7 +1,3 @@
-autoload colors && colors
-# cheers, @ehrenmurdick
-# http://github.com/ehrenmurdick/config/blob/master/zsh/prompt.zsh
-
 git_branch() {
   echo $(/usr/bin/git symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'})
 }
@@ -14,9 +10,9 @@ git_dirty() {
   else
     if [[ $st == "nothing to commit (working directory clean)" ]]
     then
-      echo "on %{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%}"
+      echo "%{\e[0m%}on %{\e[1;32m%}$(git_prompt_info)"
     else
-      echo "on %{$fg_bold[red]%}$(git_prompt_info)%{$reset_color%}"
+      echo "%{\e[0m%}on %{\e[1;31m%}$(git_prompt_info)"
     fi
   fi
 }
@@ -25,16 +21,6 @@ git_prompt_info () {
  ref=$(/usr/bin/git symbolic-ref HEAD 2>/dev/null) || return
 # echo "(%{\e[0;33m%}${ref#refs/heads/}%{\e[0m%})"
  echo "${ref#refs/heads/}"
-}
-
-project_name () {
-  name=$(pwd | awk -F'Development/' '{print $2}' | awk -F/ '{print $1}')
-  echo $name
-}
-
-project_name_color () {
-#  name=$(project_name)
-  echo "%{\e[0;35m%}${name}%{\e[0m%}"
 }
 
 unpushed () {
@@ -46,38 +32,32 @@ need_push () {
   then
     echo " "
   else
-    echo "with %{$fg_bold[magenta]%}unpushed%{$reset_color%}"
+    echo "%{\e[0m%}with %{\e[1;35m%}unpushed"
   fi
 }
 
 rvm_prompt(){
   if $(which rvm &> /dev/null)
   then
-	  echo "%{$fg_bold[yellow]%}$(rvm tools identifier)%{$reset_color%}"
+	  echo "%{\e[0;33m%}$(rvm tools identifier)"
 	else
 	  echo ""
   fi
 }
 
 directory_name(){
-  echo "%{$fg_bold[cyan]%}%1/%{$reset_color%}"
+  echo "%{\e[0;36m%}%1/"
 }
 
-host_name(){
-  host_short=$(echo $HOST | cut -d"." -f1)
-  echo "%{$fg_bold[yellow]%}$host_short%{$reset_color%}"
+project_pwd() {
+  echo $PWD | sed -e "s/\/Users\/$USER/~/" -e "s/~\/projects\/\([^\/]*\)\/current/\\1/" -e "s/~\/Sites\/\([^\/]*\)\/current/http:\/\/\\1/"
 }
 
-user_at(){
-  user=$(echo $USER)
-  echo "%{$fg[yellow]%}$user@%{$reset_color%}"
+ruby_version() {
+  echo " $(ruby -v | awk '{print $2}')"
 }
 
-export PROMPT=$'\n$(user_at)$(host_name) : $(directory_name) $(project_name_color)$(git_dirty) $(need_push)\n› '
-set_prompt () {
-  export RPROMPT=""
-}
+export PROMPT=$'%{\e[0;90m%}%n@%m%{\e[0m%}
+%{\e[0;%(?.32.31)m%}>%{\e[0m%} '
 
-precmd() {
-  set_prompt
-}
+export RPROMPT=$'$(directory_name) $(git_dirty) $(need_push)%{\e[0m%}'
