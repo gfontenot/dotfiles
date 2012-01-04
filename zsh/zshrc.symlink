@@ -2,10 +2,6 @@
 export ZSH=$HOME/Dropbox/Personal/dotfiles
 
 # your project folder that we can `c [tab]` to
-export PROJECTS=~/Dropbox/Personal/\!\!Code
-
-# Your Notes folder
-export NOTES=~/Dropbox/Personal/Notes/Text
 
 # source every .zsh file in this rep
 for config_file ($ZSH/**/*.zsh) source $config_file
@@ -25,3 +21,9 @@ compinit
 # Configure Terminal to open new tabs in the current directory
 precmd () {print -Pn "\e]2; %~/ \a"}
 preexec () {print -Pn "\e]2; %~/ \a"}
+
+# Auto ls when cding into a directory
+function chpwd() {
+    emulate -LR zsh
+    ls
+}
