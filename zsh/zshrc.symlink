@@ -18,7 +18,6 @@ fi
 autoload -U compinit
 compinit
 
-
 # Configure Terminal to open new tabs in the current directory
 precmd () {print -Pn "\e]2; %~/ \a"}
 preexec () {print -Pn "\e]2; %~/ \a"}
@@ -28,3 +27,7 @@ function chpwd() {
     emulate -LR zsh
     ls
 }
+
+# load every completion after autocomplete loads
+for config_file ($ZSH/**/completion.sh) source $config_file
+
