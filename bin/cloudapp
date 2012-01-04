@@ -60,7 +60,11 @@ end
 
 # Copy it to your (Mac's) clipboard.
 <<<<<<< HEAD
+<<<<<<< HEAD
 `echo '#{urls.join(',')}' | tr -d "\n" | pbcopy`
+=======
+`echo '#{urls.join(',')}' | tr -d "\n" | pbcopy`
+>>>>>>> original
 =======
 `echo '#{urls.join(',')}' | tr -d "\n" | pbcopy`
 >>>>>>> original
