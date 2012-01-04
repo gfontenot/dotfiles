@@ -2,6 +2,7 @@
 export ZSH=$HOME/Dropbox/Personal/dotfiles
 
 # your project folder that we can `c [tab]` to
+export PROJECTS=~/Dropbox/Personal/\!\!Code
 
 # source every .zsh file in this rep
 for config_file ($ZSH/**/*.zsh) source $config_file
