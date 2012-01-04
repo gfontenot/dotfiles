@@ -2,7 +2,12 @@
 
 ## dotfiles
 
-Your dotfiles are how you personalize your system. These are mine. These were originally forked from [holman](http://www.github.com/holman), but I've modified some stuff, and pulled from other sources, such as [Ben Hostongs](https://github.com/benhoskings/dot-files).
+Your dotfiles are how you personalize your system. These are mine. These were 
+originally forked from [holman](http://www.github.com/holman), but I've modified 
+some stuff, and pulled from other sources, such as pulling the prompt style from 
+[Ben Hoskings](https://github.com/benhoskings/dot-files). I removed a lot of the 
+stuff I had no use for from Holman's dotfiles, and will be adding more of my own 
+customizations as I go.
 
 ## install
 
@@ -30,6 +35,19 @@ symlinked without extension into `$HOME` when you run `rake install`.
 A lot of stuff. Seriously, a lot of stuff. Check them out in the file browser
 above and see what components may mesh up with you. Fork it, remove what you
 don't use, and build on what you do use.
+
+A couple great ideas and utilities from Holman:
+
+ - `c` and `h` shortcuts for jumping to my projects, or home folder, respectively.
+ - `dotedit` and `dotcd` for editing or jumping to these files
+ - `e` as an alias for whatever your current `EDITOR` is set to.
+
+A couple of my additions include:
+
+ - `post` and `publish`, for use with a Jekyll blog for creating or publishing new
+   blog posts.
+ - `release` for assigning `git-tags` to a repo, bumping the version number and
+   marketing number for a Mac or iOS app
 
 ## components
 
@@ -63,16 +81,3 @@ I want this to work for everyone; that means when you clone it down it should
 work for you even though you may not have `rvm` installed, for example. That
 said, I do use this as *my* dotfiles, so there's a good chance I may break
 something if I forget to make a check for a dependency.
-
-If you're brand-new to the project and run into any blockers, please
-[open an issue](https://github.com/holman/dotfiles/issues) on this repository
-and I'd love to get it fixed for you!
-
-## thanks
-
-I forked [Ryan Bates](http://github.com/ryanb)' excellent
-[dotfiles](http://github.com/ryanb/dotfiles) for a couple years before the
-weight of my changes and tweaks inspired me to finally roll my own. But Ryan's
-dotfiles were an easy way to get into bash customization, and then to jump ship
-to zsh a bit later. A decent amount of the code in these dotfiles stem or are
-inspired from Ryan's original project.

@@ -1,5 +1,4 @@
-alias dotmate='mate $ZSH'
-alias dotedit='bbedit $ZSH'
+alias dotedit='e $ZSH'
 alias dotcd='cd $ZSH'
 
 alias curl='noglob curl'

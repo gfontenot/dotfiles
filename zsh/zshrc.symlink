@@ -31,3 +31,6 @@ function chpwd() {
 # load every completion after autocomplete loads
 for config_file ($ZSH/**/completion.sh) source $config_file
 
+
+# set the editor du jour.
+export EDITOR=bbedit

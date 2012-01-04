@@ -70,4 +70,4 @@ open("#{dir}/#{file_name}.markdown", "a") do |f|
   f.puts "---"
 end
 
-`bbedit "#{dir}/#{file_name}.markdown"`
+`e "#{dir}/#{file_name}.markdown"`
