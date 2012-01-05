@@ -1,0 +1,9 @@
+# set the tab size/kind
+softTabs = true
+tabSize = 2
+
+# Don't softwrap
+softWrap = false
+
+# set git
+TM_GIT="/usr/local/bin/git"
