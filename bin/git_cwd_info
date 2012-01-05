@@ -22,9 +22,7 @@ def git_head_commit_id
 end
 
 def git_cwd_dirty
-  if `/usr/bin/git status 2>/dev/null | tail -n 1` != "nothing to commit (working directory clean)"
-    " %{\e[31m%}✗%{\e[0m%}" unless git_repo_path == '.' || `git ls-files -m`.strip.empty?
-  end
+  " %{\e[31m%}✗%{\e[0m%}" unless git_repo_path == '.' || `git ls-files -m`.strip.empty? || `git status --short | grep "^??"` == ""
 end
 
 def rebasing_etc
