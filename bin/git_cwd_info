@@ -13,11 +13,6 @@ def in_git_repo
   git_repo_path != "#{ENV['HOME']}/.git"
 end
 
-def git_repo_clean
-  repo_status = `git status 2>/dev/null | tail -n 1`
-  repo_status  == "nothing to commit (working directory clean)"
-end
-
 def git_parse_branch
   @git_parse_branch ||= File.read("#{git_repo_path}/HEAD").strip.scan(/(?<=refs\/heads\/).*$/).first
 end
@@ -27,7 +22,7 @@ def git_head_commit_id
 end
 
 def git_cwd_dirty
-  " %{\e[31m%}✗%{\e[0m%}" unless git_repo_clean
+  " %{\e[31m%}✗%{\e[0m%}" unless git_repo_path == '.' || `git ls-files -m`.strip.empty?
 end
 
 def rebasing_etc
