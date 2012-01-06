@@ -25,6 +25,10 @@ def git_cwd_dirty
   " %{\e[31m%}✗%{\e[0m%}" unless /directory clean/.match(`git status 2>/dev/null | tail -n 1`)
 end
 
+def git_cwd_needs_push
+	" %{\e[31m%}⬆%{\e[0m%}" unless `git cherry -v origin/#{git_parse_branch} 2>/dev/null`
+end
+
 def rebasing_etc
   if File.exists?(File.join(git_repo_path, 'BISECT_LOG'))
     "+bisect"
@@ -36,5 +40,5 @@ def rebasing_etc
 end
 
 if in_git_repo
-  print " %{\e[34m%}#{git_parse_branch}%{\e[90m%}@%{\e[33m%}#{git_head_commit_id}%{\e[0m%}#{rebasing_etc}#{git_cwd_dirty}"
+  print " %{\e[34m%}#{git_parse_branch}%{\e[90m%}@%{\e[33m%}#{git_head_commit_id}%{\e[0m%}#{rebasing_etc}#{git_cwd_dirty}#{git_cwd_needs_push}"
 end
