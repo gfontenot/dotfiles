@@ -13,6 +13,12 @@ alias gau='ga -u'
 alias gc!='git commit -v'
 alias gcp='git commit -p'
 alias gcav='git commit -a -v'
+alias gco='git checkout'
+alias gp='git push'
+alias gm='git merge --no-ff'
+alias gmf='git merge --ff-only'
+alias gup='git smart-pull'
+
 
 # log aliases
 alias glog='git log --pretty="format:%C(yellow)%h%Cblue%d%Creset %s - %C(white)%an %Cgreen(%cr)%Creset" --date=relative'
