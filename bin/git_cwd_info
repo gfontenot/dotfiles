@@ -22,7 +22,7 @@ def git_head_commit_id
 end
 
 def git_cwd_dirty
-  " %{\e[31m%}✗%{\e[0m%}" unless `git ls-files -m -o -d --exclude-standard`.strip.empty?  || "directory clean".match(`git status 2>/dev/null | tail -n 1`)
+  " %{\e[31m%}✗%{\e[0m%}" unless /directory clean/.match(`git status 2>/dev/null | tail -n 1`)
 end
 
 def rebasing_etc
