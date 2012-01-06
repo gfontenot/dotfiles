@@ -32,7 +32,7 @@ need_push () {
   then
     echo " "
   else
-    echo " %{\e[31m%}unpushed"
+    echo " %{\e[31m%}⬆"
   fi
 }
 
