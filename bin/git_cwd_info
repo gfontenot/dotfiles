@@ -22,7 +22,7 @@ def git_head_commit_id
 end
 
 def git_cwd_dirty
-  " %{\e[31m%}✗%{\e[0m%}" unless git_repo_path == '.' || `git ls-files -mo --exclude-standard`.strip.empty?
+  " %{\e[31m%}✗%{\e[0m%}" unless git_repo_path == '.' || `git ls-files -m -o -d --exclude-standard`.strip.empty?
 end
 
 def rebasing_etc
