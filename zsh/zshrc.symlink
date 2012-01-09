@@ -1,8 +1,8 @@
 # shortcut to this dotfiles path is $ZSH
-export ZSH=$HOME/Dropbox/Personal/dotfiles
+export ZSH=$HOME/Code/dotfiles
 
 # your project folder that we can `c [tab]` to
-export PROJECTS=~/Dropbox/Personal/\!\!Code
+export PROJECTS=~/Code
 
 # source every .zsh file in this rep
 for config_file ($ZSH/**/*.zsh) source $config_file
