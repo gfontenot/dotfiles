@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env ruby -W0
 # -*- coding: utf-8 -*-
 
 # The methods that get called more than once are memoized.
