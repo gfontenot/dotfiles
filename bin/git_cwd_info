@@ -29,6 +29,11 @@ def git_cwd_needs_push
 	" %{\e[31m%}⬆%{\e[0m%}" unless `git cherry -v origin/#{git_parse_branch} 2>/dev/null`.strip.empty?
 end
 
+# def git_cwd_needs_pull
+#   # Will display a green down arrow if the repo has changes on the server.
+#   " %{\e[32m%}⬇%{\e[0m%}" unless `git rev-parse HEAD 2>/dev/null`.strip == `git ls-remote origin -h refs/heads/#{git_parse_branch} 2>/dev/null`.strip.split(" ")[0]
+# end
+
 def rebasing_etc
   if File.exists?(File.join(git_repo_path, 'BISECT_LOG'))
     "+bisect"
