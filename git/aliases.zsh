@@ -6,7 +6,7 @@ alias g=hub
 alias gdiff='git difftool'
 
 # quick aliases for common actions
-alias gs='git status --short'
+alias gs='git status -sb'
 alias ga='git add'
 alias gap='ga -p'
 alias gau='ga -u'
