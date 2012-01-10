@@ -1,9 +1,3 @@
-if [[ -n $SSH_CONNECTION ]]; then
-  export PS1='%m:%3~$(git_info_for_prompt)%# '
-else
-  export PS1='%3~$(git_info_for_prompt)%# '
-fi
-
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
@@ -36,3 +30,16 @@ setopt HIST_REDUCE_BLANKS
 # don't expand aliases _before_ completion has finished
 #   like: git comm-[tab]
 setopt complete_aliases
+
+# Configure Terminal to open new tabs in the current directory
+precmd () {print -Pn "\e]2; %~/ \a"}
+preexec () {print -Pn "\e]2; %~/ \a"}
+
+# Auto ls when cding into a directory
+function chpwd() {
+    emulate -LR zsh
+    ls
+}
+
+# set the editor du jour.
+export EDITOR=bbedit
