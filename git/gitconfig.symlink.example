@@ -42,7 +42,7 @@
 
 [core]
   excludesfile = ~/.gitignore
-  editor = bbedit -w
+  editor = subl -wn
 
 [apply]
   whitespace = warn
