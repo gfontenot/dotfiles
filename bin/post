@@ -49,7 +49,7 @@ name = ARGV.join(" ")
 file_name = ARGV.join("-").downcase
 
 if draft
-  dir = "drafts"
+  dir = "_drafts"
 else
   dir = "_posts"
   file_name = "#{Date.today.to_s}-#{file_name}"
