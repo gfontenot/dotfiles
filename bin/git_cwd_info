@@ -23,7 +23,7 @@ def git_head_commit_id
 end
 
 def git_cwd_dirty
-  " ✗" unless /directory clean/.match(`git status 2>/dev/null | tail -n 1`)
+  " ✗" unless /directory clean/.match(`git status 2>/dev/null`)
 end
 
 def git_cwd_needs_push
