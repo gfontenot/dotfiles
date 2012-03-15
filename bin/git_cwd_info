@@ -15,6 +15,7 @@ end
 
 def git_parse_branch
   @git_parse_branch ||= File.read("#{git_repo_path}/HEAD").strip.scan(/(?<=refs\/heads\/).*$/).first
+  @git_parse_branch ||= "%{\e[31m%}DETACHED"
 end
 
 def git_head_commit_id
@@ -22,11 +23,11 @@ def git_head_commit_id
 end
 
 def git_cwd_dirty
-  " %{\e[31m%}✗%{\e[0m%}" unless /directory clean/.match(`git status 2>/dev/null | tail -n 1`)
+  " ✗" unless /directory clean/.match(`git status 2>/dev/null | tail -n 1`)
 end
 
 def git_cwd_needs_push
-	" %{\e[31m%}⬆%{\e[0m%}" unless `git cherry -v origin/#{git_parse_branch} 2>/dev/null`.strip.empty?
+	" ⬆" unless `git cherry -v origin/#{git_parse_branch} 2>/dev/null`.strip.empty?
 end
 
 # def git_cwd_needs_pull
@@ -45,5 +46,5 @@ def rebasing_etc
 end
 
 if in_git_repo
-  print " %{\e[34m%}#{git_parse_branch}%{\e[90m%}@%{\e[33m%}#{git_head_commit_id}%{\e[0m%}#{rebasing_etc}#{git_cwd_dirty}#{git_cwd_needs_push}"
+  print " %{\e[34m%}#{git_parse_branch}%{\e[90m%}@%{\e[33m%}#{git_head_commit_id}%{\e[0m%}#{rebasing_etc}%{\e[31m%}#{git_cwd_dirty}#{git_cwd_needs_push}%{\e[0m%}"
 end
