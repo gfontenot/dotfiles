@@ -46,7 +46,7 @@ elsif (!draft && !post)
 end
 
 name = ARGV.join(" ")
-file_name = ARGV.join("-").downcase
+file_name = ARGV.join("-").downcase.gsub(/[^-\w]/, '')
 
 if draft
   dir = "_drafts"
