@@ -16,7 +16,7 @@ alias gcp='git commit -p'
 alias gcav='git commit -a -v'
 alias gco='git checkout'
 alias gp='git push'
-alias gm='git merge --no-ff'
+alias gm='git smart-merge'
 alias gmf='git merge --ff-only'
 alias gup='git smart-pull'
 
