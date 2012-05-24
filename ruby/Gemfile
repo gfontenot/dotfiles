@@ -1,0 +1,22 @@
+# Gems that should be installed at the system level
+
+source :rubygems
+
+# IRB replacement
+gem "pry"
+
+# print helpers
+gem "awesome_print"
+gem "colored"
+
+# Git helpers
+gem "git"
+gem "git-smart"
+gem "gist"
+
+# Dev frameworks
+gem "sinatra"
+gem "jekyll"
+
+# Utility apps
+gem "cloudapp"
