@@ -1,4 +1,8 @@
 #!/usr/bin/env ruby
+# 
+# Shows git branches sorted by time.
+# Stolen from Ben Hoskings
+# https://github.com/benhoskings/dot-files/
 
 def format_commit_info timestamp, time_desc, commit_id, message, ref_name
   [
