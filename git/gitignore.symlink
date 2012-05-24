@@ -6,7 +6,11 @@
 
 # Jekyll
 _site
-drafts
+_drafts
+
+# Bundler
+.bundle
+vendor/bundle/ruby
 
 # Xcode
 build/*
