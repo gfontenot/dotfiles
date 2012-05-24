@@ -32,7 +32,8 @@
   unstaged = difftool
   
   current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
-	
+	alias = config --get-regexp 'alias.*'
+  
 [color]
   diff = auto
   status = auto
