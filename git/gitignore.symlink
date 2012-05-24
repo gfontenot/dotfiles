@@ -8,7 +8,6 @@
 _site
 drafts
 
-
 # Xcode
 build/*
 *.pbxuser

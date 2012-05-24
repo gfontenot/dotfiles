@@ -1,7 +1,7 @@
 # === Config from https://github.com/skwp/dotfiles/blob/master/irb/pryrc ===
 
 # === CUSTOM PROMPT ===
-# This prompt shows the ruby version (useful for RVM)
+# This prompt shows the ruby version
 Pry.prompt = [
               proc { |obj, nest_level, pry|
                 "\e[34m[#{pry.input_array.size}]\e[0m #{RUBY_VERSION} \e[33m(#{obj})\e[0m:#{nest_level} > "
