@@ -9,7 +9,6 @@ _site
 _drafts
 
 # Bundler
-.bundle
 .bin
 vendor/bundle/ruby
 
