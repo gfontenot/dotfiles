@@ -17,6 +17,10 @@ gem "gist"
 # Dev frameworks
 gem "sinatra"
 gem "jekyll"
+gem "rails"
+
+# Testing
+gem "rspec"
 
 # Utility apps
 gem "cloudapp"
