@@ -10,6 +10,7 @@ _drafts
 
 # Bundler
 .bundle
+.bin
 vendor/bundle/ruby
 
 # Xcode
