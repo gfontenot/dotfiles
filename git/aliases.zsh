@@ -3,7 +3,7 @@
 alias g=hub
 
 # alias straight to difftool for quick access
-alias gdiff='git difftool'
+alias gdiff='git difftool -y'
 
 # quick aliases for common actions
 alias gs='git status -sb'
