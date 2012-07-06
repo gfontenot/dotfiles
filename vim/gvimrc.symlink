@@ -60,9 +60,14 @@ set autochdir
 
 set bs=indent,eol,start
 
-" FILE SETTINMGS
+" FILE SETTINGS
 " =====================================
 
 " 2 spaces for indentation, and replace smartly
-set sw=2 sts=2 et
+set tabstop=2 shiftwidth=2 expandtab
 
+" PLUGINS
+" =====================================
+
+" Map the tComment command to <leader>|c
+map <leader>c <c-_><c-_>
