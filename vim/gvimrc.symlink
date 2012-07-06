@@ -1,0 +1,68 @@
+" EDITOR VISUAL
+" =====================================
+
+" Set up the color scheme
+set background=dark
+colorscheme railscasts
+
+" Set the font
+set guifont=Inconsolata:h13
+
+" Turn on cursor line/column numbers
+set ruler
+
+" Turn on Line numbers
+set number
+
+" Highlight the current line
+set cursorline
+
+" No blinking the freaking cursor in normal mode
+set gcr=n:blinkon0
+
+" Turn on syntax highlighting
+syntax on
+
+" GUI
+" =====================================
+
+" No freaking toolbar
+set go-=T
+
+" No freaking beeping
+set visualbell
+
+" EDITOR FEATURES
+" =====================================
+
+" Search - Hilight (hls), incremental (is), case-insensitive (ic), case
+" sensitive when explicitly using mixed case (scs)
+set hls is ic scs
+
+" Automatic file-type detection
+filetype plugin indent on
+
+" Turn on undo buffers for hidden files
+set hid
+
+" No need to work in compatibility mode
+set nocp
+
+" Don't make backups when overwriting
+set nobackup
+set nowritebackup
+
+" Write swp files to a single location
+set directory=$HOME/.vim/tmp//,.
+
+" Always set the cwd to the current file's directory
+set autochdir
+
+set bs=indent,eol,start
+
+" FILE SETTINMGS
+" =====================================
+
+" 2 spaces for indentation, and replace smartly
+set sw=2 sts=2 et
+
