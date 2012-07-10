@@ -17,8 +17,14 @@ set hidden                        " Handle multiple buffers better.
 set wildmenu                      " Enhanced command line completion.
 set wildmode=list:longest         " Complete files like a shell.
 
+set gdefault                      " default to global substitutions on lines
+
 set ignorecase                    " Case-insensitive searching.
 set smartcase                     " But case-sensitive if expression contains a capital letter.
+
+set incsearch                     " Highlight matches as you type.
+set hlsearch                      " Highlight matches.
+set showmatch                     " Show all matches
 
 set number                        " Show line numbers.
 set ruler                         " Show cursor position.
@@ -26,9 +32,6 @@ set ruler                         " Show cursor position.
 set cursorline                    " Highlight the current line
 
 set gcr=n:blinkon0                " Turn off the blinking cursor in normal mode   
-
-set incsearch                     " Highlight matches as you type.
-set hlsearch                      " Highlight matches.
 
 set wrap                          " Turn on line wrapping.
 set scrolloff=3                   " Show 3 lines of context around the cursor.
@@ -41,12 +44,12 @@ set nobackup                      " Don't make a backup before overwriting a fil
 set nowritebackup                 " And again.
 set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
-" set autochdir                     " Always set the cwd to the current file's directory
-
 " UNCOMMENT TO USE
 set tabstop=2                    " Global tab width.
 set shiftwidth=2                 " And again, related.
 set expandtab                    " Use spaces instead of tabs
+
+au FocusLost * :wa               " Save when you lose focus (like a baws)
 
 set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
@@ -73,6 +76,17 @@ map <leader>tm :tabmove
 nnoremap <silent> <Leader>p :CommandT<CR>
 nnoremap <silent> <Leader>b :CommandTBuffer<CR>
 
+" Remap / so that we always use the /v option when searching
+nnoremap / /\v
+vnoremap / /\v
+
+" Set <leader><space> to clear search highlighting
+nnoremap <leader><space> :noh<cr>
+
+" Map <tab> to match bracket pairs
+nnoremap <tab> %
+vnoremap <tab> %
+
 " Map the tComment command to <leader>c
 " map <leader>c <c-_><c-_>
 
@@ -92,5 +106,4 @@ nnoremap <silent> <Leader>b :CommandTBuffer<CR>
 
 " For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
-
 
