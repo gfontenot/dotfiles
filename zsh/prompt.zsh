@@ -9,4 +9,4 @@ ruby_version() {
 export PROMPT=$'%{\e[0;90m%}%n@%m%{\e[0m%}
 %{\e[0;%(?.32.31)m%}>%{\e[0m%} '
 
-export RPROMPT=$'$(project_pwd)$($ZSH/zsh/git_cwd_info)'
+export RPROMPT=$'$(project_pwd)$($ZSH/zsh/git_cwd_info)$(ruby_version)'
