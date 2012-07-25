@@ -27,7 +27,7 @@ def git_cwd_dirty
 end
 
 def git_cwd_needs_push
-	" ⬆" unless `git cherry -v origin/#{git_parse_branch} 2>/dev/null`.strip.empty?
+	" ⬆ " unless `git cherry -v origin/#{git_parse_branch} 2>/dev/null`.strip.empty?
 end
 
 def rebasing_etc
