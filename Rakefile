@@ -32,6 +32,10 @@ task :install do
     end
     `ln -s "$PWD/#{linkable}" "#{target}"`
   end
+
+  # Link up the Sublime Text 2 pref file
+  # This shit is uuugly
+  `ln -s "$PWD/Sublime Text/Preferences.sublime-settings" "$HOME/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Preferences.sublime-settings"`
 end
 
 task :uninstall do
