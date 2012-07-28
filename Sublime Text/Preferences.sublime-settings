@@ -38,6 +38,7 @@
 	"font_face": "Inconsolata",
 	"font_size": 13.0,
 	"highlight_line": true,
+	"rulers": [80],
 	"ignored_packages":
 	[
 		"Vintage"
