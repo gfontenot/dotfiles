@@ -1,6 +1,6 @@
 ---
 lastfm_user: 'gfontenot'
-rss_feeds: [http://feed.feedburner.com/gfontenot]
+rss_feeds: []
 markdownify_rss_posts: false
 star_rss_posts: false
 twitter_users: [gfontenot, hopsapp]
