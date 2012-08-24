@@ -1,0 +1,24 @@
+[submodule "vim/vim.symlink/bundle/tomtom-tcomment"]
+	path = vim/vim.symlink/bundle/tomtom-tcomment
+	url = git://github.com/tomtom/tcomment_vim.git
+[submodule "vim/vim.symlink/bundle/wincent-command-t"]
+	path = vim/vim.symlink/bundle/wincent-command-t
+	url = git://github.com/wincent/Command-T.git
+[submodule "vim/vim.symlink/bundle/tpope-vim-rails"]
+	path = vim/vim.symlink/bundle/tpope-vim-rails
+	url = git://github.com/tpope/vim-rails.git
+[submodule "vim/vim.symlink/bundle/tpope-vim-surround"]
+	path = vim/vim.symlink/bundle/tpope-vim-surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "vim/vim.symlink/bundle/tpope-vim-markdown"]
+	path = vim/vim.symlink/bundle/tpope-vim-markdown
+	url = git://github.com/tpope/vim-markdown.git
+[submodule "vim/vim.symlink/bundle/tpope-vim-endwise"]
+	path = vim/vim.symlink/bundle/tpope-vim-endwise
+	url = git://github.com/tpope/vim-endwise.git
+[submodule "vim/vim.symlink/bundle/kchmk-vim-coffee-script"]
+	path = vim/vim.symlink/bundle/kchmk-vim-coffee-script
+	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/vim.symlink/bundle/airblade-vim-rooter"]
+	path = vim/vim.symlink/bundle/airblade-vim-rooter
+	url = git://github.com/airblade/vim-rooter.git
