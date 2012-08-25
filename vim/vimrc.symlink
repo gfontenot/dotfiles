@@ -87,15 +87,21 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 
-" Map the tComment command to <leader>c
-" map <leader>c <c-_><c-_>
+" Get off my lawn
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
 
-" Uncomment to use Jamis Buck's file opening plugin
-" map <Leader>p :FuzzyFinderTextMate<Enter>
+" Treat <li> and <p> tags like the block tags they are
+let g:html_indent_tags = 'li\|p'
 
-" Automatic fold settings for specific files. Uncomment to use.
-" autocmd FileType ruby setlocal foldmethod=syntax
-" autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
+" Autocomplete HTML tags
+imap <leader>. </<C-X><C-O>
+
+" Improve syntax highlighting
+au BufRead,BufNewFile Gemfile set filetype=ruby
+au BufRead,BufNewFile *.md set filetype=markdown
 
 " Set up some utility functions for swapping buffers in splits
 function! MarkWindowSwap()
