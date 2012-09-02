@@ -42,4 +42,4 @@ function chpwd() {
 }
 
 # set the editor du jour.
-export EDITOR="subl -n"
+export EDITOR="mvim"
