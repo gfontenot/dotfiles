@@ -5,7 +5,30 @@ silent! call pathogen#runtime_append_all_bundles()
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
-runtime macros/matchit.vim        " Load the matchit plugin.
+" Set up the color scheme
+set background=dark
+colorscheme railscasts
+
+" Highlight the 80 character column
+set colorcolumn=80
+
+" Map leader to comma
+let mapleader = ","
+
+augroup vimrcEx
+  au!
+
+  " For all text files set 'textwidth' to 78 characters.
+  autocmd FileType text setlocal textwidth=78
+
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it when the position is invalid or when inside an event handler
+  " (happens when dropping a file on gvim).
+  autocmd BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal g`\"" |
+    \ endif
+augroup END
 
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
@@ -31,7 +54,7 @@ set ruler                         " Show cursor position.
 
 set cursorline                    " Highlight the current line
 
-set gcr=n:blinkon0                " Turn off the blinking cursor in normal mode   
+set gcr=n:blinkon0                " Turn off the blinking cursor in normal mode
 
 set wrap                          " Turn on line wrapping.
 set scrolloff=3                   " Show 3 lines of context around the cursor.
@@ -49,17 +72,14 @@ set tabstop=2                    " Global tab width.
 set shiftwidth=2                 " And again, related.
 set expandtab                    " Use spaces instead of tabs
 
-" au FocusLost * :wa               " Save when you lose focus (like a baws)
-
 set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 set wildignore+=_site\/*
 
-" Set up the color scheme
-set background=dark
-colorscheme railscasts
+" Display extra whitespace
+set list listchars=tab:»·,trail:·
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
@@ -72,8 +92,8 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
-" Map command-t to <leader>p
-nnoremap <silent> <Leader>p :CommandT<CR>
+" Map command-t to <leader>t
+nnoremap <silent> <Leader>t :CommandT<CR>
 nnoremap <silent> <Leader>b :CommandTBuffer<CR>
 
 " Remap / so that we always use the /v option when searching
@@ -120,8 +140,20 @@ function! DoWindowSwap()
     "Switch to dest and shuffle source->dest
     exe curNum . "wincmd w"
     "Hide and open so that we aren't prompted and keep history
-    exe 'hide buf' markedBuf 
+    exe 'hide buf' markedBuf
 endfunction
 
 nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
 nmap <silent> <leader>pw :call DoWindowSwap()<CR>
+
+" Indent if we're at the beginning of a line. Else, do completion.
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-n>
