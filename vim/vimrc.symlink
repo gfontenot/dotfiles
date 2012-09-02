@@ -92,10 +92,6 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
-" Map command-t to <leader>t
-nnoremap <silent> <Leader>t :CommandT<CR>
-nnoremap <silent> <Leader>b :CommandTBuffer<CR>
-
 " Remap / so that we always use the /v option when searching
 nnoremap / /\v
 vnoremap / /\v
