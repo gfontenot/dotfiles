@@ -12,28 +12,28 @@
 [user]
         name = Gordon Fontenot
         email = your@example.com
-        
+
 [alias]
   co = checkout
   wtf     = !$ZSH/bin/git-wtf
   rank = !$ZSH/bin/git-rank-contributers
   count   = !git shortlog -sn
-	
+
   lol = log --pretty=oneline --abbrev-commit --graph --decorate
-  
-	amend = commit --amend -C HEAD
-	credit = commit --amend --author "$1 <$2>" -C HEAD
-	
-	undo = reset --soft HEAD^
-	rh = reset --hard
-  
+
+  amend = commit --amend -C HEAD
+  credit = commit --amend --author "$1 <$2>" -C HEAD
+
+  undo = reset --soft HEAD^
+  rh = reset --hard
+
   unstage = reset HEAD
   staged = difftool --cached
   unstaged = difftool
-  
+
   current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
-	alias = config --get-regexp 'alias.*'
-  
+  alias = config --get-regexp 'alias.*'
+
 [color]
   diff = auto
   status = auto
@@ -47,7 +47,7 @@
 
 [apply]
   whitespace = warn
-  
+
 [mergetool]
   keepBackup = false
 
@@ -64,8 +64,8 @@
 # Kaleidoscope
 
 [difftool "Kaleidoscope"]
-	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [difftool]
-	prompt = false
+  prompt = false
 [diff]
-	tool = Kaleidoscope
+  tool = Kaleidoscope
