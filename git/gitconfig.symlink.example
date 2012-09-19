@@ -10,14 +10,14 @@
 # task.
 
 [user]
-        name = Gordon Fontenot
-        email = your@example.com
+  name = Gordon Fontenot
+  email = your@example.com
 
 [alias]
   co = checkout
-  wtf     = !$ZSH/bin/git-wtf
+  wtf = !$ZSH/bin/git-wtf
   rank = !$ZSH/bin/git-rank-contributers
-  count   = !git shortlog -sn
+  count = !git shortlog -sn
 
   lol = log --pretty=oneline --abbrev-commit --graph --decorate
 
