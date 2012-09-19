@@ -43,7 +43,7 @@
 
 [core]
   excludesfile = ~/.gitignore
-  editor = subl -wn
+  editor = "mvim -v"
 
 [apply]
   whitespace = warn
