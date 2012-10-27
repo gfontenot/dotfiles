@@ -20,3 +20,6 @@ alias gup='git smart-pull'
 alias glog='git log --pretty="format:%C(yellow)%h%Cblue%d%Creset %s - %C(white)%an %Cgreen(%cr)%Creset" --date=relative'
 alias gl='glog --graph'
 alias gla='gl --all'
+
+# git rm deleted files
+alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
