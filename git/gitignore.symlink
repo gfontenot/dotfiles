@@ -26,6 +26,3 @@ build/*
 xcuserdata
 profile
 *.moved-aside
-
-#general
-submodules
