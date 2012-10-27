@@ -5,6 +5,9 @@ silent! call pathogen#runtime_append_all_bundles()
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
+" Autoload changes from disk
+set autoread
+
 " Set up the color scheme
 set t_Co=256
 set background=dark
@@ -28,6 +31,7 @@ augroup vimrcEx
 
   " For all text files set 'textwidth' to 78 characters.
   autocmd FileType text setlocal textwidth=78
+  autocmd FileType markdown setlocal textwidth=78
 
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
@@ -36,6 +40,9 @@ augroup vimrcEx
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
     \   exe "normal g`\"" |
     \ endif
+
+  " Always start on the first line of a Git commit message
+  autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
 augroup END
 
 set showcmd                       " Display incomplete commands.
