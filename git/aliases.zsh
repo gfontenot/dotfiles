@@ -14,6 +14,7 @@ alias gco='git checkout'
 alias gp='git push'
 alias gmf='git merge --ff-only'
 alias gup='git smart-pull'
+alias gsup='git submodule --init --recursive'
 
 
 # log aliases
