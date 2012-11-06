@@ -13,7 +13,7 @@ alias gcm='git commit -m'
 alias gco='git checkout'
 alias gp='git push'
 alias gmf='git merge --ff-only'
-alias gup='git smart-pull'
+alias gup='git smart-pull && git remote prune origin'
 alias gsup='git submodule --init --recursive'
 
 
