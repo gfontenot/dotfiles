@@ -14,7 +14,7 @@ alias gco='git checkout'
 alias gp='git push'
 alias gmf='git merge --ff-only'
 alias gup='git smart-pull && git remote prune origin'
-alias gsup='git submodule --init --recursive'
+alias gsup='git submodule update --init --recursive'
 
 
 # log aliases
