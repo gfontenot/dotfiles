@@ -1,7 +1,5 @@
 #!/usr/bin/ruby
 require 'irb/completion'
-# require 'irb/ext/save-history'
-require 'rubygems'
 
 IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
@@ -15,7 +13,7 @@ class Object
   def local_methods(obj = self)
     (obj.methods - obj.class.superclass.instance_methods).sort
   end
-  
+
   # print documentation
   #
   #   ri 'Array#pop'
@@ -31,10 +29,13 @@ class Object
   end
 end
 
-def me
-  User.find_by_login('holman')
-end
-
 def r
   reload!
+end
+
+def c(text)
+  IO.popen("pbcopy", "w") do |io|
+    io.write(text)
+  end
+  text
 end
