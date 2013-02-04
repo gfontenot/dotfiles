@@ -1,5 +1,5 @@
-alias dotedit='e $ZSH'
 alias dotcd='cd $ZSH'
+alias dotedit='dotcd && e'
 
 alias log="$ZSH/bin/dayone.rb"
 
