@@ -28,3 +28,18 @@
 [submodule "vim/vim.symlink/bundle/mileszs-ack"]
 	path = vim/vim.symlink/bundle/mileszs-ack
 	url = git://github.com/mileszs/ack.vim.git
+[submodule "ruby/rbenv/plugins/rbenv-update"]
+	path = ruby/rbenv/plugins/rbenv-update
+	url = git://github.com/rkh/rbenv-update.git
+[submodule "ruby/rbenv/plugins/ruby-build"]
+	path = ruby/rbenv/plugins/ruby-build
+	url = git://github.com/sstephenson/ruby-build.git
+[submodule "ruby/rbenv/plugins/rbenv-gem-rehash"]
+	path = ruby/rbenv/plugins/rbenv-gem-rehash
+	url = git://github.com/sstephenson/rbenv-gem-rehash.git
+[submodule "ruby/rbenv/plugins/rbenv-default-gems"]
+	path = ruby/rbenv/plugins/rbenv-default-gems
+	url = git://github.com/sstephenson/rbenv-default-gems.git
+[submodule "ruby/rbenv/plugins/rbenv-binstubs"]
+	path = ruby/rbenv/plugins/rbenv-binstubs
+	url = git://github.com/ianheggie/rbenv-binstubs.git

@@ -33,6 +33,17 @@ task :install do
     `ln -s "$PWD/#{linkable}" "#{target}"`
   end
 
+  link_rbenv
+end
+
+def link_rbenv
+  source_files = Dir.glob('ruby/rbenv/*')
+  `mkdir -p $HOME/.rbenv`
+  source_files.each do |source|
+    source_name = source.split('/').last
+    FileUtils.rm_rf("#{ENV["HOME"]}/.rbenv/#{source_name}")
+    `ln -s "$PWD/#{source}" "$HOME/.rbenv/#{source_name}"`
+  end
 end
 
 task :uninstall do
@@ -46,7 +57,7 @@ task :uninstall do
     if File.symlink?(target)
       FileUtils.rm(target)
     end
-    
+
     # Replace any backups made during installation
     if File.exists?("#{ENV["HOME"]}/.#{file}.backup")
       `mv "$HOME/.#{file}.backup" "$HOME/.#{file}"` 
