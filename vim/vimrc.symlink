@@ -35,16 +35,11 @@ set colorcolumn=80
 let mapleader = ","
 
 " Remap Command-T to <leader>p
-nnoremap <silent> <Leader>p :CommandT<CR>
-
-" Fix Command-T so that <ESC> closes the file popup
-let g:CommandTCancelMap=['<ESC>','<C-c>']
+nnoremap <silent> <Leader>p :CtrlP<CR>
+nnoremap <silent> <leader>b :CtrlPBuffer<CR>
 
 augroup vimrcEx
   au!
-  " CocoaPods
-  au BufNewFile,BufRead Podfile,*.podspec      set filetype=ruby
-
   " For all text files set 'textwidth' to 78 characters.
   autocmd FileType text setlocal textwidth=78
   autocmd FileType markdown setlocal textwidth=78
@@ -85,8 +80,6 @@ set ruler                         " Show cursor position.
 
 set cursorline                    " Highlight the current line
 
-" set gcr=n:blinkon0                " Turn off the blinking cursor in normal mode
-
 " Change cursor shape to an underscore  when in insert mode
 let &t_SI = "\<Esc>]50;CursorShape=2\x7"
 " Change back to a block in normal mode
@@ -103,7 +96,6 @@ set nobackup                      " Don't make a backup before overwriting a fil
 set nowritebackup                 " And again.
 set noswapfile                    " Don't use swapfiles
 
-" UNCOMMENT TO USE
 set tabstop=2                    " Global tab width.
 set shiftwidth=2                 " And again, related.
 set expandtab                    " Use spaces instead of tabs
@@ -139,12 +131,6 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 
-" Get off my lawn
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
-
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
 
@@ -154,6 +140,7 @@ imap <leader>. </<C-X><C-O>
 " Improve syntax highlighting
 au BufRead,BufNewFile Gemfile set filetype=ruby
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufNewFile,BufRead Podfile,*.podspec set filetype=ruby
 
 " Set up some utility functions for swapping buffers in splits
 function! MarkWindowSwap()
