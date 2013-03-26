@@ -16,7 +16,6 @@ alias gmf='git merge --ff-only'
 alias gup='git smart-pull && git remote prune origin'
 alias gsup='git submodule update --init --recursive'
 
-
 # log aliases
 alias glog='git log --pretty="format:%C(yellow)%h%Cblue%d%Creset %s - %C(white)%an %Cgreen(%cr)%Creset" --date=relative'
 alias gl='glog --graph'
