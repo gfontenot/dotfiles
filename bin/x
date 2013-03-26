@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+#
+# Open the .xcworkspace file in the current directory, or open the first
+# .xcodeproj file if one isn't found
+
+xcode_project = Dir.glob('*.xcworkspace').first
+
+unless xcode_project
+  xcode_project = Dir.glob('*.xcodeproj').first
+end
+
+if xcode_project
+  `open -a 'Xcode' #{xcode_project}`
+else
+  puts 'No Xcode projects found!'
+end
