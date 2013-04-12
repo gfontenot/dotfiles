@@ -1,7 +1,10 @@
+" Case-insensitive searching.
 set ignorecase
+
+" But case-sensitive if expression contains a capital letter.
 set smartcase
 
-set incsearch
-set showmatch
+" default to global substitutions on lines
+set gdefault
 
 set pasteboard
