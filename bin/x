@@ -10,7 +10,7 @@ unless xcode_project
 end
 
 if xcode_project
-  `open -a 'Xcode' #{xcode_project}`
+  `open -a 'Xcode' "#{xcode_project}"`
 else
   puts 'No Xcode projects found!'
 end
