@@ -15,6 +15,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'airblade/vim-rooter'
 Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim'
+Bundle 'thoughtbot/vim-magictags'
 
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
