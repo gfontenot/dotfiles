@@ -1,8 +1,9 @@
+# OS X
 .DS_Store
-.svn
-.tissues
-*~
+
+# Vim
 *.swp
+.netrwhist
 
 # Jekyll
 _site
