@@ -4,7 +4,8 @@ set ignorecase
 " But case-sensitive if expression contains a capital letter.
 set smartcase
 
-" default to global substitutions on lines
+" Default to global substitutions on lines
 set gdefault
 
+" Use the system pasteboard
 set pasteboard
