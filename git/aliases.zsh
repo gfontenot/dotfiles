@@ -3,21 +3,21 @@
 alias g=hub
 
 # alias straight to difftool for quick access
-alias gdiff='git difftool -y'
+alias gdiff='g difftool -y'
 
 # quick aliases for common actions
-alias gs='git status -sb'
-alias ga='git add'
-alias gc!='git commit -v'
-alias gcm='git commit -m'
-alias gco='git checkout'
-alias gp='git push'
-alias gmf='git merge --ff-only'
-alias gup='git smart-pull && git remote prune origin'
-alias gsup='git submodule update --init --recursive'
+alias gs='g status -sb'
+alias ga='g add'
+alias gc!='g commit -v'
+alias gcm='g commit -m'
+alias gco='g checkout'
+alias gp='g push'
+alias gmf='g merge --ff-only'
+alias gup='g smart-pull && g remote prune origin'
+alias gsup='g submodule update --init --recursive'
 
 # log aliases
-alias glog='git log --pretty="format:%C(yellow)%h%Cblue%d%Creset %s - %C(white)%an %Cgreen(%cr)%Creset" --date=relative'
+alias glog='g log --pretty="format:%C(yellow)%h%Cblue%d%Creset %s - %C(white)%an %Cgreen(%cr)%Creset" --date=relative'
 alias gl='glog --graph'
 alias gla='gl --all'
 
