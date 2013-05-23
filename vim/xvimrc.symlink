@@ -9,3 +9,6 @@ set gdefault
 
 " Use the system pasteboard
 set pasteboard
+
+" Map ,b to toggle a breakpoint at the current line
+nmap ,b :xccmd toggleBreakpointAtCurrentLine<CR>
