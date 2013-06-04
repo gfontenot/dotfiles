@@ -17,6 +17,11 @@ Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'thoughtbot/vim-magictags'
 
+" Cocoa specific plugins
+" Bundle 'msanders/cocoa.vim'
+Bundle 'Rip-Rip/clang_complete'
+Bundle 'llvm-mirror/lldb', {'rtp': 'utils/vim-lldb'}
+
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
@@ -29,15 +34,14 @@ set background=dark
 colorscheme lucius
 LuciusDark
 
+" Use ag instead of ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 " Highlight the 80 character column
 set colorcolumn=80
 
 " Map leader to comma
 let mapleader = ","
-
-" Remap Command-T to <leader>p
-nnoremap <silent> <Leader>p :CtrlP<CR>
-nnoremap <silent> <leader>b :CtrlPBuffer<CR>
 
 augroup vimrcEx
   au!
@@ -76,7 +80,7 @@ set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
 set showmatch                     " Show all matches
 
-set number                        " Show line numbers.
+set relativenumber                " Use relative line numbers
 set ruler                         " Show cursor position.
 
 set cursorline                    " Highlight the current line
