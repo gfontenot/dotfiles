@@ -13,7 +13,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'airblade/vim-rooter'
-Bundle 'mileszs/ack.vim'
+Bundle 'rking/ag.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'thoughtbot/vim-magictags'
 
@@ -34,8 +34,7 @@ set background=dark
 colorscheme lucius
 LuciusDark
 
-" Use ag instead of ack
-let g:ackprg = 'ag --nogroup --nocolor --column'
+let g:ctrlp_user_command = 'ag --nogroup --nobreak --noheading --nocolor -g "" %s'
 
 " Highlight the 80 character column
 set colorcolumn=80
