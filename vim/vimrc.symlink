@@ -4,14 +4,13 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 " Setup vundles
+Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fugitive'
 Bundle 'tomtom/tcomment_vim'
-Bundle 'kchmck/vim-coffee-script'
 Bundle 'airblade/vim-rooter'
 Bundle 'rking/ag.vim'
 Bundle 'kien/ctrlp.vim'
@@ -19,8 +18,8 @@ Bundle 'thoughtbot/vim-magictags'
 
 " Cocoa specific plugins
 " Bundle 'msanders/cocoa.vim'
-Bundle 'Rip-Rip/clang_complete'
-Bundle 'llvm-mirror/lldb', {'rtp': 'utils/vim-lldb'}
+" Bundle 'Rip-Rip/clang_complete'
+" Bundle 'llvm-mirror/lldb', {'rtp': 'utils/vim-lldb'}
 
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
