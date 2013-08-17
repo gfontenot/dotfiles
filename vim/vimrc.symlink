@@ -41,6 +41,16 @@ set colorcolumn=80
 " Map leader to comma
 let mapleader = ","
 
+" Faster split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Open splits to the bottom right
+set splitbelow
+set splitright
+
 augroup vimrcEx
   au!
   " For all text files set 'textwidth' to 78 characters.
