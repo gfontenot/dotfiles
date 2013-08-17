@@ -1,0 +1,8 @@
+set from = "gordon@thoughtbot.com"
+set sendmail = "/usr/local/bin/msmtp -a thoughtbot"
+set spoolfile = "+gordon-thoughtbot.com/INBOX"
+set mbox = "+gordon-thoughtbot.com/archive"
+set postponed = "+gordon-thoughtbot.com/drafts"
+macro index gi "<change-folder>+gordon-thoughtbot.com/INBOX<enter>" "Go to the INBOX"
+macro index gt "<change-folder>+gordon-fontenot-me.com/INBOX<enter>" "toggle account"
+

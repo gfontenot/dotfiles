@@ -1,0 +1,44 @@
+[general]
+ui = ttyui
+accounts = thoughtbot, MobileMe
+pythonfile=~/Code/dotfiles/offlineimap/config.py
+fsync = False
+
+[Account thoughtbot]
+localrepository = thoughtbot-Local
+remoterepository = thoughtbot-Remote
+status_backend = sqlite
+
+[Repository thoughtbot-Local]
+type = Maildir
+localfolders = ~/.mail/gordon-thoughtbot.com
+nametrans = local_folder_to_gmail_folder
+
+[Repository thoughtbot-Remote]
+maxconnections = 1
+type = Gmail
+remoteuser = gordon@thoughtbot.com
+remotepasseval = get_password("gordon@thoughtbot.com")
+cert_fingerprint = b0ba392bba326e6feb1add4d04fa0fb86cd173fa
+realdelete = no
+nametrans = gmail_folder_to_local_folder
+folderfilter = should_include_folder
+
+[Account MobileMe]
+localrepository = MobileMe-Local
+remoterepository = MobileMe-Remote
+status_backend = sqlite
+
+[Repository MobileMe-Local]
+type = Maildir
+localfolders = ~/.mail/gordon-fontenot-me.com
+
+[Repository MobileMe-Remote]
+maxconnections = 1
+type = IMAP
+ssl = yes
+remotehost = imap.mail.me.com
+remoteuser = gordon.fontenot@me.com
+remotepasseval = get_password("gordon.fontenot@me.com")
+cert_fingerprint = 13db1ba7073b75443c52a14c3bae0cc9d478567c
+realdelete = no
