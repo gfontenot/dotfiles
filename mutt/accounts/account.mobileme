@@ -1,4 +1,5 @@
 set from = "gordon.fontenot@me.com"
+set signature = $ZSH/mutt/accounts/signature.mobileme
 set sendmail = "/usr/local/bin/msmtp -a MobileMe"
 set spoolfile = "+gordon-fontenot-me.com/INBOX"
 set mbox = "+gordon-fontenot-me.com/archive"

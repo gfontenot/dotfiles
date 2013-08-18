@@ -6,7 +6,6 @@ set message_cachedir = ~/.mutt/cache/bodies       # where to store bodies
 set certificate_file = ~/.mutt/certificates       # where to store certs
 set mailcap_path     = $ZSH/mutt/config/mailcap   # entries for filetypes
 set tmpdir           = ~/.mutt/temp               # where to keep temp files
-set signature        = ~/.mutt/sig                # my signature file
 
 # Basic Options --------------------------------------
 set wait_key = no        # shut up, mutt
@@ -111,11 +110,11 @@ unset record
 
 # Plugins
 macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
-macro index,pager \cL <pipe-message>'$ZSH/mutt/plugins/mutt-to-omnifocus.py'<enter> 'Create Omnifocus task from message'
+macro index,pager \cT <pipe-message>'$ZSH/mutt/plugins/mutt-to-omnifocus.py'<enter> 'Create Omnifocus task from message'
 
 # Open thoughtbot by default --------------------------
 set spoolfile = "+gordon-thoughtbot.com/INBOX"
 
 # Multiple account config
-folder-hook gordon-thoughtbot.com/* source $ZSH/mutt/accounts/thoughtbot.muttrc
-folder-hook gordon-fontenot-me.com/* source $ZSH/mutt/accounts/MobileMe.muttrc
+folder-hook gordon-thoughtbot.com/* source $ZSH/mutt/accounts/account.thoughtbot
+folder-hook gordon-fontenot-me.com/* source $ZSH/mutt/accounts/account.mobileme
