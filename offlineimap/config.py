@@ -22,8 +22,5 @@ def should_include_folder(folder):
     return folder not in EXCLUDED_FOLDERS
 
 def get_password(account):
-    command = "security find-generic-password -g -a %s -s offlineimap" % account
-    output = subprocess.check_output(command, shell=True, stderr=subprocess.STDOUT)
-    outtext = [l for l in output.splitlines()
-        if l.startswith('password: ')][0]
-    return re.match(r'password: .*"(.*)"', outtext).group(1)
+  cmd = "keychain.py %s" % account
+  return subprocess.check_output(cmd, shell=True, stderr=subprocess.STDOUT).rstrip()
