@@ -22,5 +22,5 @@ def should_include_folder(folder):
     return folder not in EXCLUDED_FOLDERS
 
 def get_password(account):
-  cmd = "keychain.py %s" % account
+  cmd = "~/Code/dotfiles/bin/keychain.py %s" % account
   return subprocess.check_output(cmd, shell=True, stderr=subprocess.STDOUT).rstrip()
