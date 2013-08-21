@@ -150,6 +150,12 @@ au BufRead,BufNewFile Gemfile set filetype=ruby
 au BufRead,BufNewFile *.md set filetype=markdown
 au BufNewFile,BufRead Podfile,*.podspec set filetype=ruby
 
+" Treat Objective-C properly
+au BufNewFile,BufRead *.m set filetype=objc
+au BufNewFile,BufRead *.h set filetype=objc
+au FileType objc setlocal tabstop=4
+au FileType objc setlocal shiftwidth=4
+
 " Set up some utility functions for swapping buffers in splits
 function! MarkWindowSwap()
     let g:markedWinNum = winnr()
