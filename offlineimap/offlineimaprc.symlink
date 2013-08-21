@@ -1,6 +1,6 @@
 [general]
 ui = ttyui
-accounts = thoughtbot, MobileMe
+accounts = thoughtbot, MobileMe, FastMail
 pythonfile=~/Code/dotfiles/offlineimap/config.py
 fsync = False
 
@@ -42,3 +42,24 @@ remoteuser = gordon.fontenot@me.com
 remotepasseval = get_password("gordon.fontenot@me.com")
 cert_fingerprint = 13db1ba7073b75443c52a14c3bae0cc9d478567c
 realdelete = no
+
+[Account FastMail]
+localrepository = FastMail-Local
+remoterepository = FastMail-Remote
+status_backend = sqlite
+
+[Repository FastMail-Local]
+type = Maildir
+localfolders = ~/.mail/gordon-fonten.io
+nametrans = local_folder_to_fastmail_folder
+
+[Repository FastMail-Remote]
+maxconnections = 1
+type = IMAP
+ssl = yes
+remotehost = mail.messagingengine.com
+remoteuser = gfontenot@fastmail.fm
+remotepasseval = get_password("gordon@fonten.io")
+cert_fingerprint = fa86c1ca2d4f805e8fe7b8e7076a3ad2ccc52bb4
+realdelete = no
+nametrans = fastmail_folder_to_local_folder
