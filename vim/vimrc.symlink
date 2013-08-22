@@ -14,6 +14,8 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'airblade/vim-rooter'
 Bundle 'rking/ag.vim'
 Bundle 'kien/ctrlp.vim'
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'rizzatti/dash.vim'
 Bundle 'thoughtbot/vim-magictags'
 
 " Cocoa specific plugins
@@ -119,6 +121,9 @@ set wildignore+=_site\/*
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
 
+nmap <leader>d <Plug>DashGlobalSearch
+
+" Map <leader><leader> to switch to previous file
 nnoremap <leader><leader> <c-^>
 
 " Tab mappings.
