@@ -111,7 +111,7 @@ unset record
 
 # Plugins
 macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
-macro index,pager \cT <pipe-message>'$ZSH/mutt/plugins/mutt-to-omnifocus.py'<enter> 'Create Omnifocus task from message'
+macro index,pager \cT <pipe-message>'$ZSH/mutt/plugins/email-to-omnifocus.rb'<enter> 'Create Omnifocus task from message'
 
 # Open thoughtbot by default --------------------------
 set spoolfile = "+gordon-thoughtbot.com/INBOX"
