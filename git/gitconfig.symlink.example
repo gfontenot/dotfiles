@@ -11,12 +11,20 @@
 
 [user]
   name = Gordon Fontenot
-  email = your@example.com
+  email = gordon@thoughtbot.com
+  username = GFontenot
+  user = GFontenot
+
+[github]
+  user = gfontenot
+  token = <token>
 
 [alias]
   wtf = !$ZSH/bin/git-wtf
   rank = !$ZSH/bin/git-rank-contributers
   count = !git shortlog -sn
+
+  update = !$ZSH/bin/git-pull-with-log
 
   amend = commit --amend -C HEAD
   credit = commit --amend --author "$1 <$2>" -C HEAD
@@ -25,7 +33,8 @@
   staged = difftool --cached
   unstaged = difftool
 
-  current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
+  current-branch = rev-parse --abbrev-ref HEAD
+  review = "!sh -c 'SHA=${1:-HEAD}; BRANCH=${2:-master}; if [ $SHA == $BRANCH ] ; then SHA=HEAD; fi; BASE_SHA=$(git merge-base $BRANCH $SHA); git difftool $BASE_SHA $SHA;' -"
 
 [color]
   diff = auto
@@ -34,8 +43,11 @@
   ui = true
   wtf = true
 
+[pretty]
+  custom = %C(yellow)%h%Cblue%d%Creset %s - %C(white)%an %Cgreen(%cr)%Creset
+
 [core]
-  excludesfile = ~/.gitignore
+  excludesfile = /Users/gordon/.gitignore
   editor = "mvim -v"
 
 [apply]
@@ -43,6 +55,7 @@
 
 [mergetool]
   keepBackup = false
+  prompt = false
 
 [help]
   autocorrect = 1
@@ -51,14 +64,22 @@
   submodule = 1
 
 [push]
-  # Only push branches that have been set up to track a remote branch.
   default = current
 
 # Kaleidoscope
 
 [difftool "Kaleidoscope"]
-  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [difftool]
   prompt = false
 [diff]
   tool = Kaleidoscope
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
+[merge]
+  tool = Kaleidoscope
+[ghi]
+  token = <token>
+[credential]
+  helper = osxkeychain
