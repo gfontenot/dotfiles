@@ -8,7 +8,7 @@ set smartcase
 set gdefault
 
 " Use the system pasteboard
-set pasteboard
+set clipboard=unnamed
 
 " Map <space>b to toggle a breakpoint at the current line
 nmap <space>b :xccmd toggleBreakpointAtCurrentLine<CR>
