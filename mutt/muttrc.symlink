@@ -112,6 +112,8 @@ set forward_quote                    # include message in forwards
 set sendmail_wait = 0
 unset record
 
+set editor = "vim +:silent+/^$ +:noh"
+
 # Plugins
 macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
 macro index,pager \cT <pipe-message>'$ZSH/mutt/plugins/email-to-omnifocus.rb'<enter> 'Create Omnifocus task from message'
