@@ -22,7 +22,7 @@ set pipe_decode          # strip headers and eval mimes when piping
 set thorough_search      # strip headers and eval mimes before searching
 
 # Color scheme ---------------------------------------
-source $ZSH/mutt/config/mutt-colors-solarized-dark-16.muttrc
+source $ZSH/mutt/config/mutt-colors-tomorrow-night-eighties-16.muttrc
 
 # Status Bar -----------------------------------------
 set status_chars  = " *%A"
