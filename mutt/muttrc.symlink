@@ -48,6 +48,9 @@ set uncollapse_jump                        # don't collapse on an unread message
 set sort_re                                # thread based on regex
 set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
 
+# Don't use d at all. Accounts have 'a' mapped to the right thing.
+bind index,pager d noop
+
 # Index Key Bindings ---------------------------------
 bind index gg       first-entry
 bind index G        last-entry
