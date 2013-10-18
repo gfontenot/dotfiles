@@ -11,13 +11,16 @@ set gdefault
 set clipboard=unnamed
 
 " Map <space>b to toggle a breakpoint at the current line
-nmap <space>b :xccmd toggleBreakpointAtCurrentLine<CR>
+nnoremap <space>b :xccmd toggleBreakpointAtCurrentLine<CR>
 
 " Use <space>cm to toggle comments for the selection
-nmap <space>cm :xccmd commentAndUncommentCurrentLines<CR>
+nnoremap <space>cm :xccmd commentAndUncommentCurrentLines<CR>
+
+" Edit in scope
+nnoremap <space>e :xccmd toggleTokenizedEditing<CR>
 
 " Map openQuickly to control p to mimic ctrl-p in vim
-nmap <C-p> :xccmd openQuickly<CR>
+nnoremap <C-p> :xccmd openQuickly<CR>
 
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
