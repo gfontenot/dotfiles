@@ -69,6 +69,9 @@ macro index o "<shell-escape>offlineimap -qf INBOX<enter>" "run offlineimap to s
 # Saner copy/move dialogs
 macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 
+# Search with notmuch
+macro index S "<enter-command>unset wait_key<enter><shell-escape>$ZSH/notmuch/mutt-notmuch.py -G ~/.mail/temporary/search<enter><change-folder-readonly>+temporary/search<enter>" "search mail (using notmuch)"
+
 # Pager View Options ---------------------------------
 set pager_index_lines = 10 # number of index lines to show
 set pager_context = 3      # number of context lines to show

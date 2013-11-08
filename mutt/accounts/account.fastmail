@@ -11,6 +11,6 @@ macro index gt "<change-folder>+gordon-thoughtbot.com/INBOX<enter>" "toggle acco
 
 macro index,pager a "<save-message>+gordon-fonten.io/Archive<enter>" "Archive the message"
 macro index,pager A "<tag-thread>;s+gordon-fonten.io/Archive<enter>" "Archive the thread"
-macro index,pager S "<save-message>+gordon-fonten.io/Junk<enter>" "Mark the message as spam"
+macro index,pager ! "<save-message>+gordon-fonten.io/Junk<enter>" "Mark the message as spam"
 
 # vim: ft=muttrc

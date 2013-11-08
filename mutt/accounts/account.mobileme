@@ -12,6 +12,6 @@ macro index gp "<change-folder>+gordon-fonten.io/INBOX<enter>" "switch to FastMa
 
 macro index,pager a "<save-message>+gordon-fontenot-me.com/Archive<enter>" "Archive the message"
 macro index,pager A "<tag-thread>;s+gordon-fontenot-me.com/Archive<enter>" "Archive the thread"
-macro index,pager S "<save-message>+gordon-fontenot-me.com/Junk<enter>" "Mark the message as spam"
+macro index,pager ! "<save-message>+gordon-fontenot-me.com/Junk<enter>" "Mark the message as spam"
 
 # vim: ft=muttrc
