@@ -123,6 +123,12 @@ augroup vimrcEx
   autocmd FileType text setlocal textwidth=78
   autocmd FileType markdown setlocal textwidth=78
 
+  " Turn on spellcheck for specific filetypes
+  autocmd FileType text setlocal spell
+  autocmd FileType markdown setlocal spell
+  autocmd FileType gitcommit setlocal spell
+  autocmd FileType mail setlocal spell
+
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
   " (happens when dropping a file on gvim).
