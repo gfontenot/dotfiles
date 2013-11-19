@@ -18,6 +18,12 @@ Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 Bundle 'itchyny/lightline.vim'
 
+" Simplenote
+Bundle 'mrtazz/simplenote.vim'
+let g:SimplenoteFiletype = "markdown"
+let g:SimplenoteVertical=1
+source ~/.simplenoterc
+
 " Cocoa specific plugins
 " Bundle 'msanders/cocoa.vim'
 " Bundle 'Rip-Rip/clang_complete'

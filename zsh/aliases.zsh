@@ -1,6 +1,8 @@
 alias dotcd='cd $ZSH'
 alias dotedit='dotcd && e'
 
+alias notes='vim +Simplenote\ -l'
+
 alias curl='noglob curl'
 
 alias reload!='. ~/.zshrc'
