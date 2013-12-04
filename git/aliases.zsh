@@ -6,7 +6,6 @@ alias g=hub
 alias gdiff='g diff'
 
 # quick aliases for common actions
-alias gs='g status -sb'
 alias ga='g add'
 alias gc!='g commit -v'
 alias gcm='g commit -m'
