@@ -1,6 +1,3 @@
-[submodule "ruby/rbenv/plugins/rbenv-update"]
-	path = ruby/rbenv/plugins/rbenv-update
-	url = git://github.com/rkh/rbenv-update.git
 [submodule "vim/vim.symlink/bundle/vundle"]
 	path = vim/vim.symlink/bundle/vundle
 	url = https://github.com/gmarik/vundle.git
