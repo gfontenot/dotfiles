@@ -3,51 +3,21 @@ require 'rake'
 desc "Hook our dotfiles into system-standard positions."
 task :install do
   linkables = Dir.glob('*/**{.symlink}')
-
-  skip_all = false
-  overwrite_all = false
-  backup_all = false
-
   linkables.each do |linkable|
-    overwrite = false
-    backup = false
-
     file = linkable.split('/').last.split('.symlink').last
     target = "#{ENV["HOME"]}/.#{file}"
 
     if File.exists?(target) || File.symlink?(target)
-      unless skip_all || overwrite_all || backup_all
-        puts "File already exists: #{target}, what do you want to do? [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all"
-        case STDIN.gets.chomp
-        when 'o' then overwrite = true
-        when 'b' then backup = true
-        when 'O' then overwrite_all = true
-        when 'B' then backup_all = true
-        when 'S' then skip_all = true
-        when 's' then next
-        end
-      end
-      FileUtils.rm_rf(target) if overwrite || overwrite_all
-      `mv "$HOME/.#{file}" "$HOME/.#{file}.backup"` if backup || backup_all
+      FileUtils.rm_rf(target)
     end
+
     `ln -s "$PWD/#{linkable}" "#{target}"`
   end
 
-  link_rbenv
-end
-
-def link_rbenv
-  source_files = Dir.glob('ruby/rbenv/*')
-  `mkdir -p $HOME/.rbenv`
-  source_files.each do |source|
-    source_name = source.split('/').last
-    FileUtils.rm_rf("#{ENV["HOME"]}/.rbenv/#{source_name}")
-    `ln -s "$PWD/#{source}" "$HOME/.rbenv/#{source_name}"`
-  end
+  link_default_gems
 end
 
 task :uninstall do
-
   Dir.glob('**/*.symlink').each do |linkable|
 
     file = linkable.split('/').last.split('.symlink').last
@@ -67,3 +37,14 @@ task :uninstall do
 end
 
 task :default => 'install'
+
+# Special case for default gems because uuugggghhhh
+def link_default_gems
+  target = "#{ENV["HOME"]}/.rbenv/default-gems"
+
+  if File.exists?(target)
+    FileUtils.rm_rf(target)
+  end
+
+  `ln -s "$PWD/ruby/default-gems.symlink" #{target}`
+end
