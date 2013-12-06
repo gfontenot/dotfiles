@@ -31,7 +31,7 @@ status_backend = sqlite
 
 [Repository MobileMe-Local]
 type = Maildir
-localfolders = ~/.mail/gordon-fontenot-me.com
+localfolders = ~/.mail/gordon.fontenot-me.com
 
 [Repository MobileMe-Remote]
 maxconnections = 1

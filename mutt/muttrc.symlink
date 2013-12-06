@@ -126,5 +126,5 @@ set spoolfile = "+gordon-thoughtbot.com/INBOX"
 
 # Multiple account config
 folder-hook gordon-thoughtbot.com/* source $ZSH/mutt/accounts/account.thoughtbot
-folder-hook gordon-fontenot-me.com/* source $ZSH/mutt/accounts/account.mobileme
+folder-hook gordon.fontenot-me.com/* source $ZSH/mutt/accounts/account.mobileme
 folder-hook gordon-fonten.io/* source $ZSH/mutt/accounts/account.fastmail
