@@ -1,155 +1,28 @@
 set nocompatible                  " Must come first because it changes other options.
-
-set rtp=~/.vim/bundle/vundle,$ZSH/vim,$VIMRUNTIME
-set spellfile=~/.vim/en.utf-8.add
-call vundle#rc()
-
-" Setup vundles
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-endwise'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'airblade/vim-rooter'
-Bundle 'rking/ag.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'rizzatti/funcoo.vim'
-Bundle 'rizzatti/dash.vim'
-Bundle 'itchyny/lightline.vim'
-
-" Simplenote
-Bundle 'mrtazz/simplenote.vim'
-let g:SimplenoteFiletype = "markdown"
-let g:SimplenoteVertical=1
-source ~/.simplenoterc
-
-" Cocoa specific plugins
-" Bundle 'msanders/cocoa.vim'
-" Bundle 'Rip-Rip/clang_complete'
-" Bundle 'llvm-mirror/lldb', {'rtp': 'utils/vim-lldb'}
-
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
-
-" Autoload changes from disk
-set autoread
-
-" Set up the color scheme
-set t_Co=256
-set background=dark
-colorscheme lucius
-LuciusDark
-
-" Set up status bar
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'mode_map': { 'c': 'NORMAL' },
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
-      \ },
-      \ 'component_function': {
-      \   'modified': 'MyModified',
-      \   'readonly': 'MyReadonly',
-      \   'fugitive': 'MyFugitive',
-      \   'filename': 'MyFilename',
-      \   'fileformat': 'MyFileformat',
-      \   'filetype': 'MyFiletype',
-      \   'fileencoding': 'MyFileencoding',
-      \   'mode': 'MyMode',
-      \ },
-      \ 'separator': { 'left': '⮀', 'right': '⮂' },
-      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
-      \ }
-
-function! MyModified()
-  return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
-endfunction
-
-function! MyReadonly()
-  return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? '⭤' : ''
-endfunction
-
-function! MyFilename()
-  return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-        \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
-        \  &ft == 'unite' ? unite#get_status_string() :
-        \  &ft == 'vimshell' ? substitute(b:vimshell.current_dir,expand('~'),'~','') :
-        \ '' != expand('%t') ? expand('%t') : '[No Name]') .
-        \ ('' != MyModified() ? ' ' . MyModified() : '')
-endfunction
-
-function! MyFugitive()
-  return &ft !~? 'vimfiler\|gundo' && exists('*fugitive#head') && strlen(fugitive#head()) ? fugitive#head() : ''
-endfunction
-
-function! MyFileformat()
-  return winwidth('.') > 70 ? &fileformat : ''
-endfunction
-
-function! MyFiletype()
-  return winwidth('.') > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
-endfunction
-
-function! MyFileencoding()
-  return winwidth('.') > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
-endfunction
-
-function! MyMode()
-  return winwidth('.') > 60 ? lightline#mode() : ''
-endfunction
-
-let g:ctrlp_user_command = 'ag --nogroup --nobreak --noheading --nocolor -g "" %s'
-
-" Highlight the 80 character column
-set colorcolumn=80
-
-" Map leader to space
-let mapleader = " "
-
-" Faster split navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
-" Open splits to the bottom right
-set splitbelow
-set splitright
-
-augroup vimrcEx
-  au!
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
-  autocmd FileType markdown setlocal textwidth=78
-
-  " Turn on spellcheck for specific filetypes
-  autocmd FileType text setlocal spell
-  autocmd FileType markdown setlocal spell
-  autocmd FileType gitcommit setlocal spell
-  autocmd FileType mail setlocal spell
-
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
-  " (happens when dropping a file on gvim).
-  autocmd BufReadPost *
-    \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal g`\"" |
-    \ endif
-augroup END
+set rtp+=$ZSH/vim
 
 set showcmd                       " Display incomplete commands.
-set showmode                      " Display the mode you're in.
-
 set backspace=indent,eol,start    " Intuitive backspacing.
-
-set hidden                        " Handle multiple buffers better.
+set hidden                        " Don't kill unwritten buffers when hidden
 
 set wildmenu                      " Enhanced command line completion.
 set wildmode=list:longest         " Complete files like a shell.
 
 set gdefault                      " default to global substitutions on lines
+
+set visualbell                    " No beeping.
+
+set nobackup                      " Don't make a backup before overwriting a file.
+set nowritebackup                 " And again.
+set noswapfile                    " Don't use swapfiles
+
+set tabstop=2                     " Global tab width.
+set shiftwidth=2                  " And again, related.
+set expandtab                     " Use spaces instead of tabs
+
+set wildignore+=_site\/*
 
 set ignorecase                    " Case-insensitive searching.
 set smartcase                     " But case-sensitive if expression contains a capital letter.
@@ -158,108 +31,35 @@ set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
 set showmatch                     " Show all matches
 
+" Highlight the 80 character column
+set colorcolumn=80
+
 set relativenumber                " Use relative line numbers
-set ruler                         " Show cursor position.
-
 set cursorline                    " Highlight the current line
-
-" Change cursor shape to an underscore  when in insert mode
-let &t_SI = "\<Esc>]50;CursorShape=2\x7"
-" Change back to a block in normal mode
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 set wrap                          " Turn on line wrapping.
 set scrolloff=3                   " Show 3 lines of context around the cursor.
 
 set title                         " Set the terminal's title
 
-set visualbell                    " No beeping.
-
-set nobackup                      " Don't make a backup before overwriting a file.
-set nowritebackup                 " And again.
-set noswapfile                    " Don't use swapfiles
-
-set tabstop=2                    " Global tab width.
-set shiftwidth=2                 " And again, related.
-set expandtab                    " Use spaces instead of tabs
-
-set laststatus=2                  " Show the status line all the time
-" Useful status information at bottom of screen
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
-
-set wildignore+=_site\/*
-
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
 
-nmap <leader>d <Plug>DashGlobalSearch
+" Change cursor shape to an underscore  when in insert mode
+let &t_SI = "\<Esc>]50;CursorShape=2\x7"
+" Change back to a block in normal mode
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
-" Map <leader><leader> to switch to previous file
-nnoremap <leader><leader> <c-^>
-
-" Tab mappings.
-map <leader>tt :tabnew<cr>
-map <leader>tc :tabclose<cr>
-map <leader>to :tabonly<cr>
-map <leader>tn :tabnext<cr>
-map <leader>tp :tabprevious<cr>
-
-" Remap / so that we always use the /v option when searching
-nnoremap / /\v
-vnoremap / /\v
-
-" Set <leader>c to clear search highlighting
-nnoremap <leader>c :noh<cr>
-
-" Map <tab> to match bracket pairs
-nnoremap <tab> %
-vnoremap <tab> %
-
-" Treat <li> and <p> tags like the block tags they are
-let g:html_indent_tags = 'li\|p'
-
-" Improve syntax highlighting
-au BufRead,BufNewFile Gemfile set filetype=ruby
-au BufRead,BufNewFile *.md set filetype=markdown
-au BufNewFile,BufRead Podfile,*.podspec set filetype=ruby
-
-" Treat Objective-C properly
-au BufNewFile,BufRead *.m set filetype=objc
-au BufNewFile,BufRead *.h set filetype=objc
-au FileType objc setlocal tabstop=4
-au FileType objc setlocal shiftwidth=4
-
-" Set up some utility functions for swapping buffers in splits
-function! MarkWindowSwap()
-    let g:markedWinNum = winnr()
-endfunction
-
-function! DoWindowSwap()
-    "Mark destination
-    let curNum = winnr()
-    let curBuf = bufnr( "%" )
-    exe g:markedWinNum . "wincmd w"
-    "Switch to source and shuffle dest->source
-    let markedBuf = bufnr( "%" )
-    "Hide and open so that we aren't prompted and keep history
-    exe 'hide buf' curBuf
-    "Switch to dest and shuffle source->dest
-    exe curNum . "wincmd w"
-    "Hide and open so that we aren't prompted and keep history
-    exe 'hide buf' markedBuf
-endfunction
-
-nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
-nmap <silent> <leader>pw :call DoWindowSwap()<CR>
-
-" Indent if we're at the beginning of a line. Else, do completion.
-function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-p>"
-    endif
-endfunction
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <s-tab> <c-n>
+source $ZSH/vim/config/plugins.vim
+source $ZSH/vim/config/keybindings.vim
+source $ZSH/vim/config/simplenote.vim
+source $ZSH/vim/config/cocoa.vim
+source $ZSH/vim/config/colorscheme.vim
+source $ZSH/vim/config/status_bar.vim
+source $ZSH/vim/config/split_swapping.vim
+source $ZSH/vim/config/tab_completion.vim
+source $ZSH/vim/config/spellcheck.vim
+source $ZSH/vim/config/silver_searcher.vim
+source $ZSH/vim/config/splits.vim
+source $ZSH/vim/config/filetypes.vim
+source $ZSH/vim/config/textwidth.vim
