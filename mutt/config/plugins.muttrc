@@ -1,0 +1,10 @@
+# urlview --------------------------------------------
+macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
+
+# Omnifocus ------------------------------------------
+macro index,pager \cT <pipe-message>'$ZSH/mutt/plugins/email-to-omnifocus.rb'<enter> 'Create Omnifocus task from message'
+
+# Contacts completion --------------------------------
+set query_command = "contacts -Sf '%eTOKEN%n' '%s' | sed -e 's/TOKEN/\t/g'"
+bind editor <Tab> complete-query
+bind editor ^T    complete

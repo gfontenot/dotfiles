@@ -1,0 +1,13 @@
+macro index \Cr \
+  "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" \
+  "mark all messages as read"
+
+macro index O \
+  "<shell-escape>offlineimap -q<enter>" \
+  "sync all mail"
+
+macro index o \
+  "<shell-escape>offlineimap -qf INBOX<enter>" \
+  "sync inbox"
+
+macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"

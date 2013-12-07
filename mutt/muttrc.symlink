@@ -21,8 +21,16 @@ set beep_new             # bell on new mails
 set pipe_decode          # strip headers and eval mimes when piping
 set thorough_search      # strip headers and eval mimes before searching
 
+# Open thoughtbot by default --------------------------
+set spoolfile = "+gordon-thoughtbot.com/INBOX"
+
+# Multiple account config
+folder-hook gordon-thoughtbot.com/* source $ZSH/mutt/accounts/account.thoughtbot
+folder-hook gordon.fontenot-me.com/* source $ZSH/mutt/accounts/account.mobileme
+folder-hook gordon-fonten.io/* source $ZSH/mutt/accounts/account.fastmail
+
 # Color scheme ---------------------------------------
-source $ZSH/mutt/config/mutt-colors-tomorrow-night-eighties-16.muttrc
+source $ZSH/mutt/colors/tomorrow-night-eighties-16.muttrc
 
 # Status Bar -----------------------------------------
 set status_chars  = " *%A"
@@ -34,43 +42,13 @@ unignore from: to: cc: date: subject:   # show only these
 unhdr_order *                           # some distros order things by default
 hdr_order from: to: cc: date: subject:  # and in this order
 
-# Contacts completion --------------------------------
-set query_command = "contacts -Sf '%eTOKEN%n' '%s' | sed -e 's/TOKEN/\t/g'"
-bind editor <Tab> complete-query
-bind editor ^T    complete
-
 # Index View Options ---------------------------------
 set date_format = "%m/%d"
 set index_format = "[%Z]  %D  %-20.20F  %s"
 set sort = threads                         # like gmail
-# set sort_aux = reverse-last-date-received  # like gmail
 set uncollapse_jump                        # don't collapse on an unread message
 set sort_re                                # thread based on regex
 set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
-
-# Don't use d at all. Accounts have 'a' mapped to the right thing.
-bind index,pager d noop
-
-# Index Key Bindings ---------------------------------
-bind index gg       first-entry
-bind index G        last-entry
-
-bind index R        group-reply
-bind index <tab>    sync-mailbox
-bind index <space>  collapse-thread
-
-# Ctrl-R to mark all as read
-macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
-
-# Sync email
-macro index O "<shell-escape>offlineimap -q<enter>"        "run offlineimap to sync all mail"
-macro index o "<shell-escape>offlineimap -qf INBOX<enter>" "run offlineimap to sync inbox"
-
-# Saner copy/move dialogs
-macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
-
-# Search with notmuch
-macro index S "<enter-command>unset wait_key<enter><shell-escape>$ZSH/notmuch/mutt-notmuch.py -G ~/.mail/temporary/search<enter><change-folder-readonly>+temporary/search<enter>" "search mail (using notmuch)"
 
 # Pager View Options ---------------------------------
 set pager_index_lines = 10 # number of index lines to show
@@ -84,47 +62,7 @@ set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
 auto_view text/html
 alternative_order text/plain text/enriched text/html
 
-# Pager Key Bindings ---------------------------------
-bind pager k  previous-line
-bind pager j  next-line
-bind pager gg top
-bind pager G  bottom
-
-bind pager R  group-reply
-
-# View attachments properly.
-bind attach <return> view-mailcap
-
-# Compose View Options -------------------------------
-set realname = "Gordon Fontenot"     # who am i?
-set envelope_from                    # which from?
-set sig_dashes                       # dashes before sig
-set edit_headers                     # show headers when composing
-set fast_reply                       # skip to compose when replying
-set askcc                            # ask for CC:
-set fcc_attach                       # save attachments with the body
-unset mime_forward                   # forward attachments as part of body
-set forward_format = "Fwd: %s"       # format of subject when forwarding
-set forward_decode                   # decode when forwarding
-set attribution = "On %d, %n wrote:" # format of quoting header
-set reply_to                         # reply to Reply to: field
-set reverse_name                     # reply as whomever it was to
-set include                          # include message in replies
-set forward_quote                    # include message in forwards
-
-set sendmail_wait = 0
-unset record
-
-set editor = "vim +:silent+/^$ +:noh"
-
-# Plugins
-macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
-macro index,pager \cT <pipe-message>'$ZSH/mutt/plugins/email-to-omnifocus.rb'<enter> 'Create Omnifocus task from message'
-
-# Open thoughtbot by default --------------------------
-set spoolfile = "+gordon-thoughtbot.com/INBOX"
-
-# Multiple account config
-folder-hook gordon-thoughtbot.com/* source $ZSH/mutt/accounts/account.thoughtbot
-folder-hook gordon.fontenot-me.com/* source $ZSH/mutt/accounts/account.mobileme
-folder-hook gordon-fonten.io/* source $ZSH/mutt/accounts/account.fastmail
+source $ZSH/mutt/config/keybindings.muttrc
+source $ZSH/mutt/config/macros.muttrc
+source $ZSH/mutt/config/compose_settings.muttrc
+source $ZSH/mutt/config/plugins.muttrc
