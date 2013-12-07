@@ -17,6 +17,12 @@ task :install do
   link_default_gems
 end
 
+desc "Install dotfiles, then install homebrew and default applications"
+task :complete => [:install] do
+  install_homebrew
+  brew_bundle
+end
+
 task :uninstall do
   Dir.glob('**/*.symlink').each do |linkable|
 
@@ -47,4 +53,13 @@ def link_default_gems
   end
 
   `ln -s "$PWD/ruby/default-gems.symlink" #{target}`
+end
+
+def install_homebrew
+  `ruby <(curl -fsS https://raw.github.com/mxcl/homebrew/go/install)`
+  `brew update`
+end
+
+def brew_bundle
+  `brew bundle`
 end
