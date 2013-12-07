@@ -1,6 +1,6 @@
 set nocompatible                  " Must come first because it changes other options.
 
-set rtp+=~/.vim/bundle/vundle
+set rtp=~/.vim/bundle/vundle,$ZSH/vim,$VIMRUNTIME
 set spellfile=~/.vim/en.utf-8.add
 call vundle#rc()
 
