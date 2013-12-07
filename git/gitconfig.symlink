@@ -13,6 +13,8 @@
 [alias]
   wtf = !$ZSH/bin/git-wtf
   rank = !$ZSH/bin/git-rank-contributers
+  review = !$ZSH/bin/git-review
+
   count = !git shortlog -sn
 
   amend = commit --amend -C HEAD
@@ -23,7 +25,6 @@
   unstaged = difftool
 
   current-branch = rev-parse --abbrev-ref HEAD
-  review = "!sh -c 'SHA=${1:-HEAD}; BRANCH=${2:-master}; if [ $SHA == $BRANCH ] ; then SHA=HEAD; fi; BASE_SHA=$(git merge-base $BRANCH $SHA); git difftool $BASE_SHA $SHA;' -"
 
 [color]
   ui = true
