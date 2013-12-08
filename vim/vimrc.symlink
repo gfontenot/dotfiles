@@ -3,6 +3,10 @@ syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 set rtp+=$ZSH/vim
 
+for fpath in split(globpath('$ZSH/vim/config', '*.vim'), '\n')
+  exec 'source' fpath
+endfor
+
 set showcmd                       " Display incomplete commands.
 set backspace=indent,eol,start    " Intuitive backspacing.
 set hidden                        " Don't kill unwritten buffers when hidden
@@ -49,17 +53,3 @@ set list listchars=tab:»·,trail:·
 let &t_SI = "\<Esc>]50;CursorShape=2\x7"
 " Change back to a block in normal mode
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-
-source $ZSH/vim/config/plugins.vim
-source $ZSH/vim/config/keybindings.vim
-source $ZSH/vim/config/simplenote.vim
-source $ZSH/vim/config/cocoa.vim
-source $ZSH/vim/config/colorscheme.vim
-source $ZSH/vim/config/status_bar.vim
-source $ZSH/vim/config/split_swapping.vim
-source $ZSH/vim/config/tab_completion.vim
-source $ZSH/vim/config/spellcheck.vim
-source $ZSH/vim/config/silver_searcher.vim
-source $ZSH/vim/config/splits.vim
-source $ZSH/vim/config/filetypes.vim
-source $ZSH/vim/config/textwidth.vim
