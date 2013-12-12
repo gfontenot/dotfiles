@@ -8,8 +8,8 @@
 # Originally taken from the Black Pixel blog:
 # http://blackpixel.com/blog/2012/11/code-review-kaleidoscope.html
 
-local SHA=${1:-HEAD}
-local BRANCH=${2:-master}
+SHA=${1:-HEAD}
+BRANCH=${2:-master}
 
 if [ $SHA == $BRANCH ]; then
   SHA=HEAD
