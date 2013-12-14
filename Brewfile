@@ -32,3 +32,31 @@ install heroku-toolbelt
 install the_silver_searcher
 install haskell-platform
 install git-update
+
+## ----------------------------
+#      OS X Applications
+## ----------------------------
+
+tap phinze/homebrew-cask
+
+install brew-cask
+
+cask install adium
+cask install acorn
+cask install alfred
+cask install bartender
+cask install dash
+cask install delivery-status
+cask install dropbox
+cask install fantastical
+cask install iterm2
+cask install kaleidoscope
+cask install moom
+cask install netnewswire
+cask install omnifocus
+cask install onepassword
+cask install quickradar
+cask install rdio
+cask install sim-pholders
+cask install sonos
+cask install transmission
