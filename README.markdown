@@ -1,83 +1,50 @@
-# gfontenot's dotfiles
+# gfontenot's dotfiles #
 
-## dotfiles
+A user's dotfiles are a collection of configurations and utilities used to
+work from day to day. These are mine.
 
-Your dotfiles are how you personalize your system. These are mine. These were 
-originally forked from [holman](http://www.github.com/holman), but I've modified 
-some stuff, and pulled from other sources, such as pulling the prompt style from 
-[Ben Hoskings](https://github.com/benhoskings/dot-files). I removed a lot of the 
-stuff I had no use for from Holman's dotfiles, and will be adding more of my own 
-customizations as I go.
+## Organization ##
 
-## install
+These dotfiles were initially forked from [holman][]'s dotfiles, and so are
+laid out in a similar fashion. I prefer grouping my various configurations by
+tool, and breaking up those configurations into modular pieces wherever
+possible. My Vim configuration is a good example of this.
 
-- `git clone git://github.com/holman/dotfiles ~/.dotfiles`
-- `cd ~/.dotfiles`
-- `rake install`
+[holman]: https://github.com/holman/dotfiles
 
-The install rake task will symlink the appropriate files in `.dotfiles` to your
-home directory. Everything is configured and tweaked within `~/.dotfiles`,
-though.
+- Any files ending in `.symlink` will be symlinked into your home directory.
+  So `git/gitconfig.symlink` gets symlinked to `.gitconfig`.
+- Any file ending in `.zsh` will be sourced by the main zsh configuration
+- Any file inside `vim/config` ending in `.vim` will be sourced by the main
+  Vim configuration
 
-The main file you'll want to change right off the bat is `zsh/zshrc.symlink`,
-which sets up a few paths that'll be different on your particular machine.
+## Installation ##
 
-## topical
+Running `rake` will move all the files into place. It's a sledgehammer,
+honestly, so you might want to be careful. It will remove existing files at
+that location and replace them with the ones inside this repo.
 
-Everything's built around topic areas. If you're adding a new area to your
-forked dotfiles — say, "Java" — you can simply add a `java` directory and put
-files in there. Anything with an extension of `.zsh` will get automatically
-included into your shell. Anything with an extension of `.symlink` will get
-symlinked without extension into `$HOME` when you run `rake install`.
+You can also run `brew bundle` to install the applications listed in the
+`Brewfile`.
 
-## what's inside
+## Interesting things ##
 
-A lot of stuff. Seriously, a lot of stuff. Check them out in the file browser
-above and see what components may mesh up with you. Fork it, remove what you
-don't use, and build on what you do use.
+I use Vim for everything. Specifically MacVim. `vim` has been aliased to `mvim
+-v` because I use MacVim in the terminal. I'm aware that I'm insane. I also
+have a little script `e` in my bin. `e` allows me to open the current dir or a
+specified file in `$EDITOR`. That was supper useful when I was constantly
+switching text editors every week. Now it's just a force of habit, and it's
+also 2 fewer keystrokes than typing `vim` every time.
 
-A couple great ideas and utilities from Holman:
+Echoing the `e` command, I have an alias for `x` to open the current directory
+with Xcode. No idea how often I type that one every day, but it's pretty
+awesome.
 
- - `c` and `h` shortcuts for jumping to my projects, or home folder, respectively.
- - `dotedit` and `dotcd` for editing or jumping to these files
- - `e` as an alias for whatever your current `EDITOR` is set to.
+I use Mutt for email (see above disclaimer about sanity). I _really_ like it,
+but it can be a lot to deal with during setup. If you are looking to set up
+Mutt, my dotfiles might help get you there. But I would also recommend reading
+[Pat Brisbin's blog post][brisbin-mutt] on his setup, as well as
+[The Homely Mutt][homely-mutt].
 
-A couple of my additions include:
-
- - `post` and `publish`, for use with a Jekyll blog for creating or publishing new
-   blog posts.
- - `release` for assigning `git-tags` to a repo, bumping the version number and
-   marketing number for a Mac or iOS app
-
-## components
-
-There's a few special files in the hierarchy.
-
-- **bin/**: Anything in `bin/` will get added to your `$PATH` and be made
-  available everywhere.
-- **topic/\*.zsh**: Any files ending in `.zsh` get loaded into your
-  environment.
-- **topic/\*.symlink**: Any files ending in `*.symlink` get symlinked into
-  your `$HOME`. This is so you can keep all of those versioned in your dotfiles
-  but still keep those autoloaded files in your home directory. These get
-  symlinked in when you run `rake install`.
-- **topic/\*.completion.sh**: Any files ending in `completion.sh` get loaded
-  last so that they get loaded after we set up zsh autocomplete functions.
-
-## add-ons
-
-There are a few things I use to make my life awesome. They're not a required
-dependency, but if you install them they'll make your life a bit more like a
-bubble bath.
-
-- If you want some more colors for things like `ls`, install grc: `brew install
-  grc`.
-- If you install the excellent [rvm](http://rvm.beginrescueend.com) to manage
-  multiple rubies, your current branch will show up in the prompt. Bonus.
-
-## bugs
-
-I want this to work for everyone; that means when you clone it down it should
-work for you even though you may not have `rvm` installed, for example. That
-said, I do use this as *my* dotfiles, so there's a good chance I may break
-something if I forget to make a check for a dependency.
+[brisbin-mutt]: http://pbrisbin.com/posts/mutt_gmail_offlineimap/
+[homely-mutt]: http://stevelosh.com/blog/2012/10/the-homely-mutt/
