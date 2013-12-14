@@ -11,11 +11,6 @@
   path = ~/.gitconfig-github
 
 [alias]
-  wtf = !$ZSH/bin/git-wtf
-  rank = !$ZSH/bin/git-rank-contributers
-  review = !$ZSH/bin/git-review
-  branch-by-time = !$ZSH/bin/git-branch-by-time
-
   count = !git shortlog -sn
 
   amend = commit --amend -C HEAD
@@ -54,6 +49,9 @@
 [push]
   default = tracking
 
+[credential]
+  helper = osxkeychain
+
 # Kaleidoscope
 
 [difftool "Kaleidoscope"]
@@ -67,7 +65,3 @@
   trustExitCode = true
 [merge]
   tool = Kaleidoscope
-[ghi]
-  token = <token>
-[credential]
-  helper = osxkeychain
