@@ -3,7 +3,7 @@ tap gfontenot/gitupdate
 
 # System stuff
 install zsh
-install git
+install git --without-completions
 install hub
 install macvim
 
