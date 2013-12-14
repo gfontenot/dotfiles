@@ -1,3 +1,6 @@
+# Taps
+tap gfontenot/gitupdate
+
 # System stuff
 install zsh
 install git
@@ -25,7 +28,7 @@ install contacts
 install lynx
 
 # Misc
-
 install heroku-toolbelt
 install the_silver_searcher
 install haskell-platform
+install git-update

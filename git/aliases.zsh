@@ -12,7 +12,7 @@ alias gcm='g commit -m'
 alias gco='g checkout'
 alias gp='g push'
 alias gmf='g merge --ff-only'
-alias gup='g smart-pull && g remote prune origin'
+alias gup='g update && g remote prune origin'
 alias gsup='g submodule update --init --recursive'
 
 # log aliases
