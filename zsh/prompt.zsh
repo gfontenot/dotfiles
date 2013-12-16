@@ -1,11 +1,11 @@
-autoload colors && colors
+autoload -U colors && colors
 
 project_pwd() {
   echo $PWD | sed -e "s/\/Users\/$USER/~/" -e "s/~\/Code\/\([^\/]*\)/\\1/"
 }
 
 ruby_version() {
-  echo " $(ruby -v | awk '{print $2}')"
+  echo " $(rbenv version-name)"
 }
 
 export PROMPT=$'%{\e[0;%(?.32.31)m%}❯%{$reset_color%} '
