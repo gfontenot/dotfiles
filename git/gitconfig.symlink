@@ -49,7 +49,7 @@
   submodule = 1
 
 [push]
-  default = tracking
+  default = current
 
 [credential]
   helper = osxkeychain
