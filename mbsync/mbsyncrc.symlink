@@ -8,7 +8,7 @@ SyncState *
 IMAPAccount MobileMe
 Host imap.mail.me.com
 User gordon.fontenot@me.com
-PassCmd "keychain.py gordon.fontenot@me.com"
+PassCmd "~/Code/dotfiles/bin/keychain.py gordon.fontenot@me.com"
 UseIMAPS yes
 CertificateFile ~/Code/dotfiles/msmtp/Equifax_Secure_CA.cert
 
@@ -31,7 +31,7 @@ Pattern *
 IMAPAccount FastMail
 Host mail.messagingengine.com
 User gfontenot@fastmail.fm
-PassCmd "keychain.py gfontenot@fastmail.fm"
+PassCmd "~/Code/dotfiles/bin/keychain.py gfontenot@fastmail.fm"
 UseIMAPS yes
 CertificateFile ~/Code/dotfiles/msmtp/Equifax_Secure_CA.cert
 
@@ -75,7 +75,7 @@ Channel FastMail-Archive
 IMAPAccount thoughtbot
 Host imap.gmail.com
 User gordon@thoughtbot.com
-PassCmd "keychain.py gordon@thoughtbot.com"
+PassCmd "~/Code/dotfiles/bin/keychain.py gordon@thoughtbot.com"
 UseIMAPS yes
 CertificateFile ~/Code/dotfiles/msmtp/Equifax_Secure_CA.cert
 
