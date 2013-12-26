@@ -21,7 +21,7 @@ install mogenerator
 # Email
 install msmtp
 install mutt
-install offline-imap
+install mbsync
 install notmuch
 install urlview
 install contacts

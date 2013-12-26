@@ -1,0 +1,123 @@
+Create Both
+SyncState *
+
+##############################################################################
+## MobileMe
+##############################################################################
+
+IMAPAccount MobileMe
+Host imap.mail.me.com
+User gordon.fontenot@me.com
+PassCmd "keychain.py gordon.fontenot@me.com"
+UseIMAPS yes
+CertificateFile ~/Code/dotfiles/msmtp/Equifax_Secure_CA.cert
+
+IMAPStore MobileMe-Remote
+Account MobileMe
+
+MaildirStore MobileMe-Local
+Path ~/.mail/gordon.fontenot-me.com/
+Inbox ~/.mail/gordon.fontenot-me.com/INBOX
+
+Channel MobileMe
+Master :MobileMe-Remote:
+Slave :MobileMe-Local:
+Pattern *
+
+##############################################################################
+## FastMail
+##############################################################################
+
+IMAPAccount FastMail
+Host mail.messagingengine.com
+User gfontenot@fastmail.fm
+PassCmd "keychain.py gfontenot@fastmail.fm"
+UseIMAPS yes
+CertificateFile ~/Code/dotfiles/msmtp/Equifax_Secure_CA.cert
+
+IMAPStore FastMail-Remote
+Account FastMail
+
+MaildirStore FastMail-Local
+Path ~/.mail/gordon-fonten.io/
+Inbox ~/.mail/gordon-fonten.io/INBOX
+
+Channel FastMail-Drafts
+Master :FastMail-Remote:INBOX/Drafts
+Slave :FastMail-Local:Drafts
+Pattern *
+
+Channel FastMail-Sent
+Master ":FastMail-Remote:INBOX/Sent Items"
+Slave :FastMail-Local:Sent
+Pattern *
+
+Channel FastMail-Archive
+Master :FastMail-Remote:INBOX/Archive
+Slave :FastMail-Local:Archive
+Pattern *
+
+Channel FastMail-INBOX
+Master :FastMail-Remote:INBOX
+Slave :FastMail-Local:INBOX
+Pattern %
+
+Group FastMail
+Channel FastMail-INBOX
+Channel FastMail-Drafts
+Channel FastMail-Sent
+Channel FastMail-Archive
+
+##############################################################################
+## thoughtbot
+##############################################################################
+
+IMAPAccount thoughtbot
+Host imap.gmail.com
+User gordon@thoughtbot.com
+PassCmd "keychain.py gordon@thoughtbot.com"
+UseIMAPS yes
+CertificateFile ~/Code/dotfiles/msmtp/Equifax_Secure_CA.cert
+
+IMAPStore thoughtbot-Remote
+Account thoughtbot
+
+MaildirStore thoughtbot-Local
+Path ~/.mail/gordon-thoughtbot.com/
+Inbox ~/.mail/gordon-thoughtbot.com/INBOX
+
+Channel thoughtbot-INBOX
+Master :thoughtbot-Remote:INBOX
+Slave :thoughtbot-Local:INBOX
+
+Channel thoughtbot-Drafts
+Master :thoughtbot-Remote:[Gmail]/Drafts
+Slave :thoughtbot-Local:Drafts
+
+Channel thoughtbot-Sent
+Master ":thoughtbot-Remote:[Gmail]/Sent Mail"
+Slave :thoughtbot-Local:Sent
+
+Channel thoughtbot-Archive
+Master ":thoughtbot-Remote:[Gmail]/All Mail"
+Slave :thoughtbot-Local:Archive
+
+Channel thoughtbot-BuildPhase
+Master ":thoughtbot-Remote:Build Phase"
+Slave ":thoughtbot-Local:Build Phase"
+
+Group thoughtbot
+Channel thoughtbot-INBOX
+Channel thoughtbot-Drafts
+Channel thoughtbot-Sent
+Channel thoughtbot-Archive
+Channel thoughtbot-BuildPhase
+
+##############################################################################
+## Inbox sync
+##############################################################################
+
+Group INBOXES
+Channel thoughtbot-INBOX
+Channel FastMail-INBOX
+Channel MobileMe:INBOX

@@ -2,11 +2,11 @@ set from = "gordon@thoughtbot.com"
 set signature = $ZSH/mutt/accounts/signature.thoughtbot
 set sendmail = "/usr/local/bin/msmtp -a thoughtbot"
 set spoolfile = "+gordon-thoughtbot.com/INBOX"
-set mbox = "+gordon-thoughtbot.com/archive"
-set postponed = "+gordon-thoughtbot.com/drafts"
+set mbox = "+gordon-thoughtbot.com/Archive"
+set postponed = "+gordon-thoughtbot.com/Drafts"
 
 macro index gi "<change-folder>+gordon-thoughtbot.com/INBOX<enter>" "Go to the INBOX"
-macro index ga "<change-folder>+gordon-thoughtbot.com/archive<enter>" "Go to the archive"
+macro index ga "<change-folder>+gordon-thoughtbot.com/Archive<enter>" "Go to the archive"
 macro index gt "<change-folder>+gordon.fontenot-me.com/INBOX<enter>" "toggle account"
 macro index gp "<change-folder>+gordon-fonten.io/INBOX<enter>" "switch to FastMail account"
 

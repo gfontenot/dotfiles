@@ -3,11 +3,11 @@ macro index \Cr \
   "mark all messages as read"
 
 macro index O \
-  "<shell-escape>offlineimap -q<enter>" \
+  "<shell-escape>mbsync -q -a<enter>" \
   "sync all mail"
 
 macro index o \
-  "<shell-escape>offlineimap -qf INBOX<enter>" \
+  "<shell-escape>mbsync -q INBOXES<enter>" \
   "sync inbox"
 
 macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
