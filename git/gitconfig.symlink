@@ -22,6 +22,8 @@
 
   current-branch = rev-parse --abbrev-ref HEAD
 
+  pr = pull-request
+
 [color]
   ui = true
   wtf = true
