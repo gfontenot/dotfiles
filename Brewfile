@@ -13,6 +13,7 @@ install ruby-build
 install rbenv-binstubs
 install rbenv-default-gems
 install rbenv-gem-rehash
+install rbenv-aliases
 
 # Objective-C Development
 install class-dump
