@@ -66,3 +66,4 @@ source $ZSH/mutt/config/keybindings.muttrc
 source $ZSH/mutt/config/macros.muttrc
 source $ZSH/mutt/config/compose_settings.muttrc
 source $ZSH/mutt/config/plugins.muttrc
+source $ZSH/mutt/config/mailing_lists.muttrc
