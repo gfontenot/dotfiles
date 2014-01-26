@@ -49,6 +49,11 @@ set title                         " Set the terminal's title
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
 
+" Configure persistent undo
+set undofile
+set undolevels=1000
+set undoreload=10000
+
 " Change cursor shape to an underscore  when in insert mode
 let &t_SI = "\<Esc>]50;CursorShape=2\x7"
 " Change back to a block in normal mode

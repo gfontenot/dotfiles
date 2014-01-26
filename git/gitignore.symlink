@@ -3,6 +3,7 @@
 
 # Vim
 *.swp
+*.un~
 .netrwhist
 
 # Jekyll
