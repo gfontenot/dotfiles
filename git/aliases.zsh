@@ -1,6 +1,6 @@
-# Use `hub` as our git wrapper:
-#   http://defunkt.github.com/hub/
-alias g=hub
+# Use `gh` as our git wrapper:
+#   https://github.com/jingweno/gh
+alias g=gh
 
 # alias straight to difftool for quick access
 alias gdiff='g diff'

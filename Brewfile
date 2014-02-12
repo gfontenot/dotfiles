@@ -1,10 +1,11 @@
 # Taps
 tap gfontenot/gitupdate
+tap jingweno/gh
 
 # System stuff
 install zsh
 install git --without-completions
-install hub
+install gh
 install macvim
 
 # rbenv and plugins
