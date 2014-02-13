@@ -1,6 +1,3 @@
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-
 " Required
 Bundle 'gmarik/vundle'
 

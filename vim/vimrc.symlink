@@ -1,6 +1,11 @@
 set nocompatible                  " Must come first because it changes other options.
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
+
+" Make sure Vundle is running before anything else
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
 set rtp+=$ZSH/vim
 
 for fpath in split(globpath('$ZSH/vim/config', '*.vim'), '\n')
