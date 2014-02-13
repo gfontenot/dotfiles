@@ -1,6 +1,7 @@
 # Use `gh` as our git wrapper:
 #   https://github.com/jingweno/gh
 alias g=gh
+alias gitsh='gitsh --git gh'
 
 # alias straight to difftool for quick access
 alias gdiff='g diff'

@@ -67,3 +67,6 @@
   trustExitCode = true
 [merge]
   tool = Kaleidoscope
+
+[gitsh]
+  defaultCommand = status -sb
