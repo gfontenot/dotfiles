@@ -5,4 +5,5 @@ augroup filetypes
   autocmd BufRead,BufNewFile *.md set filetype=markdown
   autocmd BufNewFile,BufRead Podfile,*.podspec set filetype=ruby
   autocmd BufNewFile,BufRead *.muttrc set filetype=muttrc
+  autocmd BufNewFile,BufRead *liftoffrc set filetype=yaml
 augroup END
