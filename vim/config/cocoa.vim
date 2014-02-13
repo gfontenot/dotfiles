@@ -2,6 +2,8 @@
 " Bundle 'msanders/cocoa.vim'
 " Bundle 'Rip-Rip/clang_complete'
 " Bundle 'llvm-mirror/lldb', {'rtp': 'utils/vim-lldb'}
+Bundle 'Keithbsmiley/specta.vim'
+Bundle 'b4winckler/vim-objc'
 
 augroup cocoa
   autocmd!
