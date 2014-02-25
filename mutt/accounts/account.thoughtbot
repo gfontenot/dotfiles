@@ -13,4 +13,6 @@ macro index gp "<change-folder>+gordon-fonten.io/INBOX<enter>" "switch to FastMa
 macro index,pager a "<delete-message>"
 macro index,pager A "<delete-thread>"
 
+set pgp_sign_as = 2DA8F9CE
+
 # vim: ft=muttrc
