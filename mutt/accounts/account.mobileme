@@ -14,5 +14,4 @@ macro index,pager a "<save-message>+gordon.fontenot-me.com/Archive<enter>" "Arch
 macro index,pager A "<tag-thread>;s+gordon.fontenot-me.com/Archive<enter>" "Archive the thread"
 macro index,pager ! "<save-message>+gordon.fontenot-me.com/Junk<enter>" "Mark the message as spam"
 
-set pgp_sign_as = 7925EB3C
 # vim: ft=muttrc
