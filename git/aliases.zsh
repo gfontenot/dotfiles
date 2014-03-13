@@ -18,6 +18,7 @@ alias gsup='g submodule update --init --recursive'
 
 # log aliases
 alias gl='g log --format=custom --graph'
+alias glb='gl HEAD --not master'
 
 # git rm deleted files
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
