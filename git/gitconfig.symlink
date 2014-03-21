@@ -24,6 +24,9 @@
 
   pr = pull-request
 
+[fetch]
+  prune = true
+
 [color]
   ui = true
   wtf = true
