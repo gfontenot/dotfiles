@@ -11,7 +11,9 @@
   path = ~/.gitconfig-github
 
 [alias]
-  count = !git shortlog -sn
+  count = shortlog -sn --no-merges
+  standup = shortlog --since=yesterday
+  today = shortlog --since=midnight
 
   amend = commit --amend -C HEAD
   credit = commit --amend --author "$1 <$2>" -C HEAD
