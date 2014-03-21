@@ -6,4 +6,5 @@ augroup filetypes
   autocmd BufNewFile,BufRead Podfile,*.podspec set filetype=ruby
   autocmd BufNewFile,BufRead *.muttrc set filetype=muttrc
   autocmd BufNewFile,BufRead *liftoffrc set filetype=yaml
+  autocmd BufNewFile,BufRead PULLREQ_EDITMSG set filetype=gitcommit
 augroup END
