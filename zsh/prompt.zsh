@@ -1,41 +1,45 @@
 autoload -U colors && colors
+prompt_opts=( cr subst percent )
 
-export PROMPT=$'%{\e[0;%(?.32.31)m%}❯%{$reset_color%} '
-
-export RPROMPT=$'%c $(git_info)$(ruby_version)'
+export PROMPT='%(?.%F{green}.%F{red})❯%f '
+export RPROMPT=$'%c $(git_info)'
 
 git_info() {
-  if [ "$(git_dir)" ]; then
-    echo "$(current_branch) $(current_sha)$(rebase_info) $(repo_dirty)$(needs_push)"
+  if git_dir &>/dev/null; then
+    echo "$(current_branch)$(rebase_info)$(repo_dirty)$(needs_push)$(current_sha)"
   fi
 }
 
 ruby_version() {
-  echo "$(rbenv version-name)"
+  rbenv version-name
 }
 
 current_branch() {
-  if [ "$(current_branch_name)" ]; then
-    echo "%{$fg[blue]%}$(current_branch_name)%{$reset_color%}"
-  else
+  local branch_name="$(current_branch_name)"
+
+  if [ "$branch_name" = "HEAD" ]; then
     echo "%{$fg[red]%}DETACHED%{$reset_color%}"
+  else
+    echo "%{$fg[blue]%}$branch_name%{$reset_color%}"
   fi
 }
 
 current_sha() {
-  echo "%{$fg[yellow]%}$(git rev-parse --short HEAD)%{$reset_color%}"
+  echo " %{$fg[yellow]%}$(git rev-parse --short HEAD)%{$reset_color%}"
 }
 
 rebase_info() {
-  if [ -f "$(git_dir)/BISECT_LOG" ]; then
+  local git_dir="$(git_dir)"
+
+  if [ -f "$git_dir/BISECT_LOG" ]; then
     echo "+bisect"
-  elif [ -f "$(git_dir)/MERGE_HEAD" ]; then
+  elif [ -f "$git_dir/MERGE_HEAD" ]; then
     echo "+merge"
   else
-    for file in 'rebase' 'rebase-apply' 'rebase-merge'; do
-      if [ -f "$(git_dir)/$file" ]; then
+    for file in rebase rebase-apply rebase-merge; do
+      if [ -e "$git_dir/$file" ]; then
         echo "+rebase"
-        continue
+        break
       fi
     done
   fi
@@ -43,13 +47,13 @@ rebase_info() {
 
 repo_dirty() {
   if [[ ! $(git status 2>/dev/null) =~ "directory clean" ]]; then
-    echo "%{$fg[red]%}✗%{$reset_color%} "
+    echo " %{$fg[red]%}✗%{$reset_color%}"
   fi
 }
 
 needs_push() {
-  if [ "$(git cherry -v origin/$(current_branch_name) 2>/dev/null)" ]; then
-    echo "%{$fg[red]%}⬆%{$reset_color%}  "
+  if [[ -n "$(git cherry -v origin/$(current_branch_name) 2>/dev/null)" ]]; then
+    echo " %{$fg[red]%}⬆%{$reset_color%} "
   fi
 }
 
