@@ -13,6 +13,7 @@ Bundle 'rking/ag.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'itchyny/lightline.vim'
 Bundle 'pbrisbin/vim-mkdir'
+Bundle 'nicholaides/words-to-avoid.vim'
 
 " Dash support
 Bundle 'Keithbsmiley/investigate.vim'
