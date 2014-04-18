@@ -1,0 +1,18 @@
+#! /usr/local/bin/runhaskell
+
+import System.Environment (getArgs)
+import Foreign.AppleScript
+import Control.Applicative
+
+addTask :: String -> String
+addTask task = unlines $
+    [
+        "tell application \"OmniFocus\"",
+            "parse tasks into default document with transport text \"" ++ task ++ "\"",
+        "end tell"
+    ]
+
+main = do
+    task <- unwords <$> getArgs
+    execAppleScript $ addTask task
+
