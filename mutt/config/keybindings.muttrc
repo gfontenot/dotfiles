@@ -1,3 +1,6 @@
+# I don't need this. Why the hell would I need this?
+bind index,pager,compose ! noop
+
 # Don't use d at all. Accounts have 'a' mapped to the right thing.
 bind index,pager d noop
 
