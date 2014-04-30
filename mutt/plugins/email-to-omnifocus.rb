@@ -23,9 +23,14 @@ Message Body:
 EOM
 
 applescript = <<-APPLESCRIPT
-tell application "Omnifocus"
-  tell default document
-    make new inbox task with properties {name: "#{title}", note:"#{note}"}
+tell application "OmniFocus"
+  tell quick entry
+    make new inbox task with properties {name:"#{title.gsub('"', "'")}", note:"#{note.gsub('"', "'")}"}
+    open
+  end tell
+
+  tell application "System Events"
+    keystroke tab
   end tell
 end tell
 APPLESCRIPT
