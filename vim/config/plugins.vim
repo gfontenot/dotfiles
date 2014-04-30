@@ -18,6 +18,14 @@ Bundle 'nicholaides/words-to-avoid.vim'
 Bundle 'tpope/vim-markdown'
 let g:markdown_fenced_languages = ['ruby', 'sh', 'yaml', 'objc', 'haskell']
 
+" Gist support
+Bundle 'mattn/gist-vim'
+Bundle 'mattn/webapi-vim'
+let g:gist_detect_filetype = 1
+let g:gist_clip_command = 'pbcopy'
+let g:gist_show_privates = 1
+let g:gist_post_private = 1
+
 " Dash support
 Bundle 'Keithbsmiley/investigate.vim'
 let g:investigate_use_dash=1
