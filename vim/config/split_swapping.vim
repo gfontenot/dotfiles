@@ -19,4 +19,4 @@ function! DoWindowSwap()
 endfunction
 
 nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
-nmap <silent> <leader>pw :call DoWindowSwap()<CR>
+nmap <silent> <leader>sw :call DoWindowSwap()<CR>

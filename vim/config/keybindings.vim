@@ -14,3 +14,8 @@ map <leader>tp :tabprevious<cr>
 
 " Set <leader>c to clear search highlighting
 nnoremap <leader>c :noh<cr>
+
+" System clipboard
+map <leader>y "*Y
+map <leader>p "*p<esc>
+map <leader>P "*P<esc>
