@@ -12,7 +12,6 @@ Bundle 'rking/ag.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'itchyny/lightline.vim'
 Bundle 'pbrisbin/vim-mkdir'
-Bundle 'takac/vim-hardtime'
 Bundle 'nicholaides/words-to-avoid.vim'
 
 " Markdown
@@ -24,4 +23,5 @@ Bundle 'Keithbsmiley/investigate.vim'
 let g:investigate_use_dash=1
 
 " Hardtime
+Bundle 'takac/vim-hardtime'
 let g:hardtime_default_on = 1
