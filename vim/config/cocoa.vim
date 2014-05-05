@@ -1,8 +1,10 @@
 " Objective-C specific plugins and settings
 
-Bundle 'Keithbsmiley/specta.vim'
-Bundle 'b4winckler/vim-objc'
-Bundle 'vim-scripts/Match-Bracket-for-Objective-C'
+let g:specta_highlight_expecta=1
+
+Plugin 'Keithbsmiley/specta.vim'
+Plugin 'b4winckler/vim-objc'
+Plugin 'vim-scripts/Match-Bracket-for-Objective-C'
 
 augroup cocoa
   autocmd!
