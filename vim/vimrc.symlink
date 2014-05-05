@@ -1,6 +1,4 @@
 set nocompatible                  " Must come first because it changes other options.
-syntax enable                     " Turn on syntax highlighting.
-filetype plugin indent on         " Turn on file type detection.
 
 " Make sure Vundle is running before anything else
 set rtp+=~/.vim/bundle/vundle
@@ -11,6 +9,9 @@ set rtp+=$ZSH/vim
 for fpath in split(globpath('$ZSH/vim/config', '*.vim'), '\n')
   exec 'source' fpath
 endfor
+
+syntax enable                     " Turn on syntax highlighting.
+filetype plugin indent on         " Turn on file type detection.
 
 set showcmd                       " Display incomplete commands.
 set backspace=indent,eol,start    " Intuitive backspacing.
