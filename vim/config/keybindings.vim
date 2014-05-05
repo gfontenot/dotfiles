@@ -17,5 +17,5 @@ nnoremap <leader>c :noh<cr>
 
 " System clipboard
 map <leader>y "*Y
-map <leader>p "*p<esc>
-map <leader>P "*P<esc>
+map <leader>p "*p
+map <leader>P "*P
