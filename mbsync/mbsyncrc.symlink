@@ -20,10 +20,10 @@ MaildirStore MobileMe-Local
 Path ~/.mail/gordon.fontenot-me.com/
 Inbox ~/.mail/gordon.fontenot-me.com/INBOX
 
-Channel MobileMe
-Master :MobileMe-Remote:
-Slave :MobileMe-Local:
-Pattern *
+# Channel MobileMe
+# Master :MobileMe-Remote:
+# Slave :MobileMe-Local:
+# Pattern *
 
 ##############################################################################
 ## FastMail
@@ -121,4 +121,4 @@ Channel thoughtbot-BuildPhase
 Group INBOXES
 Channel thoughtbot-INBOX
 Channel FastMail-INBOX
-Channel MobileMe:INBOX
+# Channel MobileMe:INBOX
