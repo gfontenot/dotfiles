@@ -9,9 +9,9 @@ SyncState *
 IMAPAccount MobileMe
 Host imap.mail.me.com
 User gordon.fontenot@me.com
-PassCmd "~/Code/dotfiles/bin/keychain.py gordon.fontenot@me.com"
+PassCmd "~/.local/bin/keychain.py gordon.fontenot@me.com"
 UseIMAPS yes
-CertificateFile ~/Code/dotfiles/msmtp/Equifax_Secure_CA.cert
+CertificateFile ~/Code/dotfiles/tag-msmtp/source/Equifax_Secure_CA.cert
 
 IMAPStore MobileMe-Remote
 Account MobileMe
@@ -32,9 +32,9 @@ Inbox ~/.mail/gordon.fontenot-me.com/INBOX
 IMAPAccount FastMail
 Host mail.messagingengine.com
 User gfontenot@fastmail.fm
-PassCmd "~/Code/dotfiles/bin/keychain.py gfontenot@fastmail.fm"
+PassCmd "~/.local/bin/keychain.py gfontenot@fastmail.fm"
 UseIMAPS yes
-CertificateFile ~/Code/dotfiles/msmtp/Equifax_Secure_CA.cert
+CertificateFile ~/Code/dotfiles/tag-msmtp/source/Equifax_Secure_CA.cert
 
 IMAPStore FastMail-Remote
 Account FastMail
@@ -76,9 +76,9 @@ Channel FastMail-Archive
 IMAPAccount thoughtbot
 Host imap.gmail.com
 User gordon@thoughtbot.com
-PassCmd "~/Code/dotfiles/bin/keychain.py gordon@thoughtbot.com"
+PassCmd "~/.local/bin/keychain.py gordon@thoughtbot.com"
 UseIMAPS yes
-CertificateFile ~/Code/dotfiles/msmtp/Equifax_Secure_CA.cert
+CertificateFile ~/Code/dotfiles/tag-msmtp/source/Equifax_Secure_CA.cert
 
 IMAPStore thoughtbot-Remote
 Account thoughtbot
