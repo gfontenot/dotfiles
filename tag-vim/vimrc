@@ -1,14 +1,17 @@
 set nocompatible                  " Must come first because it changes other options.
 
 " Make sure Vundle is running before anything else
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
 
 set rtp+=$DOTFILES/tag-vim/source
 
 for fpath in split(globpath('$DOTFILES/tag-vim/source/config', '*.vim'), '\n')
   exec 'source' fpath
 endfor
+
+call vundle#end()
 
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
