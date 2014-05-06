@@ -1,0 +1,71 @@
+# Paths ----------------------------------------------
+set folder           = ~/.mail                    # mailbox location
+set alias_file       = ~/.mutt/alias              # where to store aliases
+set header_cache     = ~/.mutt/cache/headers      # where to store headers
+set message_cachedir = ~/.mutt/cache/bodies       # where to store bodies
+set certificate_file = ~/.mutt/certificates       # where to store certs
+set mailcap_path     = $DOTFILES/tag-mutt/source/config/mailcap # entries for filetypes
+set tmpdir           = ~/.mutt/temp               # where to keep temp files
+
+# Basic Options --------------------------------------
+set wait_key = no        # shut up, mutt
+set mbox_type = Maildir  # mailbox type
+set timeout = 3          # idle time before scanning
+set mail_check = 0       # minimum time between scans
+unset move               # gmail does that
+set delete               # don't ask, just do
+unset confirmappend      # don't ask, just do!
+set quit                 # don't ask, just do!!
+unset mark_old           # read/new is good enough for me
+set beep_new             # bell on new mails
+set pipe_decode          # strip headers and eval mimes when piping
+set thorough_search      # strip headers and eval mimes before searching
+
+# Open thoughtbot by default --------------------------
+set spoolfile = "+gordon-thoughtbot.com/INBOX"
+
+# Multiple account config
+mailboxes +gordon-thoughtbot.com/INBOX +gordon.fontenot-me.com/INBOX +gordon-fonten.io/INBOX
+folder-hook gordon-thoughtbot.com/* source $DOTFILES/tag-mutt/source/accounts/account.thoughtbot
+folder-hook gordon.fontenot-me.com/* source $DOTFILES/tag-mutt/source/accounts/account.mobileme
+folder-hook gordon-fonten.io/* source $DOTFILES/tag-mutt/source/accounts/account.fastmail
+
+# Color scheme ---------------------------------------
+source $DOTFILES/tag-mutt/source/colors/tomorrow-night-eighties-16.muttrc
+
+# Status Bar -----------------------------------------
+set status_chars  = " *%A"
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+# Header Options -------------------------------------
+ignore *                                # ignore all headers
+unignore from: to: cc: date: subject:   # show only these
+unhdr_order *                           # some distros order things by default
+hdr_order from: to: cc: date: subject:  # and in this order
+
+# Index View Options ---------------------------------
+set date_format = "%m/%d"
+set index_format = "[%Z]  %D  %-20.20F  %s"
+set sort = threads                         # like gmail
+set uncollapse_jump                        # don't collapse on an unread message
+set sort_re                                # thread based on regex
+set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
+
+# Pager View Options ---------------------------------
+set pager_index_lines = 10 # number of index lines to show
+set pager_context = 3      # number of context lines to show
+set pager_stop             # don't go to next message automatically
+set menu_scroll            # scroll in menus
+set tilde                  # show tildes like in vim
+unset markers              # no ugly plus signs
+
+set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+auto_view text/html
+alternative_order text/plain text/enriched text/html
+
+source $DOTFILES/tag-mutt/source/config/keybindings.muttrc
+source $DOTFILES/tag-mutt/source/config/macros.muttrc
+source $DOTFILES/tag-mutt/source/config/compose_settings.muttrc
+source $DOTFILES/tag-mutt/source/config/plugins.muttrc
+source $DOTFILES/tag-mutt/source/config/mailing_lists.muttrc
+source $DOTFILES/tag-mutt/source/config/pgp.muttrc

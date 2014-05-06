@@ -1,0 +1,67 @@
+set nocompatible                  " Must come first because it changes other options.
+
+" Make sure Vundle is running before anything else
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+set rtp+=$DOTFILES/tag-vim/source
+
+for fpath in split(globpath('$DOTFILES/tag-vim/source/config', '*.vim'), '\n')
+  exec 'source' fpath
+endfor
+
+syntax enable                     " Turn on syntax highlighting.
+filetype plugin indent on         " Turn on file type detection.
+
+set showcmd                       " Display incomplete commands.
+set backspace=indent,eol,start    " Intuitive backspacing.
+set hidden                        " Don't kill unwritten buffers when hidden
+
+set wildmenu                      " Enhanced command line completion.
+set wildmode=list:longest         " Complete files like a shell.
+
+set gdefault                      " default to global substitutions on lines
+
+set visualbell                    " No beeping.
+
+set nobackup                      " Don't make a backup before overwriting a file.
+set nowritebackup                 " And again.
+set noswapfile                    " Don't use swapfiles
+
+set tabstop=2                     " Global tab width.
+set shiftwidth=2                  " And again, related.
+set expandtab                     " Use spaces instead of tabs
+
+set wildignore+=_site\/*
+
+set ignorecase                    " Case-insensitive searching.
+set smartcase                     " But case-sensitive if expression contains a capital letter.
+
+set incsearch                     " Highlight matches as you type.
+set hlsearch                      " Highlight matches.
+set showmatch                     " Show all matches
+
+" Highlight the 80 character column
+set colorcolumn=80
+
+set relativenumber                " Use relative line numbers
+set cursorline                    " Highlight the current line
+
+set wrap                          " Turn on line wrapping.
+set scrolloff=3                   " Show 3 lines of context around the cursor.
+
+set title                         " Set the terminal's title
+
+" Display extra whitespace
+set list listchars=tab:»·,trail:·
+
+" Configure persistent undo
+set undofile
+set undodir=~/.vim/undo
+set undolevels=1000
+set undoreload=10000
+
+" Change cursor shape to an underscore  when in insert mode
+let &t_SI = "\<Esc>]50;CursorShape=2\x7"
+" Change back to a block in normal mode
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
