@@ -6,7 +6,7 @@
 	<string>com.gfontenot.mailrun</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/Users/gordon/Code/dotfiles/bin/mailrun.sh</string>
+    <string>/Users/gordon/.local/bin/mailrun.sh</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
