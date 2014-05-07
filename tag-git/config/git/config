@@ -59,6 +59,9 @@
 [credential]
   helper = osxkeychain
 
+[gh]
+  autoUpdate = never
+
 # Kaleidoscope
 
 [difftool "Kaleidoscope"]
