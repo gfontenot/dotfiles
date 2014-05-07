@@ -1,5 +1,5 @@
 set from = "gordon@thoughtbot.com"
-set signature = $ZSH/mutt/accounts/signature.thoughtbot
+set signature = $DOTFILES/tag-mutt/source/accounts/thoughtbot.sig
 set sendmail = "/usr/local/bin/msmtp -a thoughtbot"
 set spoolfile = "+gordon-thoughtbot.com/INBOX"
 set mbox = "+gordon-thoughtbot.com/Archive"

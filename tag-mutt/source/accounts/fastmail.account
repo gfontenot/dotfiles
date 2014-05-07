@@ -1,5 +1,5 @@
 set from = "gordon@fonten.io"
-set signature = $ZSH/mutt/accounts/signature.fastmail
+set signature = $DOTFILES/tag-mutt/source/accounts/fastmail.sig
 set sendmail = "/usr/local/bin/msmtp -a FastMail"
 set spoolfile = "+gordon-fonten.io/INBOX"
 set mbox = "+gordon-fonten.io/Archive"
