@@ -11,3 +11,5 @@ macro index o \
   "sync inbox"
 
 macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+
+macro pager H "v/html<enter><return>" "view HTML version of the message"
