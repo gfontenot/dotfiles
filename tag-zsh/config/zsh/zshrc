@@ -1,4 +1,4 @@
-# shortcut to this dotfiles path is $ZSH
+# shortcut to this dotfiles path is $DOTFILES
 export DOTFILES=$HOME/Code/dotfiles
 
 # your project folder that we can `c [tab]` to

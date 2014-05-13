@@ -1,1 +1,1 @@
-export PATH="$HOME/.local/bin:$HOME/.cabal/bin:/usr/texbin:/usr/local/bin:$PATH"
+path=( "$HOME/.local/bin" "/usr/local/bin" $path )
