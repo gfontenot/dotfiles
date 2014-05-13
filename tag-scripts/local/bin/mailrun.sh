@@ -5,4 +5,8 @@ if pgrep mbsync; then
   pkill mbsync
 fi
 
-/usr/local/bin/mbsync -q -a
+mailboxes=$1
+
+[ -z "$mailboxes" ] && mailboxes="-a"
+
+/usr/local/bin/mbsync -q "$mailboxes"

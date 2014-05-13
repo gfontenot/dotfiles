@@ -3,11 +3,11 @@ macro index \Cr \
   "mark all messages as read"
 
 macro index O \
-  "<shell-escape>mbsync -q -a<enter>" \
+  "<shell-escape>~/.local/bin/mailrun.sh<enter>" \
   "sync all mail"
 
 macro index o \
-  "<shell-escape>mbsync -q INBOXES<enter>" \
+  "<shell-escape>~/.local/bin/mailrun.sh INBOXES<enter>" \
   "sync inbox"
 
 macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
