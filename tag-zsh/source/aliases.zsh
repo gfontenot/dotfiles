@@ -1,6 +1,8 @@
 alias dotcd='cd $DOTFILES'
 alias dotedit='dotcd && e'
 
+alias notes='cd $NOTES && e'
+
 alias curl='noglob curl'
 
 alias reload!='. ~/.zshrc'
