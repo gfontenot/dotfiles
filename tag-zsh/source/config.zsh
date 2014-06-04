@@ -31,4 +31,4 @@ function chpwd() {
 }
 
 # set the editor du jour.
-export EDITOR="mvim -v"
+export VISUAL="mvim -v"

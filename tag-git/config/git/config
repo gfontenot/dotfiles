@@ -37,7 +37,7 @@
 
 [core]
   excludesfile = ~/.config/git/ignore
-  editor = "mvim -v"
+  editor = "$VISUAL"
 
 [apply]
   whitespace = warn
