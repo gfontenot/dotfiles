@@ -19,8 +19,7 @@
   credit = commit --amend --author "$1 <$2>" -C HEAD
 
   unstage = reset HEAD
-  staged = difftool --cached
-  unstaged = difftool
+  staged = diff --staged
 
   current-branch = rev-parse --abbrev-ref HEAD
 
