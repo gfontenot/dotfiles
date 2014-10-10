@@ -9,12 +9,13 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'pbrisbin/vim-mkdir'
 Plugin 'nicholaides/words-to-avoid.vim'
+Plugin 'Keithbsmiley/swift.vim'
 
 Plugin 'pbrisbin/vim-rename-file'
 
 " Markdown
 Plugin 'tpope/vim-markdown'
-let g:markdown_fenced_languages = ['ruby', 'sh', 'yaml', 'objc', 'haskell']
+let g:markdown_fenced_languages = ['swift', 'ruby', 'sh', 'yaml', 'objc', 'haskell']
 
 " Gist support
 Plugin 'mattn/gist-vim'
