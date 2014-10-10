@@ -1,0 +1,42 @@
+#!/bin/sh
+#
+# pbrisbin 2014
+#
+###
+err_usage() {
+  cat >&2 <<EOF
+Usage: ghu [options] < file
+
+Parse stdin as an email for any List-Unsubscribe header containing a URL. Visit
+that URL using curl, thereby unsubscribing you from the thread.
+
+Options:
+  -o, --open    Open the unsubscribe link with \$BROWSER, not curl
+  -p, --print   Print the unsubscribe link, do not visit it
+
+EOF
+
+  exit 64
+}
+
+share="$(dirname "$0")"/../share/ghu
+
+command() {
+  curl --silent "$@" | sed "
+    /^.*\(You've been unsubscribed from the thread\).*$/!d
+    s//\1/g"
+}
+
+if [ -n "$1" ]; then
+  case "$1" in
+    -o|--open)  command() { $BROWSER "$@"; } ;;
+    -p|--print) command() { printf "%s\n" "$*"; } ;;
+    *) err_usage ;;
+  esac
+fi
+
+if unsubscribe="$("$share"/ghu-parse)" && [ -n "$unsubscribe" ]; then
+  command "$unsubscribe"
+else
+  exit 1
+fi

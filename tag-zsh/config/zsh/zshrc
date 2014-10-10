@@ -7,6 +7,8 @@ export PROJECTS=~/Code
 # Where you keep your plain text notes
 export NOTES="$HOME/Dropbox (Personal)/notes"
 
+export BROWSER="open"
+
 # source every .zsh file in this repo
 for config_file ($DOTFILES/**/source/*.zsh) [[ "$(basename $config_file)" == "completion.zsh" ]] || source $config_file
 
