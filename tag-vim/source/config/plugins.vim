@@ -9,6 +9,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'pbrisbin/vim-mkdir'
 Plugin 'nicholaides/words-to-avoid.vim'
+Plugin 'raichoo/haskell-vim'
 Plugin 'Keithbsmiley/swift.vim'
 
 Plugin 'pbrisbin/vim-rename-file'
