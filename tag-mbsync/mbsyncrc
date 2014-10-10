@@ -3,29 +3,6 @@ Expunge Both
 SyncState *
 
 ##############################################################################
-## MobileMe
-##############################################################################
-
-IMAPAccount MobileMe
-Host imap.mail.me.com
-User gordon.fontenot@me.com
-PassCmd "~/.local/bin/keychain.py gordon.fontenot@me.com"
-UseIMAPS yes
-CertificateFile ~/Code/dotfiles/tag-msmtp/source/Equifax_Secure_CA.cert
-
-IMAPStore MobileMe-Remote
-Account MobileMe
-
-MaildirStore MobileMe-Local
-Path ~/.mail/gordon.fontenot-me.com/
-Inbox ~/.mail/gordon.fontenot-me.com/INBOX
-
-# Channel MobileMe
-# Master :MobileMe-Remote:
-# Slave :MobileMe-Local:
-# Pattern *
-
-##############################################################################
 ## FastMail
 ##############################################################################
 
@@ -121,4 +98,3 @@ Channel thoughtbot-BuildPhase
 Group INBOXES
 Channel thoughtbot-INBOX
 Channel FastMail-INBOX
-# Channel MobileMe:INBOX

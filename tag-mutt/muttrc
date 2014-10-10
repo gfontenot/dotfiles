@@ -25,9 +25,8 @@ set thorough_search      # strip headers and eval mimes before searching
 set spoolfile = "+gordon-thoughtbot.com/INBOX"
 
 # Multiple account config
-mailboxes +gordon-thoughtbot.com/INBOX +gordon.fontenot-me.com/INBOX +gordon-fonten.io/INBOX
+mailboxes +gordon-thoughtbot.com/INBOX +gordon-fonten.io/INBOX
 folder-hook gordon-thoughtbot.com/* source $DOTFILES/tag-mutt/source/accounts/thoughtbot.account
-folder-hook gordon.fontenot-me.com/* source $DOTFILES/tag-mutt/source/accounts/mobileme.account
 folder-hook gordon-fonten.io/* source $DOTFILES/tag-mutt/source/accounts/fastmail.account
 
 # Color scheme ---------------------------------------
