@@ -20,3 +20,20 @@ macro index,pager \cU \
 set query_command = "contacts -Sf '%eTOKEN%n' '%s' | sed -e 's/TOKEN/\t/g'"
 bind editor <Tab> complete-query
 bind editor ^T    complete
+
+# GitHub notifications integrations ------------------
+# http://blog.adamspiers.org/2014/10/05/managing-your-github-notifications-inbox-with-mutt/
+message-hook "(~N|~O) ~f notifications@github.com" \
+  "push '\
+    <enter-command>set \
+      my_old_pipe_decode=\$pipe_decode \
+      my_old_wait_key=\$wait_key \
+      nopipe_decode \
+      nowait_key \
+    <enter>\
+    <pipe-message>$DOTFILES/tag-mutt/source/plugins/gh-read<enter>\
+    <enter-command>set \
+      pipe_decode=\$my_old_pipe_decode \
+      wait_key=\$my_old_wait_key \
+    <enter> \
+  '"
