@@ -10,9 +10,10 @@ macro index,pager \cT \
 
 # GHU (https://github.com/pbrisbin/ghu) --------------
 macro index,pager \cU \
-  "<enter-command>set my_old_pipe_decode=\$pipe_decode nopipe_decode<enter>\
-  | $DOTFILES/tag-mutt/source/plugins/bin/ghu<enter>\
-  <enter-command>set pipe_decode=\$my_old_pipe_decode<enter>\
+  "<tag-thread> \
+  <enter-command>set my_old_pipe_decode=\$pipe_decode nopipe_decode<enter> \
+  <pipe-message>$DOTFILES/tag-mutt/source/plugins/bin/ghu<enter> \
+  <enter-command>set pipe_decode=\$my_old_pipe_decode<enter> \
   A" \
   "Unsubscribe from any email with a List-Unsubscribe header and archive the thread"
 
@@ -23,7 +24,7 @@ bind editor ^T    complete
 
 # GitHub notifications integrations ------------------
 # http://blog.adamspiers.org/2014/10/05/managing-your-github-notifications-inbox-with-mutt/
-message-hook "(~N|~O) ~f notifications@github.com" \
+message-hook "(~N|~O) !(~T) ~f notifications@github.com" \
   "push '\
     <enter-command>set \
       my_old_pipe_decode=\$pipe_decode \

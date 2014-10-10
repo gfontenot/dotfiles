@@ -11,6 +11,6 @@
 # Decoding the HTML part seems to put arbitrary line breaks in the middle of the
 # beacon URL. This function just prints stdin as one long line.
 beacon_re='https://github\.com/notifications/beacon/.*\.gif'
-beacon_url="$(xargs printf -- "%s" | grep -o "$beacon_re")"
+beacon_url="$(tr -d '\n' | grep -o "$beacon_re")"
 
 [ -n "$beacon_url" ] && curl --silent "$beacon_url" >/dev/null &
