@@ -6,4 +6,6 @@ macro index o \
   "<shell-escape>~/.local/bin/mailrun.sh INBOXES<enter>" \
   "sync inbox"
 
-macro pager H "v/html<enter><return>" "view HTML version of the message"
+macro index,pager \cV \
+  "v/html<enter><return>q" \
+  "view HTML version of the message"
