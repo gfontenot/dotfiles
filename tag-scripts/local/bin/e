@@ -15,7 +15,7 @@
 #   # => opens the specified directory in your editor
 
 if [[ "$1" == "" ]]; then
-  "$VISUAL" .
+  eval "$VISUAL" .
 else
-  "$VISUAL" "$1"
+  eval "$VISUAL" "$1"
 fi
