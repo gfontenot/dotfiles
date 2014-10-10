@@ -28,7 +28,3 @@ let g:gist_post_private = 1
 " Dash support
 Plugin 'Keithbsmiley/investigate.vim'
 let g:investigate_use_dash=1
-
-" Hardtime
-Plugin 'takac/vim-hardtime'
-let g:hardtime_default_on = 1
