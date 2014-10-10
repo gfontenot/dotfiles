@@ -1,7 +1,3 @@
-macro index \Cr \
-  "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" \
-  "mark all messages as read"
-
 macro index O \
   "<shell-escape>~/.local/bin/mailrun.sh<enter>" \
   "sync all mail"
@@ -9,7 +5,5 @@ macro index O \
 macro index o \
   "<shell-escape>~/.local/bin/mailrun.sh INBOXES<enter>" \
   "sync inbox"
-
-macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 
 macro pager H "v/html<enter><return>" "view HTML version of the message"
