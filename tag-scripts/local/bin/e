@@ -14,8 +14,10 @@
 #   $ e /usr/local
 #   # => opens the specified directory in your editor
 
+editor="mvim -v"
+
 if [[ "$1" == "" ]]; then
-  eval "$VISUAL" .
+  $editor .
 else
-  eval "$VISUAL" "$1"
+  $editor "$@"
 fi

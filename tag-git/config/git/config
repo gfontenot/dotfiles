@@ -37,7 +37,6 @@
 
 [core]
   excludesfile = ~/.config/git/ignore
-  editor = "$VISUAL"
 
 [apply]
   whitespace = warn
