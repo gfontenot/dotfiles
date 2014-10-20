@@ -17,6 +17,6 @@ macro index,pager \cU \
   "Unsubscribe from any email with a List-Unsubscribe header and archive the thread"
 
 # Contacts completion --------------------------------
-set query_command = "contacts -Sf '%eTOKEN%n' '%s' | sed -e 's/TOKEN/\t/g'"
+set query_command = "$DOTFILES/tag-mutt/source/plugins/contacts.swift %s"
 bind editor <Tab> complete-query
 bind editor ^T    complete
