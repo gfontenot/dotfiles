@@ -21,6 +21,9 @@ set beep_new             # bell on new mails
 set pipe_decode          # strip headers and eval mimes when piping
 set thorough_search      # strip headers and eval mimes before searching
 
+# Customize display filter ----------------------------
+set display_filter = $DOTFILES/tag-mutt/source/plugins/display_filter.sh
+
 # Open thoughtbot by default --------------------------
 set spoolfile = "+gordon-thoughtbot.com/INBOX"
 
