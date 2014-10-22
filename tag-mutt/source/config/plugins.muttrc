@@ -5,18 +5,18 @@ macro pager \cb \
 
 # Omnifocus ------------------------------------------
 macro index,pager \cT \
-  <pipe-message>'$DOTFILES/tag-mutt/source/plugins/email-to-omnifocus.rb'<enter> \
+  <pipe-message>'$MUTT_PLUGINS/email-to-omnifocus.rb'<enter>\
   'Create Omnifocus task from message'
 
 # GHU (https://github.com/pbrisbin/ghu) --------------
 macro index,pager \cU \
-  "<enter-command>set my_old_pipe_decode=\$pipe_decode nopipe_decode<enter> \
-  <pipe-message>$DOTFILES/tag-mutt/source/plugins/bin/ghu<enter> \
-  <enter-command>set pipe_decode=\$my_old_pipe_decode<enter> \
-  A" \
+  "<enter-command>set my_old_pipe_decode=\$pipe_decode nopipe_decode<enter>\
+  <pipe-message>$MUTT_PLUGINS/bin/ghu<enter>\
+  <enter-command>set pipe_decode=\$my_old_pipe_decode<enter>\
+  A"\
   "Unsubscribe from any email with a List-Unsubscribe header and archive the thread"
 
 # Contacts completion --------------------------------
-set query_command = "$DOTFILES/tag-mutt/source/plugins/contacts.swift %s"
+set query_command = "$MUTT_PLUGINS/contacts.swift %s"
 bind editor <Tab> complete-query
 bind editor ^T    complete
