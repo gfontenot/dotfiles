@@ -8,7 +8,7 @@ set mailcap_path     = $DOTFILES/tag-mutt/source/config/mailcap # entries for fi
 set tmpdir           = ~/.mutt/temp               # where to keep temp files
 
 # Basic Options --------------------------------------
-set wait_key = no        # shut up, mutt
+unset wait_key           # shut up, mutt
 set mbox_type = Maildir  # mailbox type
 set timeout = 3          # idle time before scanning
 set mail_check = 0       # minimum time between scans
