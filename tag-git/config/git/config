@@ -6,6 +6,13 @@
 [user]
   name = Gordon Fontenot
   email = gordon@thoughtbot.com
+  signingkey = 2DA8F9CE
+
+[gpg]
+  program = gpg2
+
+[commit]
+  gpgsign = true
 
 [include]
   path = ~/.gitconfig-github
