@@ -35,6 +35,6 @@ tell application "OmniFocus"
 end tell
 APPLESCRIPT
 
-`osascript << EOT
-#{applescript}
-#EOT`
+shell = IO.popen('osascript', 'w')
+shell.write applescript
+shell.close
