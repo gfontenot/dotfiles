@@ -28,6 +28,7 @@ install notmuch
 install urlview
 install contacts
 install lynx
+install gpg2
 
 # Misc
 install heroku-toolbelt
