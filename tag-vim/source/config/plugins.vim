@@ -1,18 +1,17 @@
+Plugin 'Keithbsmiley/swift.vim'
+Plugin 'itchyny/lightline.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'nicholaides/words-to-avoid.vim'
+Plugin 'pbrisbin/vim-mkdir'
+Plugin 'pbrisbin/vim-rename-file'
+Plugin 'raichoo/haskell-vim'
+Plugin 'rking/ag.vim'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
-Plugin 'rking/ag.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'itchyny/lightline.vim'
-Plugin 'pbrisbin/vim-mkdir'
-Plugin 'nicholaides/words-to-avoid.vim'
-Plugin 'raichoo/haskell-vim'
-Plugin 'Keithbsmiley/swift.vim'
-
-Plugin 'pbrisbin/vim-rename-file'
+Plugin 'tpope/vim-surround'
 
 " Markdown
 Plugin 'tpope/vim-markdown'
@@ -29,3 +28,12 @@ let g:gist_post_private = 1
 " Dash support
 Plugin 'Keithbsmiley/investigate.vim'
 let g:investigate_use_dash=1
+
+" Runfile
+Plugin 'pbrisbin/vim-runfile'
+let g:runfile_by_name = {
+  \ '.*Gemfile$': '!bundle',
+  \ '.*\.m\(ark\)\?d\(own\)\?$': '!open -a "Marked" %',
+  \ '.*\.hs': '!cabal exec -- ghci %',
+  \ }
+map <leader>r :Run<CR>
