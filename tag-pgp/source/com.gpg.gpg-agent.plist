@@ -6,7 +6,8 @@
 	<string>com.gpg.gpg-agent.plist</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/Users/gordon/.local/bin/start-gpg-agent.sh</string>
+		<string>/usr/local/bin/gpg-agent</string>
+		<string>--daemon</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
