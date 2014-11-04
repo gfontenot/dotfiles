@@ -4,6 +4,7 @@ set sendmail = "/usr/local/bin/msmtp -a FastMail"
 set spoolfile = "+gordon-fonten.io/INBOX"
 set mbox = "+gordon-fonten.io/Archive"
 set postponed = "+gordon-fonten.io/Drafts"
+set record = "+gordon-fonten.io/Sent"
 
 macro index gi "<change-folder>+gordon-fonten.io/INBOX<enter>" "Go to the INBOX"
 macro index ga "<change-folder>+gordon-fonten.io/Archive<enter>" "Go to the archive"

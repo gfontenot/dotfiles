@@ -4,6 +4,7 @@ set sendmail = "/usr/local/bin/msmtp -a thoughtbot"
 set spoolfile = "+gordon-thoughtbot.com/INBOX"
 set mbox = "+gordon-thoughtbot.com/Archive"
 set postponed = "+gordon-thoughtbot.com/Drafts"
+unset record
 
 macro index gi "<change-folder>+gordon-thoughtbot.com/INBOX<enter>" "Go to the INBOX"
 macro index ga "<change-folder>+gordon-thoughtbot.com/Archive<enter>" "Go to the archive"
