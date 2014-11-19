@@ -40,7 +40,7 @@
   wtf = true
 
 [pretty]
-  custom = %C(yellow)%h%Cblue%d%Creset %s - %C(white)%an %Cgreen(%cr)%Creset
+  custom = %C(yellow)%h%Cblue%d%Creset %s - %C(white)%an %C(cyan)(%G?) %Cgreen(%cr)%Creset
 
 [core]
   excludesfile = ~/.config/git/ignore
