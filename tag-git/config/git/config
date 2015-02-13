@@ -32,6 +32,8 @@
 
   pr = pull-request
 
+  changelog = log --format=changelog --graph
+
 [fetch]
   prune = true
 
@@ -41,6 +43,7 @@
 
 [pretty]
   custom = %C(yellow)%h%Cblue%d%Creset %s - %C(white)%an %C(cyan)(%G?) %Cgreen(%cr)%Creset
+  changelog = %s - %an
 
 [core]
   excludesfile = ~/.config/git/ignore
