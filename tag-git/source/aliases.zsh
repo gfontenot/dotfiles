@@ -1,7 +1,7 @@
-# Use `gh` as our git wrapper:
-#   https://github.com/jingweno/gh
-alias g=gh
-alias gitsh='gitsh --git gh'
+# Use `hub` as our git wrapper:
+#   https://github.com/github/hub
+alias g=hub
+alias gitsh='gitsh --git hub'
 
 # alias straight to difftool for quick access
 alias gdiff='g diff'
