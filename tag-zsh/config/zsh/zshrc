@@ -4,11 +4,11 @@ export PROJECTS="$HOME/Code"
 # shortcut to this dotfiles path is $DOTFILES
 export DOTFILES="$PROJECTS/dotfiles"
 
-# your project folder that we can `c [tab]` to
-export PROJECTS=~/Code
+# Your personal Dropbox folder
+export DROPBOX="$HOME/Dropbox (Personal)"
 
 # Where you keep your plain text notes
-export NOTES="$HOME/Dropbox (Personal)/notes"
+export NOTES="$DROPBOX/notes"
 
 export BROWSER="open"
 
