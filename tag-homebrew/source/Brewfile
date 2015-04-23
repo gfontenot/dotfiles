@@ -10,12 +10,8 @@ install gh
 install macvim
 
 # rbenv and plugins
-install rbenv
-install ruby-build
-install rbenv-binstubs
-install rbenv-default-gems
-install rbenv-gem-rehash
-install rbenv-aliases
+install chruby
+install ruby-install
 
 # Objective-C Development
 install class-dump
