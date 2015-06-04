@@ -6,19 +6,21 @@ enable() {
   today=$(date -u +"%Y-%m-%d %H:%M:%S +0000")
   defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui*.plist doNotDisturb -boolean true
   defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui*.plist doNotDisturbDate -date "$today"
+  echo "DND Enabled"
 }
 
 disable() {
   defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui*.plist doNotDisturb -boolean false
   defaults -currentHost delete ~/Library/Preferences/ByHost/com.apple.notificationcenterui*.plist doNotDisturbDate
+  echo "DND Disabled"
 }
 
-if ((dnd_currently_enabled)); then
+if [[ "$1" == "--enable" ]]; then
+  enable
+elif [[ "$1" == "--disable" ]] || (($dnd_currently_enabled)); then
   disable
-  echo "DND Disabled"
 else
   enable
-  echo "DND Enabled"
 fi
 
 killall NotificationCenter
