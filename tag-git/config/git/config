@@ -38,6 +38,9 @@
 [fetch]
   prune = true
 
+[rebase]
+  autosquash = true
+
 [color]
   ui = true
   wtf = true
