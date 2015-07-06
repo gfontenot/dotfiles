@@ -21,22 +21,28 @@ EOF
 
 share="$(dirname "$0")"/../share/ghu
 
-command() {
+get() {
   curl --silent "$@" | sed "
     /^.*\(You've been unsubscribed from the thread\).*$/!d
     s//\1/g"
 }
 
+parse() {
+  local url_re='https?://[^[:space:]>]+'
+
+  "$share"/parse-header "List-Unsubscribe" | grep -ioE "$url_re"
+}
+
 if [ -n "$1" ]; then
   case "$1" in
-    -o|--open)  command() { $BROWSER "$@"; } ;;
-    -p|--print) command() { printf "%s\n" "$*"; } ;;
+    -o|--open)  get() { ${BROWSER:-open} "$@"; } ;;
+    -p|--print) get() { printf "%s\n" "$*"; } ;;
     *) err_usage ;;
   esac
 fi
 
-if unsubscribe="$("$share"/ghu-parse)" && [ -n "$unsubscribe" ]; then
-  command "$unsubscribe"
+if unsubscribe="$(parse)" && [ -n "$unsubscribe" ]; then
+  get "$unsubscribe"
 else
   exit 1
 fi
