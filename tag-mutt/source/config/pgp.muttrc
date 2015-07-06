@@ -4,3 +4,4 @@ set pgp_timeout = 3600        # Cache the passphrase for an hour
 set crypt_autosign = yes      # Automatically sign all outgoing mail
 set crypt_replyencrypt = yes  # Automatically encrypt replies to encrypted messages
 set pgp_sign_as = 2DA8F9CE
+set pgp_use_gpg_agent = yes
