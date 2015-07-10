@@ -31,7 +31,7 @@ set spoolfile = "+gordon-thoughtbot.com/INBOX"
 mailboxes +gordon-thoughtbot.com/INBOX +gordon-fonten.io/INBOX
 folder-hook gordon-thoughtbot.com/* source $DOTFILES/tag-mutt/source/accounts/thoughtbot.account
 folder-hook gordon-fonten.io/* source $DOTFILES/tag-mutt/source/accounts/fastmail.account
-alternates gordon\.fontenot@me\.com gordon@fonten\.io gordon@thoughtbot\.com
+alternates gordon\.fontenot@me\.com gordon@fonten\.io gmoney@gitpushgitpaid\.com gordon@thoughtbot\.com
 
 
 # Color scheme ---------------------------------------
