@@ -19,8 +19,6 @@ EOF
   exit 64
 }
 
-share="$(dirname "$0")"/../share/ghu
-
 get() {
   curl --silent "$@" | sed "
     /^.*\(You've been unsubscribed from the thread\).*$/!d
@@ -28,9 +26,13 @@ get() {
 }
 
 parse() {
-  local url_re='https?://[^[:space:]>]+'
+  sed "/^List-Unsubscribe: /,/^\([A-Z].*: \| *$\)/!d" |\
+    sed -n 2p |\
+    sed "s/<\(.*\)>/\1/g" |\
+    xargs printf -- "%s " |\
+    sed "s/  *$//g"
 
-  "$share"/parse-header "List-Unsubscribe" | grep -ioE "$url_re"
+  printf "\n"
 }
 
 if [ -n "$1" ]; then

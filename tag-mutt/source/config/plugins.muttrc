@@ -17,7 +17,7 @@ macro index,pager \cT \
 # GHU (https://github.com/pbrisbin/ghu) --------------
 macro index,pager \cU \
   "<enter-command>set my_old_pipe_decode=\$pipe_decode nopipe_decode<enter>\
-  <pipe-message>$MUTT_PLUGINS/bin/ghu<enter>\
+  <pipe-message>$MUTT_PLUGINS/ghu<enter>\
   <enter-command>set pipe_decode=\$my_old_pipe_decode<enter>\
   A" \
   "Unsubscribe from any email with a List-Unsubscribe header and archive the thread"
