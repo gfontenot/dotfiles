@@ -1,6 +1,12 @@
 set from = "gordon@fonten.io"
 set signature = $DOTFILES/tag-mutt/source/accounts/fastmail.sig
-set sendmail = "/usr/local/bin/msmtp -a FastMail"
+
+set my_user = "gfontenot@fastmail.fm"
+set my_pass = `keychain.py gfontenot@fastmail.fm`
+set my_host = "mail.messagingengine.com"
+set smtp_url = "smtp://$my_user:$my_pass@$my_host:587"
+set smtp_authenticators = "gssapi:login"
+
 set spoolfile = "+gordon-fonten.io/INBOX"
 set mbox = "+gordon-fonten.io/Archive"
 set postponed = "+gordon-fonten.io/Drafts"

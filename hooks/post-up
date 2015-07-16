@@ -10,6 +10,3 @@ setup_vundle() {
 }
 
 setup_vundle
-
-# set the proper permissions on msmtprc
-chmod 600 ~/.msmtprc

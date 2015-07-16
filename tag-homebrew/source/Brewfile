@@ -17,7 +17,6 @@ install ruby-install
 install class-dump
 
 # Email
-install msmtp
 install mutt
 install mbsync
 install notmuch

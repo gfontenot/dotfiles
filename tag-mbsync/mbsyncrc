@@ -11,7 +11,7 @@ Host mail.messagingengine.com
 User gfontenot@fastmail.fm
 PassCmd "~/.local/bin/keychain.py gfontenot@fastmail.fm"
 UseIMAPS yes
-CertificateFile ~/Code/dotfiles/tag-msmtp/source/Equifax_Secure_CA.cert
+CertificateFile ~/Code/dotfiles/tag-mbsync/source/Equifax_Secure_CA.cert
 
 IMAPStore FastMail-Remote
 Account FastMail
@@ -55,7 +55,7 @@ Host imap.gmail.com
 User gordon@thoughtbot.com
 PassCmd "~/.local/bin/keychain.py gordon@thoughtbot.com"
 UseIMAPS yes
-CertificateFile ~/Code/dotfiles/tag-msmtp/source/Equifax_Secure_CA.cert
+CertificateFile ~/Code/dotfiles/tag-mbsync/source/Equifax_Secure_CA.cert
 
 IMAPStore thoughtbot-Remote
 Account thoughtbot

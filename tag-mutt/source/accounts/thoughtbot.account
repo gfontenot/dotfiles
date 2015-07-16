@@ -1,6 +1,12 @@
 set from = "gordon@thoughtbot.com"
 set signature = $DOTFILES/tag-mutt/source/accounts/thoughtbot.sig
-set sendmail = "/usr/local/bin/msmtp -a thoughtbot"
+
+set my_user = "gordon@thoughtbot.com""
+set my_pass = `keychain.py gordon@thoughtbot.com`
+set my_host = "smtp.gmail.com"
+set smtp_url = "smtp://$my_user:$my_pass@$my_host:587"
+set smtp_authenticators = "gssapi:login"
+
 set spoolfile = "+gordon-thoughtbot.com/INBOX"
 set mbox = "+gordon-thoughtbot.com/Archive"
 set postponed = "+gordon-thoughtbot.com/Drafts"
