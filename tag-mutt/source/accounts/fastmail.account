@@ -5,7 +5,7 @@ set my_user = "gfontenot@fastmail.fm"
 set my_pass = `keychain.py gfontenot@fastmail.fm`
 set my_host = "mail.messagingengine.com"
 set smtp_url = "smtp://$my_user:$my_pass@$my_host:587"
-set smtp_authenticators = "gssapi:login"
+unset smtp_authenticators
 
 set spoolfile = "+gordon-fonten.io/INBOX"
 set mbox = "+gordon-fonten.io/Archive"
