@@ -14,3 +14,6 @@ text/html; lynx -dump %s; nametemplate=%s.html; copiousoutput
 
 # Unidentified files
 application/octet-stream; $DOTFILES/tag-mutt/source/plugins/view_attachment.sh %s "-"
+
+# Passbook Passes
+application/vnd-com.apple.pkpass; open %s
