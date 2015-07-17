@@ -1,21 +1,16 @@
-# My gitconfig
-#
-# This config file includes an (untracked) file that contains my sensitive
-# github credentials.
-
 [user]
   name = Gordon Fontenot
   email = gmoney@gitpushgitpaid.com
   signingkey = 2DA8F9CE
+
+[github]
+  user = gfontenot
 
 [gpg]
   program = gpg2
 
 [commit]
   gpgsign = true
-
-[include]
-  path = ~/.gitconfig-github
 
 [alias]
   count = shortlog -sn --no-merges
