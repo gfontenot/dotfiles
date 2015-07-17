@@ -7,5 +7,5 @@ macro index o \
   "sync inbox"
 
 macro index,pager \cV \
-  "v/html<enter><return>q" \
+  "v/html<enter><return>qa" \
   "view HTML version of the message"
