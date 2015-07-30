@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#
+# create local and remote branch
+
+set -e
+
+git checkout -b "$1"
+git push origin "$1" --set-upstream

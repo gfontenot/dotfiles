@@ -16,6 +16,9 @@ alias gmf='g merge --ff-only'
 alias gup='g update'
 alias gsup='g submodule update --init --recursive'
 
+alias gbc='g branch-create'
+alias gbd='g branch-delete'
+
 # log aliases
 alias gl='g log --format=custom --graph'
 alias glb='gl HEAD --not master'

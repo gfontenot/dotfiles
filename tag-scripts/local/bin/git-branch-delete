@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#
+# Delete local and remote branch
+
+set -e
+
+git push origin :"$1"
+git branch -d "$1"
