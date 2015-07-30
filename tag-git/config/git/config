@@ -30,6 +30,9 @@
 
   changelog = log --format=changelog --graph
 
+[merge]
+  ff = only
+
 [fetch]
   prune = true
 
