@@ -68,3 +68,5 @@
 
 [gitsh]
   defaultCommand = status -sb
+  gitCommand = /usr/local/bin/hub
+  noGreeting = true
