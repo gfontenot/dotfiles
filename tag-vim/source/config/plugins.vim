@@ -34,6 +34,6 @@ Plugin 'pbrisbin/vim-runfile'
 let g:runfile_by_name = {
   \ '.*Gemfile$': '!bundle',
   \ '.*\.m\(ark\)\?d\(own\)\?$': '!open -a "Marked" %',
-  \ '.*\.hs': '!cabal exec -- ghci -Wall %',
+  \ '.*\.hs': '!cabal repl %',
   \ }
 map <leader>r :Run<CR>
