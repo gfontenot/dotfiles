@@ -1,7 +1,6 @@
 # Use `hub` as our git wrapper:
 #   https://github.com/github/hub
 alias g=hub
-alias gitsh='gitsh --git hub'
 
 # alias straight to difftool for quick access
 alias gdiff='g diff'
