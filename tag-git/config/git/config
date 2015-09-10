@@ -13,6 +13,15 @@
   gpgsign = true
 
 [alias]
+  c = commit -v
+  cm = commit -m
+  co = checkout
+  l = log --format=custom --graph
+  lb = log --format=custom --graph HEAD --not master
+
+  up = update
+  sup = submodule update --init --recursive
+
   count = shortlog -sn --no-merges
   standup = shortlog --since=yesterday
   today = shortlog --since=midnight
