@@ -1,2 +1,3 @@
-alias vim="mvim -v"
-alias s='vim ~/.scratch.md'
+alias e='mvim -v'
+alias vim="e"
+alias s='e ~/.scratch.md'
