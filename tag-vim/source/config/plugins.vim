@@ -13,6 +13,8 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 
+Plugin 'christoomey/vim-tmux-navigator'
+
 " Markdown
 Plugin 'tpope/vim-markdown'
 let g:markdown_fenced_languages = ['swift', 'ruby', 'sh', 'yaml', 'objc', 'haskell']
