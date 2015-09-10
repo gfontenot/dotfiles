@@ -82,3 +82,4 @@
   defaultCommand = status -sb
   gitCommand = /usr/local/bin/hub
   noGreeting = true
+  prompt = "%D(%c%b%#%w)"
