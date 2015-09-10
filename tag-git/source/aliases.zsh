@@ -21,6 +21,3 @@ alias gbd='g delete-branch'
 # log aliases
 alias gl='g l'
 alias glb='g lb'
-
-# git rm deleted files
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
