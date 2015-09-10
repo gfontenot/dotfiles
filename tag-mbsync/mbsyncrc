@@ -35,6 +35,11 @@ Master :FastMail-Remote:INBOX/Archive
 Slave :FastMail-Local:Archive
 Pattern *
 
+Channel FastMail-Vault
+Master :FastMail-Remote:INBOX/Vault
+Slave :FastMail-Local:Vault
+Pattern *
+
 Channel FastMail-INBOX
 Master :FastMail-Remote:INBOX
 Slave :FastMail-Local:INBOX
@@ -45,6 +50,7 @@ Channel FastMail-INBOX
 Channel FastMail-Drafts
 Channel FastMail-Sent
 Channel FastMail-Archive
+Channel FastMail-Vault
 
 ##############################################################################
 ## thoughtbot
