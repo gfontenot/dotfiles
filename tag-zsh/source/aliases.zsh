@@ -1,5 +1,4 @@
-alias dotcd='cd $DOTFILES'
-alias dotedit='dotcd && e'
+alias dotedit='cd $DOTFILES && e'
 
 alias notes='cd $NOTES && e'
 
