@@ -10,7 +10,7 @@ IMAPAccount FastMail
 Host mail.messagingengine.com
 User gfontenot@fastmail.fm
 PassCmd "~/.local/bin/keychain.py gfontenot@fastmail.fm"
-UseIMAPS yes
+SSLType IMAPS
 CertificateFile ~/Code/dotfiles/tag-mbsync/source/Equifax_Secure_CA.cert
 
 IMAPStore FastMail-Remote
@@ -60,7 +60,8 @@ IMAPAccount thoughtbot
 Host imap.gmail.com
 User gordon@thoughtbot.com
 PassCmd "~/.local/bin/keychain.py gordon@thoughtbot.com"
-UseIMAPS yes
+SSLType IMAPS
+AuthMechs LOGIN
 CertificateFile ~/Code/dotfiles/tag-mbsync/source/Equifax_Secure_CA.cert
 
 IMAPStore thoughtbot-Remote
