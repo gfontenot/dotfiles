@@ -1,11 +1,8 @@
 Plugin 'Keithbsmiley/swift.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'nicholaides/words-to-avoid.vim'
 Plugin 'pbrisbin/vim-mkdir'
 Plugin 'pbrisbin/vim-rename-file'
-Plugin 'raichoo/haskell-vim'
-Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
@@ -13,11 +10,6 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 
-Plugin 'christoomey/vim-tmux-navigator'
-
-" Markdown
-Plugin 'tpope/vim-markdown'
-let g:markdown_fenced_languages = ['swift', 'ruby', 'sh', 'yaml', 'objc', 'haskell']
 
 " Gist support
 Plugin 'mattn/gist-vim'
