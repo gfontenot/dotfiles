@@ -7,7 +7,7 @@ install zsh
 install git --without-completions
 install git-update
 install gh
-install macvim
+install vim
 
 # rbenv and plugins
 install chruby

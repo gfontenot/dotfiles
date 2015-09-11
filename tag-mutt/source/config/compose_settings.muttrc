@@ -16,4 +16,4 @@ set forward_quote                    # include message in forwards
 set sendmail_wait = 0
 unset record
 
-set editor = "mvim -v +:silent+/^$ +:noh"
+set editor = "vim +:silent+/^$ +:noh"

@@ -1,3 +1,2 @@
-alias e='mvim -v'
-alias vim="e"
+alias e='vim'
 alias s='e ~/.scratch.md'

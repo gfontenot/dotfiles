@@ -31,5 +31,5 @@ function chpwd() {
 }
 
 # set the editor du jour.
-export VISUAL='vim'
+export VISUAL='/usr/local/bin/vim'
 export EDITOR="$VISUAL"
