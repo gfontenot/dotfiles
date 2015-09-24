@@ -2,17 +2,11 @@ autoload -U colors && colors
 prompt_opts=( cr subst percent )
 
 export PROMPT='%(?.%F{green}.%F{red})❯%f '
-export RPROMPT=$'$(swift_version)%c $(git_info)'
+export RPROMPT=$'%c $(git_info)'
 
 git_info() {
   if git_dir &>/dev/null; then
     echo "$(current_branch)$(rebase_info)$(repo_dirty)$(needs_push)$(current_sha)"
-  fi
-}
-
-swift_version() {
-  if /usr/bin/xcode-select -p | grep -i beta &>/dev/null; then
-    echo "%{$fg[yellow]%}BETA%{$reset_color%} "
   fi
 }
 
