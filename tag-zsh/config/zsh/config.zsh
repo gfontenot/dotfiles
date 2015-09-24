@@ -1,9 +1,9 @@
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
-fpath=($ZDOTDIR/functions $fpath)
+fpath=(~/.config/zsh/functions $fpath)
 
-autoload -U $ZDOTDIR/functions/*(:t)
+autoload -U ~/.config/zsh/functions/*(:t)
 autoload zmv
 
 setopt NO_BG_NICE # don't nice background tasks
