@@ -33,3 +33,7 @@ function chpwd() {
 # set the editor du jour.
 export VISUAL='/usr/local/bin/vim'
 export EDITOR="$VISUAL"
+
+# I have _no idea_ how I broke this, but for some reason, this was bound to
+# `redisplay`, which is _clearly_ wrong, so this is me chaning it back.
+bindkey ^R history-incremental-search-backward

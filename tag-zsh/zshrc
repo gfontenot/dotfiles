@@ -13,7 +13,10 @@ export DROPBOX="$HOME/Dropbox (Personal)"
 # Where you keep your plain text notes
 export NOTES="$DROPBOX/notes"
 
-# source every .zsh file in this repo
+# source the base zshrc configurations first
+for config_file (~/.config/zsh/*.zsh) source $config_file
+
+# source every other .zsh file in this repo
 for config_file ($DOTFILES/**/source/*.zsh) [[ "$(basename $config_file)" == "completion.zsh" ]] || source $config_file
 
 # initialize autocomplete here, otherwise functions won't be loaded
