@@ -23,27 +23,22 @@ Inbox ~/.mail/gordon-fonten.io/INBOX
 Channel FastMail-Drafts
 Master :FastMail-Remote:INBOX/Drafts
 Slave :FastMail-Local:Drafts
-Pattern *
 
 Channel FastMail-Sent
 Master ":FastMail-Remote:INBOX/Sent Items"
 Slave :FastMail-Local:Sent
-Pattern *
 
 Channel FastMail-Archive
 Master :FastMail-Remote:INBOX/Archive
 Slave :FastMail-Local:Archive
-Pattern *
 
 Channel FastMail-Vault
 Master :FastMail-Remote:INBOX/Vault
 Slave :FastMail-Local:Vault
-Pattern *
 
 Channel FastMail-INBOX
 Master :FastMail-Remote:INBOX
 Slave :FastMail-Local:INBOX
-Pattern %
 
 Group FastMail
 Channel FastMail-INBOX
