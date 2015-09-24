@@ -4,7 +4,7 @@ alias notes='cd $NOTES && e'
 
 alias curl='noglob curl'
 
-alias reload!='. ~/.zshenv'
+alias reload!='. ~/.zshrc'
 
 alias -g poop=pop # All of a sudden, everything is hilarious
 
