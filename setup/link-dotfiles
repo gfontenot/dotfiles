@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+set -e
+
+echo "Linking dotfiles"
+ln -s $PWD/rcrc ~/.rcrc
+rcup -v

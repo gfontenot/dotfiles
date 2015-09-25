@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+set -e
+
+source setup-homebrew
+source link-dotfiles
+source setup-vim
+source fix-path
