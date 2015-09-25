@@ -1,0 +1,4 @@
+brew 'mutt'
+brew 'urlview'
+brew 'contacts'
+brew 'lynx'

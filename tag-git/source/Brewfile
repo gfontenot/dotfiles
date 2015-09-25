@@ -1,0 +1,8 @@
+tap 'gfontenot/gitupdate'
+tap 'jingweno/gh'
+tap 'thoughtbot/formulae'
+
+brew 'git', args: ['without-completions']
+brew 'git-update'
+brew 'gitsh'
+brew 'hub'
