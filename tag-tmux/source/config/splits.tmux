@@ -1,6 +1,6 @@
 # horizontal and vertical splits
 bind \ split-window -h -c '#{pane_current_path}'
-bind - split-window -c '#{pane_current_path}'
+bind - split-window -v -c '#{pane_current_path}'
 
 # resize current pane with hjkl (repeatable)
 unbind l
