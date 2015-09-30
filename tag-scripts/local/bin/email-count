@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+#
+# Count the number of emails in all inboxes and return a formatted string
+# Return nothing if no emails found
+
+count=$(find ~/.mail/*/INBOX/*/ -type f | wc -l)
+emails="emails"
+
+if (( count == 0 )); then
+  exit
+elif (( count == 1 )); then
+  emails="email"
+fi
+
+echo "$count $emails"
