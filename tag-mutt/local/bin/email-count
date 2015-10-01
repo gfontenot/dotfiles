@@ -1,15 +1,43 @@
 #!/usr/bin/env sh
 #
 # Count the number of emails in all inboxes and return a formatted string
-# Return nothing if no emails found
+#
+# arguments:
+#   -z: Ignore Zeros. If this is set, don't print anything if there are 0
+#       emails
+#   -d [DELIM]: Add a trailing delimiter to the command. This is useful for
+#               running inside a tmux statusbar, where you might want a right
+#               side delimiter if we're printing text.
+
+trailing_delimiter=""
+ignore_zero=false
+
+while getopts ":d:z" opt; do
+  case $opt in
+    d)
+      trailing_delimiter="$OPTARG"
+      ;;
+    z)
+      ignore_zero=true
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+  esac
+done
 
 count=$(find ~/.mail/*/INBOX/*/ -type f | wc -l)
 emails="emails"
 
-if (( count == 0 )); then
+if (( count == 0 )) && $ignore_zero; then
   exit
 elif (( count == 1 )); then
   emails="email"
 fi
 
-echo "$count $emails"
+echo "$count $emails$trailing_delimiter"
