@@ -7,7 +7,7 @@ set -g renumber-windows on
 set -g base-index 1
 
 set -g status-left ' '
-set -g status-right '#(email-count -z -d " |") #(xcodebuild -version | grep "Xcode") '
+set -g status-right '#(email-count -z -d " |") #(xcode-version) '
 
 set-window-option -g window-status-current-bg yellow
 set-window-option -g window-status-current-fg black
