@@ -5,5 +5,6 @@ set -e
 source setup-homebrew
 source link-dotfiles
 source setup-vim
+source setup-mail
 source fix-path
 source setup-launch-agents

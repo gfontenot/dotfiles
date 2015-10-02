@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+echo "Creating temp directory for mutt"
+mkdir ~/.mutt/temp
+
+echo "Pulling mail"
+mbsync -a
+
+echo "indexing mail with notmuch"
+notmuch new
