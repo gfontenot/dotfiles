@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+
+echo "Setting up LaunchAgents"
+mkdir -p ~/Library/LaunchAgents
+
+find $(pwd)/ -type f -iname "*.plist" -print0 | while IFS= read -r -d $'\0' line; do
+  echo "Linking $line"
+  ln -s $line ~/Library/LaunchAgents
+done
+
+find ~/Library/LaunchAgents -iname "*.plist" -print0 | while IFS= read -r -d $'\0' line; do
+  echo "Starting $line"
+  launchctl load $line
+done

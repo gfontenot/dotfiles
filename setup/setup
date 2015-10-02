@@ -6,3 +6,4 @@ source setup-homebrew
 source link-dotfiles
 source setup-vim
 source fix-path
+source setup-launch-agents
