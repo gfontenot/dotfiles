@@ -6,6 +6,9 @@ echo "Installing Homebrew"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" \
   || echo "Homebrew already installed"
 
+echo "chown-ing /usr/local"
+sudo chown $(whoami):admin /usr/local && sudo chown -R $(whoami):admin /usr/local
+
 echo "Installing brew bundle"
 brew tap Homebrew/bundle
 
