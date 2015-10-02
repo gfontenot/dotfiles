@@ -1,4 +1,4 @@
-set spellfile=~/.vim/en.utf-8.add
+set spellfile=~/.vim/spell/en.utf-8.add
 
 augroup spellcheck
   autocmd!
@@ -8,4 +8,3 @@ augroup spellcheck
   autocmd FileType gitcommit setlocal spell
   autocmd FileType mail setlocal spell
 augroup END
-
