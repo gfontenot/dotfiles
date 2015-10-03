@@ -1,4 +1,7 @@
+tap 'keith/formulae'
+
 brew 'mutt'
 brew 'urlview'
 brew 'contacts'
 brew 'lynx'
+brew 'ghu'
