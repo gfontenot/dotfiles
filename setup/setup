@@ -8,3 +8,4 @@ source setup-vim
 source setup-mail
 source fix-path
 source setup-launch-agents
+source setup-xcode
