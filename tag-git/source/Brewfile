@@ -1,4 +1,4 @@
-tap 'gfontenot/gitupdate'
+tap 'gfontenot/formulae'
 tap 'thoughtbot/formulae'
 
 brew 'git', args: ['without-completions']
