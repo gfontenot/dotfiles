@@ -9,3 +9,5 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim \
 echo "Installing vim plugins"
 vim +PluginInstall +qa
 
+echo "Creating undo directory"
+mkdir -p ~/.vim/undo
