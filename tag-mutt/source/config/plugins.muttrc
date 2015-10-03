@@ -23,6 +23,6 @@ macro index,pager \cU \
   "Unsubscribe from any email with a List-Unsubscribe header and archive the thread"
 
 # Contacts completion --------------------------------
-set query_command = "$MUTT_PLUGINS/contacts.swift %s"
+set query_command = "contacts %s"
 bind editor <Tab> complete-query
 bind editor ^T    complete

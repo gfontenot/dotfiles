@@ -2,6 +2,6 @@ tap 'keith/formulae'
 
 brew 'mutt'
 brew 'urlview'
-brew 'contacts'
+brew 'contacts-cli'
 brew 'lynx'
 brew 'ghu'
