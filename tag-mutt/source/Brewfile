@@ -2,6 +2,8 @@ tap 'keith/formulae'
 tap 'gfontenot/formulae'
 
 brew 'mutt'
+brew 'notmuch'
+brew 'isync'
 brew 'urlview'
 brew 'contacts-cli'
 brew 'lynx'
