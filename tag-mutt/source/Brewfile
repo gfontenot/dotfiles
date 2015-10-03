@@ -1,7 +1,9 @@
 tap 'keith/formulae'
+tap 'gfontenot/formulae'
 
 brew 'mutt'
 brew 'urlview'
 brew 'contacts-cli'
 brew 'lynx'
 brew 'ghu'
+brew 'trelloparse'
