@@ -2,10 +2,12 @@
 
 set -e
 
-source setup-homebrew
-source link-dotfiles
-source setup-vim
-source setup-mail
-source fix-path
-source setup-launch-agents
-source setup-xcode
+setup/install-homebrew
+setup/link-dotfiles
+setup/fix-path
+setup/setup-launch-agents
+
+# Find all tag-specific setup files and source them
+for file in tag-*/setup/*; do
+  source "$file"
+done

@@ -1,11 +1,16 @@
 #!/usr/bin/env sh
 
-echo "Setting up LaunchAgents"
-mkdir -p ~/Library/LaunchAgents
+set -e
+
+echo "\n==========================================="
+echo "Setting up LaunchAgents\n"
+
+echo "Creating LaunchAgents directory"
+mkdir -p ~/Library/LaunchAgents || "LaunchAgents directory exists"
 
 find $(pwd)/ -type f -iname "*.plist" -print0 | while IFS= read -r -d $'\0' line; do
   echo "Linking $line"
-  ln -s $line ~/Library/LaunchAgents
+  ln -s $line ~/Library/LaunchAgents || echo "$line already linked"
 done
 
 find ~/Library/LaunchAgents -iname "*.plist" -print0 | while IFS= read -r -d $'\0' line; do
