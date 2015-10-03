@@ -30,10 +30,10 @@ to the tag root. However, there are some exceptions:
 
  - Anything under `tag-foo/source` will _not_ be symlinked. These files are
    usually additional configuration that doesn't need to be moved into the
-   home directory, and is sourced in place. However, this might also include
+   home directory, and are sourced in place. However, this might also include
    files such as `launchd` files or file templates.
  - Anything under `tag-foo/setup` will also not be symlinked into `$HOME`.
-   These directories contain setup scripts for the specific tool or tag.
+   These directories contain setup scripts for the specific tag.
 
 These ignore patterns are being controlled by the `EXCLUDES` key in my
 [`rcrc`][rcrc].
