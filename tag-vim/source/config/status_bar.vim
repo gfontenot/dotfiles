@@ -10,3 +10,5 @@ let g:lightline.active = {
       \      ['filetype']
       \   ]
 \}
+
+let g:lightline.inactive = { 'right': [ ] }
