@@ -10,4 +10,3 @@ mailboxes=$1
 [ -z "$mailboxes" ] && mailboxes="-a"
 
 /usr/local/bin/mbsync -q "$mailboxes"
-/usr/local/bin/notmuch new 2&> /dev/null

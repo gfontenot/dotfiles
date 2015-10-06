@@ -10,6 +10,3 @@ mkdir ~/.mutt/temp || echo "Temp directory exists"
 
 echo "Pulling mail"
 mbsync -a
-
-echo "indexing mail with notmuch"
-notmuch new

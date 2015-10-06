@@ -3,11 +3,11 @@ macro pager \cB \
   <pipe-entry>'urlview'<enter> \
   'Follow links with urlview'
 
-# Search with notmuch --------------------------------
+# Search ---------------------------------------------
 macro index S \
-  "<shell-escape>$MUTT_PLUGINS/mutt-notmuch.py -G ~/.mail/temporary/search<enter>\
+  "<shell-escape>ag-mail<enter>\
   <change-folder-readonly>+temporary/search<enter>" \
-  "search mail using notmuch"
+  "search mail using ag-mail"
 
 # Omnifocus ------------------------------------------
 macro index,pager \cT \

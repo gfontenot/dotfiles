@@ -2,7 +2,7 @@ tap 'keith/formulae'
 tap 'gfontenot/formulae'
 
 brew 'mutt'
-brew 'notmuch'
+brew 'the_silver_searcher'
 brew 'isync'
 brew 'urlview'
 brew 'contacts-cli'
