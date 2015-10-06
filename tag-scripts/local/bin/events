@@ -1,0 +1,41 @@
+#!/usr/bin/env sh
+
+from="today"
+till="today"
+
+while getopts ":tw" opt; do
+  case $opt in
+    t)
+      from="tomorrow"
+      till="tomorrow"
+      ;;
+    w)
+      from="today"
+      till="next week"
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+  esac
+done
+
+icalBuddy \
+  --separateByDate \
+  --noCalendarNames \
+  --formatOutput \
+  --excludeCals Moving \
+  --excludeEventProps attendees,notes,location \
+  --noRelativeDates \
+  --dateFormat "%A, %m/%d" \
+  eventsFrom:"$from" \
+  to:"$till" \
+  | \
+  less \
+  --quit-if-one-screen \
+  --no-init \
+  --RAW-CONTROL-CHARS \
