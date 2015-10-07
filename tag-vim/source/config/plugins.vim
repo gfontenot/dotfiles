@@ -1,9 +1,22 @@
+" Fuzzy finder for files
 Plugin 'kien/ctrlp.vim'
+
+" Automatically create non-existent directories
 Plugin 'pbrisbin/vim-mkdir'
+
+" Rename files in place
 Plugin 'pbrisbin/vim-rename-file'
+
+" Easily comment code
 Plugin 'tpope/vim-commentary'
+
+" Automatically add closing statements for a number of languages
 Plugin 'tpope/vim-endwise'
+
+" Allow . to make plugin actions repeat
 Plugin 'tpope/vim-repeat'
+
+" Surround text objects with characters
 Plugin 'tpope/vim-surround'
 
 " Remember last position in files
