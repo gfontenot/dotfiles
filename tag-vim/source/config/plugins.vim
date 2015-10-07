@@ -6,6 +6,9 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 
+" Remember last position in files
+Plugin 'dietsche/vim-lastplace'
+
 " Intelligent tab completion
 Plugin 'ervandew/supertab'
 
