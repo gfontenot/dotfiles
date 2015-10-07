@@ -6,6 +6,9 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 
+" Intelligent tab completion
+Plugin 'ervandew/supertab'
+
 " Colorscheme
 Plugin 'jonathanfilip/vim-lucius'
 
