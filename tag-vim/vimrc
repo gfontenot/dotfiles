@@ -3,6 +3,7 @@ set nocompatible                  " Must come first because it changes other opt
 " Make sure Vundle is running before anything else
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
 Plugin 'gmarik/Vundle.vim'
 
 set rtp+=$DOTFILES/tag-vim/source
@@ -15,6 +16,9 @@ call vundle#end()
 
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
+
+colorscheme lucius                " Use Lucius for our color scheme
+LuciusDark                        " Use the dark version of Lucius
 
 set showcmd                       " Display incomplete commands.
 set backspace=indent,eol,start    " Intuitive backspacing.

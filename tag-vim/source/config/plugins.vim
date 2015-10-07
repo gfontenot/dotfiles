@@ -6,6 +6,9 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 
+" Colorscheme
+Plugin 'jonathanfilip/vim-lucius'
+
 " Dash support
 Plugin 'Keithbsmiley/investigate.vim'
 let g:investigate_use_dash=1
