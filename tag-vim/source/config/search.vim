@@ -19,3 +19,9 @@ augroup END
 
 " Search silently
 command -nargs=+ -complete=file -bar Gr silent! grep! <args> | redraw!
+
+" Map Gr directly to \ for speeeed
+nnoremap \ :Gr<SPACE>
+
+" bind K to grep word under cursor
+nnoremap K :Gr <C-R><C-W><CR>
