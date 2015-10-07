@@ -9,3 +9,13 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
+
+augroup search
+  autocmd!
+
+  " Open the quickfix window with all grep commands
+  autocmd QuickFixCmdPost *grep* cwindow
+augroup END
+
+" Search silently
+command -nargs=+ -complete=file -bar Gr silent! grep! <args> | redraw!
