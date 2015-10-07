@@ -1,5 +1,3 @@
-Plugin 'rking/ag.vim'
-
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
   " Use Ag over Grep
