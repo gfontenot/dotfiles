@@ -18,6 +18,6 @@ autoload -U compinit
 compinit
 
 # source the remaining zsh config files
-for config_file (~/.config/*/*.zsh) source $config_file
+for config_file (~/.config/^zsh/*.zsh) source $config_file
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

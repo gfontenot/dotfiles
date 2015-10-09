@@ -15,6 +15,7 @@ setopt PROMPT_SUBST
 setopt CORRECT
 setopt COMPLETE_IN_WORD
 setopt IGNORE_EOF
+setopt EXTENDED_GLOB
 
 # don't expand aliases _before_ completion has finished
 #   like: git comm-[tab]
@@ -36,4 +37,4 @@ export EDITOR="$VISUAL"
 
 # I have _no idea_ how I broke this, but for some reason, this was bound to
 # `redisplay`, which is _clearly_ wrong, so this is me chaning it back.
-bindkey ^R history-incremental-search-backward
+bindkey "^R" history-incremental-search-backward
