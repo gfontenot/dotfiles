@@ -17,7 +17,7 @@ for config_file (~/.config/zsh/*.zsh) source $config_file
 autoload -U compinit
 compinit
 
-# source the remaining config files in the repo
-for config_file ($DOTFILES/**/source/*.zsh) source $config_file
+# source the remaining zsh config files
+for config_file (~/.config/*/*.zsh) source $config_file
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

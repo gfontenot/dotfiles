@@ -6,9 +6,9 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-set rtp+=$DOTFILES/tag-vim/source
+set rtp+=~/.config/vim
 
-for fpath in split(globpath('$DOTFILES/tag-vim/source/config', '*.vim'), '\n')
+for fpath in split(globpath('~/.config/vim', '*.vim'), '\n')
   exec 'source' fpath
 endfor
 

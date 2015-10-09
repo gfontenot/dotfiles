@@ -8,7 +8,7 @@ echo "Setting up LaunchAgents\n"
 echo "Creating LaunchAgents directory"
 mkdir -p ~/Library/LaunchAgents || "LaunchAgents directory exists"
 
-find $(pwd)/*/source/LaunchAgents -type f -iname "*.plist" -print0 | while IFS= read -r -d $'\0' line; do
+find $(pwd)/*/LaunchAgents -type f -iname "*.plist" -print0 | while IFS= read -r -d $'\0' line; do
   echo "Linking $line"
   ln -s $line ~/Library/LaunchAgents || echo "$line already linked"
 done

@@ -1,5 +1,5 @@
 set from = "gordon@thoughtbot.com"
-set signature = $DOTFILES/tag-mutt/source/accounts/thoughtbot.sig
+set signature = ~/.config/mutt/accounts/thoughtbot.sig
 
 set my_user = "gordon@thoughtbot.com""
 set my_pass = `keychain.py gordon@thoughtbot.com`

@@ -4,7 +4,7 @@ set alias_file       = ~/.mutt/alias              # where to store aliases
 set header_cache     = ~/.mutt/cache/headers      # where to store headers
 set message_cachedir = ~/.mutt/cache/bodies       # where to store bodies
 set certificate_file = ~/.mutt/certificates       # where to store certs
-set mailcap_path     = $DOTFILES/tag-mutt/source/config/mailcap # entries for filetypes
+set mailcap_path     = ~/.config/mutt/mailcap     # entries for filetypes
 set tmpdir           = ~/.mutt/temp               # where to keep temp files
 
 # Basic Options --------------------------------------
@@ -22,20 +22,20 @@ set pipe_decode          # strip headers and eval mimes when piping
 set thorough_search      # strip headers and eval mimes before searching
 
 # Customize display filter ----------------------------
-set display_filter = $MUTT_PLUGINS/display_filter.sh
+set display_filter = ~/.config/mutt/plugins/display_filter.sh
 
 # Open thoughtbot by default --------------------------
 set spoolfile = "+gordon-thoughtbot.com/INBOX"
 
 # Multiple account config
 mailboxes +gordon-thoughtbot.com/INBOX +gordon-fonten.io/INBOX
-folder-hook gordon-thoughtbot.com/* source $DOTFILES/tag-mutt/source/accounts/thoughtbot.account
-folder-hook gordon-fonten.io/* source $DOTFILES/tag-mutt/source/accounts/fastmail.account
+folder-hook gordon-thoughtbot.com/* source ~/.config/mutt/accounts/thoughtbot.account
+folder-hook gordon-fonten.io/* source ~/.config/mutt/accounts/fastmail.account
 alternates gordon\.fontenot@me\.com gordon@fonten\.io gmoney@gitpushgitpaid\.com gordon@thoughtbot\.com
 
 
 # Color scheme ---------------------------------------
-source $DOTFILES/tag-mutt/source/colors/tomorrow-night-eighties-16.muttrc
+source ~/.config/mutt/colors/tomorrow-night-eighties-16.muttrc
 
 # Status Bar -----------------------------------------
 set status_chars  = " *%A"
@@ -67,9 +67,9 @@ set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
 auto_view text/html
 alternative_order text/plain text/enriched text/html
 
-source $DOTFILES/tag-mutt/source/config/keybindings.muttrc
-source $DOTFILES/tag-mutt/source/config/macros.muttrc
-source $DOTFILES/tag-mutt/source/config/compose_settings.muttrc
-source $DOTFILES/tag-mutt/source/config/plugins.muttrc
-source $DOTFILES/tag-mutt/source/config/mailing_lists.muttrc
-source $DOTFILES/tag-mutt/source/config/pgp.muttrc
+source ~/.config/mutt/keybindings.muttrc
+source ~/.config/mutt/macros.muttrc
+source ~/.config/mutt/compose_settings.muttrc
+source ~/.config/mutt/plugins.muttrc
+source ~/.config/mutt/mailing_lists.muttrc
+source ~/.config/mutt/pgp.muttrc
