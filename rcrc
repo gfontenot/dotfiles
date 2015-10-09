@@ -1,3 +1,3 @@
 EXCLUDES="README.md Brewfile LaunchAgents Templates setup"
 DOTFILES_DIRS="$DOTFILES"
-TAGS="zsh scripts haskell git pgp mutt vim tmux xcode ruby ag"
+TAGS="ag git haskell mutt pgp ruby scripts tmux vim xcode zsh"
