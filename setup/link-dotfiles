@@ -5,5 +5,4 @@ set -e
 echo "\n==========================================="
 echo "Linking dotfiles\n"
 
-ln -s $PWD/rcrc ~/.rcrc || echo ".rcrc already linked"
-rcup -v
+RCRC=rcrc rcup -v
