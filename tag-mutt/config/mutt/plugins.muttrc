@@ -11,7 +11,7 @@ macro index S \
 
 # Omnifocus ------------------------------------------
 macro index,pager \cT \
-  <pipe-message>'$MUTT_PLUGINS/email-to-omnifocus.rb'<enter> \
+  <pipe-message>'~/.config/mutt/plugins/email-to-omnifocus.rb'<enter> \
   'Create Omnifocus task from message'
 
 # GHU (https://github.com/pbrisbin/ghu) --------------
