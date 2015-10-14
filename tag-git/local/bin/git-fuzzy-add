@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+file=$(git ls-files \
+           --modified \
+           --others \
+           --exclude-standard \
+           | pick
+)
+
+git add $1 "$file"

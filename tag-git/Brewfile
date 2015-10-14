@@ -5,3 +5,5 @@ brew 'git', args: ['without-completions']
 brew 'git-update'
 brew 'gitsh'
 brew 'hub'
+
+brew 'pick'
