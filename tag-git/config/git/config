@@ -32,6 +32,8 @@
   amend = commit --amend -C HEAD
   credit = commit --amend --author "$1 <$2>" -C HEAD
 
+  wip = commit --all --message 'wip'
+
   unstage = reset HEAD
   staged = diff --staged
 
