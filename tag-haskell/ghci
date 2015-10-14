@@ -1,1 +1,15 @@
-:set prompt "ghci> "
+:set editor vim
+-- Set the prompt
+:set prompt "\ESC[0;34mλ> \ESC[m"
+-- Allow :load-ing from ./src
+:set -isrc
+-- Allow :load-ing from ./tests
+:set -itests
+
+import Data.List
+import Data.Char
+import Control.Applicative
+import Control.Monad
+
+-- cabal install hoogle, then `:hoogle fmap`
+:def hoogle \s -> return $ ":! hoogle --count=15 \"" ++ s ++ "\""
