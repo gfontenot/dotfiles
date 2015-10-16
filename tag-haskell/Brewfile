@@ -1,2 +1,5 @@
+tap "gabebw/formulae"
+
 brew "ghc"
 brew "cabal-install"
+brew "huspenders"
