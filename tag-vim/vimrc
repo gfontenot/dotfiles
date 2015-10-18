@@ -52,6 +52,7 @@ set showmatch                     " Show all matches
 set colorcolumn=80
 
 set relativenumber                " Use relative line numbers
+set number                        " Also show the current line number
 set cursorline                    " Highlight the current line
 
 set wrap                          " Turn on line wrapping.
