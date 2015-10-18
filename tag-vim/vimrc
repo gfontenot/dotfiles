@@ -1,8 +1,4 @@
-" Make sure Vundle is running before anything else
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim'
+call plug#begin()
 
 set rtp+=~/.config/vim
 
@@ -10,7 +6,7 @@ for fpath in split(globpath('~/.config/vim', '*.vim'), '\n')
   exec 'source' fpath
 endfor
 
-call vundle#end()
+call plug#end()
 
 colorscheme lucius                " Use Lucius for our color scheme
 LuciusDark                        " Use the dark version of Lucius

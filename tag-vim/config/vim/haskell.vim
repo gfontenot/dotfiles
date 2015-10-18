@@ -1,4 +1,4 @@
-Plugin 'raichoo/haskell-vim'
+Plug 'raichoo/haskell-vim'
 
 augroup haskell
   autocmd!

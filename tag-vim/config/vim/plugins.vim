@@ -1,42 +1,42 @@
-" Basic defaults
-Plugin 'tpope/vim-sensible'
+" Baseic defaults
+Plug 'tpope/vim-sensible'
 
 " Fuzzy finder for files
-Plugin 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 
 " Automatically create non-existent directories
-Plugin 'pbrisbin/vim-mkdir'
+Plug 'pbrisbin/vim-mkdir'
 
 " Rename files in place
-Plugin 'pbrisbin/vim-rename-file'
+Plug 'pbrisbin/vim-rename-file'
 
 " Easily comment code
-Plugin 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
 
 " Automatically add closing statements for a number of languages
-Plugin 'tpope/vim-endwise'
+Plug 'tpope/vim-endwise'
 
 " Allow . to make plugin actions repeat
-Plugin 'tpope/vim-repeat'
+Plug 'tpope/vim-repeat'
 
 " Surround text objects with characters
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
 " Remember last position in files
-Plugin 'dietsche/vim-lastplace'
+Plug 'dietsche/vim-lastplace'
 
 " Intelligent tab completion
-Plugin 'ervandew/supertab'
+Plug 'ervandew/supertab'
 
 " Colorscheme
-Plugin 'jonathanfilip/vim-lucius'
+Plug 'jonathanfilip/vim-lucius'
 
 " Dash support
-Plugin 'Keithbsmiley/investigate.vim'
+Plug 'Keithbsmiley/investigate.vim'
 let g:investigate_use_dash=1
 
 " Runfile
-Plugin 'pbrisbin/vim-runfile'
+Plug 'pbrisbin/vim-runfile'
 let g:runfile_by_name = {
   \ '.*\.m\(ark\)\?d\(own\)\?$': '!open -a "Marked" %',
   \ '.*\.hs': '!cabal repl %',

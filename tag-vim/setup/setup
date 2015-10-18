@@ -10,7 +10,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim \
   || echo "Vundle already installed"
 
 echo "Installing vim plugins"
-vim +PluginInstall +qa
+vim +PlugInstall +qa
 
 echo "Creating undo directory"
 mkdir -p ~/.vim/undo || echo "Undo directory exists"

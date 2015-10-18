@@ -1,4 +1,4 @@
-Plugin 'gfontenot/vim-xcodebuild'
+Plug 'gfontenot/vim-xcodebuild'
 
 let g:xcodebuild_run_command = 'VtrSendCommandToRunner! {cmd}'
 let g:xcodebuild_xcpretty_testing_flags = '--test'
