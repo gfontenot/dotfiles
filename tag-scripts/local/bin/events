@@ -28,7 +28,7 @@ icalBuddy \
   --separateByDate \
   --noCalendarNames \
   --formatOutput \
-  --excludeCals Moving \
+  --excludeCals Moving,Urvi \
   --excludeEventProps attendees,notes,location \
   --noRelativeDates \
   --dateFormat "%A, %m/%d" \
