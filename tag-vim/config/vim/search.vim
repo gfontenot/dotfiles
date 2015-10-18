@@ -1,3 +1,9 @@
+set gdefault                      " default to global substitutions on lines
+set ignorecase                    " Case-insensitive searching.
+set smartcase                     " But case-sensitive if expression contains a capital letter.
+set hlsearch                      " Highlight matches.
+set showmatch                     " Show all matches
+
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
   " Use Ag over Grep

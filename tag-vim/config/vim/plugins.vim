@@ -1,3 +1,6 @@
+" Basic defaults
+Plugin 'tpope/vim-sensible'
+
 " Fuzzy finder for files
 Plugin 'kien/ctrlp.vim'
 
