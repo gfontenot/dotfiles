@@ -26,14 +26,19 @@ rcup -d .gfontenot-dotfiles -x README.md -x rcrc -t git
 ## repo organization ##
 
 `rcm` will symlink all files into place, keeping the folder structure relative
-to the tag root. However, there are some exceptions:
+to the tag root. However, our `rcrc` is explicitly ignoring a few things:
 
- - Anything under `tag-foo/source` will _not_ be symlinked. These files are
-   usually additional configuration that doesn't need to be moved into the
-   home directory, and are sourced in place. However, this might also include
-   files such as `launchd` files or file templates.
- - Anything under `tag-foo/setup` will also not be symlinked into `$HOME`.
-   These directories contain setup scripts for the specific tag.
+ - `Brewfile`s are the homebrew dependencies for a specific tag, and so don't
+   need to be symlinked.
+ - `LaunchAgents` directories hold `plist` files for `launchd`. These will be
+   symlinked into place manually, since they need to go into a location other
+   than `~`. These will also be loaded into `launchd` as part of the main
+   setup script.
+ - `Templates` directories hold various templates. For example,
+   `tag-xcode/Templates` holds onto various Xcode template files that need to
+   be symlinked into a specific location.
+ - Anything named `setup` (or in a directory with that name) is assumed to be
+   part of the general setup process, and so will not be symlinked.
 
 These ignore patterns are being controlled by the `EXCLUDES` key in my
 [`rcrc`][rcrc].
