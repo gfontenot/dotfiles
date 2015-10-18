@@ -28,9 +28,6 @@ Plug 'dietsche/vim-lastplace'
 " Intelligent tab completion
 Plug 'ervandew/supertab'
 
-" Colorscheme
-Plug 'jonathanfilip/vim-lucius'
-
 " Dash support
 Plug 'Keithbsmiley/investigate.vim'
 let g:investigate_use_dash=1

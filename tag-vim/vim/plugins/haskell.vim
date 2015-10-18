@@ -1,0 +1,1 @@
+Plug 'raichoo/haskell-vim'

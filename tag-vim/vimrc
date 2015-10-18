@@ -1,15 +1,20 @@
+" Stolen wholesale from gabebw, who stole it wholesale from christoomey, whose
+" dotfiles you really should check out:
+" https://github.com/christoomey/dotfiles
+function! s:SourceConfigFilesIn(directory)
+  let directory_splat = '~/.vim/' . a:directory . '/*.vim'
+  for config_file in split(glob(directory_splat), '\n')
+    if filereadable(config_file)
+        execute 'source' config_file
+    endif
+  endfor
+endfunction
+
 call plug#begin()
-
-set rtp+=~/.config/vim
-
-for fpath in split(globpath('~/.config/vim', '*.vim'), '\n')
-  exec 'source' fpath
-endfor
-
+call s:SourceConfigFilesIn('plugins')
 call plug#end()
 
-colorscheme lucius                " Use Lucius for our color scheme
-LuciusDark                        " Use the dark version of Lucius
+call s:SourceConfigFilesIn('config')
 
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
@@ -18,5 +23,4 @@ set noswapfile                    " Don't use swapfiles
 set tabstop=2                     " Global tab width.
 set shiftwidth=2                  " And again, related.
 set expandtab                     " Use spaces instead of tabs
-
 set wrap                          " Turn on line wrapping.

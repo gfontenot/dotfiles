@@ -1,5 +1,3 @@
-Plug 'itchyny/lightline.vim'
-
 let g:lightline = { 'colorscheme': 'wombat' }
 
 let g:lightline.active = {

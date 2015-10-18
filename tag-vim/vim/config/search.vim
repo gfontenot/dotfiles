@@ -3,6 +3,7 @@ set ignorecase                    " Case-insensitive searching.
 set smartcase                     " But case-sensitive if expression contains a capital letter.
 set hlsearch                      " Highlight matches.
 set showmatch                     " Show all matches
+autocmd BufReadCmd set nohlsearch " on opening the file, clear search-highlighting
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')

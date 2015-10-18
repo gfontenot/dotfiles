@@ -1,6 +1,3 @@
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'christoomey/vim-tmux-runner'
-
 let g:VtrGitCdUpOnOpen = 1
 
 nnoremap <leader>kr :VtrKillRunner<cr>
