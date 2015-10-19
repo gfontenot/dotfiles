@@ -14,7 +14,7 @@
 
 [alias]
   c = commit --verbose
-  cm = commit -m
+  cm = commit --message
   co = checkout
   l = log --format=custom --graph
   lb = log --format=custom --graph HEAD --not master
@@ -24,13 +24,13 @@
 
   fadd = fuzzy-add
 
-  count = shortlog -sn --no-merges
+  count = shortlog --summary --numbered --no-merges
   standup = shortlog --since=yesterday
   today = shortlog --since=midnight
   branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(committerdate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
 
-  amend = commit --amend -C HEAD
-  credit = commit --amend --author "$1 <$2>" -C HEAD
+  amend = commit --amend --reuse-message HEAD
+  credit = commit --amend --author "$1 <$2>" --reuse-message HEAD
 
   wip = commit --all --message 'wip'
 
@@ -83,7 +83,7 @@
   helper = osxkeychain
 
 [gitsh]
-  defaultCommand = status -sb
+  defaultCommand = status --short --branch
   gitCommand = /usr/local/bin/hub
   noGreeting = true
   prompt = "%D(%c%b%#%w)"
