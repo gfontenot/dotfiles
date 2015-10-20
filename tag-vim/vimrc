@@ -19,6 +19,7 @@ call s:SourceConfigFilesIn('config')
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
 set noswapfile                    " Don't use swapfiles
+set hidden                        " Don't kill unwritten buffers when hidden
 
 set tabstop=2                     " Global tab width.
 set shiftwidth=2                  " And again, related.
