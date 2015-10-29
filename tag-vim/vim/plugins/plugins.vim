@@ -30,12 +30,6 @@ Plug 'ervandew/supertab'
 
 " Dash support
 Plug 'Keithbsmiley/investigate.vim'
-let g:investigate_use_dash=1
 
 " Runfile
 Plug 'pbrisbin/vim-runfile'
-let g:runfile_by_name = {
-  \ '.*\.m\(ark\)\?d\(own\)\?$': '!open -a "Marked" %',
-  \ '.*\.hs': '!cabal repl %',
-  \ }
-map <leader>r :Run<CR>
