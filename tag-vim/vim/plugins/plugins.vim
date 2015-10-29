@@ -1,6 +1,9 @@
 " Baseic defaults
 Plug 'tpope/vim-sensible'
 
+" Git support
+Plug 'tpope/vim-fugitive'
+
 " Fuzzy finder for files
 Plug 'kien/ctrlp.vim'
 
