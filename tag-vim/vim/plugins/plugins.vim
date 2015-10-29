@@ -28,8 +28,5 @@ Plug 'dietsche/vim-lastplace'
 " Intelligent tab completion
 Plug 'ervandew/supertab'
 
-" Dash support
-Plug 'Keithbsmiley/investigate.vim'
-
 " Runfile
 Plug 'pbrisbin/vim-runfile'
