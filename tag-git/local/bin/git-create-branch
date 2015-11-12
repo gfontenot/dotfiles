@@ -4,5 +4,7 @@
 
 set -e
 
-git checkout -b "$1"
-git push origin "$1" --set-upstream
+branch_name="gf-$1"
+
+git checkout -b "$branch_name"
+git push origin "$branch_name" --set-upstream
