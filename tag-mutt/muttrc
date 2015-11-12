@@ -15,7 +15,7 @@ set mail_check = 0       # minimum time between scans
 unset move               # gmail does that
 set delete               # don't ask, just do
 unset confirmappend      # don't ask, just do!
-set quit                 # don't ask, just do!!
+set quit = ask-yes       # Ask if we really want to quit
 unset mark_old           # read/new is good enough for me
 set beep_new             # bell on new mails
 set pipe_decode          # strip headers and eval mimes when piping
