@@ -1,1 +1,7 @@
-subscribe cocoaheadsboston cocoapods
+subscribe cocoaheadsboston \
+  cocoapods \
+  mutt-users \
+  swift-users \
+  swift-dev \
+  swift-build-dev \
+  swift-evolution
