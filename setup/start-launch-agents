@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+set -e
+
+echo "\n==========================================="
+echo "Starting LaunchAgents\n"
+
+find ~/Library/LaunchAgents -iname "*.plist" -print0 | while IFS= read -r -d $'\0' line; do
+  echo "Starting $line"
+  launchctl load $line
+done

@@ -5,9 +5,10 @@ set -e
 setup/install-homebrew
 setup/link-dotfiles
 setup/fix-path
-setup/setup-launch-agents
 
 # Find all tag-specific setup files and source them
 for file in tag-*/setup/*; do
   source "$file"
 done
+
+setup/start-launch-agents
