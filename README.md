@@ -30,13 +30,6 @@ to the tag root. However, our `rcrc` is explicitly ignoring a few things:
 
  - `Brewfile`s are the homebrew dependencies for a specific tag, and so don't
    need to be symlinked.
- - `LaunchAgents` directories hold `plist` files for `launchd`. These will be
-   symlinked into place manually, since they need to go into a location other
-   than `~`. These will also be loaded into `launchd` as part of the main
-   setup script.
- - `Templates` directories hold various templates. For example,
-   `tag-xcode/Templates` holds onto various Xcode template files that need to
-   be symlinked into a specific location.
  - Anything named `setup` (or in a directory with that name) is assumed to be
    part of the general setup process, and so will not be symlinked.
 
@@ -44,6 +37,11 @@ These ignore patterns are being controlled by the `EXCLUDES` key in my
 [`rcrc`][rcrc].
 
 [rcrc]: https://github.com/gfontenot/dotfiles/blob/master/rcrc
+
+Additionally, I'm using the `UNDOTTED` key in my `rcrc` to make sure that
+`Library` files aren't symlinked into `.Library`. This means I can do things
+like add Xcode color schemes, or LaunchAgents into my dotfiles and have them
+symlinked into place properly.
 
 ## attribution ##
 
