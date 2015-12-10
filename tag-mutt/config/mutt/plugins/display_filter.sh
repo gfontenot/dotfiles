@@ -4,7 +4,7 @@
 message=$(tee /tmp/mutt.txt)
 
 if echo "${message}" | egrep --silent "From: Trello"; then
-  echo "${message}" | trelloparse
+  echo "${message}" | trelloparse | fold -s
 else
   echo "${message}"
 fi
