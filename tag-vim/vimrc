@@ -27,3 +27,9 @@ set expandtab                     " Use spaces instead of tabs
 set wrap                          " Turn on line wrapping.
 set nojoinspaces                  " Don't add two spaces after punctuation
                                   " when joining lines
+
+" Load local vimrc if found
+let local_config = expand('%:p:h') . '/.vimrc'
+if filereadable(local_config)
+  exe 'source' local_config
+endif
