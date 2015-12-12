@@ -25,3 +25,5 @@ set tabstop=2                     " Global tab width.
 set shiftwidth=2                  " And again, related.
 set expandtab                     " Use spaces instead of tabs
 set wrap                          " Turn on line wrapping.
+set nojoinspaces                  " Don't add two spaces after punctuation
+                                  " when joining lines
