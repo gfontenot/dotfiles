@@ -35,7 +35,7 @@ alternates gordon\.fontenot@me\.com gordon@fonten\.io gmoney@gitpushgitpaid\.com
 
 
 # Color scheme ---------------------------------------
-source ~/.config/mutt/colors/tomorrow-night-eighties-16.muttrc
+source ~/.config/mutt/color.muttrc
 
 # Status Bar -----------------------------------------
 set status_chars  = " *%A"
