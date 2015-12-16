@@ -19,11 +19,6 @@ color index         cyan            default         "~v~(~N)"                   
 color index         cyan            default         "~N~v~(~N)"                 # collapsed thread with unread parent
 color index         black           red             "~v~(~D)"
 
-# message headers ------------------------------------------------------
-color hdrdefault    yellow          default
-color header        blue            default         "^(From)"
-color header        blue            default         "^(Subject)"
-
 # body -----------------------------------------------------------------
 color quoted        yellow          default
 color quoted1       cyan            default
