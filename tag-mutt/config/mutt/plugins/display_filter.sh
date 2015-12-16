@@ -1,9 +1,13 @@
 #!/usr/bin/env sh
 
-# message=$(recode utf-8..iso-8859-1 | recode HTML_4.0)
-message=$(tee /tmp/mutt.txt)
+tmp_file="/tmp/mutt.txt"
+cat - > "$tmp_file"
 
-if echo "${message}" | egrep --silent "From: Trello"; then
+tmp_date=$(formail -x Date < "$tmp_file")
+local_date=$(gdate -d "$tmp_date" +"%a, %d %b %Y %H:%M:%S")
+message=$(formail -f -I "Date: $local_date" < "$tmp_file")
+
+if echo "${message}" | fgrep --silent "From: Trello"; then
   echo "${message}" | trelloparse | fold -s
 else
   echo "${message}"
