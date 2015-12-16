@@ -56,6 +56,7 @@ set sort_re                                # thread based on regex
 set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
 
 # Pager View Options ---------------------------------
+set pager_format = "───[ %C/%m ]───[ %s ]───%>──[ %P ]──"
 set pager_index_lines = 10 # number of index lines to show
 set pager_context = 3      # number of context lines to show
 set pager_stop             # don't go to next message automatically
