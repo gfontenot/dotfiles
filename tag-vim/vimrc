@@ -15,6 +15,7 @@ call s:SourceConfigFilesIn('plugins')
 call plug#end()
 
 call s:SourceConfigFilesIn('config')
+call s:SourceConfigFilesIn('functions')
 
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
