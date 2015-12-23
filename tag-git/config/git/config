@@ -43,6 +43,8 @@
 
   changelog = log --format=changelog --graph
 
+  gs = !echo "This isnt a thing, idiot"
+
 [merge]
   ff = only
 
