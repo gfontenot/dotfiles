@@ -1,1 +1,1 @@
-Plug 'gfontenot/vim-xcodebuild'
+Plug 'gfontenot/vim-xcode'
