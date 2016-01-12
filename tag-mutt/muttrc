@@ -73,4 +73,5 @@ source ~/.config/mutt/macros.muttrc
 source ~/.config/mutt/compose_settings.muttrc
 source ~/.config/mutt/plugins.muttrc
 source ~/.config/mutt/mailing_lists.muttrc
+source ~/.config/mutt/html_emails.muttrc
 source ~/.config/mutt/pgp.muttrc
