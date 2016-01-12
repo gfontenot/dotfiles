@@ -43,7 +43,13 @@
 
   changelog = log --format=changelog --graph
 
+  vdiff = difftool
+
   gs = !echo "This isnt a thing, idiot"
+
+[diff]
+  tool = vimdiff
+  prompt = false
 
 [merge]
   ff = only
