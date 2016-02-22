@@ -30,3 +30,6 @@ Plug 'ervandew/supertab'
 
 " Runfile
 Plug 'pbrisbin/vim-runfile'
+
+" Easily copy to the system clipboard
+Plug 'christoomey/vim-system-copy'
