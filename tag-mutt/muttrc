@@ -66,7 +66,7 @@ unset markers              # no ugly plus signs
 
 set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
 auto_view text/html
-alternative_order text/plain text/enriched text/html
+message-hook . "unalternative_order *; alternative_order text/plain text/enriched text/html"
 
 source ~/.config/mutt/keybindings.muttrc
 source ~/.config/mutt/macros.muttrc
