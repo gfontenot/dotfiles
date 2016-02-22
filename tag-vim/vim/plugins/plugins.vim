@@ -14,7 +14,7 @@ Plug 'pbrisbin/vim-rename-file'
 Plug 'tpope/vim-commentary'
 
 " Automatically add closing statements for a number of languages
-Plug 'tpope/vim-endwise'
+Plug 'cohama/lexima.vim'
 
 " Allow . to make plugin actions repeat
 Plug 'tpope/vim-repeat'
