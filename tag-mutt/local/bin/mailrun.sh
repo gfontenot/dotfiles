@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if pgrep mbsync; then
+if pgrep -q mbsync; then
   echo "Another instance of mbsync is running. Killing it now."
   pkill mbsync
 fi
