@@ -1,1 +1,1 @@
-path=( "./.cabal-sandbox/bin" "$HOME/.cabal/bin" $path)
+path=( "$HOME/.stack/bin" $path)

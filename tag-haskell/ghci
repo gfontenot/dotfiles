@@ -11,5 +11,5 @@ import Data.Char
 import Control.Applicative
 import Control.Monad
 
--- cabal install hoogle, then `:hoogle fmap`
+-- stack install hoogle, then `:hoogle fmap`
 :def hoogle \s -> return $ ":! hoogle --count=15 \"" ++ s ++ "\""

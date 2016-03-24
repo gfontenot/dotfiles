@@ -5,9 +5,5 @@ set -e
 echo "\n==========================================="
 echo "Setting up Haskell\n"
 
-echo "Installing and updating cabal"
-cabal install cabal-install
-cabal update
-
 echo "Installing basic dependencies"
-cabal install alex happy yesod-bin hoogle
+stack install alex happy yesod-bin hoogle

@@ -1,0 +1,11 @@
+# prevent collisions with personal scripts
+local-bin-path: /Users/gordon/.stack/bin
+
+system-ghc: false
+install-ghc: true
+
+templates:
+  params:
+    author-email: gordon@fonten.io
+    author-name: Gordon Fontenot
+    github-username: gfontenot
