@@ -8,7 +8,7 @@ local_date=$(gdate -d "$tmp_date" +"%a, %d %b %Y %H:%M:%S")
 message=$(formail -f -I "Date: $local_date" < "$tmp_file")
 
 if echo "${message}" | fgrep --silent "From: Trello"; then
-  echo "${message}" | trelloparse | fold -s | recode html
+  echo "${message}" | trelloparse | reflow --ignore-headers | recode html
 else
-  echo "${message}"
+  echo "${message}" | reflow --ignore-headers
 fi
