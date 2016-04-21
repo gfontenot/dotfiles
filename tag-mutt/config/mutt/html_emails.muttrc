@@ -11,3 +11,6 @@ message-hook '~f do_not_reply@apple\.com ~s iTunes\ Connect:' \
 
 message-hook '~f itunesconnect@apple\.com ~s iTunes\ Connect:' \
   "unalternative_order *; alternative_order text/html"
+
+message-hook '~f hello@lyftmail\.com' \
+  "unalternative_order *; alternative_order text/html"
