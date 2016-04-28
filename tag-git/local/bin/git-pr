@@ -1,0 +1,8 @@
+#!/bin/sh
+# Open a PR and copy the url to the clipboard
+
+set -e
+
+msg="/tmp/commitmsg"
+
+git log --format="%h (%aN, %ar)%n%w(78,3,3)%2%n%+b" | sed 's/^/# /' > $msg
