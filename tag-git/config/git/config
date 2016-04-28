@@ -39,8 +39,6 @@
 
   current-branch = rev-parse --abbrev-ref HEAD
 
-  pr = pull-request
-
   changelog = log --format=changelog --graph
 
   vdiff = difftool
