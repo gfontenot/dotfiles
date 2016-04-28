@@ -10,7 +10,7 @@ application/pdf; ~/.config/mutt/plugins/view_attachment.sh %s pdf
 
 # HTML
 text/html; ~/.config/mutt/plugins/view_attachment.sh %s html
-text/html; lynx -dump %s; nametemplate=%s.html; copiousoutput
+text/html; lynx -display_charset=UTF-8 -width=78 -dump %s; nametemplate=%s.html; copiousoutput
 
 # Unidentified files
 application/octet-stream; ~/.config/mutt/plugins/view_attachment.sh %s "-"
