@@ -11,5 +11,5 @@ unbind r
 bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
 
 # copy/paste
-unbind -t vi-copy Enter
-bind-key -t vi-copy Enter copy-pipe 'pbcopy'
+bind-key -t vi-copy v begin-selection
+bind-key -t vi-copy y copy-pipe 'pbcopy'
