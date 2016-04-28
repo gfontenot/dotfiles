@@ -10,14 +10,13 @@ number_of_commits=$(git rev-list master..HEAD --count)
 
 echo > $msg
 
-if [[ "$number_of_commits" = "1" ]]; then
+if [ "$number_of_commits" -eq "1" ]; then
   git log -1 --pretty=%B >> "$msg"
 else
-  git log --format="%h (%aN, %ar)%n%w(78,3,3)%s%n%+b" master..HEAD | sed 's/^/# /' >> "$msg"
+  git log --reverse --format="%h (%aN, %ar)%n%w(78,3,3)%s%n%+b" master..HEAD \
+    | sed 's/^/# /' >> "$msg"
 fi
 
-echo "# vim: ft=gitcommit" >> "$msg"
-
-vim -c startinsert "$msg"
+vim -c startinsert -c 'set ft=gitcommit' "$msg"
 hub pull-request -m "$(sed '/^#/d' "$msg")" | pbcopy
 echo "copied: $(pbpaste)"
