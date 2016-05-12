@@ -39,7 +39,7 @@
 
   current-branch = rev-parse --abbrev-ref HEAD
 
-  pr = !git push -u --force && git create-pull-request
+  pr = create-pull-request
 
   changelog = log --format=changelog --graph
 
