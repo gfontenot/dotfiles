@@ -1,7 +1,7 @@
 tap 'keith/formulae'
 tap 'gfontenot/formulae'
 
-brew 'mutt'
+brew 'mutt', arge: ['with-gpgme']
 brew 'the_silver_searcher'
 brew 'isync'
 brew 'urlview'
