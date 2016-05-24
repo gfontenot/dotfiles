@@ -1,2 +1,1 @@
-set textwidth=78
-set spell
+call Include('~/.vim/ftplugin/text.vim')

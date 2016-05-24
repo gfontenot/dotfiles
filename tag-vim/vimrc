@@ -1,12 +1,16 @@
+function! g:Include(file)
+  if filereadable(expand(a:file))
+    execute 'source' a:file
+  endif
+endfunction
+
 " Stolen wholesale from gabebw, who stole it wholesale from christoomey, whose
 " dotfiles you really should check out:
 " https://github.com/christoomey/dotfiles
 function! s:SourceConfigFilesIn(directory)
   let directory_splat = '~/.vim/' . a:directory . '/*.vim'
   for config_file in split(glob(directory_splat), '\n')
-    if filereadable(config_file)
-        execute 'source' config_file
-    endif
+    call Include(config_file)
   endfor
 endfunction
 
