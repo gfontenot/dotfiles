@@ -25,7 +25,7 @@ augroup search
 augroup END
 
 " Search silently
-command -nargs=+ -complete=file -bar Gr silent! grep! <args> | redraw!
+command! -nargs=+ -complete=file -bar Gr silent! grep! <args> | redraw!
 
 " Map Gr directly to \ for speeeed
 nnoremap \ :Gr<SPACE>
