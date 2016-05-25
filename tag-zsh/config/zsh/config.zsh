@@ -1,7 +1,7 @@
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
-fpath=(~/.config/zsh/functions $fpath)
+fpath=(~/.config/zsh/completion-scripts ~/.config/zsh/functions $fpath)
 
 autoload -U ~/.config/zsh/functions/*(:t)
 autoload zmv
