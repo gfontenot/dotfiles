@@ -6,4 +6,4 @@ brew 'git-update'
 brew 'gitsh'
 brew 'hub'
 
-brew 'pick'
+brew 'fzf'

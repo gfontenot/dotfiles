@@ -4,7 +4,7 @@ file=$(git ls-files \
            --modified \
            --others \
            --exclude-standard \
-           | pick
+           | fzf
 )
 
 git add $1 "$file"
