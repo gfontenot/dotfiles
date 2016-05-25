@@ -32,3 +32,19 @@ nnoremap \ :Gr<SPACE>
 
 " bind K to grep word under cursor
 nnoremap K :Gr <C-R><C-W><CR>
+
+" Move the search term to the middle of the screen if the screen has changed
+" position.
+" Stolen from @keith:
+" https://github.com/keith/dotfiles/commit/20f98a645dd9ebcd24fa96d3aac0e9fe34a21a6a
+function! s:NextAndCenter(cmd)
+  let view = winsaveview()
+  execute "normal! " . a:cmd
+
+  if view.topline != winsaveview().topline
+    normal! zzzv
+  endif
+endfunction
+
+nnoremap <silent> n :call <SID>NextAndCenter('n')<CR>
+nnoremap <silent> N :call <SID>NextAndCenter('N')<CR>
