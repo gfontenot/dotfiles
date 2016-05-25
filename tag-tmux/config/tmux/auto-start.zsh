@@ -25,9 +25,10 @@ _no_tmux_sessions() {
 
 _ensure_tmux_is_running() {
   if _no_tmux_sessions; then
-    # Daemonize so it doesn't auto-open the session. We just want something that
-    # `tmux attach` can use.
-    tmux new -d
+    # create our default session with mutt and our dotfiles
+    local session_name="personal"
+    tmux new-session -s "$session_name" -d mutt
+    tmux new-window -t "$session_name" -d -c "$DOTFILES"
   fi
 }
 
