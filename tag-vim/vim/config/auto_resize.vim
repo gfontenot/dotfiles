@@ -1,0 +1,1 @@
+autocmd VimResized * wincmd =
