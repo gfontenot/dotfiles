@@ -1,4 +1,6 @@
-brew 'tmux'
+tap 'gfontenot/formulae'
+
+brew 'tmux20'
 brew 'reattach-to-user-namespace'
 
 brew 'fzf'
