@@ -25,10 +25,7 @@ _no_tmux_sessions() {
 
 _ensure_tmux_is_running() {
   if _no_tmux_sessions; then
-    # create our default session with mutt and our dotfiles
-    local session_name="personal"
-    tmux new-session -s "$session_name" -n "mutt" -d mutt
-    tmux new-window -t "$session_name" -n "dotfiles" -d -c "$DOTFILES"
+    create-default-tmux-session
   fi
 }
 
