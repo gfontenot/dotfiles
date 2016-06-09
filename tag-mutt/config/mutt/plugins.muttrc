@@ -15,7 +15,7 @@ macro index,pager \cT \
   'Create Omnifocus task from message'
 
 # GHU (https://github.com/pbrisbin/ghu) --------------
-macro index,pager \cU \
+macro index,pager \cx \
   "<enter-command>set my_old_pipe_decode=\$pipe_decode nopipe_decode<enter>\
   <pipe-message>ghu<enter>\
   <enter-command>set pipe_decode=\$my_old_pipe_decode<enter>\
