@@ -12,8 +12,8 @@ set relativenumber
 " Display the current line number
 set number
 
-" Use the system pasteboard
-set clipboard=unnamed
+nnoremap gcc :xccmd commentAndUncommentCurrentLines<CR>
+vnoremap gc :xccmd commentAndUncommentCurrentLines<CR>
 
 " Map <space>b to toggle a breakpoint at the current line
 nnoremap <space>b :xccmd toggleBreakpointAtCurrentLine<CR>
@@ -23,6 +23,9 @@ nnoremap <space>cm :xccmd commentAndUncommentCurrentLines<CR>
 
 " Edit in scope
 nnoremap <space>e :xccmd toggleTokenizedEditing<CR>
+
+nnoremap <space>om :xccmd jumpToPreviousCounterpart<CR>
+nnoremap <space>oh :xccmd jumpToNextCounterpart<CR>
 
 " Map openQuickly to control p to mimic ctrl-p in vim
 nnoremap <C-p> :xccmd openQuickly<CR>
