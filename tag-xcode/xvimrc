@@ -21,9 +21,6 @@ nnoremap <space>b :xccmd toggleBreakpointAtCurrentLine<CR>
 " Use <space>cm to toggle comments for the selection
 nnoremap <space>cm :xccmd commentAndUncommentCurrentLines<CR>
 
-" Edit in scope
-nnoremap <space>e :xccmd toggleTokenizedEditing<CR>
-
 nnoremap <space>om :xccmd jumpToPreviousCounterpart<CR>
 nnoremap <space>oh :xccmd jumpToNextCounterpart<CR>
 
