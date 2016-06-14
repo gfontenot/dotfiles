@@ -58,6 +58,7 @@
 [diff]
   tool = vimdiff
   prompt = false
+  compactionHeuristic = true
 
 [merge]
   ff = only
