@@ -11,7 +11,8 @@ unbind r
 bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
 
 # jump between sessions
-bind-key j choose-tree
+unbind p
+bind-key p choose-tree
 
 # copy/paste
 bind-key -t vi-copy v begin-selection
