@@ -1,1 +1,0 @@
-eval "$(swiftenv init -)"

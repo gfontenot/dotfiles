@@ -1,4 +1,1 @@
-tap 'kylef/formulae'
-
 brew 'carthage'
-brew 'swiftenv'
