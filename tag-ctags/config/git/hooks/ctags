@@ -1,0 +1,4 @@
+#!/bin/sh
+
+rm .git/tags
+git ls-files | ctags -L -
