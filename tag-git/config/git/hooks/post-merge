@@ -1,0 +1,7 @@
+#!/bin/sh
+
+hooks_dir="$HOME/.config/git/hooks/post-merge-hooks/"
+
+for e in `find "$hooks_dir" -type f -o -type l -maxdepth 1 2> /dev/null`; do
+  [ -x $e ] && $e
+done

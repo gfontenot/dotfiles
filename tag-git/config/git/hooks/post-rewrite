@@ -1,0 +1,9 @@
+#!/bin/sh
+
+case "$1" in
+  rebase) hooks_dir="$HOME/.config/git/hooks/post-rebase-hooks/"
+esac
+
+for e in `find "$hooks_dir" -type f -o -type l -maxdepth 1 2> /dev/null`; do
+  [ -x $e ] && $e
+done
