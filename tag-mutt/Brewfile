@@ -2,7 +2,7 @@ tap 'keith/formulae'
 tap 'gfontenot/formulae'
 
 brew 'mutt', arge: ['with-gpgme']
-brew 'the_silver_searcher'
+brew 'notmuch'
 brew 'isync'
 brew 'urlview'
 brew 'contacts-cli'
