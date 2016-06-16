@@ -11,9 +11,10 @@
 
 [commit]
   gpgsign = true
+  verbose = true
 
 [alias]
-  c = commit --verbose
+  c = commit
   cm = commit --message
   co = checkout
   l = log --format=custom --graph
