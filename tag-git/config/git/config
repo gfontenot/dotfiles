@@ -49,9 +49,9 @@
   gs = !echo "This isnt a thing, idiot"
 
 [pager]
-  log = "diff-highlight | less -FXR"
-  show = "diff-highlight | less -FXR"
-  diff = "diff-highlight | less -FXR"
+  log = "diff-highlight | less"
+  show = "diff-highlight | less"
+  diff = "diff-highlight | less"
 
 [interactive]
   diffFilter = diff-highlight
