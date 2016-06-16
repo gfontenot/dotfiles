@@ -1,0 +1,7 @@
+-f ./.git/tags
+--tag-relative
+--recurse
+--exclude=.git
+--exclude=build
+--exclude=vendor
+--exclude=Vendor
