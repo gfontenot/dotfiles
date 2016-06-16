@@ -14,21 +14,11 @@ let g:ctrlp_user_command = 'ag -Q --files-with-matches --hidden --nocolor -g "" 
 " ag is fast enough that CtrlP doesn't need to cache
 let g:ctrlp_use_caching = 0
 
-augroup search
-  autocmd!
-
-  " Open the quickfix window with all grep commands
-  autocmd QuickFixCmdPost *grep* cwindow
-augroup END
-
-" Search silently
-command! -nargs=+ -complete=file -bar Gr silent! grep! <args> | redraw!
-
 " Map Gr directly to \ for speeeed
-nnoremap \ :Gr<SPACE>
+nnoremap \ :Ag<SPACE>
 
 " bind K to grep word under cursor
-nnoremap K :Gr <C-R><C-W><CR>
+nnoremap K :Ag <C-R><C-W><CR>
 
 " Move the search term to the middle of the screen if the screen has changed
 " position.
