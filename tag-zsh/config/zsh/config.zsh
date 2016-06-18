@@ -38,12 +38,3 @@ export EDITOR="$VISUAL"
 # I have _no idea_ how I broke this, but for some reason, this was bound to
 # `redisplay`, which is _clearly_ wrong, so this is me chaning it back.
 bindkey "^R" history-incremental-search-backward
-
-# i - Vim's smart case
-# j.5 - Center search results
-# F - Quit if the content is <1 screen
-# K - Quit on CTRL-C
-# M - Longer prompt
-# R - handle ASCII color escapes
-# X - Don't send clear screen signal
-export LESS="ij.5FKMRX"
