@@ -38,6 +38,8 @@
   unstage = reset HEAD
   staged = diff --staged
 
+  conflicts = "!$EDITOR $(git diff --name-only --diff-filter=U)"
+
   current-branch = rev-parse --abbrev-ref HEAD
 
   pr = create-pull-request
