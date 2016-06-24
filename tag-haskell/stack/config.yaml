@@ -4,6 +4,11 @@ local-bin-path: /Users/gordon/.stack/bin
 system-ghc: false
 install-ghc: true
 
+extra-include-dirs:
+  - /usr/local/opt/openssl/include
+extra-lib-dirs:
+  - /usr/local/opt/openssl/lib
+
 templates:
   params:
     author-email: gordon@fonten.io
