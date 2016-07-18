@@ -42,7 +42,7 @@ rebase_info() {
 }
 
 repo_dirty() {
-  if [[ ! $(git status 2>/dev/null) =~ "directory clean" ]]; then
+  if [[ ! $(git status 2>/dev/null) =~ "working tree clean" ]]; then
     echo " %{$fg[red]%}✗%{$reset_color%}"
   fi
 }
