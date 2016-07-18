@@ -49,7 +49,7 @@ other_email=gordon@thoughtbot.com;gordon.fontenot@me.com;
 #
 [new]
 tags=unread;inbox;
-ignore=spam;trash;
+ignore=spam;trash;temporary;tmp;
 
 # Search configuration
 #
