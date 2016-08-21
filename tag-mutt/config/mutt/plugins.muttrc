@@ -10,10 +10,10 @@ macro index S \
   <change-folder-readonly>+temporary/search<enter>" \
   'search mail (using notmuch)'
 
-# Omnifocus ------------------------------------------
+# OmniFocus ------------------------------------------
 macro index,pager \cT \
   <pipe-message>'~/.config/mutt/plugins/email-to-omnifocus.rb'<enter> \
-  'Create Omnifocus task from message'
+  'Create OmniFocus task from message'
 
 # GHU (https://github.com/pbrisbin/ghu) --------------
 macro index,pager \cx \
