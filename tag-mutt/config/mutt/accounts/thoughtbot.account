@@ -14,9 +14,15 @@ unset record
 
 macro index gi "<change-folder>+gordon-thoughtbot.com/INBOX<enter>" "Go to the INBOX"
 macro index ga "<change-folder>+gordon-thoughtbot.com/Archive<enter>" "Go to the archive"
+macro index gf "<change-folder>+gordon-thoughtbot.com/Followup<enter>" "Go to the followup folder"
 macro index gt "<change-folder>+gordon-fonten.io/INBOX<enter>" "toggle account"
 
 macro index,pager a "<delete-message>"
 macro index,pager A "<delete-thread>"
+
+macro index,pager \cF \
+  "<save-message>+gordon-thoughtbot.com/Followup<enter> \
+  ^T" \
+  "Move message to Followup and create an OmniFocus task"
 
 # vim: ft=muttrc

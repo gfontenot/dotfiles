@@ -36,6 +36,10 @@ Channel FastMail-Vault
 Master :FastMail-Remote:INBOX/Vault
 Slave :FastMail-Local:Vault
 
+Channel FastMail-Followup
+Master :FastMail-Remote:INBOX/Followup
+Slave :FastMail-Local:Followup
+
 Channel FastMail-INBOX
 Master :FastMail-Remote:INBOX
 Slave :FastMail-Local:INBOX
@@ -46,6 +50,7 @@ Channel FastMail-Drafts
 Channel FastMail-Sent
 Channel FastMail-Archive
 Channel FastMail-Vault
+Channel FastMail-Followup
 
 ##############################################################################
 ## thoughtbot
@@ -86,12 +91,17 @@ Channel thoughtbot-BuildPhase
 Master ":thoughtbot-Remote:Build Phase"
 Slave ":thoughtbot-Local:Build Phase"
 
+Channel thoughtbot-Followup
+Master ":thoughtbot-Remote:Followup"
+Slave ":thoughtbot-Local:Followup"
+
 Group thoughtbot
 Channel thoughtbot-INBOX
 Channel thoughtbot-Drafts
 Channel thoughtbot-Sent
 Channel thoughtbot-Archive
 Channel thoughtbot-BuildPhase
+Channel thoughtbot-Followup
 
 ##############################################################################
 ## Inbox sync
