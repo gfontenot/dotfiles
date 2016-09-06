@@ -1,3 +1,3 @@
-set colorcolumn=120
-set tabstop=4
-set shiftwidth=4
+setlocal colorcolumn=120
+setlocal tabstop=4
+setlocal shiftwidth=4
