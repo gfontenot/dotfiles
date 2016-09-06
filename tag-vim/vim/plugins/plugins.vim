@@ -36,3 +36,6 @@ Plug 'pbrisbin/vim-runfile'
 
 " Easily copy to the system clipboard
 Plug 'christoomey/vim-system-copy'
+
+" Taskpaper syntax and highlighting
+Plug 'davidoc/taskpaper.vim'
