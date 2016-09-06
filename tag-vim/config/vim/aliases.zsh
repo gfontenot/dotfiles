@@ -1,2 +1,2 @@
-alias e='vim'
+alias e='$VISUAL'
 alias s='e ~/.scratch.md'
