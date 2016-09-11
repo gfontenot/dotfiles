@@ -26,4 +26,10 @@ macro index,pager \cF \
   ^T" \
   "Move message to Followup and create an OmniFocus task"
 
+macro index S \
+  "<enter-command>unset wait_key<enter> \
+  <shell-escape>mu-mutt gordon-fonten.io<enter> \
+  <change-folder-readonly>+temporary/search<enter>" \
+  'search mail (using mu)'
+
 # vim: ft=muttrc

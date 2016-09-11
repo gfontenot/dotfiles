@@ -3,13 +3,6 @@ macro pager \cB \
   <pipe-entry>'urlview'<enter> \
   'Follow links with urlview'
 
-# Search ---------------------------------------------
-macro index S \
-  "<enter-command>unset wait_key<enter> \
-  <shell-escape>notmuch-mutt -G ~/.mail/temporary/search<enter> \
-  <change-folder-readonly>+temporary/search<enter>" \
-  'search mail (using notmuch)'
-
 # OmniFocus ------------------------------------------
 macro index,pager \cT \
   <pipe-message>'~/.config/mutt/plugins/email-to-omnifocus.rb'<enter> \
