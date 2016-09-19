@@ -1,1 +1,2 @@
-brew 'gpg2'
+tap 'homebrew/versions'
+brew 'gnupg21'
