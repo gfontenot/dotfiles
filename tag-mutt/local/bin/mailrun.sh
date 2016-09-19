@@ -10,4 +10,4 @@ mailboxes=$1
 [ -z "$mailboxes" ] && mailboxes="-a"
 
 /usr/local/bin/mbsync -q "$mailboxes"
-/usr/local/bin/mu index --maildir=~/.mail
+/usr/local/bin/mu index --maildir=~/.mail --quiet
