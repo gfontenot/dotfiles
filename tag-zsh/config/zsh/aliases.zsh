@@ -13,3 +13,7 @@ alias -g poop=pop
 alias -g 0a=-a
 
 alias :q='logout'
+
+# Search for a process and kill it but in a funny way
+# `fucking phoenix`
+alias fucking="pkill -9 -f"
