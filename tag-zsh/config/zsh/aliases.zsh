@@ -6,8 +6,10 @@ alias curl='noglob curl'
 
 alias reload!='. ~/.zshrc'
 
-alias -g poop=pop # All of a sudden, everything is hilarious
+# All of a sudden, everything is hilarious
+alias -g poop=pop
 
-alias -g 0a=-a # fucking seriously
+# fucking seriously
+alias -g 0a=-a
 
 alias :q='logout'
