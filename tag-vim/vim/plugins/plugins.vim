@@ -1,12 +1,6 @@
 " Baseic defaults
 Plug 'tpope/vim-sensible'
 
-" Fuzzy finder for files
-Plug 'kien/ctrlp.vim'
-
-" Searching with ag
-Plug 'rking/ag.vim'
-
 " Automatically create non-existent directories
 Plug 'pbrisbin/vim-mkdir'
 

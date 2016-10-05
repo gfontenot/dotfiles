@@ -8,13 +8,7 @@ autocmd BufReadCmd set nohlsearch " on opening the file, clear search-highlighti
 " Use Ag over Grep
 set grepprg=ag\ --nogroup\ --nocolor
 
-" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-let g:ctrlp_user_command = 'ag -Q --files-with-matches --hidden --nocolor -g "" %s'
-
-" ag is fast enough that CtrlP doesn't need to cache
-let g:ctrlp_use_caching = 0
-
-" Map Gr directly to \ for speeeed
+" Map Ag directly to \ for speeeed
 nnoremap \ :Ag<SPACE>
 
 " bind K to grep word under cursor
