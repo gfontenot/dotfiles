@@ -16,4 +16,4 @@ bind-key p choose-tree
 
 # copy/paste
 bind-key -t vi-copy v begin-selection
-bind-key -t vi-copy y copy-pipe 'pbcopy'
+bind-key -t vi-copy y copy-pipe 'reattach-to-user-namespace pbcopy'
