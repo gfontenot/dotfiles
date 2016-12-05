@@ -4,13 +4,10 @@
 # N days and contain git repositories.
 
 modified_directories() {
-  local days_since_modified=90
-
   echo "${JUMP_DIRECTORIES//:/\n}" | while read dir; do
     find -L "$dir" \
       -not -path '*/\.*' \
       -type d \
-      -mtime -$days_since_modified \
       -maxdepth 1
   done
 }
