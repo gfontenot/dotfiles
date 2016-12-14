@@ -1,3 +1,13 @@
-command! -complete=file -nargs=1
+command! -complete=file -nargs=?
       \ Remove
-      \ call delete(<f-args>) | bdelete!
+      \ call <sid>remove(<f-args>)
+
+function! s:remove(...)
+  if empty(a:000)
+    let filename = @%
+  else
+    let filename = join(a:000)
+  endif
+
+  call delete(filename) | bdelete!
+endfunction
