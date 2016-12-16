@@ -1,7 +1,13 @@
 #!/bin/sh
 
-tmux list-sessions \
-  | sed -E 's/:.*$//' \
-  | grep -v \"^$(tmux display-message -p '#S')\$\" \
+list_sessions() {
+  for session in $(tmux list-sessions -F "#S"); do
+    for window in $(tmux list-windows -t "$session" -F "#W"); do
+      echo "$session:$window"
+    done
+  done
+}
+
+list_sessions \
   | fzf --reverse \
   | xargs tmux switch-client -t
