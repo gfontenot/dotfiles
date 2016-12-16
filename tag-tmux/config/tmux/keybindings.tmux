@@ -12,7 +12,7 @@ bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
 
 # jump between sessions
 unbind p
-bind-key p split-window -v -b "tmux-fuzzy-choose-tree"
+bind-key p split-window -v -p 20 "tmux-fuzzy-choose-tree"
 
 # copy/paste
 bind-key -t vi-copy v begin-selection
