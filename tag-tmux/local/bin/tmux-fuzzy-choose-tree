@@ -1,13 +1,19 @@
 #!/bin/sh
 
+weighted_windows_for() {
+  tmux list-windows -t "$1" -F "#{window_active} #W" \
+    | sort --reverse \
+    | awk '{ print $2; }'
+}
+
 list_sessions() {
   for session in $(tmux list-sessions -F "#S"); do
-    for window in $(tmux list-windows -t "$session" -F "#W"); do
+    for window in $(weighted_windows_for $session); do
       echo "$session:$window"
     done
   done
 }
 
 list_sessions \
-  | fzf --reverse \
+  | fzf --no-sort --reverse \
   | xargs tmux switch-client -t
