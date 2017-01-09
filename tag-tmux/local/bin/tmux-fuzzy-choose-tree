@@ -3,9 +3,12 @@
 list_sessions() {
   for session in $(tmux list-sessions -F "#S"); do
     echo "$session"
-    for window in $(tmux list-windows -t "$session" -F "#W"); do
-      echo "$session:$window"
-    done
+    window_count=$(tmux list-windows -t "$session" | wc -l | tr -d '[:space:]')
+    if (( "$window_count" > 1 )); then
+      for window in $(tmux list-windows -t "$session" -F "#W"); do
+        echo "$session:$window"
+      done
+    fi
   done
 }
 
