@@ -1,9 +1,6 @@
 # prevent collisions with personal scripts
 local-bin-path: /Users/gordon/.stack/bin
 
-system-ghc: false
-install-ghc: true
-
 extra-include-dirs:
   - /usr/local/opt/openssl/include
 extra-lib-dirs:
