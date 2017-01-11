@@ -1,9 +1,9 @@
 macro index O \
-  "<shell-escape>~/.local/bin/mailrun.sh<enter>" \
+  "<shell-escape>~/.local/bin/fetchmail<enter>" \
   "sync all mail"
 
 macro index o \
-  "<shell-escape>~/.local/bin/mailrun.sh INBOXES<enter>" \
+  "<shell-escape>~/.local/bin/fetchmail INBOXES<enter>" \
   "sync inbox"
 
 macro index,pager \cV \

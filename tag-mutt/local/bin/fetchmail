@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 if pgrep -q mbsync; then
   echo "Another instance of mbsync is running. Killing it now."

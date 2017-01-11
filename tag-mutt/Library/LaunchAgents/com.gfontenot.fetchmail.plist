@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>com.gfontenot.mailrun</string>
+	<string>com.gfontenot.fetchmail</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/Users/gordon/.local/bin/mailrun.sh</string>
+		<string>/Users/gordon/.local/bin/fetchmail</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
