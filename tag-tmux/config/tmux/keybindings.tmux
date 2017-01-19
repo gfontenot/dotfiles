@@ -4,7 +4,7 @@ unbind C-s
 bind C-s send-prefix
 
 # Open a temporary split with gitsh
-bind g split-window -h -c '#{pane_current_path}' -p 30 'gitsh'
+bind g split-window -h -c '#{pane_current_path}' -p 30 'reattach-to-user-namespace gitsh'
 
 # reload config
 unbind r
