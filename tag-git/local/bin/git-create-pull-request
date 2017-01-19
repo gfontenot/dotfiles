@@ -18,5 +18,12 @@ else
 fi
 
 vim "${vim_flags[@]}" "$msg"
-hub pull-request -m "$(sed '/^#/d' "$msg")" | pbcopy
+
+if [ -n "$TMUX"]; then
+  pbcopy="pbcopy"
+else
+  pbcopy="reattach-to-user-namespace pbcopy"
+fi
+
+hub pull-request -m "$(sed '/^#/d' "$msg")" | "$pbcopy"
 echo "copied: $(pbpaste)"
