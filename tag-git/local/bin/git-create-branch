@@ -4,7 +4,15 @@
 
 set -e
 
-branch_name="gf-$1"
+name="$1"
+
+if [ -z "$name" ]; then
+  echo "Branch name required"
+  printf "> "
+  read name
+fi
+
+branch_name="gf-$name"
 
 git checkout -b "$branch_name"
 git push origin "$branch_name" --set-upstream
