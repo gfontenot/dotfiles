@@ -10,7 +10,6 @@
   program = gpg2
 
 [commit]
-  gpgsign = true
   verbose = true
 
 [alias]
