@@ -8,7 +8,7 @@ modified_directories() {
     find -L "$dir" \
       -not -path '*/\.*' \
       -type d \
-      -maxdepth 1
+      -maxdepth 2
   done
 }
 
