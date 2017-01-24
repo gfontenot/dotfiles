@@ -12,6 +12,9 @@ bind -r k resize-pane -U 4
 unbind j
 bind -r j resize-pane -D 4
 
+unbind Space
+bind Space switch-client -l
+
 # Smart pane switching with awareness of vim splits
 forward_programs="view|n?vim?|fzf"
 
