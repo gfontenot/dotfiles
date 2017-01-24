@@ -20,4 +20,4 @@ is_a_git_repo(){
   done
 }
 
-modified_directories | is_a_git_repo
+modified_directories | is_a_git_repo | sort --unique
