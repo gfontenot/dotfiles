@@ -18,5 +18,5 @@ else
 fi
 
 vim "${vim_flags[@]}" "$msg"
-hub pull-request -m "$(sed '/^#/d' "$msg")" | pbcopy
+hub pull-request -m "$(sed '/^#/d' "$msg")" | tr -d '\n' | pbcopy
 echo "copied: $(pbpaste)"
