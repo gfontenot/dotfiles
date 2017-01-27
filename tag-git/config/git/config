@@ -1,14 +1,13 @@
 [user]
   name = Gordon Fontenot
   email = gmoney@gitpushgitpaid.com
-  signingKey = 2DA8F9CE
+  signingkey = 2DA8F9CE
 
 [github]
   user = gfontenot
 
 [gpg]
   program = gpg2
-
 
 [commit]
   gpgsign = true
