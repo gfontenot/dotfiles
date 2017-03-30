@@ -15,3 +15,6 @@ tags
 
 # AppCode
 .idea
+
+# Projectionist
+.projections.json

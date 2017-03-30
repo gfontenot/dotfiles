@@ -28,6 +28,12 @@ preexec () {print -Pn "\e]2; %~/ \a"}
 # Auto ls when cding into a directory
 function chpwd() {
     emulate -LR zsh
+
+    local v=$(projections)
+    if [[ $? -eq 0 ]]; then
+      echo $v > .projections.json
+    fi
+
     ls
 }
 

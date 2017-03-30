@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+exists() {
+  compgen -G "$1" > /dev/null
+}
+
+PROJECTIONS_PATH="$HOME/.projections"
+
+list=()
+
+if exists "*.xcodeproj" || exists "*.xcworkspace"; then list+=('xcode'); fi
+
+files=()
+count=0
+while [ "x${list[count]}" != "x" ]; do
+  files+="$PROJECTIONS_PATH/${list[count]}.json"
+  count=$((count + 1))
+done
+
+if [ $count -eq 0 ]; then exit 1; fi
+
+jq -s 'reduce .[] as $item ({}; .* $item)' "$files"

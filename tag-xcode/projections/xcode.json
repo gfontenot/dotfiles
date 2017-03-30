@@ -1,0 +1,43 @@
+{
+  "Sources/Models/*.swift": {
+    "command": "model",
+    "test": [
+      "UnitTests/Tests/Models/{}Spec.swift"
+    ]
+  },
+  "Sources/Extensions/*.swift": {
+    "command": "extension",
+    "test": [
+      "UnitTests/Tests/Extensions/{}Spec.swift"
+    ]
+  },
+  "Sources/Requests/*.swift": {
+    "command": "request",
+    "template": [
+      "import Swish",
+      "",
+      "struct {}: Request {",
+      "  typealias ResponseObject = EmptyResponse",
+      "",
+      "  func build() -> URLRequest {",
+      "  }",
+      "}"
+    ],
+    "test": [
+      "UnitTests/Tests/Requests/{}Spec.swift"
+    ]
+  },
+  "UnitTests/Tests/*Spec.swift": {
+    "command": "test",
+    "template": [
+      "@testable import MODULE",
+      "import Quick",
+      "import Nimble",
+      "",
+      "final class {basename}Spec: QuickSpec {",
+      "  override func spec() {",
+      "  }",
+      "}"
+    ]
+  }
+}

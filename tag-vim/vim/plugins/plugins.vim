@@ -36,3 +36,6 @@ Plug 'davidoc/taskpaper.vim'
 
 " Perform sort operations on text objects
 Plug 'christoomey/vim-sort-motion'
+
+" Project specific configurations
+Plug 'tpope/vim-projectionist'
