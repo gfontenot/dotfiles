@@ -10,6 +10,9 @@ export DROPBOX="$HOME/Dropbox (Personal)"
 # Where you keep your plain text notes
 export NOTES="$DROPBOX/notes"
 
+# Where you keep blog post drafts
+export DRAFTS_FOLDER="$DROPBOX/Apps/Editorial/Blog post drafts"
+
 # source the base zshrc configurations first
 for config_file (~/.config/zsh/*.zsh) source $config_file
 
