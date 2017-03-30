@@ -33,3 +33,6 @@ Plug 'christoomey/vim-system-copy'
 
 " Taskpaper syntax and highlighting
 Plug 'davidoc/taskpaper.vim'
+
+" Perform sort operations on text objects
+Plug 'christoomey/vim-sort-motion'
