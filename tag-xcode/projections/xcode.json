@@ -11,12 +11,12 @@
       "UnitTests/Tests/Extensions/{}Spec.swift"
     ]
   },
-  "Sources/Requests/*.swift": {
+  "Sources/Requests/*Request.swift": {
     "command": "request",
     "template": [
       "import Swish",
       "",
-      "struct {}: Request {",
+      "struct {}Request: Request {",
       "  typealias ResponseObject = EmptyResponse",
       "",
       "  func build() -> URLRequest {",
@@ -24,7 +24,7 @@
       "}"
     ],
     "test": [
-      "UnitTests/Tests/Requests/{}Spec.swift"
+      "UnitTests/Tests/Requests/{}RequestSpec.swift"
     ]
   },
   "UnitTests/Tests/*Spec.swift": {
