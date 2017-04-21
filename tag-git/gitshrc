@@ -1,0 +1,4 @@
+status -sb
+:echo
+log --oneline -n 1
+:echo
