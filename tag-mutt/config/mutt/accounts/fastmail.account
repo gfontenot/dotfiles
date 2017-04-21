@@ -24,7 +24,7 @@ macro index,pager ! "<save-message>+gordon-fonten.io/Junk<enter>" "Mark the mess
 macro index,pager \cF \
   "<save-message>+gordon-fonten.io/Followup<enter> \
   ^T" \
-  "Move message to Followup and create an OmniFocus task"
+  "Move message to Followup and create a new to do"
 
 macro index S \
   "<shell-escape>mu-mutt gordon-fonten.io<enter> \

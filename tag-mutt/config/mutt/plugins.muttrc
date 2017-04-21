@@ -3,10 +3,10 @@ macro pager \cB \
   <pipe-entry>'urlview'<enter> \
   'Follow links with urlview'
 
-# OmniFocus ------------------------------------------
+# Task management ------------------------------------
 macro index,pager \cT \
-  <pipe-message>'~/.config/mutt/plugins/email-to-omnifocus.rb'<enter> \
-  'Create OmniFocus task from message'
+  <pipe-message>'~/.config/mutt/plugins/email-to-things.rb'<enter> \
+  'Create new to do from message'
 
 # GHU (https://github.com/pbrisbin/ghu) --------------
 macro index,pager \cx \
