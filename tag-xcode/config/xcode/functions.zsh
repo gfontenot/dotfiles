@@ -15,10 +15,22 @@ xopen() {
   fi
 }
 
+current-xcode() {
+  xcode-select -p | cut -d'/' -f-3
+}
+
 x() {
-  xopen "Xcode" "$@"
+  xopen "$(current-xcode)" "$@"
 }
 
 x-pre() {
-  xopen "Xcode-Beta" "$@"
+  xopen "Xcode-beta" "$@"
+}
+
+play() {
+  x "$HOME/.scratchpad.playground"
+}
+
+play-pre() {
+  x-pre "$HOME/.scratchpad.playground"
 }
