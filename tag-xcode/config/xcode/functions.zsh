@@ -15,12 +15,8 @@ xopen() {
   fi
 }
 
-current-xcode() {
-  xcode-select -p | cut -d'/' -f-3
-}
-
 x() {
-  xopen "$(current-xcode)" "$@"
+  xopen "$(xcode-current)" "$@"
 }
 
 x-pre() {

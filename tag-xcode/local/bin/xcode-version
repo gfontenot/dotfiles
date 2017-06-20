@@ -1,3 +1,0 @@
-#!/usr/bin/env sh
-
-xcodebuild -version | grep "Xcode"
