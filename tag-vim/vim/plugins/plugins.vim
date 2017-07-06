@@ -24,9 +24,6 @@ Plug 'tpope/vim-surround'
 " Remember last position in files
 Plug 'dietsche/vim-lastplace'
 
-" Intelligent tab completion
-Plug 'ervandew/supertab'
-
 " Runfile
 Plug 'pbrisbin/vim-runfile'
 
