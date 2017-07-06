@@ -33,5 +33,5 @@ set wrap                          " Turn on line wrapping.
 set nojoinspaces                  " Don't add two spaces after punctuation
                                   " when joining lines
 
-set secure                        " Don't let external configs do scary shit
-set exrc                          " Load local vimrc if found
+" Source local vimrc if we're in a safe repo
+call Include('./.git/safe/../../.vimrc')
