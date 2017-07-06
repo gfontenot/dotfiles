@@ -19,3 +19,6 @@ alias :q='logout'
 # Search for a process and kill it but in a funny way
 # `fucking phoenix`
 alias fucking="pkill -9 -f"
+
+# Mark a git repo as being safe
+alias mksafe="mkdir .git/safe"
