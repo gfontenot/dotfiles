@@ -17,4 +17,4 @@ set text_flowed                      # Use flowed text (soft line breaks)
 set sendmail_wait = 0
 unset record
 
-set editor = "vim +:silent+/^$ +:noh"
+set editor = "nvim +:silent+/^$ +:noh"

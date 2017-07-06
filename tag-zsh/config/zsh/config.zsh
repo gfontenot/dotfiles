@@ -38,7 +38,7 @@ function chpwd() {
 }
 
 # set the editor du jour.
-export VISUAL='/usr/local/bin/vim'
+export VISUAL='/usr/local/bin/nvim'
 export EDITOR="$VISUAL"
 
 # I have _no idea_ how I broke this, but for some reason, this was bound to

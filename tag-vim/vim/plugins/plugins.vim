@@ -1,5 +1,7 @@
-" Baseic defaults
-Plug 'tpope/vim-sensible'
+if !has('nvim')
+  " Basic defaults, not needed in nvim
+  Plug 'tpope/vim-sensible'
+endif
 
 " Automatically create non-existent directories
 Plug 'pbrisbin/vim-mkdir'

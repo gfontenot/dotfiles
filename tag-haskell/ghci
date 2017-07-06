@@ -1,4 +1,4 @@
-:set editor vim
+:set editor nvim
 -- Set the prompt
 :set prompt "\ESC[0;34mλ> \ESC[m"
 -- Allow :load-ing from ./src

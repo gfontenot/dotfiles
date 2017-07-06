@@ -1,4 +1,4 @@
 EXCLUDES="README.md Brewfile setup"
 DOTFILES_DIRS="$DOTFILES"
-TAGS="ag ctags elixir git haskell javascript mutt pgp python ruby scripts swift tmux vim xcode zsh"
+TAGS="ag ctags elixir git haskell javascript mutt nvim pgp python ruby scripts swift tmux vim xcode zsh"
 UNDOTTED="Library"
