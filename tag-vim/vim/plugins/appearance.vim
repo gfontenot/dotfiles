@@ -1,5 +1,6 @@
 " Status bar
 Plug 'itchyny/lightline.vim'
 
-" Colorscheme
+" Colorschemes
 Plug 'jonathanfilip/vim-lucius'
+Plug 'junegunn/seoul256.vim'
