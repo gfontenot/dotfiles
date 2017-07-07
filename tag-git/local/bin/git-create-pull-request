@@ -3,20 +3,34 @@
 
 set -e
 
-msg="$(mktemp -t commitmsg)"
+commit_message_file="$(mktemp -t commitmsg)"
 
 number_of_commits=$(git rev-list master..HEAD --count)
-vim_flags=(-c "set ft=gitcommit")
+
+append_template_to() {
+  for template in PULL_REQUEST_TEMPLATE* .github/PULL_REQUEST_TEMPLATE*; do
+    if [ -r "$template" ]; then
+      cat "$template" >> "$1"
+    fi
+  done
+}
 
 if [ "$number_of_commits" -eq 1 ]; then
-  git log -1 --pretty=%B > "$msg"
+  git log -1 --pretty=%B > "$commit_message_file"
+  append_template_to "$commit_message_file"
 else
-  vim_flags+=(-c startinsert)
-  echo > "$msg"
+  echo "[Descriptive title goes here]" > "$commit_message_file"
+  echo >> "$commit_message_file"
+
+  append_template_to "$commit_message_file"
+
   git log --reverse --format="%h (%aN, %ar)%n%w(78,3,3)%s%n%+b" master..HEAD \
-    | sed 's/^/# /' >> "$msg"
+    | sed 's/^/# /' >> "$commit_message_file"
 fi
 
-vim "${vim_flags[@]}" "$msg"
-hub pull-request -m "$(sed '/^#/d' "$msg")" | tr -d '\n' | pbcopy
+vim -c "set ft=gitcommit" "$commit_message_file"
+message_without_comments = $(sed '/^#/d' "$commit_message_file")
+
+hub pull-request -m "$message_without_comments" | tr -d '\n' | pbcopy
+
 echo "copied: $(pbpaste)"
