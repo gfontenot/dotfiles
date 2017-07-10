@@ -29,8 +29,8 @@ else
 fi
 
 vim -c "set ft=gitcommit" "$commit_message_file"
-message_without_comments = $(sed '/^#/d' "$commit_message_file")
+message_without_comments=$(sed '/^#/d' "$commit_message_file")
 
-hub pull-request -m "$message_without_comments" | tr -d '\n' | pbcopy
-
-echo "copied: $(pbpaste)"
+if hub pull-request -m "$message_without_comments" | tr -d '\n' | pbcopy; then
+  echo "copied: $(pbpaste)"
+fi
