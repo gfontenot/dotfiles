@@ -4,6 +4,8 @@ function! g:Include(file)
   endif
 endfunction
 
+command! Reload execute "source $MYVIMRC"
+
 " Stolen wholesale from gabebw, who stole it wholesale from christoomey, whose
 " dotfiles you really should check out:
 " https://github.com/christoomey/dotfiles
