@@ -1,7 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 # Open a PR and copy the url to the clipboard
 
 set -e
+set -o pipefail
 
 commit_message_file="$(mktemp -t commitmsg)"
 
