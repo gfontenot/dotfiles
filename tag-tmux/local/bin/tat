@@ -34,7 +34,7 @@ _tmux_normalize_session_name(){
 _new_tmux_session_named() {
   new_session_name=$(basename $1)
 
-  TMUX='' tmux new-session -d -As "$new_session_name"
+  TMUX='' tmux new-session -d -As "$new_session_name" -n "vim"
   _attach_to_tmux_session "$new_session_name"
 }
 
