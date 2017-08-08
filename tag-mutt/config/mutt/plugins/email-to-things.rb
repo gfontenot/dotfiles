@@ -23,7 +23,7 @@ Message Body:
 EOM
 
 applescript = <<-APPLESCRIPT
-tell application "Things.app"
+tell application "Things3Beta"
   make new to do with properties {name:"#{title.gsub('"', "'")}", notes:"#{note.gsub('"', "'")}"}
 end tell
 APPLESCRIPT
