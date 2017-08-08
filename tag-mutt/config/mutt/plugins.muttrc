@@ -17,6 +17,6 @@ macro index,pager \cx \
   "Unsubscribe from any email with a List-Unsubscribe header and archive the thread"
 
 # Contacts completion --------------------------------
-set query_command = "reattach-to-user-namespace contacts %s"
+set query_command = "reattach-to-user-namespace contacts %s 2> /dev/null"
 bind editor <Tab> complete-query
 bind editor ^T    complete
