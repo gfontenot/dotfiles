@@ -24,7 +24,7 @@ case "${#other_apps[@]}" in
     eval "$cmd_prefix /usr/bin/xcode-select --switch ${other_apps[0]}"
     ;;
   *)
-    printf '%s\n' "other_apps[@]" \
+    printf '%s\n' "${other_apps[@]}" \
       | fzf --query="$1" \
       | xargs -I{} $cmd_prefix xcode-select --switch {}
     ;;
