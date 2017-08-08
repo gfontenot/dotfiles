@@ -4,4 +4,3 @@
 session_name="personal"
 tmux new-session -s "$session_name" -n "mutt" -d -c "Desktop" mutt
 tmux new-window -t "$session_name" -n "dotfiles" -d -c "$DOTFILES"
-tmux new-window -t "$session_name" -n "notes" -d -c "$NOTES"
