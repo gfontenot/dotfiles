@@ -38,3 +38,5 @@ Plug 'christoomey/vim-sort-motion'
 
 " Project specific configurations
 Plug 'tpope/vim-projectionist'
+
+Plug 'w0rp/ale'
