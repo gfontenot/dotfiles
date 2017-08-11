@@ -1,1 +1,0 @@
-alias gpg='gpg2'
