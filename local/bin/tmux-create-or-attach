@@ -1,10 +1,4 @@
-# Ensure we're always in a tmux session
-ensure_we_are_inside_tmux() {
-  if _not_in_tmux; then
-    _ensure_tmux_is_running
-    tmux attach -t "$(_most_recent_tmux_session)"
-  fi
-}
+#!/bin/bash
 
 # Returns the name of the most recent tmux session, sorted by time the session
 # was last attached.
@@ -29,4 +23,7 @@ _ensure_tmux_is_running() {
   fi
 }
 
-ensure_we_are_inside_tmux
+if _not_in_tmux; then
+  _ensure_tmux_is_running
+  tmux attach -t "$(_most_recent_tmux_session)"
+fi

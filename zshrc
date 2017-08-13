@@ -20,3 +20,6 @@ compinit
 for config_file (~/.config/^zsh/*.zsh) source $config_file
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Ensure we're in a tmux session at launch
+tmux-create-or-attach
