@@ -1,3 +1,5 @@
+source "$HOME/.config/zsh/path.zsh"
+
 # your project folder that we can `c [tab]` to
 export PROJECTS="$HOME/Code"
 
