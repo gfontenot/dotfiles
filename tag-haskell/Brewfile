@@ -1,4 +1,0 @@
-tap "gabebw/formulae"
-
-brew "haskell-stack"
-brew "huspenders"

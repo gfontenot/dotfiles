@@ -1,9 +1,0 @@
-tap 'gfontenot/formulae'
-tap 'thoughtbot/formulae'
-
-brew 'git', args: ['without-completions']
-brew 'git-update'
-brew 'gitsh'
-brew 'hub'
-
-brew 'fzf'
