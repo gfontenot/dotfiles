@@ -5,10 +5,7 @@ set -e
 setup/install-homebrew
 setup/link-dotfiles
 setup/fix-path
-
-# Find all tag-specific setup files and source them
-for file in tag-*/setup/*; do
-  source "$file"
-done
-
+setup/setup-vim
+setup/setup-mutt
+setup/setup-haskell
 setup/start-launch-agents

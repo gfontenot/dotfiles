@@ -2,8 +2,10 @@
 
 set -e
 
-echo "\n==========================================="
-echo "Setting up Vim\n"
+echo ""
+echo "==========================================="
+echo "Setting up Vim"
+echo ""
 
 echo "Installing vim plugins"
 vim +PlugInstall +qa

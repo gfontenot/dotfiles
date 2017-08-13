@@ -2,8 +2,10 @@
 
 set -e
 
-echo "\n==========================================="
-echo "Setting up Mail\n"
+echo ""
+echo "==========================================="
+echo "Setting up Mutt"
+echo ""
 
 echo "Creating temp directory for mutt"
 mkdir ~/.mutt/temp || echo "Temp directory exists"

@@ -2,8 +2,10 @@
 
 set -e
 
-echo "\n==========================================="
-echo "Setting up Haskell\n"
+echo ""
+echo "==========================================="
+echo "Setting up Haskell"
+echo ""
 
 echo "Installing basic dependencies"
 stack install alex happy yesod-bin hoogle

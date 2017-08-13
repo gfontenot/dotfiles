@@ -2,7 +2,9 @@
 
 set -e
 
-echo "\n==========================================="
-echo "Linking dotfiles\n"
+echo ""
+echo "==========================================="
+echo "Linking dotfiles"
+echo ""
 
 RCRC=rcrc rcup -v
