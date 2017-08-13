@@ -1,24 +1,27 @@
-alias dotedit='cd $DOTFILES && e'
-
-alias curl='noglob curl'
-
-alias reload!='. ~/.zshrc'
-
+# global {{{
 # All of a sudden, everything is hilarious
 alias -g poop=pop
 
 # fucking seriously
 alias -g 0a=-a
+# }}}
+
+# zsh {{{
+alias reload!='. ~/.zshrc'
 
 alias :q='logout'
+# }}}
 
+# utility {{{
 # Search for a process and kill it but in a funny way
 # `fucking phoenix`
 alias fucking="pkill -9 -f"
 
 # Mark a git repo as being safe
 alias mksafe="mkdir .git/safe"
+# }}}
 
+# git {{{
 # Use `hub` as our git wrapper:
 #   https://github.com/github/hub
 alias g=hub
@@ -42,11 +45,18 @@ alias gbd='g delete-branch'
 # log aliases
 alias gl='g l'
 alias glb='g lb'
+# }}}
 
+# editor {{{
 alias e='$VISUAL'
 alias s='e ~/.scratch.md'
+# }}}
 
+# mutt {{{
 alias mutt='echo -n -e "\033]0;mutt\007" && cd ~/Desktop && mutt'
+# }}}
 
+# xcode {{{
 # Clear the derived data folder cause uuuuuuggggghhhhhhh
 alias fuxcode='rm -rf ~/Library/Developer/Xcode/DerivedData/'
+# }}}
