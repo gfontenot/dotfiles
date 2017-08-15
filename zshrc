@@ -12,7 +12,6 @@ export DROPBOX="$HOME/Dropbox (Personal)"
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
-autoload -U ~/.config/zsh/functions/*(:t)
 autoload zmv
 
 setopt NO_BG_NICE # don't nice background tasks
