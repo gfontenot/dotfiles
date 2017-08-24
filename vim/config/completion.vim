@@ -17,6 +17,9 @@ set completeopt=menu,menuone,longest,preview
 " Enable deoplete automatically
 " This has no affect in vim, but will automatically enable deoplete in neovim
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#file#enable_buffer_path = 1
+
+inoremap <silent><expr><tab> pumvisible() ? "\<C-n>" : "\<tab>"
 
 " neosnippets config
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
