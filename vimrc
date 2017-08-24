@@ -16,9 +16,114 @@ function! s:SourceConfigFilesIn(directory)
   endfor
 endfunction
 
+" ============================================================================
+" PLUGINS {{{
+" ============================================================================
+
+" Using vim-plug
+" https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
-call s:SourceConfigFilesIn('plugins')
+
+" ==========
+" Completion
+" ==========
+
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'mitsuse/autocomplete-swift'
+
+" ======
+" Search
+" ======
+
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+
+" ==========
+" Git/GitHub
+" ==========
+
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'christoomey/vim-conflicted'
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
+
+" ====
+" Tmux
+" ====
+
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-runner'
+
+" ====================
+" Languages/Frameworks
+" ====================
+
+Plug 'raichoo/haskell-vim'
+Plug 'pbrisbin/vim-syntax-shakespeare'
+Plug 'elixir-lang/vim-elixir'
+Plug 'c-brenn/phoenix.vim'
+Plug 'cespare/vim-toml'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'lambdatoast/elm.vim'
+Plug 'keith/swift.vim'
+Plug 'rust-lang/rust.vim'
+Plug 'tpope/vim-markdown'
+
+" ==========
+" Appearance
+" ==========
+
+Plug 'itchyny/lightline.vim'
+Plug 'flazz/vim-colorschemes'
+
+" =======
+" Writing
+" =======
+
+Plug 'nicholaides/words-to-avoid.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+
+" ====
+" Misc
+" ====
+
+" Asynchronous file linting/formatting
+Plug 'w0rp/ale'
+" Language agnostic testing support
+Plug 'janko-m/vim-test'
+" Work with Xcode projects from inside Vim
+Plug 'gfontenot/vim-xcode'
+" Easily comment code
+Plug 'tpope/vim-commentary'
+" Allow . to make plugin actions repeat
+Plug 'tpope/vim-repeat'
+" Surround text objects with characters
+Plug 'tpope/vim-surround'
+" Project specific configurations
+Plug 'tpope/vim-projectionist'
+" Automatically create non-existent directories
+Plug 'pbrisbin/vim-mkdir'
+" Rename files in place
+Plug 'pbrisbin/vim-rename-file'
+" Easily copy to the system clipboard
+Plug 'christoomey/vim-system-copy'
+" Perform sort operations on text objects
+Plug 'christoomey/vim-sort-motion'
+" Automatically add closing statements for a number of languages
+Plug 'cohama/lexima.vim'
+" Remember last position in files
+Plug 'dietsche/vim-lastplace'
+" Quickly add attachments to emails
+" Also checks for emails that _should_ have attachments but don't.
+Plug 'chrisbra/CheckAttach'
+
 call plug#end()
+" }}}
 
 call s:SourceConfigFilesIn('config')
 call s:SourceConfigFilesIn('functions')
