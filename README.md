@@ -1,11 +1,27 @@
 # dotfiles #
 
+These are my dotfiles. They are the secret-sauce in my day-to-day workflow. In
+this repo, you'll find my config for my favorite command line tools:
+
+- [zsh], my shell of choice
+- [git], my source control tool of choice
+- [vim] (actually [neovim]) for text editing
+- [tmux] for managing sessions and terminal splits
+- [mutt] for accessing my email
+- And more!
+
+[zsh]: http://www.zsh.org/
+[git]: https://git-scm.com/
+[vim]: http://www.vim.org/
+[neovim]: https://neovim.io/
+[tmux]: https://github.com/tmux/tmux
+[mutt]: http://www.mutt.org/
+
 ## setup ##
 
 After cloning this repo, running `setup/setup` will perform the entire setup
 process. You can perform isolated parts of the setup process by running
-individual scripts found in `setup` as well as the ones found in the `setup`
-directories in specific tags.
+individual scripts found in `setup`.
 
 ## rcm ##
 
@@ -14,24 +30,15 @@ out.
 
 [rcm]: https://github.com/thoughtbot/rcm
 
-It also heavily uses the tag feature of rcm. It's really only for
-organizational purposes, but it also means that you _could_ do neat things
-like pull down parts of my dotfiles if you'd like:
-
-```
-git clone git@github.com:gfontenot/dotfiles.git .gfontenot-dotfiles
-rcup -d .gfontenot-dotfiles -x README.md -x rcrc -t git
-```
-
 ## repo organization ##
 
 `rcm` will symlink all files into place, keeping the folder structure relative
 to the tag root. However, our `rcrc` is explicitly ignoring a few things:
 
- - `Brewfile`s are the homebrew dependencies for a specific tag, and so don't
-   need to be symlinked.
- - Anything named `setup` (or in a directory with that name) is assumed to be
-   part of the general setup process, and so will not be symlinked.
+ - `Brewfile` contains our homebrew dependencies , and so doesn't need to be
+   symlinked.
+ - Anything in our `setup` directory is assumed to be part of the general
+   setup process, and so will not be symlinked.
 
 These ignore patterns are being controlled by the `EXCLUDES` key in my
 [`rcrc`][rcrc].
@@ -45,9 +52,8 @@ symlinked into place properly.
 
 ## attribution ##
 
-The general organizational pattern that I'm using is heavily inspired by
-[holman]. I originally forked his dotfiles years ago, and fell in love with
-the structure.
+This repo started life as a fork of [holman]'s dotfiles, but is completely
+unrecognizable from his now.
 
 [holman]: https://github.com/holman/dotfiles
 
