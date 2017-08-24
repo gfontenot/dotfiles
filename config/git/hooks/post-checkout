@@ -1,7 +1,3 @@
 #!/bin/sh
 
-hooks_dir="$HOME/.config/git/hooks/post-checkout-hooks/"
-
-for e in `find "$hooks_dir" -type f -o -type l -maxdepth 1 2> /dev/null`; do
-  [ -x $e ] && $e
-done
+~/.config/git/hooks/ctags >/dev/null 2>&1 &
