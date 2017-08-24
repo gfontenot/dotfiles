@@ -1,0 +1,2 @@
+inherit_from:
+  - https://raw.githubusercontent.com/thoughtbot/guides/master/style/ruby/.rubocop.yml
