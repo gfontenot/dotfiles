@@ -1,1 +1,1 @@
-call Include('~/.vim/ftplugin/text.vim')
+call Source('~/.vim/ftplugin/text.vim')
