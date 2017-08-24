@@ -48,7 +48,13 @@ setopt EXTENDED_GLOB
 # Functions {{{
 # ============================================================================
 
+# Built in version of mv that can handle patterns
 autoload zmv
+
+# Create a directory and then cd into it
+mcd() {
+  mkdir -p "$@" && cd "$@" || exit 1
+}
 
 # }}}
 
