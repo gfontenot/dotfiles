@@ -67,6 +67,7 @@ Plug 'lambdatoast/elm.vim'
 Plug 'keith/swift.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-markdown'
+Plug 'ericpruitt/tmux.vim', {'rtp': 'vim/'}
 
 " ==========
 " Appearance
