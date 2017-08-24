@@ -9,28 +9,23 @@ export DOTFILES="$PROJECTS/dotfiles"
 # Your personal Dropbox folder
 export DROPBOX="$HOME/Dropbox (Personal)"
 
-export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
 autoload zmv
 
-setopt NO_BG_NICE # don't nice background tasks
-setopt NO_HUP
-setopt NO_LIST_BEEP
-setopt LOCAL_OPTIONS # allow functions to have local options
-setopt LOCAL_TRAPS # allow functions to have local traps
-setopt PROMPT_SUBST
+# Try to correct misspelled commands
 setopt CORRECT
-setopt COMPLETE_IN_WORD
+# Require exit or logout to exit a shell
 setopt IGNORE_EOF
+# Treat the ‘#’, ‘~’ and ‘^’ characters as part of patterns for filename
+# generation
 setopt EXTENDED_GLOB
 
-# set the editor du jour.
 export VISUAL='/usr/local/bin/nvim'
 export EDITOR="$VISUAL"
 
 # I have _no idea_ how I broke this, but for some reason, this was bound to
-# `redisplay`, which is _clearly_ wrong, so this is me chaning it back.
+# `redisplay`, which is _clearly_ wrong, so this is me changing it back.
 bindkey "^R" history-incremental-search-backward
 
 source "$HOME/.config/zsh/aliases.zsh"
