@@ -7,6 +7,7 @@ brew 'ctags'
 brew 'fzf'
 brew 'gfontenot/formulae/git-update'
 brew 'gfontenot/formulae/trelloparse'
+brew 'gfontenot/formulae/xcode-cli'
 brew 'gifsicle'
 brew 'git', args: ['without-completions']
 brew 'gnupg'
