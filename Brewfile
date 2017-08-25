@@ -1,4 +1,4 @@
-brew "haskell-stack"
+brew 'haskell-stack'
 brew 'ImageMagick'
 brew 'carthage'
 brew 'coreutils'
