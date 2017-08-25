@@ -1,7 +1,6 @@
 brew "haskell-stack"
 brew 'ImageMagick'
 brew 'carthage'
-brew 'chruby'
 brew 'coreutils'
 brew 'ctags'
 brew 'fzf'

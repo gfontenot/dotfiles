@@ -350,15 +350,6 @@ export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
 source "$HOME/.asdf/asdf.sh"
 source "$HOME/.asdf/completions/asdf.bash"
 
-# ======
-# CHRUBY
-# ======
-
-source "/usr/local/share/chruby/chruby.sh"
-source "/usr/local/share/chruby/auto.sh"
-
-chruby "ruby-2.2.2"
-
 # ========
 # SWIFTENV
 # ========

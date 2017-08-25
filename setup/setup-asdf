@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Install asdf itself
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.3.0
+
+# Add language plugins
+asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
+asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
