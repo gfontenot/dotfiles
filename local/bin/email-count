@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env zsh
 #
 # Count the number of emails in all inboxes and return a formatted string
 #
