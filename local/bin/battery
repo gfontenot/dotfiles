@@ -1,0 +1,15 @@
+#!/bin/sh
+
+info=$(pmset -g batt)
+
+percentage=$(echo "$info" | grep -o '[0-9]*%' | tr -d %)
+
+if echo "$info" | grep -q 'AC Power'; then
+  extra_info=""
+elif remaining=$(echo "$info" | grep -o '[0-9]\+:[0-9]\+'); then
+  extra_info=" ($remaining)"
+else
+  extra_info=""
+fi
+
+printf "Batt: %s%s" "$percentage%" "$extra_info"
