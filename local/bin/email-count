@@ -31,7 +31,7 @@ while getopts ":d:z" opt; do
   esac
 done
 
-count=$(find ~/.mail/*/INBOX/*/ -type f | wc -l)
+count=$(find ~/.mail/*/INBOX/*/ -type f | wc -l | tr -d ' ')
 emails="emails"
 
 if (( count == 0 )) && $ignore_zero; then
