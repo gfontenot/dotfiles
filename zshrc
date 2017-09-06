@@ -19,14 +19,17 @@ path=(
 # Locations {{{
 # ============================================================================
 
-# your project folder that we can `c [tab]` to
+# Where I keep my projects
 export PROJECTS="$HOME/Code"
 
-# shortcut to this dotfiles path is $DOTFILES
+# Shortcut to my dotfiles directory
 export DOTFILES="$PROJECTS/dotfiles"
 
-# Your personal Dropbox folder
+# My personal Dropbox folder
 export DROPBOX="$HOME/Dropbox (Personal)"
+
+# Where I keep my plain text notes
+export NOTES="$DROPBOX/notes"
 
 # }}}
 
