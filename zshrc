@@ -339,7 +339,5 @@ eval "$(swiftenv init -)"
 
 # }}}
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Ensure we're in a tmux session at launch
 tmux-create-or-attach
