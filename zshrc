@@ -137,21 +137,17 @@ alias gbd='g delete-branch'
 alias gl='g l'
 alias glb='g lb'
 
-
 # ======
 # EDITOR
 # ======
 
 alias e='$VISUAL'
-alias s='e ~/.scratch.md'
-
 
 # ====
 # MUTT
 # ====
 
 alias mutt='echo -n -e "\033]0;mutt\007" && cd ~/Desktop && mutt'
-
 
 # =====
 # XCODE
