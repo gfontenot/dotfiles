@@ -7,6 +7,7 @@ path=(
   "$HOME/.local/bin"
   "/usr/local/bin"
   "$HOME/.stack/bin"
+  "$HOME/Library/Android/sdk/platform-tools"
   "/usr/bin"
   "/bin"
   "/usr/sbin"
