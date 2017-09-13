@@ -11,7 +11,7 @@ _note() {
         new)
           _arguments -C '1: :{_note-contexts}'
           ;;
-        edit|find)
+        edit|find|process)
           _message 'no more arguments'
           ;;
       esac
@@ -24,6 +24,7 @@ _note_cmds() {
     'new:Create a new note'
     'edit:Edit existing notes'
     'find:Search for a note'
+    'process:Process notes in the inbox'
   )
 
   _describe -t commands 'note command' commands "$@"

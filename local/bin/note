@@ -35,6 +35,17 @@ edit_notes() {
   $EDITOR .
 }
 
+process_notes() {
+  cd "$NOTES/"
+  inbox_contents=$(find _inbox -name "*.md")
+
+  if [ -z "$inbox_contents" ]; then
+    echo "No notes to process!"
+  else
+    find _inbox -name "*.md" -print0 | xargs -0 "$EDITOR"
+  fi
+}
+
 case "$1" in
   new)
     new_note "${@:2}"
@@ -44,6 +55,9 @@ case "$1" in
     ;;
   edit)
     edit_notes
+    ;;
+  process)
+    process_notes
     ;;
   (*)
     echo "command expected" >&2
