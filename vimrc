@@ -119,6 +119,7 @@ Plug 'dietsche/vim-lastplace'
 Plug 'chrisbra/CheckAttach'
 
 call plug#end()
+
 " }}}
 
 " ============================================================================
@@ -169,57 +170,6 @@ set splitright
 " }}}
 
 " ============================================================================
-" Functions {{{
-" ============================================================================
-
-" Reload our vim config
-command! Reload execute "source $MYVIMRC"
-
-" Source a file if readable
-function! g:Source(file)
-  if filereadable(expand(a:file))
-    execute 'source' a:file
-  endif
-endfunction
-
-" Toggle markdown checkboxes
-function! ToggleCheckbox()
-  let current_line = getline('.')
-  let cursor_pos = getpos('.')
-  if match(current_line, '\V[ ]') >= 0
-    exe 's/\V[ ]/[x]/'
-  elseif match(current_line, '\V[x]') >= 0
-    exe 's/\V[x]/[ ]/'
-  endif
-  call setpos('.', cursor_pos)
-endfunction
-
-" Remove the file for the current buffer
-command! -complete=file -nargs=?
-      \ Remove
-      \ call <sid>remove(<f-args>)
-
-function! s:remove(...)
-  if empty(a:000)
-    let filename = @%
-  else
-    let filename = join(a:000)
-  endif
-
-  call delete(filename) | bdelete!
-endfunction
-
-" Trim trailing whitespace from files
-command! TrimWhitespace call s:trim_whitespace()
-
-function! s:trim_whitespace()
-  let l:pos = getpos(".")
-  %s/\s\+$//g
-  call setpos(".", l:pos)
-endfunction
-" }}}
-
-" ============================================================================
 " Keybindings {{{
 " ============================================================================
 
@@ -239,7 +189,7 @@ nnoremap <leader>v <C-^>:vsp #<Cr>
 " original split back to the previous buffer
 nnoremap <leader>x <C-^>:sp #<Cr>
 
-nnoremap <leader>. :call ToggleCheckbox()<Cr>
+nnoremap <leader>. :call checkbox#toggle()<Cr>
 
 " }}}
 
@@ -487,18 +437,6 @@ set stl+=%{ConflictedVersion()}
 " }}}
 
 " ============================================================================
-" Ctags {{{
-" ============================================================================
-
-command! Ctags call s:generate_ctags()
-
-function! s:generate_ctags()
-  call system("git ls-files | ctags -L -")
-endfunction
-
-" }}}
-
-" ============================================================================
 " Xcode {{{
 " ============================================================================
 
@@ -521,6 +459,16 @@ let g:jsx_ext_required = 0
 " ============================================================================
 " Misc {{{
 " ============================================================================
+
+" Reload our vim config
+command! Reload execute "source $MYVIMRC"
+
+" Source a file if readable
+function! g:Source(file)
+  if filereadable(expand(a:file))
+    execute 'source' a:file
+  endif
+endfunction
 
 " Automatically resize splits when the parent window size changes
 autocmd VimResized * wincmd =
