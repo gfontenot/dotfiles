@@ -1,11 +1,11 @@
 macro index O \
-  "<shell-escape>~/.local/bin/fetchmail<enter>" \
-  "sync all mail"
+"<shell-escape>~/.local/bin/fetchmail &<enter>" \
+"sync all mail"
 
 macro index o \
-  "<shell-escape>~/.local/bin/fetchmail INBOXES<enter>" \
-  "sync inbox"
+"<shell-escape>~/.local/bin/fetchmail INBOXES &<enter>" \
+"sync inbox"
 
 macro index,pager \cV \
-  "v/html<enter><return>qa" \
-  "view HTML version of the message"
+"v/html<enter><return>qa" \
+"view HTML version of the message"

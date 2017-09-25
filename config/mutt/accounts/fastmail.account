@@ -22,13 +22,13 @@ macro index,pager A "<tag-thread>;s+gordon-fonten.io/Archive<enter>" "Archive th
 macro index,pager ! "<save-message>+gordon-fonten.io/Junk<enter>" "Mark the message as spam"
 
 macro index,pager \cF \
-  "<save-message>+gordon-fonten.io/Followup<enter> \
-  ^T" \
-  "Move message to Followup and create a new to do"
+"<save-message>+gordon-fonten.io/Followup<enter>\
+^T" \
+"Move message to Followup and create a new to do"
 
 macro index S \
-  "<shell-escape>mu-mutt gordon-fonten.io<enter> \
-  <change-folder-readonly>+temporary/search<enter>" \
-  'search mail (using mu)'
+"<shell-escape>mu-mutt gordon-fonten.io<enter>\
+<change-folder-readonly>+temporary/search<enter>" \
+'search mail (using mu)'
 
 # vim: ft=muttrc
