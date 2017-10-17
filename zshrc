@@ -126,12 +126,6 @@ alias glb='g lb'
 
 alias e='$VISUAL'
 
-# ====
-# MUTT
-# ====
-
-alias mutt='echo -n -e "\033]0;mutt\007" && cd ~/Desktop && mutt'
-
 # =====
 # XCODE
 # =====

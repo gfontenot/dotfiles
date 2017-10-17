@@ -7,7 +7,6 @@ this repo, you'll find my config for my favorite command line tools:
 - [git], my source control tool of choice
 - [vim] (actually [neovim]) for text editing
 - [tmux] for managing sessions and terminal splits
-- [mutt] for accessing my email
 - And more!
 
 [zsh]: http://www.zsh.org/
@@ -15,7 +14,6 @@ this repo, you'll find my config for my favorite command line tools:
 [vim]: http://www.vim.org/
 [neovim]: https://neovim.io/
 [tmux]: https://github.com/tmux/tmux
-[mutt]: http://www.mutt.org/
 
 ## setup ##
 
