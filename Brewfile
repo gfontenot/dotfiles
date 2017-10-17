@@ -1,3 +1,8 @@
+tap 'gfontenot/formulae'
+tap 'keith/formulae'
+tap 'kylef/formulae'
+tap 'thoughtbot/formulae'
+
 brew 'ImageMagick'
 brew 'carthage'
 brew 'coreutils'
