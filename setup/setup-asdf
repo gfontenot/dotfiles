@@ -4,7 +4,7 @@
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.3.0
 
 # Add language plugins
-asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
-asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
-asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
-asdf plugin-add elm https://github.com/vic/asdf-elm.git
+$HOME/.asdf/bin/asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
+$HOME/.asdf/bin/asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+$HOME/.asdf/bin/asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
+$HOME/.asdf/bin/asdf plugin-add elm https://github.com/vic/asdf-elm.git
