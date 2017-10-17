@@ -6,7 +6,7 @@ setup/install-homebrew
 setup/link-dotfiles
 setup/fix-path
 setup/setup-asdf
-setup/setup-vim
+setup/install-vim
 setup/setup-mutt
 setup/setup-haskell
 setup/start-launch-agents
