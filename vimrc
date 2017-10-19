@@ -486,5 +486,8 @@ set nojoinspaces                  " Don't add two spaces after punctuation
                                   " when joining lines
 " }}}
 
+" Source private vimrc files that aren't tracked in this repo
+call Source('~/.vim/private/vimrc')
+
 " Finally, source local vimrc files, but only if we're in a safe repo
 call Source('./.git/safe/../../.vimrc')
