@@ -35,12 +35,13 @@ Plug 'mitsuse/autocomplete-swift'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
-" ==========
-" Git/GitHub
-" ==========
+" ====================
+" Git/GitHub/BitBucket
+" ====================
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+Plug 'matthewtodd/vim-fustashtive'
 Plug 'christoomey/vim-conflicted'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
