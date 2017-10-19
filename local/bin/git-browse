@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+origin=$(git remote get-url origin)
+
+if [[ "$origin" =~ ".*github\.com.*" ]]; then
+  hub browse
+elif [[ "$origin" =~ ".*$STASH_URL_PATTERN.*" ]]; then
+  stash browse
+else
+  echo "Not sure how to open this url:"
+  echo "$origin"
+fi
