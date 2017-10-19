@@ -97,9 +97,7 @@ alias mksafe="mkdir .git/safe"
 # GIT
 # ===
 
-# Use `hub` as our git wrapper:
-#   https://github.com/github/hub
-alias g=hub
+alias g=git
 
 # alias straight to difftool for quick access
 alias gdiff='g diff'

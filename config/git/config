@@ -105,6 +105,5 @@
 
 [gitsh]
   defaultCommand = status --short --branch
-  gitCommand = /usr/local/bin/hub
   noGreeting = true
   prompt = "%D(%c%b%#%w)"
