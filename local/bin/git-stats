@@ -1,0 +1,36 @@
+#!/bin/bash
+# Stolen from git-pastiche
+# https://bitbucket.org/ssaasen/git-pastiche/src/master/bin/git-stats
+
+set -e
+
+# actually parse the options and do stuff
+while [[ $1 = -?* ]]; do
+    case $1 in
+        --gc)
+            echo "Repacking objects"
+            git gc --aggressive --auto
+            ;;
+        *) ;;
+    esac
+
+shift
+done
+
+# Summarize information about the current git repository
+NUMBER_OF_COMMITS=`git rev-list --all | wc -l`
+NUMBER_OF_OBJECTS=`git count-objects -v | grep in-pack | cut -f 2 -d ':'`
+NUMBER_OF_FILES=`git ls-tree --full-tree -r HEAD | wc -l | tr -d ' '`
+NUMBER_OF_CONTRIBUTORS=`git shortlog -s -n | wc -l | tr -d ' '`
+NUMBER_OF_REFS=`git show-ref --heads -s | wc -l | tr -d ' '`
+AGE=`git log --date-order --reverse --format='%cr' | head -n 1`
+REPO_SIZE=`du -hs $(git rev-parse --git-dir) | awk '{print $1}'` # count-objects has size-pack but that _requires_ the repository to be packed
+
+# %'.3f\n
+printf "Repository size (approx): %12s\n"   "${REPO_SIZE}"
+printf "Number of contributors  : %'12.d\n" $NUMBER_OF_CONTRIBUTORS
+printf "Number of commits       : %'12.d\n" $NUMBER_OF_COMMITS
+printf "Number of objects       : %'12.d\n" $NUMBER_OF_OBJECTS
+printf "Number of files         : %'12.d\n" $NUMBER_OF_FILES
+printf "Number of refs          : %'12.d\n" $NUMBER_OF_REFS
+printf "First commit            : %12s\n"   "${AGE}"
