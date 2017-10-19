@@ -12,7 +12,7 @@ if [ -z "$name" ]; then
   read name
 fi
 
-branch_name="gf-$name"
+branch_name="gfontenot/$name"
 
 git checkout -b "$branch_name"
 git push origin "$branch_name" --set-upstream
