@@ -1,5 +1,5 @@
 #!/bin/sh
 
-find "$DROPBOX/Receipts" -iname "*$1*" \
+find "$HOME/Dropbox/Receipts" -iname "*$1*" \
   | fzf --print0 --select-1 \
   | xargs -0 open
