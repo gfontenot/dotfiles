@@ -333,7 +333,9 @@ eval "$(swiftenv init -)"
 # }}}
 
 # Private config that shouldn't be shared
-source "$HOME/.config/zsh/private.zsh"
+if [ -f "$HOME/.config/zsh/private.zsh" ]; then
+  source "$HOME/.config/zsh/private.zsh"
+fi
 
 # Ensure we're in a tmux session at launch
 tmux-create-or-attach
