@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 # Open a PR and copy the url to the clipboard
 
 set -e
@@ -9,7 +9,11 @@ commit_message_file="$(mktemp -t commitmsg)"
 number_of_commits=$(git rev-list master..HEAD --count)
 
 append_template_to() {
-  for template in PULL_REQUEST_TEMPLATE* .github/PULL_REQUEST_TEMPLATE*; do
+  if [ ! -r "PULL_REQUEST_TEMPLATE*" ] && [ ! -r ".github/PULL_REQUEST_TEMPLATE*" ]; then
+    return
+  fi
+
+  for template in "PULL_REQUEST_TEMPLATE*" ".github/PULL_REQUEST_TEMPLATE*"; do
     if [ -r "$template" ]; then
       cat "$template" >> "$1"
     fi
