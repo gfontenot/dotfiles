@@ -131,6 +131,18 @@ alias e='$VISUAL'
 # Clear the derived data folder cause uuuuuuggggghhhhhhh
 alias fuxcode='rm -rf ~/Library/Developer/Xcode/DerivedData/'
 
+
+# =====
+# TOOLS
+# =====
+
+# I use a number of ruby tools for iOS development, and writing `bundle exec`
+# all the damn time is exhausting, so lets just alias the tools to the bundled
+# versions.
+
+alias pod='bundle exec pod'
+alias fastlane='bundle exec fastlane'
+
 # }}}
 
 # ============================================================================
