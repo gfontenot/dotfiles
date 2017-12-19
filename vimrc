@@ -25,7 +25,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
 Plug 'mitsuse/autocomplete-swift'
 
 " ======
@@ -289,7 +288,18 @@ let g:deoplete#file#enable_buffer_path = 1
 
 inoremap <silent><expr><tab> pumvisible() ? "\<C-n>" : "\<tab>"
 
-" neosnippets config
+" }}}
+
+" ============================================================================
+" Snippets {{{
+" ============================================================================
+
+let g:neosnippet#disable_runtime_snippets = {
+\   '_' : 1,
+\ }
+
+let g:neosnippet#snippets_directory = '~/.vim/snippets'
+
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_target)

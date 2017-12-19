@@ -1,0 +1,26 @@
+snippet struct
+options word
+    struct ${1:name} {
+        ${0:TARGET}
+    }
+
+snippet class
+options word
+    class ${1:name} {
+        ${0:TARGET}
+    }
+
+snippet enum
+options word
+    enum ${1:name} {
+        case ${0:TARGET}
+    }
+
+snippet extension
+    extension ${1:Int} {
+        ${0:TARGET}
+    }
+
+snippet mark
+options word
+    // MARK: - ${1:COMMENT}
