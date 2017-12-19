@@ -77,7 +77,7 @@
   wtf = true
 
 [pretty]
-  custom = %C(yellow)%h%Cblue%d%Creset %s - %C(white)%an %C(cyan)(%G?) %Cgreen(%cr)%Creset
+  custom = %C(yellow)%h %C(white)[%an (%G?)] %C(reset)%s%C(blue)%d %C(green)(%cr)%C(reset)
   changelog = %s - %an
 
 [core]
