@@ -46,7 +46,7 @@
 
   changelog = log --format=changelog
 
-  vdiff = difftool
+  vdiff = difftool -y -t ksdiff
 
   gs = !echo "This isnt a thing, idiot"
 
@@ -107,3 +107,6 @@
   defaultCommand = status --short --branch
   noGreeting = true
   prompt = "%D(%c%b%#%w)"
+
+[difftool "ksdiff"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
