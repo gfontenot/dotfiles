@@ -1,4 +1,10 @@
 {
+  "*.m": {
+    "alternate": "{}.h"
+  },
+  "*.h": {
+    "alternate": "{}.m"
+  },
   "Sources/Models/*.swift": {
     "command": "model",
     "test": [
