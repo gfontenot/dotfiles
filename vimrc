@@ -118,6 +118,8 @@ Plug 'dietsche/vim-lastplace'
 " Quickly add attachments to emails
 " Also checks for emails that _should_ have attachments but don't.
 Plug 'chrisbra/CheckAttach'
+" Visualize registers when trying to paste info from them
+Plug 'junegunn/vim-peekaboo'
 
 call plug#end()
 
