@@ -44,6 +44,7 @@ Plug 'matthewtodd/vim-fustashtive'
 Plug 'christoomey/vim-conflicted'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
+Plug 'gabebw/vim-github-link-opener'
 
 " ====
 " Tmux
