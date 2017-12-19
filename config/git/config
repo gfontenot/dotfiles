@@ -17,8 +17,8 @@
   c = commit
   cm = commit --message
   co = checkout
-  l = log --format=custom --graph
-  lb = log --format=custom --graph HEAD --not master
+  l = log --format=custom
+  lb = log --format=custom HEAD --not master
 
   up = update
   sup = submodule update --init --recursive
@@ -44,7 +44,7 @@
 
   pr = create-pull-request
 
-  changelog = log --format=changelog --graph
+  changelog = log --format=changelog
 
   vdiff = difftool
 
