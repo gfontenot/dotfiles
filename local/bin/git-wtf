@@ -106,12 +106,7 @@ def find_file fn
   end
 end
 
-want_color = `git config color.wtf`
-want_color = `git config color.ui` if want_color.empty?
-$color = case want_color.chomp
-  when "true"; true
-  when "auto"; $stdout.tty?
-end
+$color = $stdout.tty?
 
 def red s; $color ? "\033[31m#{s}\033[0m" : s end
 def green s; $color ? "\033[32m#{s}\033[0m" : s end
