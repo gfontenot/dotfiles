@@ -62,6 +62,7 @@
   tool = vimdiff
   prompt = false
   compactionHeuristic = true
+  colorMoved = zebra
 
 [merge]
   ff = only
