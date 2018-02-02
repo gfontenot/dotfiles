@@ -7,6 +7,8 @@ path=(
   "$HOME/.local/bin"
   "/usr/local/bin"
   "$HOME/.stack/bin"
+  "$HOME/.asdf/bin"
+  "$HOME/.asdf/shims"
   "$HOME/Library/Android/sdk/platform-tools"
   "/usr/bin"
   "/bin"
@@ -156,7 +158,9 @@ fpath=(~/.config/zsh/completion-scripts $fpath)
 setopt complete_aliases
 
 autoload -U compinit
+autoload -U bashcompinit
 compinit
+bashcompinit
 
 # matches case insensitive for lowercase
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
@@ -333,7 +337,6 @@ export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
 # ASDF
 # =====
 
-source "$HOME/.asdf/asdf.sh"
 source "$HOME/.asdf/completions/asdf.bash"
 
 # ========
