@@ -14,17 +14,4 @@ merge_base_sha=$(git merge-base "$head_sha" "$remote_sha")
 
 git log --format=custom --no-merges "$merge_base_sha".."$remote_sha"
 
-# Delete all local branches that have been merged into HEAD.
-
-deleted_branches=$(git branch --merged \
-  | grep -v '^\*' \
-  | grep -v 'master' \
-  | awk '{$1=$1;print}' \
-  | paste -s -d' ' -
-)
-
-if [ "$deleted_branches" != "" ]; then
-  for branch in $deleted_branches; do
-    git branch -d "$branch"
-  done
-fi
+git delete-local-merged
