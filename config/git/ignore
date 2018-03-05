@@ -18,3 +18,5 @@ tags
 
 # Projectionist
 .projections.json
+
+bin/stubs

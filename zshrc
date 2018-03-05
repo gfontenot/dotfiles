@@ -4,6 +4,7 @@
 
 path=(
   "./.git/safe/../../bin"
+  "./.git/safe/../../bin/stubs"
   "$HOME/.local/bin"
   "/usr/local/bin"
   "$HOME/.stack/bin"
@@ -138,12 +139,16 @@ alias fuxcode='rm -rf ~/Library/Developer/Xcode/DerivedData/'
 # TOOLS
 # =====
 
-# I use a number of ruby tools for iOS development, and writing `bundle exec`
-# all the damn time is exhausting, so lets just alias the tools to the bundled
-# versions.
+# Automatically install binstubs with bundler
 
-alias pod='bundle exec pod'
-alias fastlane='bundle exec fastlane'
+b(){
+  if [[ $# == 0 ]]; then
+    (bundle check > /dev/null || bundle install) && \
+      bundle --quiet --binstubs=./bin/stubs
+  else
+    bundle "$@"
+  fi
+}
 
 # }}}
 
