@@ -1,5 +1,0 @@
-#!/bin/sh
-# create a default session with our dotfiles
-
-session_name="personal"
-tmux new-window -t "$session_name" -n "dotfiles" -d -c "$DOTFILES"

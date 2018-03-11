@@ -14,12 +14,12 @@ _not_in_tmux() {
 }
 
 _no_tmux_sessions() {
-  [[ -z $(tmux ls) ]]
+  [[ -z $(tmux ls 2>/dev/null) ]]
 }
 
 _ensure_tmux_is_running() {
   if _no_tmux_sessions; then
-    create-default-tmux-session
+    tmux new-session -s "personal" -n "dotfiles" -d -c "$DOTFILES"
   fi
 }
 
