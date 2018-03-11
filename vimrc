@@ -397,6 +397,7 @@ nnoremap [r :ALEPreviousWrap<CR>
 
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_fixers['elm'] = ['elm-format']
 let g:ale_fix_on_save = 1
 let g:ale_echo_msg_format = '[%linter%]: %s'
 
