@@ -120,6 +120,8 @@ Plug 'dietsche/vim-lastplace'
 Plug 'chrisbra/CheckAttach'
 " Visualize registers when trying to paste info from them
 Plug 'junegunn/vim-peekaboo'
+" Allow for tmux-like split zooming
+Plug 'dhruvasagar/vim-zoom'
 
 call plug#end()
 
@@ -170,6 +172,8 @@ endfunction
 " Open splits to the bottom right
 set splitbelow
 set splitright
+
+nnoremap <silent> <C-W>z :call zoom#toggle()<CR>
 
 " }}}
 
