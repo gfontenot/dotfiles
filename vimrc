@@ -95,6 +95,8 @@ Plug 'w0rp/ale'
 Plug 'janko-m/vim-test'
 " Work with Xcode projects from inside Vim
 Plug 'gfontenot/vim-xcode'
+" Extensable URL opener
+Plug 'gfontenot/vim-url-opener'
 " Easily comment code
 Plug 'tpope/vim-commentary'
 " Allow . to make plugin actions repeat
@@ -443,6 +445,16 @@ nnoremap <leader>fr :VtrFocusRunner<cr>
 nnoremap <leader>rr :VtrSendCommandToRunner! !!<cr>
 
 nnoremap <leader>r :VtrSendCommandToRunner!<space>
+
+" }}}
+
+" ============================================================================
+" URLs {{{
+" ============================================================================
+
+let g:url_transformers =
+      \ [ 'jira#transform'
+      \ ]
 
 " }}}
 
