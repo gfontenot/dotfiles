@@ -6,6 +6,7 @@
 deleted_branches=$(git branch --list --merged master \
   | grep -v '^\*' \
   | grep -v 'master' \
+  | grep -v 'converge/' \
   | awk '{$1=$1;print}'
 )
 
