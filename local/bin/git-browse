@@ -5,7 +5,7 @@ origin=$(git remote get-url origin)
 if [[ "$origin" =~ ".*github\.com.*" ]]; then
   hub browse
 elif [[ "$origin" =~ ".*$STASH_URL_PATTERN.*" ]]; then
-  stash browse
+  stash browse 2>/dev/null
 else
   echo "Not sure how to open this url:"
   echo "$origin"
