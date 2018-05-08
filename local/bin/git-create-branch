@@ -9,10 +9,16 @@ name="$1"
 if [ -z "$name" ]; then
   echo "Branch name required"
   printf "> "
-  read name
+  read -r name
 fi
 
-branch_name="gfontenot/$name"
+origin=$(git remote get-url origin)
+
+if [[ "$origin" =~ .*github\.com:gfontenot.* ]]; then
+  branch_name="$name"
+else
+  branch_name="gfontenot/$name"
+fi
 
 git checkout -b "$branch_name"
 git push origin "$branch_name" --set-upstream
