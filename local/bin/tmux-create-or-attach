@@ -19,7 +19,7 @@ _no_tmux_sessions() {
 
 _ensure_tmux_is_running() {
   if _no_tmux_sessions; then
-    tmux new-session -s "personal" -n "dotfiles" -d -c "$DOTFILES"
+    tmux new-session -s "dotfiles" -n "dotfiles" -d -c "$DOTFILES"
   fi
 }
 
