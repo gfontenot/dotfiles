@@ -1,0 +1,10 @@
+#!/bin/sh
+
+commit_message_file="$(mktemp -t commitmsg)"
+
+echo "wip (with note)" > "$commit_message_file"
+echo "" >> "$commit_message_file"
+echo "[What were you working on?]" >> "$commit_message_file"
+
+git add .
+git commit --template="$commit_message_file"

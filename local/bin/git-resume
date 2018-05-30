@@ -1,0 +1,13 @@
+#!/bin/bash
+
+last_commit_message=$(git log --format="%s" -n 1)
+
+if [[ "$last_commit_message" =~ ^(.*[[:space:]])?wip([[:space:]].*)?$ ]]; then
+  echo "Previously:"
+  echo "-----------"
+  echo ""
+  git log --format="%b" -n 1
+  git reset @~
+else
+  echo "Nothing to resume!"
+fi

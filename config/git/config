@@ -33,8 +33,6 @@
   amend = commit --amend --reuse-message HEAD
   credit = commit --amend --author "$1 <$2>" --reuse-message HEAD
 
-  wip = commit --all --message 'wip'
-
   unstage = reset HEAD
   staged = diff --staged
 
