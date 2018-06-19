@@ -84,7 +84,7 @@ alias -g 0a=-a
 # ===
 
 alias reload!='. ~/.zshrc'
-alias :q='logout'
+alias :q='exit'
 
 # =======
 # UTILITY
