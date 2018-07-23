@@ -103,23 +103,23 @@ alias mksafe="mkdir .git/safe"
 alias g=git
 
 # alias straight to difftool for quick access
-alias gdiff='g diff'
+alias gdiff='git diff'
 
 # quick aliases for common actions
-alias ga='g add'
-alias gc!='g c'
-alias gcm='g cm'
-alias gco='g co'
-alias gp='g push'
-alias gmf='g merge --ff-only'
-alias gup='g up'
-alias gsup='g sup'
-alias gbc='g create-branch'
-alias gbd='g delete-branch'
+alias ga='git add'
+alias gc!='git c'
+alias gcm='git cm'
+alias gco='git co'
+alias gp='git push'
+alias gmf='git merge --ff-only'
+alias gup='git up'
+alias gsup='git sup'
+alias gbc='git create-branch'
+alias gbd='git delete-branch'
 
 # log aliases
-alias gl='g l'
-alias glb='g lb'
+alias gl='git l'
+alias glb='git lb'
 
 # ======
 # EDITOR
@@ -158,10 +158,6 @@ b(){
 
 fpath=(~/.config/zsh/completion-scripts $fpath)
 
-# don't expand aliases before completion has finished
-# like: git comm-[tab]
-setopt complete_aliases
-
 autoload -U compinit
 autoload -U bashcompinit
 compinit
@@ -173,20 +169,8 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # pasting with tabs doesn't perform completion
 zstyle ':completion:*' insert-tab pending
 
+# Add all custom git subcommands to autocomplete
 zstyle ':completion:*:*:git:*' user-commands ${${(M)${(k)commands}:#git-*}/git-/}
-
-# ===
-# GIT
-# ===
-
-compdef g=git
-
-compdef _git gco=git-branch
-compdef _git gp=git-push
-compdef _git gmf=git-merge
-
-compdef _git gbd=git-branch
-_git-delete-branch() { compadd "$@" $(git branch) }
 
 # }}}
 
