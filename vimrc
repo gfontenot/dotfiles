@@ -406,7 +406,8 @@ let g:ale_echo_msg_format = '[%linter%]: %s'
 " ============================================================================
 
 " Mimic ctrl-p because muscle memory
-nmap <C-p> :Files<CR>
+nnoremap <C-p> :Files<CR>
+nnoremap <C-b> :Buffers<CR>
 
 " Don't take up too much space (40% is the default)
 let g:fzf_layout = { 'down': '~20%' }
