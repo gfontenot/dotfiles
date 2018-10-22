@@ -59,14 +59,9 @@ Plug 'christoomey/vim-tmux-runner'
 
 Plug 'raichoo/haskell-vim'
 Plug 'pbrisbin/vim-syntax-shakespeare'
-Plug 'elixir-lang/vim-elixir'
-Plug 'c-brenn/phoenix.vim'
-Plug 'cespare/vim-toml'
 Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
 Plug 'lambdatoast/elm.vim'
 Plug 'keith/swift.vim'
-Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-markdown'
 Plug 'ericpruitt/tmux.vim', {'rtp': 'vim/'}
 
@@ -117,9 +112,6 @@ Plug 'christoomey/vim-sort-motion'
 Plug 'cohama/lexima.vim'
 " Remember last position in files
 Plug 'dietsche/vim-lastplace'
-" Quickly add attachments to emails
-" Also checks for emails that _should_ have attachments but don't.
-Plug 'chrisbra/CheckAttach'
 " Visualize registers when trying to paste info from them
 Plug 'junegunn/vim-peekaboo'
 " Allow for tmux-like split zooming
@@ -476,14 +468,6 @@ let g:xcode_xcpretty_testing_flags = '--test'
 
 nnoremap <leader>b :Xbuild<CR>
 nnoremap <leader>u :Xtest<CR>
-
-" }}}
-
-" ============================================================================
-" Javascript {{{
-" ============================================================================
-
-let g:jsx_ext_required = 0
 
 " }}}
 
