@@ -1,3 +1,4 @@
 EXCLUDES="README.md Brewfile resources setup"
 DOTFILES_DIRS="$DOTFILES"
 UNDOTTED="Library"
+SYMLINK_DIRS="Library/Developer/Xcode/UserData/FontAndColorThemes"
