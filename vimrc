@@ -376,9 +376,8 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 " Ale {{{
 " ============================================================================
 
-let g:ale_linters = {
-      \ 'haskell': ['hlint', 'stack-build']
-      \ }
+let g:ale_fix_on_save = 1
+let g:ale_echo_msg_format = '[%linter%]: %s'
 
 augroup AleConfig
   autocmd!
@@ -393,11 +392,13 @@ augroup END
 nnoremap ]r :ALENextWrap<CR>
 nnoremap [r :ALEPreviousWrap<CR>
 
+let g:ale_linters = {
+      \ 'haskell': ['hlint', 'stack-build']
+      \ }
+
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
 let g:ale_fixers['elm'] = ['elm-format']
-let g:ale_fix_on_save = 1
-let g:ale_echo_msg_format = '[%linter%]: %s'
 
 " }}}
 
