@@ -6,6 +6,9 @@
 # https://github.com/facebook/chisel
 command script import /usr/local/opt/chisel/libexec/fblldb.py
 
+# Load custom scripts
+command script import ~/.config/lldb/scripts/nudge.py
+
 # }}}
 
 # ============================================================================
