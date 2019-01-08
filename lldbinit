@@ -8,4 +8,13 @@ command script import /usr/local/opt/chisel/libexec/fblldb.py
 
 # }}}
 
+# ============================================================================
+# Aliases {{{
+# ============================================================================
+
+# Reload this config
+command alias reloadConfig command source ~/.lldbinit
+
+# }}}
+
 # vim: set ft=config
