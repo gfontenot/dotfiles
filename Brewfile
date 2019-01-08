@@ -5,6 +5,7 @@ tap 'thoughtbot/formulae'
 
 brew 'ImageMagick'
 brew 'carthage'
+brew 'chisel'
 brew 'coreutils'
 brew 'ctags'
 brew 'extract_url'
