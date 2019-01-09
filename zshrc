@@ -158,10 +158,9 @@ b(){
 
 fpath=(~/.config/zsh/completion-scripts $fpath)
 
-autoload -U compinit
-autoload -U bashcompinit
-compinit
-bashcompinit
+
+autoload -U compinit && compinit
+autoload -U bashcompinit && bashcompinit
 
 # matches case insensitive for lowercase
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
