@@ -158,6 +158,10 @@ b(){
 
 fpath=(~/.config/zsh/completion-scripts $fpath)
 
+# Add custom completion for git-delete-branch based on branch names
+_git_delete_branch() {
+  __gitcomp_nl "$(__git_heads)"
+}
 
 autoload -U compinit && compinit
 autoload -U bashcompinit && bashcompinit
