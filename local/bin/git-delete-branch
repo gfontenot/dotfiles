@@ -4,5 +4,12 @@
 
 set -e
 
-git push origin :"$1"
-git branch -d "$1"
+branch=$1
+commit=$(git rev-parse --short "$branch")
+
+git push origin :"$branch"
+git branch -d "$branch"
+
+echo ""
+echo "To recreate it locally, run:"
+echo "git checkout -b $branch $commit"
