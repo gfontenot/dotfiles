@@ -71,6 +71,8 @@ Plug 'ericpruitt/tmux.vim', {'rtp': 'vim/'}
 
 Plug 'itchyny/lightline.vim'
 Plug 'flazz/vim-colorschemes', { 'commit': 'eab315701f4627967fd62582eefc4e37a3745786' }
+" Dim inactive splits
+Plug 'TaDaa/vimade'
 
 " =======
 " Writing
