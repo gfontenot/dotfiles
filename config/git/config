@@ -77,7 +77,6 @@
 
 [core]
   excludesfile = ~/.config/git/ignore
-  hooksPath = ~/.config/git/hooks
 
 [apply]
   whitespace = warn
