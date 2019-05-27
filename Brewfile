@@ -1,5 +1,4 @@
 tap 'gfontenot/formulae'
-tap 'keith/formulae'
 tap 'thoughtbot/formulae'
 
 brew 'carthage'
