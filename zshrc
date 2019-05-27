@@ -213,12 +213,6 @@ preexec () {print -Pn "\e]2; %~/ \a"}
 function chpwd() {
     emulate -LR zsh
 
-    # Auto-generate projections files on cd
-    local v=$(projections)
-    if [[ $? -eq 0 ]]; then
-      echo $v > .projections.json
-    fi
-
     # Auto ls when cding into a directory
     ls
 }
