@@ -12,30 +12,26 @@ _not_in_tmux(){
 
 # Attach if not in tmux, or switch if we are in tmux
 _attach_to_tmux_session() {
-  session=$1
-
   if _not_in_tmux; then
-    tmux attach -d -t "$session"
+    tmux attach -d -t "$1"
   else
-    tmux switch-client -t "$session"
+    tmux switch-client -t "$1"
   fi
 }
 
 _tmux_session_exists(){
-  tmux list-sessions -F "#{session_name}" | egrep -q "^${1}$"
+  tmux has-session -t "=${1}" 2>/dev/null
 }
 
 # tmux doesn't allow . in session names
 _tmux_normalize_session_name(){
-  echo "${1//./-}"
+  basename "${1//./-}"
 }
 
 # Create a new tmux session with the given name.
 _new_tmux_session_named() {
-  new_session_name=$(basename $1)
-
-  TMUX='' tmux new-session -d -As "$new_session_name" -n "vim"
-  _attach_to_tmux_session "$new_session_name"
+   tmux new-session -d -As "$1"
+  _attach_to_tmux_session "$1"
 }
 
 # Try to connect to a tmux session with the given name.
