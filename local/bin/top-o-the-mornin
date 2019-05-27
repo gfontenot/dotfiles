@@ -1,9 +1,0 @@
-#!/bin/sh
-
-set -e
-
-brew update
-brew upgrade --all
-brew cleanup
-
-vim +PlugUpdate +qall
