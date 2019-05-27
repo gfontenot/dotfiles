@@ -326,12 +326,6 @@ export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
 
 source "$HOME/.asdf/completions/asdf.bash"
 
-# ========
-# SWIFTENV
-# ========
-
-eval "$(swiftenv init -)"
-
 # }}}
 
 # Private config that shouldn't be shared
