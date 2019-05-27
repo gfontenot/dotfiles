@@ -112,8 +112,6 @@ Plug 'christoomey/vim-sort-motion'
 Plug 'cohama/lexima.vim'
 " Remember last position in files
 Plug 'dietsche/vim-lastplace'
-" Visualize registers when trying to paste info from them
-Plug 'junegunn/vim-peekaboo'
 " Allow for tmux-like split zooming
 Plug 'dhruvasagar/vim-zoom'
 
