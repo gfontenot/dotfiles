@@ -133,6 +133,8 @@ set termguicolors
 highlight! Comment term=italic cterm=italic gui=italic
 highlight! Todo term=italic cterm=italic gui=italic
 highlight! link vimLineComment Comment
+highlight! link gitcommitComment Comment
+
 
 " Print the highlight-group info for the text under the cursor. This is
 " helpful for when things aren't being formatted as expected.
