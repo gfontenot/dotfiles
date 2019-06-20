@@ -3,6 +3,7 @@
 set -e
 
 setup/install-homebrew
+setup/finish-alacritty-installation
 setup/link-dotfiles
 setup/fix-path
 setup/setup-asdf
