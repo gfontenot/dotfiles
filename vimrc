@@ -134,6 +134,12 @@ highlight! Comment term=italic cterm=italic gui=italic
 highlight! Todo term=italic cterm=italic gui=italic
 highlight! link vimLineComment Comment
 
+" Print the highlight-group info for the text under the cursor. This is
+" helpful for when things aren't being formatted as expected.
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
 set colorcolumn=80                " Highlight the 80 character column
 set relativenumber                " Use relative line numbers
 set number                        " Also show the current line number
