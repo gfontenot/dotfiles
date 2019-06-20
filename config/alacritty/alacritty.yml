@@ -87,9 +87,9 @@ font:
     family: Pitch
     style: Regular
   bold:
-    style: Bold
+    style: Regular Bold
   italic:
-    style: Italic
+    style: Regular Italic
 
   # Point size
   size: 14.0
