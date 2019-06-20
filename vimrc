@@ -139,7 +139,7 @@ set noshowmode                    " Don't show the current mode
 set list listchars=tab:»·,trail:·,nbsp:·
 
 " status bar
-let g:lightline = { 'colorscheme': 'wombat' }
+let g:lightline = { 'colorscheme': 'one' }
 
 let g:lightline.active = {
       \   'right': [
