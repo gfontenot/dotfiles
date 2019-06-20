@@ -6,7 +6,7 @@ upstream_branch=$(git rev-parse --abbrev-ref --symbolic-full-name "@{u}")
 
 head_sha=$(git rev-parse HEAD)
 
-git pull --rebase=preserve --autostash
+git pull --rebase=merges --autostash
 
 remote_sha=$(git rev-parse "$upstream_branch")
 
