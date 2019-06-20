@@ -71,6 +71,7 @@ Plug 'ericpruitt/tmux.vim', {'rtp': 'vim/'}
 
 Plug 'itchyny/lightline.vim'
 Plug 'jonathanfilip/vim-lucius'
+Plug 'rakr/vim-one'
 " Dim inactive splits
 Plug 'TaDaa/vimade'
 
@@ -123,8 +124,9 @@ call plug#end()
 " Appearance {{{
 " ============================================================================
 
-colorscheme lucius                " Use Lucius for our color scheme
-LuciusDark                        " Use the dark version of Lucius
+colorscheme one
+set background=dark
+let g:one_allow_italics = 1
 set termguicolors
 
 set colorcolumn=80                " Highlight the 80 character column

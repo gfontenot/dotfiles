@@ -126,80 +126,36 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors (Lucius Dark)
+# Colors (One Dark)
 colors:
+  # Default colors
   primary:
-    background: '0x313131'
-    foreground: '0xD6D6D6'
+    background: '0x272B33'
+    foreground: '0xabb2bf'
 
-    # Bright and dim foreground colors
-    #
-    # The dimmed foreground color is calculated automatically if it is not present.
-    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
-    # is `false`, the normal foreground color will be used.
-    #dim_foreground: '0x9a9a9a'
-    #bright_foreground: '0xffffff'
-
-  # Cursor colors
-  #
-  # Colors which should be used to draw the terminal cursor. If these are unset,
-  # the cursor color will be the inverse of the cell color.
-  #cursor:
-  #  text: '0x000000'
-  #  cursor: '0xffffff'
-  
-  # Selection colors
-  #
-  # Colors which should be used to draw the selection area. If selection 
-  # background is unset, selection color will be the inverse of the cell colors. 
-  # If only text is unset the cell text color will remain the same.
-  #selection:
-  #  text: '0xeaeaea'
-  #  background: '0x404040'
-
+  # Normal colors
   normal:
-    black:   '0x2F2F2F'
-    red:     '0xF2A097'
-    green:   '0xAFD687'
-    yellow:  '0xECE9b5'
-    blue:    '0xB6EBF9'
-    magenta: '0xD6AFD6'
-    cyan:    '0x87D6AF'
-    white:   '0xD6D6D6'
+    # NOTE: Use '0x131613' for the `black` color if you'd like to see
+    # black text on the background.
+    black:   '0x282c34'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xd19a66'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0xabb2bf'
 
+  # Bright colors
   bright:
-    black:   '0x2F2F2F'
-    red:     '0xF2A097'
-    green:   '0xAFD687'
-    yellow:  '0xECE9B5'
-    blue:    '0xB6EBF9'
-    magenta: '0xD6AFD6'
-    cyan:    '0x87D6AF'
-    white:   '0xD6D6D6'
-
-  # Dim colors
-  #
-  # If the dim colors are not set, they will be calculated automatically based
-  # on the `normal` colors.
-  #dim:
-  #  black:   '0x000000'
-  #  red:     '0x8c3336'
-  #  green:   '0x7a8530'
-  #  yellow:  '0x97822e'
-  #  blue:    '0x506d8f'
-  #  magenta: '0x80638e'
-  #  cyan:    '0x497e7a'
-  #  white:   '0x9a9a9a'
-
-  # Indexed Colors
-  #
-  # The indexed colors include all colors from 16 to 256.
-  # When these are not set, they're filled with sensible defaults.
-  #
-  # Example:
-  #   `- { index: 16, color: '0xff00ff' }`
-  #
-  indexed_colors: []
+    black:   '0x5c6370'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xd19a66'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0xffffff'
 
 # Visual Bell
 #
