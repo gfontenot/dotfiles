@@ -129,6 +129,11 @@ set background=dark
 let g:one_allow_italics = 1
 set termguicolors
 
+" Italics
+highlight! Comment term=italic cterm=italic gui=italic
+highlight! Todo term=italic cterm=italic gui=italic
+highlight! link vimLineComment Comment
+
 set colorcolumn=80                " Highlight the 80 character column
 set relativenumber                " Use relative line numbers
 set number                        " Also show the current line number
