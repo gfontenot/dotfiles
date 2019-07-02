@@ -1,14 +1,15 @@
 #!/bin/zsh
 
-# List all directories in $JUMP_DIRECTORIES that have been modified in the last
-# N days and contain git repositories.
+# List all directories in $PROJECTS that contain git repositories.
 
-modified_directories() {
-  echo "${JUMP_DIRECTORIES//:/\n}" | while read dir; do
-    find -L "$dir" \
-      -not -path '*/\.*' \
-      -type d \
-      -maxdepth 2
+project_directories() {
+  echo "${PROJECTS//:/\n}" | while read dir; do
+    if [ -d "$dir" ]; then
+      find -L "$dir" \
+        -not -path '*/\.*' \
+        -type d \
+        -maxdepth 2
+    fi
   done
 }
 
@@ -20,4 +21,4 @@ is_a_git_repo(){
   done
 }
 
-modified_directories | is_a_git_repo | sort --unique
+project_directories | is_a_git_repo | sort --unique
