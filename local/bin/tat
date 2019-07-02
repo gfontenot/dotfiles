@@ -4,7 +4,7 @@
 # Use `tat blog` to connect to the `blog` session, or create a new session
 # named `blog`.
 #
-# With no arguments, fuzzy-finds a session in a directory in $JUMP_DIRECTORIES.
+# With no arguments, fuzzy-finds a session in a directory in $PROJECTS.
 
 _not_in_tmux(){
   [[ -z "$TMUX" ]]

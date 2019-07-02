@@ -201,10 +201,6 @@ setopt HIST_REDUCE_BLANKS
 setopt auto_cd
 cdpath=($HOME $PROJECTS $PROJECTS/gfontenot $PROJECTS/Square $PROJECTS/Square/Cash $HOME/Dropbox)
 
-# Exporting CDPATH is bad and can cause all sorts of problems so lets set
-# CDPATH to something else and export that instead
-export JUMP_DIRECTORIES=$CDPATH
-
 # Configure Terminal to open new tabs in the current directory
 precmd () {print -Pn "\e]2; %~/ \a"}
 preexec () {print -Pn "\e]2; %~/ \a"}
