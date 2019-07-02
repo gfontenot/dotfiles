@@ -199,7 +199,7 @@ setopt HIST_REDUCE_BLANKS
 # ============================================================================
 
 setopt auto_cd
-cdpath=($HOME $PROJECTS $PROJECTS/gfontenot $PROJECTS/Square $PROJECTS/Square/Cash $HOME/Dropbox)
+cdpath=($HOME $PROJECTS $PROJECTS/gfontenot $PROJECTS/Square/Cash)
 
 # Configure Terminal to open new tabs in the current directory
 precmd () {print -Pn "\e]2; %~/ \a"}
