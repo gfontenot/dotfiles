@@ -5,23 +5,23 @@
 	<key>DVTConsoleDebuggerInputTextColor</key>
 	<string>0.843137 0.843137 0.843137 1</string>
 	<key>DVTConsoleDebuggerInputTextFont</key>
-	<string>Pitch-Bold - 13.0</string>
+	<string>Pitch-Bold - 14.0</string>
 	<key>DVTConsoleDebuggerOutputTextColor</key>
 	<string>0.843137 0.843137 0.843137 1</string>
 	<key>DVTConsoleDebuggerOutputTextFont</key>
-	<string>Pitch-Regular - 13.0</string>
+	<string>Pitch-Regular - 14.0</string>
 	<key>DVTConsoleDebuggerPromptTextColor</key>
 	<string>0.447059 0.796078 0.956863 1</string>
 	<key>DVTConsoleDebuggerPromptTextFont</key>
-	<string>Pitch-Bold - 13.0</string>
+	<string>Pitch-Bold - 14.0</string>
 	<key>DVTConsoleExectuableInputTextColor</key>
 	<string>0.843137 0.843137 0.843137 1</string>
 	<key>DVTConsoleExectuableInputTextFont</key>
-	<string>Pitch-Regular - 13.0</string>
+	<string>Pitch-Regular - 14.0</string>
 	<key>DVTConsoleExectuableOutputTextColor</key>
 	<string>0.843137 0.843137 0.843137 1</string>
 	<key>DVTConsoleExectuableOutputTextFont</key>
-	<string>Pitch-Bold - 13.0</string>
+	<string>Pitch-Bold - 14.0</string>
 	<key>DVTConsoleTextBackgroundColor</key>
 	<string>0.191968 0.191985 0.191947 1</string>
 	<key>DVTConsoleTextInsertionPointColor</key>
@@ -30,6 +30,8 @@
 	<string>0.143903 0.235839 0.27416 1</string>
 	<key>DVTDebuggerInstructionPointerColor</key>
 	<string>0.705792 0.8 0.544 1</string>
+	<key>DVTFontAndColorVersion</key>
+	<integer>1</integer>
 	<key>DVTLineSpacing</key>
 	<real>1.1000000238418579</real>
 	<key>DVTMarkupTextBackgroundColor</key>
@@ -106,6 +108,10 @@
 		<string>0.501961 0.501961 0.501961 1</string>
 		<key>xcode.syntax.comment.doc.keyword</key>
 		<string>0.501961 0.501961 0.501961 1</string>
+		<key>xcode.syntax.declaration.other</key>
+		<string>0.254902 0.631373 0.752941 1</string>
+		<key>xcode.syntax.declaration.type</key>
+		<string>0.362946 0.846428 0.998966 1</string>
 		<key>xcode.syntax.identifier.class</key>
 		<string>0.529412 0.843137 0.843137 1</string>
 		<key>xcode.syntax.identifier.class.system</key>
@@ -132,6 +138,10 @@
 		<string>0.843137 0.843137 0.843137 1</string>
 		<key>xcode.syntax.keyword</key>
 		<string>0.447059 0.796078 0.956863 1</string>
+		<key>xcode.syntax.mark</key>
+		<string>0.572549 0.631373 0.694118 1</string>
+		<key>xcode.syntax.markup.code</key>
+		<string>0.665 0.052 0.569 1</string>
 		<key>xcode.syntax.number</key>
 		<string>0.843137 0.843137 0.843137 1</string>
 		<key>xcode.syntax.plain</key>
@@ -155,6 +165,10 @@
 		<string>Pitch-Regular - 14.0</string>
 		<key>xcode.syntax.comment.doc.keyword</key>
 		<string>Pitch-Regular - 14.0</string>
+		<key>xcode.syntax.declaration.other</key>
+		<string>Pitch-Medium - 14.0</string>
+		<key>xcode.syntax.declaration.type</key>
+		<string>Pitch-Medium - 14.0</string>
 		<key>xcode.syntax.identifier.class</key>
 		<string>Pitch-Regular - 14.0</string>
 		<key>xcode.syntax.identifier.class.system</key>
@@ -181,6 +195,10 @@
 		<string>Pitch-Regular - 14.0</string>
 		<key>xcode.syntax.keyword</key>
 		<string>Pitch-Regular - 14.0</string>
+		<key>xcode.syntax.mark</key>
+		<string>Pitch-Bold - 14.0</string>
+		<key>xcode.syntax.markup.code</key>
+		<string>Pitch-Medium - 14.0</string>
 		<key>xcode.syntax.number</key>
 		<string>Pitch-Regular - 14.0</string>
 		<key>xcode.syntax.plain</key>
