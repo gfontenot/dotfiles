@@ -16,7 +16,7 @@
 [alias]
   c = commit
   cm = commit --message
-  co = checkout
+  co = fuzzy-checkout
   l = log --format=custom
   lb = log --format=custom HEAD --not master
 
