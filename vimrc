@@ -38,13 +38,14 @@ Plug 'junegunn/fzf.vim'
 " Git/GitHub/BitBucket
 " ====================
 
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
-Plug 'matthewtodd/vim-fustashtive'
+Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-conflicted'
+Plug 'gabebw/vim-github-link-opener'
+Plug 'matthewtodd/vim-fustashtive'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
-Plug 'gabebw/vim-github-link-opener'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 " ====
 " Tmux
