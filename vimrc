@@ -397,7 +397,7 @@ let g:ale_echo_msg_format = '[%linter%]: %s'
 
 augroup AleConfig
   autocmd!
-  set updatetime=1000
+  set updatetime=100
   let g:ale_lint_on_text_changed = 0
   autocmd CursorHold * call ale#Queue(0)
   autocmd CursorHoldI * call ale#Queue(0)
