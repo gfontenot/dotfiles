@@ -148,6 +148,7 @@ set cursorline                    " Highlight the current line
 set noshowmode                    " Don't show the current mode
 set number                        " Also show the current line number
 set relativenumber                " Use relative line numbers
+set signcolumn=yes                " Always show the sign column
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
