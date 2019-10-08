@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo "Kicking gpg-agent"
+
+# From GPG-AGENT(1):
+#   The agent is automatically started on demand by gpg, gpgsm, gpgconf, or
+#   gpg-connect-agent.  Thus there is no reason to start it manually. In case
+#   you want to use the included  Secure  Shell  Agent  you  may start the
+#   agent using:
+gpg-connect-agent /bye
