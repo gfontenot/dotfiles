@@ -249,7 +249,7 @@ prompt_current_branch() {
 }
 
 prompt_current_sha() {
-  echo " %{$fg[yellow]%}$(git rev-parse --short HEAD)%{$reset_color%}"
+  echo " %{$fg[yellow]%}$(git rev-parse --short HEAD 2>/dev/null)%{$reset_color%}"
 }
 
 prompt_rebase_info() {
@@ -282,7 +282,7 @@ prompt_needs_push() {
 }
 
 prompt_current_branch_name() {
-  git rev-parse --abbrev-ref HEAD
+  git rev-parse --abbrev-ref HEAD 2>/dev/null
 }
 
 prompt_git_dir() {
