@@ -119,6 +119,14 @@ Plug 'dhruvasagar/vim-zoom'
 
 call plug#end()
 
+" Automatically install any plugins that aren't already installed when
+" launching vim.
+" https://github.com/junegunn/vim-plug/wiki/extra
+autocmd VimEnter *
+  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \|   PlugInstall --sync | q
+  \| endif
+
 " }}}
 
 " ============================================================================
