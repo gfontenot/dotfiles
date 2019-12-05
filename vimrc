@@ -25,7 +25,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet'
-Plug 'mitsuse/autocomplete-swift'
+Plug 'mitsuse/autocomplete-swift', { 'for': 'swift' }
 
 " ======
 " Search
@@ -80,9 +80,9 @@ Plug 'TaDaa/vimade'
 " Writing
 " =======
 
-Plug 'nicholaides/words-to-avoid.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
+Plug 'nicholaides/words-to-avoid.vim', { 'for': 'markdown' }
+Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
+Plug 'junegunn/limelight.vim', { 'for': 'markdown' }
 
 " ====
 " Misc
@@ -93,7 +93,7 @@ Plug 'w0rp/ale'
 " Language agnostic testing support
 Plug 'janko-m/vim-test'
 " Work with Xcode projects from inside Vim
-Plug 'gfontenot/vim-xcode'
+Plug 'gfontenot/vim-xcode', { 'for': ['objc', 'swift'] }
 " Extensable URL opener
 Plug 'gfontenot/vim-url-opener'
 " Easily comment code
