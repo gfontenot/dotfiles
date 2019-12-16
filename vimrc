@@ -58,13 +58,9 @@ Plug 'christoomey/vim-tmux-runner'
 " Languages/Frameworks
 " ====================
 
-Plug 'raichoo/haskell-vim'
+Plug 'sheerun/vim-polyglot'
 Plug 'pbrisbin/vim-syntax-shakespeare'
-Plug 'pangloss/vim-javascript'
-Plug 'lambdatoast/elm.vim'
 Plug 'keith/swift.vim'
-Plug 'tpope/vim-markdown'
-Plug 'ericpruitt/tmux.vim', {'rtp': 'vim/'}
 
 " ==========
 " Appearance
