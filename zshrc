@@ -320,7 +320,7 @@ export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
 # ASDF
 # =====
 
-source "$HOME/.asdf/completions/asdf.bash"
+source "$(brew --prefix asdf)/asdf.sh"
 
 # }}}
 

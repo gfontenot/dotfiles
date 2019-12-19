@@ -2,6 +2,7 @@ tap 'gfontenot/formulae'
 tap 'thoughtbot/formulae'
 
 cask 'alacritty'
+brew 'asdf'
 brew 'carthage'
 brew 'chisel'
 brew 'coreutils'
