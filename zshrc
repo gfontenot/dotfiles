@@ -313,16 +313,8 @@ export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
 # }}}
 
 # ============================================================================
-# Language Tooling {{{
+# Misc {{{
 # ============================================================================
-
-# =====
-# ASDF
-# =====
-
-source "$(brew --prefix asdf)/asdf.sh"
-
-# }}}
 
 # Private config that shouldn't be shared
 if [ -f "$HOME/.config/zsh/private.zsh" ]; then
