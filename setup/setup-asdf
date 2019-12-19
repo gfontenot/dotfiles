@@ -1,8 +1,16 @@
 #!/bin/sh
 
-# asdf is installed via homebrew
+echo ""
+echo "==========================================="
+echo "Setting up the asdf version manager"
+echo ""
+
+# asdf itself is installed via homebrew
+
+echo "Installing language plugins"
 
 # Add language plugins
+
 asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
 asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
