@@ -7,5 +7,4 @@ setup/finish-alacritty-installation
 setup/link-dotfiles
 setup/fix-path
 setup/setup-asdf
-setup/install-vim
 setup/setup-haskell
