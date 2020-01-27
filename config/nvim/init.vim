@@ -429,24 +429,23 @@ let g:ale_fixers['elm'] = ['elm-format']
 " FZF {{{
 " ============================================================================
 
-" Mimic ctrl-p because muscle memory
-nnoremap <C-p> :Files<CR>
-nnoremap <C-b> :Buffers<CR>
-
 " Don't take up too much space (40% is the default)
 let g:fzf_layout = { 'down': '~20%' }
 
+" Override default commands to include preview windows
+command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>,
+    \   fzf#vim#with_preview(),
+    \   <bang>0)
 
-" Override `:Ag` to include preview support. The preview window is hidden by
-" default, but can be shown by hitting `?` while viewing the results.
-"
-" Adding a `!` suffix to this command presents a fullscreen version of the
-" preview window instead.
 command! -bang -nargs=* Ag
-  \ call fzf#vim#ag(<q-args>,
-  \                 <bang>0 ? fzf#vim#with_preview('up:60%')
-  \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \                 <bang>0)
+    \ call fzf#vim#ag(<q-args>,
+    \   fzf#vim#with_preview(),
+    \   <bang>0)
+
+" Mimic ctrl-p because muscle memory
+nnoremap <C-p> :Files<CR>
+nnoremap <C-b> :Buffers<CR>
 
 " }}}
 
