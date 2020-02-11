@@ -131,7 +131,7 @@ e() {
   if [[ -z "$@" ]]; then
     nvim .
   else
-    nvim $@
+    nvim "$@"
   fi
 }
 
