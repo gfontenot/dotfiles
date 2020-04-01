@@ -511,6 +511,9 @@ nnoremap <leader>u :Xtest<CR>
 " Misc {{{
 " ============================================================================
 
+" Reload files on focus
+autocmd FocusGained,BufEnter * :checktime
+
 " Command to reload our vim config
 command! Reload execute "source $MYVIMRC"
 
