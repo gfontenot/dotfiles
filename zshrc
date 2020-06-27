@@ -10,6 +10,7 @@ path=(
   "$HOME/.asdf/bin"
   "$HOME/.asdf/shims"
   "/usr/local/bin"
+  "/usr/local/sbin"
   "$HOME/Library/Android/sdk/platform-tools"
   "/usr/bin"
   "/bin"
