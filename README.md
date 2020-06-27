@@ -41,7 +41,7 @@ to the tag root. However, our `rcrc` is explicitly ignoring a few things:
 These ignore patterns are being controlled by the `EXCLUDES` key in my
 [`rcrc`][rcrc].
 
-[rcrc]: https://github.com/gfontenot/dotfiles/blob/master/rcrc
+[rcrc]: https://github.com/gfontenot/dotfiles/blob/main/rcrc
 
 Additionally, I'm using the `UNDOTTED` key in my `rcrc` to make sure that
 `Library` files aren't symlinked into `.Library`. This means I can do things

@@ -1,10 +1,11 @@
 #!/bin/sh
 
-# Delete all local branches that have been merged into master.
-# This will automatically ignore master and the current branch
+# Delete all local branches that have been merged into main.
+# This will automatically ignore main and the current branch
 
-deleted_branches=$(git branch --list --merged master \
+deleted_branches=$(git branch --list --merged main \
   | grep -v '^\*' \
+  | grep -v 'main' \
   | grep -v 'master' \
   | grep -v 'converge/' \
   | awk '{$1=$1;print}'
