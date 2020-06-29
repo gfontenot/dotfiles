@@ -9,6 +9,9 @@
 [gpg]
   program = gpg
 
+[init]
+  templatedir = ~/.git_template
+
 [commit]
   gpgsign = true
   verbose = true
