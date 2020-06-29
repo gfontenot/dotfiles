@@ -18,7 +18,7 @@
   cm = commit --message
   co = fuzzy-checkout
   l = log --format=custom
-  lb = log --format=custom HEAD --not main
+  lb = !git log --format=custom HEAD --not $(git-main-branch-name)
 
   up = update
   sup = submodule update --init --recursive

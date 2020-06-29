@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+# Print the main branch name. This is intended to be used while I still have to
+# use repos that haven't renamed their main branch from "master".
+
+if git show-ref --quiet origin/main || git rev-parse main &>/dev/null; then
+  echo main
+else
+  echo master
+fi
+
