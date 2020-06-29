@@ -7,7 +7,7 @@ set -e
 branch=$1
 commit=$(git rev-parse --short "$branch")
 
-git push origin :"$branch"
+git push --no-verify origin :"$branch"
 git branch -d "$branch"
 
 echo ""
