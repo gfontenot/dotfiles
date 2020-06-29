@@ -182,6 +182,21 @@ nnoremap <silent> <C-W>z :call zoom#toggle()<CR>
 " }}}
 
 " ============================================================================
+" Folds {{{
+" ============================================================================
+
+" Use indentation level by default
+set foldmethod=indent
+
+" Use marker folds for Vim filetypes
+autocmd FileType vim setlocal foldmethod=marker
+
+" Set the fold level super high so that files are unfolded by default
+set foldlevel=99
+
+" }}}
+
+" ============================================================================
 " Keybindings {{{
 " ============================================================================
 
