@@ -10,7 +10,7 @@
   program = gpg
 
 [init]
-  templatedir = ~/.git_template
+  defaultBranch = main
 
 [commit]
   gpgsign = true
