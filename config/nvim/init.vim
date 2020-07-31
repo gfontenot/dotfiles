@@ -310,7 +310,6 @@ set completeopt=menu,menuone,longest,preview
 
 " Enable deoplete automatically
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#file#enable_buffer_path = 1
 
 inoremap <silent><expr><tab> pumvisible() ? "\<C-n>" : "\<tab>"
 
