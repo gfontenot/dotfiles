@@ -27,7 +27,7 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-conflicted'
-Plug 'gabebw/vim-github-link-opener'
+Plug 'gabebw/vim-github-link-opener', { 'branch': 'main' }
 Plug 'matthewtodd/vim-fustashtive'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
@@ -76,9 +76,9 @@ Plug 'w0rp/ale'
 " Language agnostic testing support
 Plug 'janko-m/vim-test'
 " Work with Xcode projects from inside Vim
-Plug 'gfontenot/vim-xcode', { 'for': ['objc', 'swift'] }
+Plug 'gfontenot/vim-xcode', { 'branch': 'main', 'for': ['objc', 'swift'] }
 " Extensable URL opener
-Plug 'gfontenot/vim-url-opener'
+Plug 'gfontenot/vim-url-opener', { 'branch': 'main' }
 " Easily comment code
 Plug 'tpope/vim-commentary'
 " Allow . to make plugin actions repeat
