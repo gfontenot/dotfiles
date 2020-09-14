@@ -8,10 +8,11 @@ head_sha=$(git rev-parse HEAD)
 
 git pull --rebase=merges --autostash
 
+git delete-local-merged
+
 remote_sha=$(git rev-parse "$upstream_branch")
 
 merge_base_sha=$(git merge-base "$head_sha" "$remote_sha")
 
 git log --format=custom --no-merges "$merge_base_sha".."$remote_sha"
 
-git delete-local-merged
