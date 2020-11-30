@@ -98,7 +98,7 @@ key_bindings:
   # Standard font resizing keybindings
   - { key: Key0,   mods: Command, action: ResetFontSize    }
   - { key: Equals, mods: Command, action: IncreaseFontSize }
-  - { key: Add,    mods: Command, action: IncreaseFontSize }
+  - { key: Plus,   mods: Command, action: IncreaseFontSize }
   - { key: Minus,  mods: Command, action: DecreaseFontSize }
 
   - { key: Paste,                   action: Paste                            }
