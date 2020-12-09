@@ -3,7 +3,7 @@
 origin=$(git remote get-url origin)
 
 if [[ "$origin" =~ ".*github\.com.*" ]]; then
-  hub browse
+  gh repo view --web
 elif [[ "$origin" =~ ".*$STASH_URL_PATTERN.*" ]]; then
   stash browse 2>/dev/null
 else
