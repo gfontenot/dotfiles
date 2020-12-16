@@ -539,8 +539,8 @@ function! g:Source(file)
 endfunction
 
 " Specify our python executables
-let g:python_host_prog = '/usr/local/bin/python2'
-let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python_host_prog = '/Users/fontenot/.asdf/shims/python2'
+let g:python3_host_prog = '/Users/fontenot/.asdf/shims/python3'
 
 " Automatically resize splits when the parent window size changes
 autocmd VimResized * wincmd =
