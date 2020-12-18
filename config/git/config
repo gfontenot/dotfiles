@@ -71,6 +71,9 @@
 [fetch]
   prune = true
 
+[pull]
+  rebase = true
+
 [rebase]
   autosquash = true
 
