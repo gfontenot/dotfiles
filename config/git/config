@@ -43,7 +43,7 @@
 
   current-branch = rev-parse --abbrev-ref HEAD
 
-  pr = create-pull-request
+  pr = !gh pr
 
   changelog = log --format=changelog
 
