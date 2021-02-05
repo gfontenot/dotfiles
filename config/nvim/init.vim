@@ -433,7 +433,7 @@ let g:ale_fixers['elm'] = ['elm-format']
 " Display fzf in a floating window
 let g:fzf_layout = { 'window': 'call CreateCenteredFloatingWindow()' }
 " Search on top, results below
-let $FZF_DEFAULT_OPTS="--reverse "
+let $FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS . "--reverse "
 
 " floating fzf window with borders
 function! CreateCenteredFloatingWindow()
