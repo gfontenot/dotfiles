@@ -402,16 +402,6 @@ let g:ale_cursor_detail = 1
 let g:ale_floating_preview = 1
 let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰']
 
-augroup AleConfig
-  autocmd!
-  set updatetime=100
-  let g:ale_lint_on_text_changed = 0
-  autocmd CursorHold * call ale#Queue(0)
-  autocmd CursorHoldI * call ale#Queue(0)
-  autocmd InsertEnter * call ale#Queue(0)
-  autocmd InsertLeave * call ale#Queue(0)
-augroup END
-
 let g:ale_linters = {
       \ 'haskell': ['hlint', 'stack-build']
       \ }
