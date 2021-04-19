@@ -11,7 +11,6 @@ call plug#begin(stdpath('data') . '/plugged')
 " ==========
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/neosnippet'
 Plug 'mitsuse/autocomplete-swift', { 'for': 'swift' }
 
 " ======
