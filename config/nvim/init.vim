@@ -402,15 +402,21 @@ let g:ale_cursor_detail = 1
 let g:ale_floating_preview = 1
 let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰']
 
-let g:ale_linters = {
-      \ 'haskell': ['hlint', 'stack-build']
-      \ }
+" Set up initial dictionary so that I can add language-specific config later
+let g:ale_linters = {}
 
 " Fixer config
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
 let g:ale_fixers['elm'] = ['elm-format']
+
+" We're going to use COC for lsp features, so we should make sure that ALE
+" doesn't conflict
+let g:ale_disable_lsp = 1
+
+" Disable linters covered by coc
+let g:ale_linters['haskell']= []
 
 nnoremap ]r :ALENextWrap<CR>
 nnoremap [r :ALEPreviousWrap<CR>
