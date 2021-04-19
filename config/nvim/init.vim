@@ -10,8 +10,7 @@ call plug#begin(stdpath('data') . '/plugged')
 " Completion
 " ==========
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'mitsuse/autocomplete-swift', { 'for': 'swift' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " ======
 " Search
@@ -306,9 +305,6 @@ nnoremap <silent> N :set hlsearch \| call <SID>NextAndCenter('N')<CR>
 set wildmenu
 set wildmode=list:longest,list:full
 set completeopt=menu,menuone,longest,preview
-
-" Enable deoplete automatically
-let g:deoplete#enable_at_startup = 1
 
 inoremap <silent><expr><tab> pumvisible() ? "\<C-n>" : "\<tab>"
 
