@@ -395,7 +395,6 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 " Ale {{{
 " ============================================================================
 
-let g:ale_fix_on_save = 1
 let g:ale_echo_msg_format = '[%linter%]: %s'
 " Show details for the violation under the cursor
 let g:ale_cursor_detail = 1
@@ -413,16 +412,18 @@ augroup AleConfig
   autocmd InsertLeave * call ale#Queue(0)
 augroup END
 
-nnoremap ]r :ALENextWrap<CR>
-nnoremap [r :ALEPreviousWrap<CR>
-
 let g:ale_linters = {
       \ 'haskell': ['hlint', 'stack-build']
       \ }
 
+" Fixer config
+let g:ale_fix_on_save = 1
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
 let g:ale_fixers['elm'] = ['elm-format']
+
+nnoremap ]r :ALENextWrap<CR>
+nnoremap [r :ALEPreviousWrap<CR>
 
 " }}}
 
