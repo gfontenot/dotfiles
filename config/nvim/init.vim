@@ -397,6 +397,11 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 let g:ale_fix_on_save = 1
 let g:ale_echo_msg_format = '[%linter%]: %s'
+" Show details for the violation under the cursor
+let g:ale_cursor_detail = 1
+" Show details in a floating window
+let g:ale_floating_preview = 1
+let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰']
 
 augroup AleConfig
   autocmd!
