@@ -411,6 +411,11 @@ let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
 let g:ale_fixers['elm'] = ['elm-format']
 
+let g:ale_fixers['haskell'] = ['brittany', 'hlint', 'stylish-haskell']
+let g:ale_haskell_brittany_executable='stack'
+let g:ale_haskell_hlint_executable='stack'
+let g:ale_haskell_stylish_haskell_executable='stack'
+
 " We're going to use COC for lsp features, so we should make sure that ALE
 " doesn't conflict
 let g:ale_disable_lsp = 1

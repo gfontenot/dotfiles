@@ -8,4 +8,11 @@ echo "Setting up Haskell"
 echo ""
 
 echo "Installing basic dependencies"
-stack install alex happy yesod-bin hoogle
+stack install \
+  alex \
+  happy \
+  yesod-bin \
+  hoogle \
+  brittany \
+  hlint \
+  stylish-haskell
