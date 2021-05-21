@@ -83,6 +83,8 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 " Surround text objects with characters
 Plug 'tpope/vim-surround'
+" Convenient aliases for normal mode commands
+Plug 'tpope/vim-unimpaired'
 " Automatically create non-existent directories
 Plug 'pbrisbin/vim-mkdir'
 " Rename files in place
