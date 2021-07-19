@@ -333,6 +333,3 @@ export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
 if [ -f "$HOME/.config/zsh/private.zsh" ]; then
   source "$HOME/.config/zsh/private.zsh"
 fi
-
-# Ensure we're in a tmux session at launch
-tmux-create-or-attach
