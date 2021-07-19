@@ -239,8 +239,6 @@ augroup END
 " Undo {{{
 " ============================================================================
 
-set undofile
-set undodir=~/.local/share/nvim/undo
 set undolevels=1000
 set undoreload=10000
 
