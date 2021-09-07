@@ -1,6 +1,7 @@
 :set editor nvim
 -- Set the prompt
 :set prompt "\ESC[0;34mλ> \ESC[m"
+:set prompt-cont "-> "
 -- Allow :load-ing from ./src
 :set -isrc
 -- Allow :load-ing from ./tests
