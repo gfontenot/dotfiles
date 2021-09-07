@@ -16,3 +16,6 @@ stack install \
   brittany \
   hlint \
   stylish-haskell
+
+echo "Setting up hoogle database"
+hoogle data
