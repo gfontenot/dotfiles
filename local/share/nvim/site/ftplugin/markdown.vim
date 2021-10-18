@@ -1,1 +1,1 @@
-call Source('~/.vim/ftplugin/text.vim')
+runtime! ftplugin/text.vim

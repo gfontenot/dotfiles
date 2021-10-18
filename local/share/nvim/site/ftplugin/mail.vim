@@ -1,2 +1,2 @@
-call Source('~/.vim/ftplugin/text.vim')
+runtime! ftplugin/text.vim
 setlocal formatoptions+=w
