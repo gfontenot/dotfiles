@@ -64,6 +64,7 @@ Plug 'TaDaa/vimade'
 Plug 'nicholaides/words-to-avoid.vim', { 'for': 'markdown' }
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 Plug 'junegunn/limelight.vim', { 'for': 'markdown' }
+Plug 'dkarter/bullets.vim', { 'for': 'markdown' }
 
 " ====
 " Misc
