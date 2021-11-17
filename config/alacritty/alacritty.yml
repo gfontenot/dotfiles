@@ -21,7 +21,7 @@ scrolling:
 
 font:
   normal:
-    family: Pitch
+    family: MonoLisa
     style: Regular
   bold:
     style: Regular Bold
