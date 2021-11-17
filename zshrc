@@ -287,7 +287,7 @@ prompt_repo_dirty() {
 
 prompt_needs_push() {
   if [[ -n "$(git cherry -v origin/$(prompt_current_branch_name) 2>/dev/null)" ]]; then
-    echo " %{$fg[red]%}⬆%{$reset_color%} "
+    echo " %{$fg[red]%}⬆%{$reset_color%}"
   fi
 }
 
