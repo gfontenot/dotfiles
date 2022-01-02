@@ -1,7 +1,7 @@
 tap 'gfontenot/formulae'
 tap 'thoughtbot/formulae'
 
-cask 'alacritty'
+cask 'kitty'
 cask 'postgres'
 
 brew 'asdf'
