@@ -20,13 +20,12 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " ====================
-" Git/GitHub/BitBucket
+" Git/GitHub
 " ====================
 
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-conflicted'
 Plug 'gabebw/vim-github-link-opener', { 'branch': 'main' }
-Plug 'matthewtodd/vim-fustashtive'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'tpope/vim-fugitive'
