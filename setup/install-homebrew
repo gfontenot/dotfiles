@@ -8,8 +8,10 @@ echo "Setting up Homebrew"
 echo ""
 
 echo "Installing Homebrew"
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" \
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" \
   || echo "Homebrew already installed"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 echo "Installing brew bundle"
 brew tap Homebrew/bundle

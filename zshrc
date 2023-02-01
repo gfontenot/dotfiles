@@ -18,6 +18,8 @@ path=(
   "/sbin"
 )
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # }}}
 
 # ============================================================================
@@ -52,7 +54,7 @@ mcd() {
 # Editor {{{
 # ============================================================================
 
-export VISUAL='/usr/local/bin/nvim'
+export VISUAL='nvim'
 export EDITOR="$VISUAL"
 
 # }}}

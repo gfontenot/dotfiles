@@ -7,4 +7,6 @@ echo "==========================================="
 echo "Linking dotfiles"
 echo ""
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 RCRC=rcrc rcup -v -d .

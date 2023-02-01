@@ -7,6 +7,8 @@ echo "==========================================="
 echo "Setting up Haskell"
 echo ""
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 echo "Installing basic dependencies"
 stack install \
   alex \

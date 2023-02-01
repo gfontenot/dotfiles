@@ -6,6 +6,7 @@ echo "Setting up the asdf version manager"
 echo ""
 
 # asdf itself is installed via homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 echo "Installing language plugins"
 
