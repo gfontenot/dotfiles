@@ -3,7 +3,6 @@ tap 'thoughtbot/formulae'
 tap 'mdogan/zulu'
 
 cask 'kitty'
-cask 'postgres'
 cask 'zulu-jdk17'
 
 brew 'asdf'
