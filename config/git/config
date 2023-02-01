@@ -6,9 +6,6 @@
 [github]
   user = gfontenot
 
-[gpg]
-  program = gpg
-
 [init]
   defaultBranch = main
 
