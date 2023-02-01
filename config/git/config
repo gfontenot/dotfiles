@@ -73,6 +73,7 @@
 
 [rebase]
   autosquash = true
+  instructionFormat = [%an] %s
 
 [pretty]
   custom = %C(yellow)%h %C(white)[%an (%G?)] %C(reset)%s%C(blue)%d %C(green)(%cr)%C(reset)
