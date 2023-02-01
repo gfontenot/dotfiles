@@ -329,7 +329,7 @@ export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
 # JAVA {{{
 # ============================================================================
 
-export JAVA_HOME=$(unset JAVA_HOME; /usr/libexec/java_home -v 11)
+export JAVA_HOME=$(unset JAVA_HOME; /usr/libexec/java_home -v 17)
 export PATH=$PATH:$JAVA_HOME
 
 # }}}
