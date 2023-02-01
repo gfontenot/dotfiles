@@ -156,7 +156,7 @@ alias fuxcode='rm -rf ~/Library/Developer/Xcode/DerivedData/'
 b(){
   if [[ $# == 0 ]]; then
     (bundle check > /dev/null || bundle install) && \
-      bundle --quiet --binstubs=./bin/stubs
+      bundle binstubs --all --path=./bin/stubs
   else
     bundle "$@"
   fi
