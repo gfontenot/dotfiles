@@ -23,7 +23,7 @@ Plug 'junegunn/fzf.vim'
 " Git/GitHub
 " ====================
 
-Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter', { 'branch': 'main' }
 Plug 'christoomey/vim-conflicted'
 Plug 'gabebw/vim-github-link-opener', { 'branch': 'main' }
 Plug 'mattn/gist-vim'
