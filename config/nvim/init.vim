@@ -540,6 +540,9 @@ function! g:Source(file)
   endif
 endfunction
 
+" We don't need pearl providers
+let g:loaded_perl_provider = 0
+
 " Automatically resize splits when the parent window size changes
 autocmd VimResized * wincmd =
 
