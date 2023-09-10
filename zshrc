@@ -11,6 +11,7 @@ path=(
   "$HOME/.asdf/shims"
   "/usr/local/bin"
   "/usr/local/sbin"
+  "/Applications/Postgres.app/Contents/Versions/latest/bin"
   "$HOME/Library/Android/sdk/platform-tools"
   "/usr/bin"
   "/bin"
