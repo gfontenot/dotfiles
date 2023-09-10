@@ -1,7 +1,6 @@
 [user]
   name = Gordon Fontenot
   email = gmoney@gitpushgitpaid.com
-  signingkey = 2DA8F9CE
 
 [github]
   user = gfontenot
@@ -10,7 +9,6 @@
   defaultBranch = main
 
 [commit]
-  gpgsign = true
   verbose = true
 
 [alias]
