@@ -15,9 +15,8 @@ stack install \
   happy \
   yesod-bin \
   hoogle \
-  brittany \
   hlint \
   stylish-haskell
 
 echo "Setting up hoogle database"
-hoogle data
+hoogle generate
