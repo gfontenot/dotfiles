@@ -1,0 +1,16 @@
+matches:
+
+  - trigger: ";s1"
+    replace: "★☆☆☆☆"
+
+  - trigger: ";s2"
+    replace: "★★☆☆☆"
+
+  - trigger: ";s3"
+    replace: "★★★☆☆"
+
+  - trigger: ";s4"
+    replace: "★★★★☆"
+
+  - trigger: ";s5"
+    replace: "★★★★★"

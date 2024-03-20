@@ -1,0 +1,21 @@
+#!/usr/bin/osascript
+
+tell application "System Events"
+  set activeBrowsers to name of processes where name is "Safari" or name is "Google Chrome"
+
+  if activeBrowsers contains "Safari" then
+    tell application "Safari"
+      try
+        return the URL of current tab of window 1
+      end try
+    end tell
+  end if
+
+  if activeBrowsers contains "Google Chrome" then
+    tell application "Google Chrome"
+      try
+        return the URL of active tab of window 1
+      end try
+    end tell
+  end if
+end tell
