@@ -4,11 +4,33 @@
 
 set -e
 
+force=0
+while getopts ":f" opt; do
+    case $opt in
+
+        f)
+            force=1
+            ;;
+
+        \?)
+            echo "Invalid option: -$OPTARG" >&2
+            exit 1
+            ;;
+
+    esac
+done
+
 branch=$1
 commit=$(git rev-parse --short "$branch")
 
+if ((force == 1)); then
+  flag='-D'
+else
+  flag='-d'
+fi
+
 git push --no-verify origin :"$branch"
-git branch -d "$branch"
+git branch "$flag" "$branch"
 
 echo ""
 echo "To recreate it locally, run:"
