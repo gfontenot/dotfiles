@@ -6,7 +6,7 @@
 # For more information about stack's configuration, see
 # http://docs.haskellstack.org/en/stable/yaml_configuration/
 #
-resolver: lts-21.12
+resolver: lts-22.13
 flags: {}
 extra-package-dbs: []
 packages: []
