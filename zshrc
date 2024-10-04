@@ -129,16 +129,7 @@ alias glb='git lb'
 # EDITOR
 # ======
 
-# Open the current directory if we didn't specify a file to open
-
-e() {
-  if [[ -z "$@" ]]; then
-    nvim .
-  else
-    nvim "$@"
-  fi
-}
-
+alias e=nvim
 
 # =====
 # XCODE
