@@ -13,6 +13,8 @@ return {
 				"lua",
 				"vim",
 				"vimdoc",
+				"bash",
+				"markdown",
 			},
 			sync_install = false,
 			highlight = { enable = true },
