@@ -22,14 +22,14 @@ vim.opt.showmode = false
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
--- Automatically resize splits when the parent window size changes
-vim.cmd("autocmd VimResized * wincmd =")
-
 -- Tabs vs Spaces fight
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.wrap = true
+
+-- Persist undo history
+vim.opt.undofile = true
 
 -- [[ MAPPINGS ]]
 
@@ -39,3 +39,31 @@ vim.keymap.set('n', '<Leader><Leader>', '<C-^>', { desc = "Jump back to the prev
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
+-- Case insensitive searching unless we include capital letters in the search (or if we specify \C)
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
+-- Live substitutions
+vim.opt.inccommand = 'split'
+
+-- Display some whitespace characters
+vim.opt.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+
+-- [[ Autocommands ]]
+
+-- Automatically resize splits when the parent window size changes
+vim.cmd("autocmd VimResized * wincmd =")
+
+-- Highlight when yanking (copying) text
+--  Try it with `yap` in normal mode
+--  See `:help vim.highlight.on_yank()`
+vim.api.nvim_create_autocmd('TextYankPost', {
+  desc = 'Highlight when yanking (copying) text',
+  group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
+
