@@ -30,5 +30,11 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.wrap = true
 
+-- [[ MAPPINGS ]]
+
 -- Map <leader><leader> to switch to previous file
-vim.keymap.set('n', '<Leader><Leader>', '<C-^>')
+vim.keymap.set('n', '<Leader><Leader>', '<C-^>', { desc = "Jump back to the previous file" })
+
+-- Clear highlights on search when pressing <Esc> in normal mode
+--  See `:help hlsearch`
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
