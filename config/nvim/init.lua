@@ -22,10 +22,7 @@ vim.opt.showmode = false
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
--- Tabs vs Spaces fight
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
+-- Wrap text at line lengths
 vim.opt.wrap = true
 
 -- Persist undo history
