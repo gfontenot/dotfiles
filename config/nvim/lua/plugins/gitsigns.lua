@@ -5,5 +5,5 @@ return {
 	init = function()
 		-- Always show the sign column
 		vim.opt.signcolumn = "yes"
-	end
+	end,
 }

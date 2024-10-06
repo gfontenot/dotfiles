@@ -19,8 +19,6 @@ return {
 			dashboard.button("q", "󰅚  Quit", "<cmd>qa<CR>"),
 		}
 
-		require("alpha").setup(
-			theme.config
-		)
+		require("alpha").setup(theme.config)
 	end,
 }

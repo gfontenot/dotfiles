@@ -1,9 +1,9 @@
 return {
-	'nvim-telescope/telescope.nvim',
-	version = '0.1.8',
+	"nvim-telescope/telescope.nvim",
+	version = "0.1.8",
 	dependencies = {
 		"nvim-telescope/telescope-file-browser.nvim",
-		'nvim-lua/plenary.nvim'
+		"nvim-lua/plenary.nvim",
 	},
 	config = function()
 		local telescope = require("telescope")
@@ -12,8 +12,8 @@ return {
 		telescope.setup({
 			defaults = {
 				prompt_prefix = " ❯ ",
-				selection_caret = "❯ "
-			}
+				selection_caret = "❯ ",
+			},
 		})
 
 		-- Telescope Remaps
@@ -27,6 +27,5 @@ return {
 			":Telescope file_browser initial_mode=normal path=%:p:h select_buffer=true<CR>",
 			{}
 		)
-
-	end
+	end,
 }
