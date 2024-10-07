@@ -6,16 +6,16 @@ return {
 
 		configs.setup({
 			ensure_installed = {
-				"swift",
+				"bash",
 				"haskell",
-				"javascript",
 				"html",
+				"javascript",
 				"lua",
+				"markdown",
+				"swift",
+				"tmux",
 				"vim",
 				"vimdoc",
-				"bash",
-				"markdown",
-				"tmux",
 			},
 			sync_install = false,
 			highlight = { enable = true },
