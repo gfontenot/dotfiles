@@ -133,6 +133,10 @@ alias fuxcode='rm -rf ~/Library/Developer/Xcode/DerivedData/'
 # TOOLS
 # =====
 
+# Use eza instead of ls
+
+alias ls='eza --icons=always'
+
 # Automatically install binstubs with bundler
 
 b(){
