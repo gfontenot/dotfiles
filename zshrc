@@ -61,16 +61,6 @@ export EDITOR="$VISUAL"
 # }}}
 
 # ============================================================================
-# Keybindings {{{
-# ============================================================================
-
-# I have _no idea_ how I broke this, but for some reason, this was bound to
-# `redisplay`, which is _clearly_ wrong, so this is me changing it back.
-bindkey "^R" history-incremental-search-backward
-
-# }}}
-
-# ============================================================================
 # Aliases {{{
 # ============================================================================
 
@@ -298,6 +288,8 @@ prompt_git_dir() {
 # ============================================================================
 # FZF {{{
 # ============================================================================
+
+source <(fzf --zsh)
 
 export FZF_DEFAULT_OPTS='
 --bind ctrl-u:page-up,ctrl-f:page-down
