@@ -7,7 +7,6 @@ return {
 	-- Languages
 	{ "sheerun/vim-polyglot" },
 	{ "pbrisbin/vim-syntax-shakespeare" },
-	{ "keith/swift.vim" },
 
 	-- Misc
 	{ "christoomey/vim-sort-motion" },
