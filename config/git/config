@@ -46,22 +46,18 @@
 
   gs = !echo "This isnt a thing, idiot"
 
-[pager]
-  log = "diff-highlight | less -FXR"
-  show = "diff-highlight | less -FXR"
-  diff = "diff-highlight | less -FXR"
-
 [interactive]
-  diffFilter = diff-highlight
+  diffFilter = delta --color-only
 
 [diff]
   tool = vimdiff
   prompt = false
   compactionHeuristic = true
-  colorMoved = zebra
+  colorMoved = default
 
 [merge]
   ff = only
+  conflictstyle = diff3
 
 [fetch]
   prune = true
@@ -79,6 +75,7 @@
 
 [core]
   excludesfile = ~/.config/git/ignore
+  pager = delta
 
 [apply]
   whitespace = warn
@@ -101,3 +98,7 @@
 
 [difftool "ksdiff"]
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
+[delta]
+  navigate = true
+  side-by-side = true
