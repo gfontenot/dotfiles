@@ -154,6 +154,10 @@ b(){
 # Completion {{{
 # ============================================================================
 
+# fish-like autocomplete suggestions
+source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+bindkey '^y' autosuggest-accept
+
 fpath=(~/.config/zsh/completion-scripts $fpath)
 
 # Add custom completion for git-delete-branch based on branch names
