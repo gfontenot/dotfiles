@@ -99,10 +99,5 @@
 [credential]
   helper = osxkeychain
 
-[gitsh]
-  defaultCommand = status --short --branch
-  noGreeting = true
-  prompt = "%D(%c%b%#%w)"
-
 [difftool "ksdiff"]
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
