@@ -157,6 +157,7 @@ return {
 						},
 					},
 				},
+				yamlls = {},
 			}
 
 			-- [[ Mason config ]]
