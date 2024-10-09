@@ -1,2 +1,12 @@
+customCommands:
+  - key: 'N'
+    context: 'localBranches'
+    prompts:
+      - type: 'input'
+        title: 'What is the new branch name?'
+        key: 'BranchName'
+        initialValue: 'gfontenot/'
+    command: 'git checkout -b {{.Form.BranchName}} && git push origin {{.Form.BranchName}} --set-upstream'
+    description: 'Create a new branch, push it, and set the upstream'
 git:
   branchPrefix: 'gfontenot/'
