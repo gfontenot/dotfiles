@@ -11,3 +11,5 @@ customCommands:
 git:
   branchPrefix: 'gfontenot/'
   branchLogCmd: 'git log --color=always --format=custom'
+gui:
+  nerdFontsVersion: "3"
