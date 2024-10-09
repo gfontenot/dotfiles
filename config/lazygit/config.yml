@@ -10,3 +10,4 @@ customCommands:
     description: 'Create a new branch, push it, and set the upstream'
 git:
   branchPrefix: 'gfontenot/'
+  branchLogCmd: 'git log --color=always --format=custom'
