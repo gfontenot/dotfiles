@@ -144,6 +144,15 @@ return {
 				},
 			})
 
+			require("lspconfig").hls.setup({
+				filetypes = { "haskell", "lhaskell" },
+				settings = {
+					haskell = {
+						formattingProvider = "stylish-haskell",
+					},
+				},
+			})
+
 			-- [[ Managed servers ]]
 
 			-- This table is basically [server_name: opts]
@@ -218,6 +227,7 @@ return {
 			end,
 			formatters_by_ft = {
 				lua = { "stylua" },
+				haskell = { "stylish-haskell" },
 			},
 		},
 	},
