@@ -17,6 +17,9 @@ asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
 asdf plugin-add elm https://github.com/asdf-community/asdf-elm.git
+asdf plugin add ghc
+asdf plugin add cabal
+asdf plugin add hls
 asdf plugin-add python
 
 # Install latest language versions that we rely on

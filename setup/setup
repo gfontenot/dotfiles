@@ -6,4 +6,3 @@ setup/install-homebrew
 setup/link-dotfiles
 setup/fix-path
 setup/setup-asdf
-setup/setup-haskell
