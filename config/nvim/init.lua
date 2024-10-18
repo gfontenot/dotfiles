@@ -42,6 +42,8 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+vim.opt.gdefault = true
+
 -- Live substitutions
 vim.opt.inccommand = "split"
 
