@@ -18,6 +18,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.showmode = false
 vim.opt.foldlevelstart = 99
+vim.opt.conceallevel = 1
 
 -- Open splits to the bottom right
 vim.opt.splitbelow = true
