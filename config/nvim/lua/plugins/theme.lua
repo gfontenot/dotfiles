@@ -11,7 +11,7 @@ return {
 			italic = true,
 			bold = true,
 			underline = true,
-			undercurl = true,
+			undercurl = false,
 		},
 		colors = {
 			background = "#19191F",
