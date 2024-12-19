@@ -230,68 +230,7 @@ export CLICOLOR=true
 # PROMPT
 # ======
 
-autoload -U colors && colors
-setopt prompt_subst
-
-export PROMPT='%(?.%F{green}.%F{red})❯%f '
-export RPROMPT=$'%c $(prompt_git_info)'
-
-prompt_git_info() {
-  if prompt_git_dir &>/dev/null; then
-    echo "$(prompt_current_branch)$(prompt_rebase_info)$(prompt_repo_dirty)$(prompt_needs_push)$(prompt_current_sha)"
-  fi
-}
-
-prompt_current_branch() {
-  local branch_name="$(prompt_current_branch_name)"
-
-  if [ "$branch_name" = "HEAD" ]; then
-    echo "%{$fg[red]%}DETACHED%{$reset_color%}"
-  else
-    echo "%{$fg[blue]%}$branch_name%{$reset_color%}"
-  fi
-}
-
-prompt_current_sha() {
-  echo " %{$fg[yellow]%}$(git rev-parse --short HEAD 2>/dev/null)%{$reset_color%}"
-}
-
-prompt_rebase_info() {
-  local git_dir="$(prompt_git_dir)"
-
-  if [ -f "$git_dir/BISECT_LOG" ]; then
-    echo "+bisect"
-  elif [ -f "$git_dir/MERGE_HEAD" ]; then
-    echo "+merge"
-  else
-    for file in rebase rebase-apply rebase-merge; do
-      if [ -e "$git_dir/$file" ]; then
-        echo "+rebase"
-        break
-      fi
-    done
-  fi
-}
-
-prompt_repo_dirty() {
-  if [[ ! $(git status 2>/dev/null) =~ "working tree clean" ]]; then
-    echo " %{$fg[red]%}✗%{$reset_color%}"
-  fi
-}
-
-prompt_needs_push() {
-  if [[ -n "$(git cherry -v origin/$(prompt_current_branch_name) 2>/dev/null)" ]]; then
-    echo " %{$fg[red]%}⬆%{$reset_color%}"
-  fi
-}
-
-prompt_current_branch_name() {
-  git rev-parse --abbrev-ref HEAD 2>/dev/null
-}
-
-prompt_git_dir() {
-  git rev-parse --git-dir 2>/dev/null
-}
+eval "$(starship init zsh)"
 
 # }}}
 
