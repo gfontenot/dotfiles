@@ -4,6 +4,7 @@ tap 'mdogan/zulu'
 tap 'thoughtbot/formulae'
 
 cask 'kitty'
+brew 'ghostty'
 cask 'zulu-jdk17'
 
 brew 'asdf'

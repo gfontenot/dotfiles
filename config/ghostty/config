@@ -1,0 +1,3 @@
+command = /opt/homebrew/bin/fish
+font-family = MonoLisa
+theme = Noir

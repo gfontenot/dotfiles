@@ -1,0 +1,43 @@
+# Noir Colorscheme for Ghostty
+# Based on:
+# - https://github.com/connorholyday/nord-kitty/blob/master/nord.conf
+# - https://gist.github.com/marcusramberg/64010234c95a93d953e8c79fdaf94192
+# - https://github.com/arcticicestudio/nord-hyper
+
+foreground = #D8DEE9
+background = #19191F
+selection-foreground = #000000
+selection-background = #FFFACD
+cursor-color = #81A1C1
+
+# black
+palette = 0=#3B4252
+palette = 8=#4C566A
+
+# red
+palette = 1=#BF616A
+palette = 9=#BF616A
+
+# green
+palette = 2=#A3BE8C
+palette = 10=#A3BE8C
+
+# yellow
+palette = 3=#EBCB8B
+palette = 11=#EBCB8B
+
+# blue
+palette = 4=#81A1C1
+palette = 12=#81A1C1
+
+# magenta
+palette = 5=#B48EAD
+palette = 13=#B48EAD
+
+# cyan
+palette = 6=#88C0D0
+palette = 14=#8FBCBB
+
+# white
+palette = 7=#E5E9F0
+palette = 15=#ECEFF4
