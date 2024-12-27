@@ -67,6 +67,9 @@ alias glb 'git lb'
 # Misc {{{
 # ============================================================================
 
+# Disable welcome messages
+set fish_greeting
+
 # Clear the derived data folder cause uuuuuuggggghhhhhhh
 alias fuxcode 'rm -rf ~/Library/Developer/Xcode/DerivedData/'
 
