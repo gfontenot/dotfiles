@@ -21,6 +21,12 @@ set -x DOTFILES "$PROJECTS/dotfiles"
 
 # }}}
 
+function __ls_projects
+    fd .git $PROJECTS --glob --type=d --prune --hidden --format="{//}"
+end
+
+alias pcd "cd (__ls_projects | fzf)"
+
 # ============================================================================
 # Editor {{{
 # ============================================================================
