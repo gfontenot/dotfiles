@@ -21,6 +21,7 @@ return {
 		vim.keymap.set("n", "<C-b>", builtin.buffers, {})
 		vim.keymap.set("n", "<C-g>", builtin.git_status, {})
 		vim.keymap.set("n", "<C-f>", builtin.live_grep, {})
+		vim.keymap.set("n", "<C-k>", builtin.grep_string, {})
 		vim.keymap.set(
 			"n",
 			"<C-e>",
