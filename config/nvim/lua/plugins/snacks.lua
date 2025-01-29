@@ -22,4 +22,14 @@ return {
 		statuscolumn = { enabled = true },
 		words = { enabled = true },
 	},
+	keys = {
+		{
+			"<leader>lg",
+			function()
+				require("snacks")
+				Snacks.lazygit()
+			end,
+			desc = "Launch LazyGit (snacks.nvim)",
+		},
+	},
 }
