@@ -46,6 +46,7 @@ alias e nvim
 alias mksafe "mkdir .git/safe"
 
 alias g git
+alias lg lazygit
 
 # quick aliases for common actions
 alias gdiff 'git diff'
