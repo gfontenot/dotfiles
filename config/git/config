@@ -50,7 +50,7 @@
   diffFilter = delta --color-only
 
 [diff]
-  tool = vimdiff
+  tool = ksdiff
   prompt = false
   compactionHeuristic = true
   colorMoved = default
@@ -98,7 +98,7 @@
   helper = osxkeychain
 
 [difftool "ksdiff"]
-  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+  cmd = /usr/local/bin/ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
 [delta]
   navigate = true
