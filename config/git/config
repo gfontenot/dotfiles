@@ -47,7 +47,7 @@
   gs = !echo "This isnt a thing, idiot"
 
 [interactive]
-  diffFilter = delta --color-only
+  diffFilter = delta --color-only --side-by-side
 
 [diff]
   tool = ksdiff
@@ -75,7 +75,7 @@
 
 [core]
   excludesfile = ~/.config/git/ignore
-  pager = delta
+  pager = delta --side-by-side
 
 [apply]
   whitespace = warn
@@ -102,4 +102,3 @@
 
 [delta]
   navigate = true
-  side-by-side = true
