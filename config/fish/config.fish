@@ -7,7 +7,8 @@ fish_add_path /Applications/Postgres.app/Contents/Versions/latest/bin
 fish_add_path $HOME/stack/bin
 fish_add_path $HOME/.local/bin
 set PATH ./.git/safe/../../bin ./.git/safe/../../bin/stubs $PATH
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
+set -x ASDF_DATA_DIR $HOME/.asdf
+set PATH $ASDF_DATA_DIR/shims $PATH
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
