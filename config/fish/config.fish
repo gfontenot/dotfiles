@@ -95,9 +95,6 @@ end
 
 fzf --fish | source
 
-# Make Alt-C work on macOS
-bind -M insert "ç" fzf-cd-widget
-
 set -x FZF_DEFAULT_OPTS '
 --bind ctrl-u:page-up,ctrl-f:page-down
 --color=dark
