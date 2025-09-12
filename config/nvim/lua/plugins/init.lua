@@ -14,7 +14,6 @@ return {
 	{ "cohama/lexima.vim" },
 	{ "dietsche/vim-lastplace" },
 	{ "pbrisbin/vim-mkdir" },
-	{ "tpope/vim-commentary" },
 	{ "tpope/vim-repeat" },
 	{ "tpope/vim-surround" },
 }
