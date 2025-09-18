@@ -1,3 +1,5 @@
+local Util = require("util")
+
 -- Disable netrw (strongly suggested for nvim-tree)
 -- This needs to happen as early as possible in the startup
 vim.g.loaded_netrw = 1
@@ -37,9 +39,16 @@ vim.opt.undofile = true
 -- Map <leader><leader> to switch to previous file
 vim.keymap.set("n", "<Leader><Leader>", "<C-^>", { desc = "Jump back to the previous file" })
 
--- Clear highlights on search when pressing <Esc> in normal mode
---  See `:help hlsearch`
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+vim.keymap.set("n", "<Esc>", function()
+	Util.close_floats()
+	if vim.bo.modifiable then
+		Util.clear_highlights()
+	else
+		if #vim.api.nvim_list_wins() > 1 then
+			return Util.feedkeys("<C-w>c")
+		end
+	end
+end, { desc = "Close floats, clear highlights" })
 
 -- Case insensitive searching unless we include capital letters in the search (or if we specify \C)
 vim.opt.ignorecase = true
