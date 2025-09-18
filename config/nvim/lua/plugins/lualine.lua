@@ -11,8 +11,22 @@ return {
 			options = {
 				theme = noirbuddy_lualine.theme,
 			},
-			sections = noirbuddy_lualine.sections,
-			inactive_sections = noirbuddy_lualine.inactive_sections,
+			sections = {
+				lualine_a = { { "filename", path = 1 } },
+				lualine_b = {},
+				lualine_c = {},
+				lualine_x = {},
+				lualine_y = { "branch" },
+				lualine_z = { "location" },
+			},
+			inactive_sections = {
+				lualine_a = { { "filename", path = 1 } },
+				lualine_b = {},
+				lualine_c = {},
+				lualine_x = {},
+				lualine_y = {},
+				lualine_z = {},
+			},
 		})
 	end,
 }
