@@ -36,6 +36,36 @@ return {
 			"hrsh7th/cmp-nvim-lsp",
 		},
 		config = function()
+			local diagnosticsGroup = vim.api.nvim_create_augroup("diagnostics", {})
+
+			local function diagnostics_autocmd(typ, pattern, cmdOrFn)
+				if type(cmdOrFn) == "function" then
+					vim.api.nvim_create_autocmd(
+						typ,
+						{ pattern = pattern, callback = cmdOrFn, group = diagnosticsGroup }
+					)
+				else
+					vim.api.nvim_create_autocmd(typ, { pattern = pattern, command = cmdOrFn, group = diagnosticsGroup })
+				end
+			end
+
+			diagnostics_autocmd({ "CursorHold", "InsertLeave" }, nil, function()
+				local opts = {
+					focusable = false,
+					scope = "cursor",
+					close_events = { "BufLeave", "CursorMoved", "InsertEnter" },
+				}
+				vim.diagnostic.open_float(nil, opts)
+			end)
+
+			diagnostics_autocmd("InsertEnter", nil, function()
+				vim.diagnostic.enable(false)
+			end)
+
+			diagnostics_autocmd("InsertLeave", nil, function()
+				vim.diagnostic.enable(true)
+			end)
+
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
 				callback = function(event)
