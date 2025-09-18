@@ -20,6 +20,8 @@ vim.opt.showmode = false
 vim.opt.foldlevelstart = 99
 vim.opt.conceallevel = 1
 
+vim.opt.winborder = "rounded"
+
 -- Open splits to the bottom right
 vim.opt.splitbelow = true
 vim.opt.splitright = true
