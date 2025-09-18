@@ -36,6 +36,13 @@ vim.opt.undofile = true
 
 -- [[ MAPPINGS ]]
 
+-- Delete hjkl mappings since they don't make sense at all on my keyboard layout (Workman)
+-- I actually use the arrow keys for these operations (or I use better navigation modes)
+vim.keymap.set("n", "h", "<Nop>")
+vim.keymap.set("n", "j", "<Nop>")
+vim.keymap.set("n", "k", "<Nop>")
+vim.keymap.set("n", "l", "<Nop>")
+
 -- Map <leader><leader> to switch to previous file
 vim.keymap.set("n", "<Leader><Leader>", "<C-^>", { desc = "Jump back to the previous file" })
 
