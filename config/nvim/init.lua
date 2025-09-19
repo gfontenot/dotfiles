@@ -43,6 +43,18 @@ vim.keymap.set("n", "j", "<Nop>")
 vim.keymap.set("n", "k", "<Nop>")
 vim.keymap.set("n", "l", "<Nop>")
 
+-- Split Management
+
+vim.keymap.set("n", "<C-\\>", "<C-w>s", { desc = "Create a new horizontal split" })
+vim.keymap.set("n", "<C-->", "<C-w>v", { desc = "Create a new vertical split" })
+
+-- <A-Right>
+vim.keymap.set("n", "<A-f>", "<C-w><Right>", { desc = "Move cursor to the split to the right" })
+-- <A-Left>
+vim.keymap.set("n", "<A-b>", "<C-w><Left>", { desc = "Move cursor to the split to the left" })
+vim.keymap.set("n", "<A-Down>", "<C-w><Down>", { desc = "Move cursor to the split below the current one" })
+vim.keymap.set("n", "<A-Up>", "<C-w><Up>", { desc = "Move cursor to the split above the current one" })
+
 -- Map <leader><leader> to switch to previous file
 vim.keymap.set("n", "<Leader><Leader>", "<C-^>", { desc = "Jump back to the previous file" })
 
