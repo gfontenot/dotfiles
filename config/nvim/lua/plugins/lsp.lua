@@ -164,7 +164,7 @@ return {
 
 			-- [[ Unmanaged Servers ]]
 
-			require("lspconfig").sourcekit.setup({
+			vim.lsp.config("sourcekit", {
 				capabilities = {
 					workspace = {
 						didChangeWatchedFiles = {
@@ -174,7 +174,7 @@ return {
 				},
 			})
 
-			require("lspconfig").hls.setup({
+			vim.lsp.config("hls", {
 				filetypes = { "haskell", "lhaskell" },
 				settings = {
 					haskell = {
@@ -214,7 +214,7 @@ return {
 					function(server_name)
 						local server = servers[server_name] or {}
 						server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-						require("lspconfig")[server_name].setup(server)
+						vim.lsp.config(server_name, server)
 					end,
 				},
 			})
