@@ -42,6 +42,7 @@ return {
 			nmap("<Leader>hb", function()
 				gitsigns.blame_line({ full = true })
 			end, "Git blame (line)")
+			nmap("<Leader>hB", gitsigns.blame, "Show git blame info")
 		end,
 	},
 	init = function()
