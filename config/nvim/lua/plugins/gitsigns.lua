@@ -40,6 +40,9 @@ return {
 
 			nmap("<Leader>hp", gitsigns.preview_hunk, "Preview hunk")
 			nmap("<Leader>hi", gitsigns.preview_hunk_inline, "Preview hunk (inline)")
+			nmap("<Leader>hb", function()
+				gitsigns.blame_line({ full = true })
+			end, "Git blame (line)")
 		end,
 	},
 	init = function()
