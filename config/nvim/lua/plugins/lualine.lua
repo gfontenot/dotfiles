@@ -2,14 +2,11 @@ return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
-		"jesseleite/nvim-noirbuddy",
 	},
 	config = function()
-		local noirbuddy_lualine = require("noirbuddy.plugins.lualine")
-
 		require("lualine").setup({
 			options = {
-				theme = noirbuddy_lualine.theme,
+				theme = "onedark",
 			},
 			sections = {
 				lualine_a = { { "filename", path = 1 } },
