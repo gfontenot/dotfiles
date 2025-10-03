@@ -11,9 +11,7 @@ return {
 	-- Misc
 	{ "christoomey/vim-sort-motion" },
 	{ "christoomey/vim-system-copy" },
-	{ "cohama/lexima.vim" },
 	{ "dietsche/vim-lastplace" },
 	{ "pbrisbin/vim-mkdir" },
 	{ "tpope/vim-repeat" },
-	{ "tpope/vim-surround" },
 }
