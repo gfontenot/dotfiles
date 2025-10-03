@@ -33,6 +33,13 @@ return {
 				{ lhs = "]c", direction = "next", desc = "Next Change" },
 				{ lhs = "[c", direction = "prev", desc = "Previous Change" },
 			})
+
+			local function nmap(lhs, rhs, desc)
+				vim.keymap.set("n", lhs, rhs, { desc = desc, buffer = bufnr })
+			end
+
+			nmap("<Leader>hp", gitsigns.preview_hunk, "Preview hunk")
+			nmap("<Leader>hi", gitsigns.preview_hunk_inline, "Preview hunk (inline)")
 		end,
 	},
 	init = function()
