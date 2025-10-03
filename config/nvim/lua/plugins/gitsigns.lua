@@ -5,7 +5,6 @@
 
 return {
 	"lewis6991/gitsigns.nvim",
-	version = "0.9",
 	opts = {
 		on_attach = function(bufnr)
 			-- Set up keybindings
