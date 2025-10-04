@@ -3,15 +3,14 @@
 These are my dotfiles. They are the secret-sauce in my day-to-day workflow. In
 this repo, you'll find my config for my favorite command line tools:
 
-- [zsh], my shell of choice
+- [fish], my shell of choice
 - [git], my source control tool of choice
-- [vim] (actually [neovim]) for text editing
+- [neovim] for text editing
 - [tmux] for managing sessions and terminal splits
 - And more!
 
-[zsh]: http://www.zsh.org/
+[fish]: https://fishshell.com/
 [git]: https://git-scm.com/
-[vim]: http://www.vim.org/
 [neovim]: https://neovim.io/
 [tmux]: https://github.com/tmux/tmux
 
