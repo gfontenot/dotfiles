@@ -33,7 +33,7 @@ return {
 		{
 			"<leader>lg",
 			function()
-				require("snacks")
+				local Snacks = require("snacks")
 				Snacks.lazygit()
 			end,
 			desc = "Launch LazyGit (snacks.nvim)",

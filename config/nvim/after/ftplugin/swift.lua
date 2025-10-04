@@ -1,3 +1,5 @@
+local MiniSplitjoin = require("mini.splitjoin")
+
 vim.opt_local.colorcolumn = "120"
 
 local gen_hook = MiniSplitjoin.gen_hook
