@@ -3,7 +3,7 @@ return {
 	version = "*",
 	lazy = false,
 	keys = {
-		{ "<C-t>", "<cmd>NvimTreeToggle<cr>", desc = "Toggle Tree" },
+		{ "<Leader>e", "<cmd>NvimTreeFindFileToggle<cr>", desc = "Toggle Tree" },
 	},
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
