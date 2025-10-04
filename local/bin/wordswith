@@ -1,3 +1,0 @@
-#!/bin/sh
-
-grep "${1}" /usr/share/dict/words | less
