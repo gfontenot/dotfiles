@@ -6,13 +6,11 @@ this repo, you'll find my config for my favorite command line tools:
 - [fish], my shell of choice
 - [git], my source control tool of choice
 - [neovim] for text editing
-- [tmux] for managing sessions and terminal splits
 - And more!
 
 [fish]: https://fishshell.com/
 [git]: https://git-scm.com/
 [neovim]: https://neovim.io/
-[tmux]: https://github.com/tmux/tmux
 
 ## setup ##
 
