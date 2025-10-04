@@ -1,0 +1,2 @@
+[editor_open]
+command = "nvim --server $NVIM --remote-send '<cmd>lua EditLineFromScooter(\"%file\", %line)<CR>'"
