@@ -164,29 +164,27 @@ return {
 
 			-- [[ Unmanaged Servers ]]
 
-			vim.lsp.config("sourcekit", {
-				capabilities = {
-					workspace = {
-						didChangeWatchedFiles = {
-							dynamicRegistration = true,
+			local unmanaged_servers = {
+				sourcekit = {},
+				hls = {
+					filetypes = { "haskell", "lhaskell" },
+					settings = {
+						haskell = {
+							formattingProvider = "stylish-haskell",
 						},
 					},
 				},
-			})
+			}
 
-			vim.lsp.config("hls", {
-				filetypes = { "haskell", "lhaskell" },
-				settings = {
-					haskell = {
-						formattingProvider = "stylish-haskell",
-					},
-				},
-			})
+			for server_name, config in pairs(unmanaged_servers) do
+				vim.lsp.config(server_name, config)
+				vim.lsp.enable(server_name)
+			end
 
 			-- [[ Managed servers ]]
 
 			-- This table is basically [server_name: opts]
-			local servers = {
+			local managed_servers = {
 				lua_ls = {
 					settings = {
 						Lua = {
@@ -202,7 +200,7 @@ return {
 			-- [[ Mason config ]]
 
 			require("mason").setup()
-			local ensure_installed = vim.tbl_keys(servers or {})
+			local ensure_installed = vim.tbl_keys(managed_servers or {})
 			vim.list_extend(ensure_installed, {
 				-- Add additional tools to install here
 				"stylua",
@@ -212,7 +210,7 @@ return {
 			require("mason-lspconfig").setup({
 				handlers = {
 					function(server_name)
-						local server = servers[server_name] or {}
+						local server = managed_servers[server_name] or {}
 						server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
 						vim.lsp.config(server_name, server)
 					end,
