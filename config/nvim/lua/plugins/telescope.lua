@@ -17,10 +17,13 @@ return {
 		})
 
 		-- Telescope Remaps
-		vim.keymap.set("n", "<C-p>", builtin.find_files, { desc = "Find files" })
-		vim.keymap.set("n", "<C-b>", builtin.buffers, { desc = "Find open buffers" })
-		vim.keymap.set("n", "<C-g>", builtin.git_status, { desc = "Find dirty files" })
-		vim.keymap.set("n", "<C-f>", builtin.live_grep, { desc = "Live grep" })
+		vim.keymap.set("n", "<C-p>", builtin.git_files, { desc = "Find files" })
+		vim.keymap.set("n", "<Leader>fb", builtin.buffers, { desc = "Find open buffers" })
+		vim.keymap.set("n", "<Leader>fg", builtin.git_status, { desc = "Find dirty files" })
+		vim.keymap.set("n", "<Leader>ff", builtin.live_grep, { desc = "Live grep" })
+		vim.keymap.set("n", "<Leader>ps", function()
+			builtin.grep_string({ search = vim.fn.input("Grep > ") })
+		end, { desc = "Search for a term" })
 		vim.keymap.set("n", "<C-k>", builtin.grep_string, { desc = "Search for word under the cursor" })
 		vim.keymap.set(
 			"n",
