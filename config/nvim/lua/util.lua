@@ -47,4 +47,34 @@ function Util.feedkeys(keys, mode)
 	return vim.api.nvim_feedkeys(Util.termcodes(keys), mode, true)
 end
 
+local function expand_home(filepath)
+	if filepath:sub(1, 1) == "~" then
+		-- Get home directory from environment variable
+		local home = os.getenv("HOME") or os.getenv("USERPROFILE") -- USERPROFILE for Windows
+		if home then
+			return home .. filepath:sub(2)
+		end
+	end
+	return filepath
+end
+
+function Util.load_file_with_fallback(filepath, fallback)
+	-- Expand the path first
+	filepath = expand_home(filepath)
+
+	local file, err = io.open(filepath, "r")
+	if not file then
+		return type(fallback) == "function" and fallback() or fallback or ""
+	end
+
+	local content = file:read("*all")
+	file:close()
+
+	if not content then
+		return type(fallback) == "function" and fallback() or fallback or ""
+	end
+
+	return content
+end
+
 return Util
