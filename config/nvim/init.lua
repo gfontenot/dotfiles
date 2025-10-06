@@ -21,6 +21,7 @@ vim.opt.relativenumber = true
 vim.opt.showmode = false
 vim.opt.foldlevelstart = 99
 vim.opt.conceallevel = 1
+vim.opt.scrolloff = 8
 
 vim.opt.winborder = "rounded"
 
