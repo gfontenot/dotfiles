@@ -23,6 +23,7 @@ return {
 		indent = { enabled = true },
 		input = { enabled = true },
 		notifier = { enabled = true },
+		picker = {},
 		quickfile = { enabled = true },
 		scope = { enabled = true },
 		scroll = { enabled = true },
