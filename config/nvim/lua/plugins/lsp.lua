@@ -159,6 +159,27 @@ return {
 							vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
 						end, "[T]oggle Inlay [H]ints")
 					end
+
+					-- Inline completion should be available in the next release of Neovim
+					-- if
+					-- 	client
+					-- 	and client:supports_method(vim.lsp.protocol.Methods.textDocument_inlineCompletion, event.buf)
+					-- then
+					-- 	vim.lsp.inline_completion.enable(true, { bufnr = event.buf })
+					--
+					-- 	vim.keymap.set(
+					-- 		"i",
+					-- 		"<C-F>",
+					-- 		vim.lsp.inline_completion.get,
+					-- 		{ desc = "LSP: accept inline completion", buffer = event.buf }
+					-- 	)
+					-- 	vim.keymap.set(
+					-- 		"i",
+					-- 		"<C-G>",
+					-- 		vim.lsp.inline_completion.select,
+					-- 		{ desc = "LSP: switch inline completion", buffer = event.buf }
+					-- 	)
+					-- end
 				end,
 			})
 
@@ -209,6 +230,7 @@ return {
 					},
 				},
 				yamlls = {},
+				copilot = {},
 			}
 
 			-- [[ Mason config ]]
