@@ -7,13 +7,6 @@ return {
 		},
 		keys = {
 			{
-				"<leader>aa",
-				function()
-					require("sidekick.cli").toggle()
-				end,
-				desc = "Sidekick Toggle CLI",
-			},
-			{
 				"<leader>as",
 				function()
 					require("sidekick.cli").select({ filter = { installed = true } })
