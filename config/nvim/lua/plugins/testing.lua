@@ -40,7 +40,10 @@ return {
 		{
 			"<Leader>ta",
 			function()
-				require("neotest").run.run({ suite = true, extra_args = { target = true } })
+				require("neotest").run.run({
+					suite = true,
+					extra_args = { target = true, current_file = vim.fn.expand("%") },
+				})
 			end,
 			{ desc = "Run all tests in current target." },
 		},
