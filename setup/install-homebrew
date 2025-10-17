@@ -13,8 +13,5 @@ echo "Installing Homebrew"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-echo "Installing brew bundle"
-brew tap Homebrew/bundle
-
 echo "Installing homebrew dependencies"
 brew bundle
