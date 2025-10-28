@@ -25,6 +25,7 @@ return {
 					{ section = "startup" },
 				},
 			},
+			explorer = {},
 			indent = { enabled = true },
 			input = { enabled = true },
 			notifier = { enabled = true },
@@ -61,7 +62,13 @@ return {
 			{ "<Leader>fg", Snacks.picker.git_status, desc = "Find dirty files" },
 			{ "<Leader>ff", Snacks.picker.grep, desc = "Live grep" },
 			{ "<C-k>", Snacks.picker.grep_word, desc = "Search for the word under the cursor" },
-			{ "<C-e>", Snacks.picker.explorer, desc = "Open file explorer" },
+			{
+				"<C-e>",
+				function()
+					Snacks.explorer()
+				end,
+				desc = "Open file explorer",
+			},
 		})
 	end,
 }
