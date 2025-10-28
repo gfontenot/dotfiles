@@ -64,30 +64,4 @@ return {
 			{ "<C-e>", Snacks.picker.explorer, desc = "Open file explorer" },
 		})
 	end,
-	keys = {
-
-		-- LazyGit
-		{
-			"<leader>lg",
-			function()
-				local Snacks = require("snacks")
-				Snacks.lazygit()
-			end,
-			desc = "Launch LazyGit",
-		},
-
-		-- Picker
-		{
-			"<C-p>",
-			function()
-				local Snacks = require("snacks")
-				Snacks.picker.files({ hidden = true })
-			end,
-			desc = "Find files",
-		},
-		{
-			"<Leader>fb",
-			function() end,
-		},
-	},
 }
