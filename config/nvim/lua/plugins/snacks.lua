@@ -58,10 +58,34 @@ return {
 				end,
 				desc = "Find Files",
 			},
-			{ "<Leader>fb", Snacks.picker.buffers, desc = "Find open buffers" },
-			{ "<Leader>fg", Snacks.picker.git_status, desc = "Find dirty files" },
-			{ "<Leader>ff", Snacks.picker.grep, desc = "Live grep" },
-			{ "<C-k>", Snacks.picker.grep_word, desc = "Search for the word under the cursor" },
+			{
+				"<Leader>fb",
+				function()
+					Snacks.picker.buffers()
+				end,
+				desc = "Find open buffers",
+			},
+			{
+				"<Leader>fg",
+				function()
+					Snacks.picker.git_status()
+				end,
+				desc = "Find dirty files",
+			},
+			{
+				"<Leader>ff",
+				function()
+					Snacks.picker.grep()
+				end,
+				desc = "Live grep",
+			},
+			{
+				"<C-k>",
+				function()
+					Snacks.picker.grep_word()
+				end,
+				desc = "Search for the word under the cursor",
+			},
 			{
 				"<C-e>",
 				function()
