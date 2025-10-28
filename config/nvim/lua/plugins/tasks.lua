@@ -3,12 +3,12 @@ return {
 	dependencies = {
 		"nvim-lua/popup.nvim",
 		"nvim-lua/plenary.nvim",
-		"nvim-telescope/telescope.nvim",
+		"folke/snacks.nvim",
 	},
 	config = function()
 		require("vstask").setup({
-			require("telescope").load_extension("vstask"),
-			telescope_keys = {
+			picker = "snacks",
+			telescope_keys = { -- These bindings still work with Snacks.picker
 				vertical = "<C-v>",
 				split = "<CR>",
 				tab = "<C-t>",
