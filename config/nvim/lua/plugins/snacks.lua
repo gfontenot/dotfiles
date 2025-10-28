@@ -93,6 +93,13 @@ return {
 				end,
 				desc = "Open file explorer",
 			},
+			{
+				"<Leader>pp",
+				function()
+					Snacks.picker()
+				end,
+				desc = "Choose picker",
+			},
 		})
 	end,
 }
