@@ -1,9 +1,5 @@
 return {
 
-	-- Git/GitHub
-	{ "tpope/vim-fugitive" },
-	{ "tpope/vim-rhubarb" },
-
 	-- Languages
 	{ "sheerun/vim-polyglot" },
 

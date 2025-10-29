@@ -70,15 +70,7 @@ return {
 
 		local wk = require("which-key")
 
-		wk.add({
-			{
-				"<Leader>lg",
-				function()
-					Snacks.lazygit()
-				end,
-				desc = "Launch lazygit",
-			},
-		})
+		wk.add({})
 
 		-- Picker
 		wk.add({
@@ -142,6 +134,25 @@ return {
 					Snacks.terminal()
 				end,
 				desc = "Toggle floating terminal",
+			},
+		})
+
+		-- Git
+		wk.add({
+			{
+				"<Leader>gg",
+				function()
+					Snacks.lazygit()
+				end,
+				desc = "Launch lazygit",
+			},
+			{
+				"<Leader>gb",
+				mode = { "n", "v" },
+				function()
+					Snacks.gitbrowse()
+				end,
+				desc = "[G]it [B]rowse",
 			},
 		})
 	end,
