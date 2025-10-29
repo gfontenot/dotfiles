@@ -29,7 +29,38 @@ return {
 			indent = { enabled = true },
 			input = { enabled = true },
 			notifier = { enabled = true },
-			picker = { enabled = true },
+			picker = {
+				enabled = true,
+				sources = {
+					explorer = {
+						win = {
+							list = {
+								keys = {
+									["Y"] = { "copy_path_to_clipboard", mode = { "n", "x" } },
+								},
+							},
+						},
+						actions = {
+							copy_path_to_clipboard = function(picker)
+								-- Copied from Snacks, except mine always uses the "+" register on the setreg line
+								-- https://github.com/folke/snacks.nvim/blob/59c5545e91878c1f6218b032a881832bc98a46f3/lua/snacks/explorer/actions.lua#L129
+								-- Because for some reason, `vim.v.setreg` is always `"`
+								local files = {} ---@type string[]
+								if vim.fn.mode():find("^[vV]") then
+									picker.list:select()
+								end
+								for _, item in ipairs(picker:selected({ fallback = true })) do
+									table.insert(files, Snacks.picker.util.path(item))
+								end
+								picker.list:set_selected() -- clear selection
+								local value = table.concat(files, "\n")
+								vim.fn.setreg("+", value, "l") -- <- this changed
+								Snacks.notify.info("Yanked " .. #files .. " files")
+							end,
+						},
+					},
+				},
+			},
 			quickfile = { enabled = true },
 			scope = { enabled = true },
 			scroll = { enabled = true },
