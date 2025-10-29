@@ -87,28 +87,28 @@ return {
 				function()
 					Snacks.picker.files({ hidden = true })
 				end,
-				desc = "Find Files",
+				desc = "Open file [P]icker",
 			},
 			{
-				"<Leader>fb",
+				"<Leader>pb",
 				function()
 					Snacks.picker.buffers()
 				end,
-				desc = "Find open buffers",
+				desc = "[P]ick open [B]uffer",
 			},
 			{
-				"<Leader>fg",
+				"<Leader>pg",
 				function()
 					Snacks.picker.git_status()
 				end,
-				desc = "Find dirty files",
+				desc = "[P]ick from [G]it status",
 			},
 			{
-				"<Leader>ff",
+				"<Leader>ps",
 				function()
 					Snacks.picker.grep()
 				end,
-				desc = "Live grep",
+				desc = "[P]ick from live [S]earch",
 			},
 			{
 				"<C-k>",
@@ -122,14 +122,14 @@ return {
 				function()
 					Snacks.explorer()
 				end,
-				desc = "Open file explorer",
+				desc = "Open file [E]xplorer",
 			},
 			{
 				"<Leader>pp",
 				function()
 					Snacks.picker()
 				end,
-				desc = "Choose picker",
+				desc = "[P]ick from available [P]ickers",
 			},
 		})
 	end,
