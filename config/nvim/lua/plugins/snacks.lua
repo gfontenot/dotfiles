@@ -132,5 +132,17 @@ return {
 				desc = "[P]ick from available [P]ickers",
 			},
 		})
+
+		-- Terminal
+		wk.add({
+			{
+				"<C-/>",
+				mode = { "n", "t" },
+				function()
+					Snacks.terminal()
+				end,
+				desc = "Toggle floating terminal",
+			},
+		})
 	end,
 }
