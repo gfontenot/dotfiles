@@ -1,6 +1,6 @@
 local Util = require('util')
 
--- Disable netrw (strongly suggested for nvim-tree)
+-- Disable netrw
 -- This needs to happen as early as possible in the startup
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -14,13 +14,16 @@ vim.g.mapleader = ' '
 require('config.lazy')
 require('scooter')
 
--- Appearance
+-- Options
 vim.opt.colorcolumn = '80'
-vim.opt.relativenumber = true
-vim.opt.foldlevelstart = 99
 vim.opt.conceallevel = 1
+vim.opt.foldlevelstart = 99
+vim.opt.gdefault = true
+vim.opt.inccommand = 'split'
+vim.opt.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.relativenumber = true
 vim.opt.scrolloff = 8
-
 vim.opt.winborder = 'rounded'
 
 -- [[ MAPPINGS ]]
@@ -81,15 +84,6 @@ wk.add({
     desc = 'Close floats, clear highlights',
   },
 })
-
-vim.opt.gdefault = true
-
--- Live substitutions
-vim.opt.inccommand = 'split'
-
--- Display some whitespace characters
-vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- [[ Autocommands ]]
 
