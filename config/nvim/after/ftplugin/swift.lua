@@ -1,11 +1,11 @@
-local MiniSplitjoin = require("mini.splitjoin")
+local MiniSplitjoin = require('mini.splitjoin')
 
-vim.opt_local.colorcolumn = "120"
+vim.opt_local.colorcolumn = '120'
 
 local gen_hook = MiniSplitjoin.gen_hook
 
-local parens_brackets = { brackets = { "%b()", "%b[]" } }
-local curly = { brackets = { "%b{}" } }
+local parens_brackets = { brackets = { '%b()', '%b[]' } }
+local curly = { brackets = { '%b{}' } }
 
 -- Add trailing comma when splitting inside brackets
 local add_trailing_commas = gen_hook.add_trailing_separator(parens_brackets)
@@ -16,6 +16,6 @@ local pad_curly = gen_hook.pad_brackets(curly)
 
 -- Create buffer-local config
 vim.b.minisplitjoin_config = {
-	split = { hooks_post = { add_trailing_commas } },
-	join = { hooks_post = { remove_trailing_commas, pad_curly } },
+  split = { hooks_post = { add_trailing_commas } },
+  join = { hooks_post = { remove_trailing_commas, pad_curly } },
 }

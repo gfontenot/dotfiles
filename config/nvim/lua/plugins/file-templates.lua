@@ -1,4 +1,4 @@
 return {
-	"otavioschwanck/new-file-template.nvim",
-	opts = {},
+  'otavioschwanck/new-file-template.nvim',
+  opts = {},
 }
