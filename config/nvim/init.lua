@@ -9,22 +9,18 @@ vim.g.loaded_netrwPlugin = 1
 -- that they can use the right leader if they set up their own keybindings with
 -- it.
 vim.g.mapleader = ' '
+vim.opt.winborder = 'rounded'
 
 -- Load plugins
 require('config.lazy')
 require('scooter')
 
 -- Options
-vim.opt.colorcolumn = '80'
-vim.opt.conceallevel = 1
-vim.opt.foldlevelstart = 99
-vim.opt.gdefault = true
 vim.opt.inccommand = 'split'
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 8
-vim.opt.winborder = 'rounded'
 
 -- [[ MAPPINGS ]]
 
