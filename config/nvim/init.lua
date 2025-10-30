@@ -12,28 +12,16 @@ vim.g.mapleader = ' '
 
 -- Load plugins
 require('config.lazy')
+require('scooter')
 
 -- Appearance
 vim.opt.colorcolumn = '80'
-vim.opt.cursorline = true
-vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.showmode = false
 vim.opt.foldlevelstart = 99
 vim.opt.conceallevel = 1
 vim.opt.scrolloff = 8
 
 vim.opt.winborder = 'rounded'
-
--- Open splits to the bottom right
-vim.opt.splitbelow = true
-vim.opt.splitright = true
-
--- Wrap text at line lengths
-vim.opt.wrap = true
-
--- Persist undo history
-vim.opt.undofile = true
 
 -- [[ MAPPINGS ]]
 
@@ -80,10 +68,6 @@ vim.keymap.set('n', '<Esc>', function()
   end
 end, { desc = 'Close floats, clear highlights' })
 
--- Case insensitive searching unless we include capital letters in the search (or if we specify \C)
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-
 vim.opt.gdefault = true
 
 -- Live substitutions
@@ -97,16 +81,3 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Automatically resize splits when the parent window size changes
 vim.cmd('autocmd VimResized * wincmd =')
-
--- Highlight when yanking (copying) text
---  Try it with `yap` in normal mode
---  See `:help vim.highlight.on_yank()`
-vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-})
-
-require('scooter')
