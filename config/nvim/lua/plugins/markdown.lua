@@ -1,8 +1,12 @@
 return {
-  'MeanderingProgrammer/render-markdown.nvim',
+  'OXY2DEV/markview.nvim',
   dependencies = {
-    'nvim-treesitter/nvim-treesitter',
     'nvim-mini/mini.nvim',
   },
-  opts = {},
+  lazy = false,
+  opts = {
+    preview = {
+      icons = 'mini',
+    },
+  },
 }
