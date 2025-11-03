@@ -20,3 +20,5 @@ tags
 .projections.json
 
 bin/stubs
+
+**/.claude/settings.local.json
