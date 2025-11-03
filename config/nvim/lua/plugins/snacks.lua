@@ -51,7 +51,7 @@ return {
                 end
                 picker.list:set_selected() -- clear selection
                 local value = table.concat(files, '\n')
-                vim.fn.setreg('+', value, 'l') -- <- this changed
+                vim.fn.setreg('+', value, 'l')
                 Snacks.notify.info('Yanked ' .. #files .. ' files')
               end,
             },
