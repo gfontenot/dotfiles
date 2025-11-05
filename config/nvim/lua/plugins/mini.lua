@@ -5,6 +5,7 @@ return {
     require('mini.ai').setup()
     require('mini.basics').setup()
     require('mini.pairs').setup()
+    require('mini.sessions').setup()
     require('mini.splitjoin').setup()
     require('mini.surround').setup()
 
