@@ -5,7 +5,7 @@ tap 'thoughtbot/formulae'
 
 cask 'espanso'
 cask 'ghostty'
-cask 'zulu-jdk17'
+cask 'zulu-jdk21'
 
 brew 'asdf'
 brew 'bash'
