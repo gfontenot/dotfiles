@@ -5,6 +5,7 @@
 *.swp
 *.un~
 .netrwhist
+Session.vim
 
 # Jekyll
 _site
