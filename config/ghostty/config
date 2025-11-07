@@ -1,6 +1,6 @@
 command = /opt/homebrew/bin/fish
 font-family = MonoLisa
-theme = Gruvbox Dark
+theme = Kanagawabones
 
 resize-overlay = never
 window-step-resize = true
