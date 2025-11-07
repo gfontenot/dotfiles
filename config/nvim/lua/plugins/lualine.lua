@@ -13,7 +13,17 @@ return {
         lualine_a = { { 'filename', path = 1 } },
         lualine_b = {},
         lualine_c = {},
-        lualine_x = {},
+        lualine_x = {
+          {
+            'diagnostics',
+            sources = { 'nvim_workspace_diagnostic' },
+            sections = { 'error', 'warn' },
+            symbols = { error = ' ', warn = ' ' },
+            colored = true,
+            update_in_insert = false,
+            always_visible = false,
+          },
+        },
         lualine_y = { 'branch' },
         lualine_z = { 'location' },
       },
