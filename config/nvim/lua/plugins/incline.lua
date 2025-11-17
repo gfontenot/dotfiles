@@ -14,8 +14,7 @@ return {
     },
     render = function(props)
       local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ':t')
-      local ft_icon, ft_color = require('mini.icons').get('file', filename)
-      local modified = vim.bo[props.buf].modified and 'bold,italic' or 'bold'
+      local modified = vim.bo[props.buf].modified
 
       local function get_diagnostic_label()
         local icons = { error = '', warn = '' }
@@ -36,12 +35,23 @@ return {
         return label
       end
 
-      local buffer = {
+      local function file_icon()
+        local ft_icon, ft_highlight = require('mini.icons').get('file', filename)
+        return ft_icon and { ft_icon .. ' ', guifg = ft_highlight, guibg = 'none' } or ''
+      end
+
+      local function filename_and_modification()
+        return {
+          { filename .. ' ', gui = 'bold' },
+          modified and { '[+] ', gui = 'bold' } or '',
+        }
+      end
+
+      return {
         { get_diagnostic_label() },
-        { (ft_icon or '') .. ' ', guifg = ft_color, guibg = 'none' },
-        { filename .. ' ', gui = modified },
+        { file_icon() },
+        { filename_and_modification() },
       }
-      return buffer
     end,
   },
 }
