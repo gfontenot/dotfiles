@@ -18,7 +18,7 @@ return {
             'diagnostics',
             sources = { 'nvim_workspace_diagnostic' },
             sections = { 'error', 'warn' },
-            symbols = { error = ' ', warn = ' ' },
+            symbols = { error = ' ', warn = ' ' },
             colored = true,
             update_in_insert = false,
             always_visible = false,
