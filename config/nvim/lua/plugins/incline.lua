@@ -1,6 +1,9 @@
 return {
   'b0o/incline.nvim',
-  event = 'VeryLazy',
+  event = {
+    'BufReadPre',
+    'BufNewFile',
+  },
   opts = {
     window = {
       padding = 2,
