@@ -89,89 +89,93 @@ local function configure_keymaps(Snacks)
 end
 
 -- Config for the dashboard
-local dashboard = {
-  enabled = true,
-  preset = {
-    keys = {
-      {
-        icon = ' ',
-        key = 'f',
-        desc = 'Find File',
-        action = ":lua Snacks.dashboard.pick('files')",
+local function dashboard(Snacks)
+  return {
+    enabled = true,
+    preset = {
+      keys = {
+        {
+          icon = ' ',
+          key = 'f',
+          desc = 'Find File',
+          action = ":lua Snacks.dashboard.pick('files')",
+        },
+        {
+          icon = ' ',
+          key = 's',
+          desc = 'Find Text',
+          action = ":lua Snacks.dashboard.pick('live_grep')",
+        },
+        {
+          icon = ' ',
+          key = 'r',
+          desc = 'Recent Files',
+          action = ":lua Snacks.dashboard.pick('oldfiles')",
+        },
+        {
+          icon = ' ',
+          key = 'S',
+          desc = 'Restore Session',
+          section = 'session',
+        },
+        {
+          icon = '󰒲 ',
+          key = 'L',
+          desc = 'Lazy',
+          action = ':Lazy',
+          enabled = package.loaded.lazy ~= nil,
+        },
+        { icon = ' ', key = 'q', desc = 'Quit', action = ':qa' },
       },
-      {
-        icon = ' ',
-        key = 's',
-        desc = 'Find Text',
-        action = ":lua Snacks.dashboard.pick('live_grep')",
-      },
-      {
-        icon = ' ',
-        key = 'r',
-        desc = 'Recent Files',
-        action = ":lua Snacks.dashboard.pick('oldfiles')",
-      },
-      {
-        icon = ' ',
-        key = 'S',
-        desc = 'Restore Session',
-        section = 'session',
-      },
-      {
-        icon = '󰒲 ',
-        key = 'L',
-        desc = 'Lazy',
-        action = ':Lazy',
-        enabled = package.loaded.lazy ~= nil,
-      },
-      { icon = ' ', key = 'q', desc = 'Quit', action = ':qa' },
     },
-  },
-  sections = {
-    { section = 'header' },
-    { section = 'keys', gap = 1, padding = 1 },
-    {
-      icon = ' ',
-      title = 'Recent Files',
-      section = 'recent_files',
-      cwd = true,
-      indent = 2,
-      padding = 1,
+    sections = {
+      { section = 'header' },
+      { section = 'keys', gap = 1, padding = 1 },
+      {
+        icon = ' ',
+        title = 'Recent Files',
+        section = 'recent_files',
+        cwd = true,
+        indent = 2,
+        padding = 1,
+      },
+      { section = 'startup' },
     },
-    { section = 'startup' },
-  },
-}
+  }
+end
 
 -- Config for the picker
-local picker = {
-  enabled = true,
-  sources = {
-    explorer = {
-      win = {
-        list = {
-          keys = {
-            ['Y'] = { 'copy_path_to_clipboard', mode = { 'n', 'x' } },
+local function picker(snacks)
+  return {
+    enabled = true,
+    sources = {
+      explorer = {
+        win = {
+          list = {
+            keys = {
+              ['Y'] = { 'copy_path_to_clipboard', mode = { 'n', 'x' } },
+            },
           },
         },
-      },
-      actions = {
-        copy_path_to_clipboard = function(picker)
-          local files = {} ---@type string[]
-          if vim.fn.mode():find('^[vV]') then
-            picker.list:select()
-          end
-          for _, item in ipairs(picker:selected({ fallback = true })) do
-            table.insert(files, Snacks.picker.util.path(item))
-          end
-          picker.list:set_selected() -- clear selection
-          local value = table.concat(files, '\n')
-          vim.fn.setreg('+', value, 'l')
-          Snacks.notify.info('Yanked ' .. #files .. ' files')
-        end,
+        actions = {
+          copy_path_to_clipboard = function(picker)
+            local files = {} ---@type string[]
+            if vim.fn.mode():find('^[vV]') then
+              picker.list:select()
+            end
+            for _, item in ipairs(picker:selected({ fallback = true })) do
+              table.insert(files, Snacks.picker.util.path(item))
+            end
+            picker.list:set_selected() -- clear selection
+            local value = table.concat(files, '\n')
+            vim.fn.setreg('+', value, 'l')
+            Snacks.notify.info('Yanked ' .. #files .. ' files')
+          end,
+        },
       },
     },
-  },
-}
+  }
+end
 
 return {
   'folke/snacks.nvim',
@@ -184,12 +188,12 @@ return {
     local Snacks = require('snacks')
     Snacks.setup({
       bigfile = { enabled = true },
-      dashboard = dashboard,
+      dashboard = dashboard(Snacks),
       explorer = { enabled = true },
       indent = { enabled = true },
       input = { enabled = true },
       notifier = { enabled = true },
-      picker = picker,
+      picker = picker(Snacks),
       quickfile = { enabled = true },
       scope = { enabled = true },
       scroll = { enabled = true },
