@@ -5,23 +5,37 @@ local utils = require('util')
 local copyright_notice =
   utils.load_file_with_fallback('~/.config/nvim/private/copyright/swift.txt', '')
 
+local cursor = '|cursor|'
+
 local function base_template(relative_path, filename)
-  return copyright_notice .. '\n\n|cursor|'
+  -- stylua: ignore
+  return string.format([[
+%s
+
+%s]],
+    copyright_notice,
+    cursor
+  )
 end
 
 local function test_template(relative_path, filename)
-  local elems = template_utils.split(filename, '.')
+  local elems = template_utils.split(filename, '%.')
   local test_class = elems[1]
-  return copyright_notice
-    .. [[
+  -- stylua: ignore
+  return string.format([[
+%s
 
 import XCTest
 
-final class ]]
-    .. test_class
-    .. [[: XCTestCase {
-    |cursor|
-}]]
+final class %s: XCTestCase {
+
+    %s
+
+}]],
+    copyright_notice,
+    test_class,
+    cursor
+  )
 end
 
 --- @param opts table

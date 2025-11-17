@@ -74,6 +74,9 @@ function Util.load_file_with_fallback(filepath, fallback)
     return type(fallback) == 'function' and fallback() or fallback or ''
   end
 
+  -- Strip trailing newlines
+  content = content:gsub('[\r\n]+$', '')
+
   return content
 end
 
