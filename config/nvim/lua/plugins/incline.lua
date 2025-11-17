@@ -16,7 +16,7 @@ return {
       local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ':t')
       local modified = vim.bo[props.buf].modified
 
-      local function get_diagnostic_label()
+      local function buffer_diagnostics()
         local icons = { error = '', warn = '' }
         local label = {}
 
@@ -48,7 +48,7 @@ return {
       end
 
       return {
-        { get_diagnostic_label() },
+        { buffer_diagnostics() },
         { file_icon() },
         { filename_and_modification() },
       }
