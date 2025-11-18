@@ -12,14 +12,8 @@ echo "Installing language plugins"
 
 # Add language plugins
 
-asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
-asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
-asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
-asdf plugin-add elm https://github.com/asdf-community/asdf-elm.git
-asdf plugin add ghc
-asdf plugin add cabal
-asdf plugin add hls
+asdf plugin-add nodejs
+asdf plugin-add ruby
 asdf plugin-add python
 
 # Install latest language versions that we rely on
@@ -28,8 +22,8 @@ asdf install python latest:3
 asdf install python latest:2
 asdf global python latest:3 latest:2
 
-asdf install nodejs latest:16
-asdf global nodejs latest:16
+asdf install nodejs latest
+asdf global nodejs latest
 
 asdf install ruby latest
 asdf global ruby latest
