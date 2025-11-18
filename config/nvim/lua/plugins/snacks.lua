@@ -1,3 +1,24 @@
+-- Helper function to extract base filename by removing test/mock prefixes and suffixes
+local function get_base_filename()
+  local filename = vim.fn.expand('%:t:r')
+
+  -- Strip Swift/ObjC extension suffixes: Foo+Bar -> Foo
+  filename = filename:gsub('%+.*$', '')
+
+  -- Strip suffixes (with optional delimiter): Tests, Test, Spec
+  -- Pattern matches: Tests, tests, TESTS, _tests, -test, etc.
+  filename = filename:gsub('[_-]?[Tt][Ee][Ss][Tt][Ss]?$', '') -- _tests
+  filename = filename:gsub('[_-]?[Ss][Pp][Ee][Cc]$', '') -- _spec
+
+  -- Strip prefixes (with optional delimiter): Fake, Mock, Stub
+  -- Pattern matches: Fake, fake, FAKE, fake_, mock-, etc.
+  filename = filename:gsub('^[Ff][Aa][Kk][Ee][_-]?', '') -- Fake_
+  filename = filename:gsub('^[Mm][Oo][Cc][Kk][_-]?', '') -- Mock_
+  filename = filename:gsub('^[Ss][Tt][Uu][Bb][_-]?', '') -- Stub_
+
+  return filename
+end
+
 local function configure_keymaps(Snacks)
   local wk = require('which-key')
 
@@ -11,6 +32,17 @@ local function configure_keymaps(Snacks)
         Snacks.picker.files({ hidden = true })
       end,
       desc = 'Open file [P]icker',
+    },
+    {
+      '<Leader>pr',
+      function()
+        local base_name = get_base_filename()
+        Snacks.picker.files({
+          hidden = true,
+          args = { base_name },
+        })
+      end,
+      desc = '[P]ick from [R]elated files',
     },
     {
       '<Leader>pb',
