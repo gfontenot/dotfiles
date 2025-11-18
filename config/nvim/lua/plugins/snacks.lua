@@ -10,9 +10,10 @@ local function get_base_filename()
   filename = filename:gsub('[_-]?[Tt][Ee][Ss][Tt][Ss]?$', '') -- _tests
   filename = filename:gsub('[_-]?[Ss][Pp][Ee][Cc]$', '') -- _spec
 
-  -- Strip prefixes (with optional delimiter): Fake, Mock, Stub
+  -- Strip prefixes (with optional delimiter): Fake, Mock, Stub, Real
   -- Pattern matches: Fake, fake, FAKE, fake_, mock-, etc.
   filename = filename:gsub('^[Ff][Aa][Kk][Ee][_-]?', '') -- Fake_
+  filename = filename:gsub('^[Rr][Ee][Aa][Ll][_-]?', '') -- Real_
   filename = filename:gsub('^[Mm][Oo][Cc][Kk][_-]?', '') -- Mock_
   filename = filename:gsub('^[Ss][Tt][Uu][Bb][_-]?', '') -- Stub_
 
