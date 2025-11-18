@@ -11,8 +11,8 @@ customCommands:
 git:
   branchPrefix: 'gfontenot/'
   branchLogCmd: 'git log --color=always --format=custom'
-  paging:
-    colorArg: always
-    pager: delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
 gui:
   nerdFontsVersion: "3"
