@@ -36,10 +36,30 @@ local function configure_keymaps(Snacks)
     {
       '<Leader>pr',
       function()
+        local current_file = vim.fn.expand('%:p')
         local base_name = get_base_filename()
-        Snacks.picker.files({
-          hidden = true,
-          args = { base_name },
+        local cwd = vim.fn.getcwd()
+
+        -- Use fd to find files matching the base name (case-insensitive)
+        local cmd = string.format('fd --type f --hidden --color never -i "%s" "%s"', base_name, cwd)
+        local files = vim.fn.systemlist(cmd)
+
+        -- Convert to items and filter out current file
+        local items = {}
+        for _, file in ipairs(files) do
+          local abs_path = vim.fn.fnamemodify(file, ':p')
+          if abs_path ~= current_file then
+            table.insert(items, {
+              text = file,
+              file = abs_path,
+            })
+          end
+        end
+
+        Snacks.picker.pick({
+          title = 'Related',
+          items = items,
+          auto_confirm = true,
         })
       end,
       desc = '[P]ick from [R]elated files',
