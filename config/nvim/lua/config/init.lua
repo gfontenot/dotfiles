@@ -8,5 +8,5 @@ vim.g.loaded_netrwPlugin = 1
 -- it.
 vim.g.mapleader = ' '
 
+-- Load plugins
 require('config.lazy')
-require('config.scooter')
