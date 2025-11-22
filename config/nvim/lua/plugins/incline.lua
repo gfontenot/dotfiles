@@ -1,3 +1,5 @@
+local custom_icons = require('config.icons')
+
 return {
   'b0o/incline.nvim',
   event = {
@@ -17,7 +19,10 @@ return {
       local modified = vim.bo[props.buf].modified
 
       local function buffer_diagnostics()
-        local icons = { error = '', warn = '' }
+        local icons = {
+          error = custom_icons.diagnostics.error,
+          warn = custom_icons.diagnostics.warn,
+        }
         local label = {}
 
         for severity, icon in pairs(icons) do

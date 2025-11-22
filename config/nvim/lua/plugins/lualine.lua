@@ -7,6 +7,7 @@ return {
   config = function()
     -- Modified from the evil_lualine example code
     -- https://github.com/nvim-lualine/lualine.nvim/blob/master/examples/evil_lualine.lua
+    local custom_icons = require('config.icons')
     local lualine = require('lualine')
     local colors = require('kanso.colors').setup({ theme = 'mist' })
     local theme = colors.theme
@@ -60,7 +61,7 @@ return {
 
     ins_left({
       function()
-        return '▊'
+        return custom_icons.left_spacer
       end,
       color = { fg = palette.green }, -- Sets highlighting of component
       padding = { left = 0, right = 1 }, -- We don't need space before this
@@ -69,7 +70,7 @@ return {
     ins_left({
       -- mode component
       function()
-        return ''
+        return custom_icons.status
       end,
       color = function()
         -- auto change color according to neovims mode
@@ -102,7 +103,10 @@ return {
       'diagnostics',
       sources = { 'nvim_workspace_diagnostic' },
       sections = { 'error', 'warn' },
-      symbols = { error = ' ', warn = ' ' },
+      symbols = {
+        error = custom_icons.diagnostics_spaced.error,
+        warn = custom_icons.diagnostics_spaced.warn,
+      },
       colored = true,
       update_in_insert = false,
       always_visible = false,
@@ -110,7 +114,7 @@ return {
 
     ins_right({
       function()
-        return '▊'
+        return custom_icons.right_spacer
       end,
       color = { fg = palette.green },
       padding = { left = 1 },
