@@ -44,6 +44,7 @@ return {
         ensure_installed = {
           'copilot',
           'lua_ls',
+          'rust-analyzer',
           'stylua',
           'yamlls',
         },
