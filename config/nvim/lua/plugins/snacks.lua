@@ -243,6 +243,12 @@ return {
       bigfile = { enabled = true },
       dashboard = dashboard(Snacks),
       explorer = { enabled = true },
+      image = {
+        doc = {
+          enabled = true,
+          inline = false,
+        },
+      },
       indent = { enabled = true },
       input = { enabled = true },
       notifier = { enabled = true },
