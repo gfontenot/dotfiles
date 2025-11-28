@@ -37,12 +37,13 @@ return {
         vim.keymap.set('n', lhs, rhs, { desc = desc, buffer = bufnr })
       end
 
-      nmap('<Leader>hp', gitsigns.preview_hunk, 'Preview hunk')
-      nmap('<Leader>hi', gitsigns.preview_hunk_inline, 'Preview hunk (inline)')
-      nmap('<Leader>hb', function()
+      nmap('<Leader>gp', gitsigns.preview_hunk_inline, 'Preview hunk (inline)')
+      nmap('<Leader>gP', gitsigns.preview_hunk, 'Preview hunk')
+      nmap('<Leader>gb', function()
         gitsigns.blame_line({ full = true })
-      end, 'Git blame (line)')
-      nmap('<Leader>hB', gitsigns.blame, 'Show git blame info')
+      end, 'Git [B]lame (line)')
+      nmap('<Leader>gB', gitsigns.blame, 'Git [B]lame (full)')
+      nmap('<Leader>gt', gitsigns.toggle_current_line_blame, 'Toggle current line blame')
     end,
   },
   init = function()

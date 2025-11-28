@@ -131,12 +131,12 @@ local function configure_keymaps(Snacks)
       desc = 'Launch lazygit',
     },
     {
-      '<Leader>gb',
+      '<Leader>go',
       mode = { 'n', 'v' },
       function()
         Snacks.gitbrowse()
       end,
-      desc = '[G]it [B]rowse',
+      desc = '[G]it Browse ([O]pen)',
     },
   })
 end
