@@ -5,6 +5,11 @@ return {
       -- NES support feels wonky to me, so just use the AI sidebar stuff
       nes = { enabled = false },
       cli = {
+        prompts = {
+          review_unstaged = 'Give me a comprehensive code review of my unstaged changes',
+          review_main = 'Give me a comprehensive code review of all changes in this branch',
+          refactor = 'Come up with a plan to refactor {this} to be more idiomatic/readable/maintainable',
+        },
         win = {
           layout = 'float',
         },
