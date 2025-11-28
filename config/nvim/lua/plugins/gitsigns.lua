@@ -6,6 +6,7 @@
 return {
   'lewis6991/gitsigns.nvim',
   opts = {
+    current_line_blame = true,
     on_attach = function(bufnr)
       -- Set up keybindings
       local gitsigns = require('gitsigns')
