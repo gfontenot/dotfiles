@@ -4,6 +4,11 @@ return {
     opts = {
       -- NES support feels wonky to me, so just use the AI sidebar stuff
       nes = { enabled = false },
+      cli = {
+        win = {
+          layout = 'float',
+        },
+      },
     },
     keys = {
       {
