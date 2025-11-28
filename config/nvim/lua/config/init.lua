@@ -13,13 +13,14 @@ require('config.lazy')
 
 -- Configure diagnostic symbols
 local icons = require('config.icons')
-local diagnostic_symbols = {
-  DiagnosticSignError = icons.diagnostics.error,
-  DiagnosticSignWarn = icons.diagnostics.warn,
-  DiagnosticSignHint = icons.diagnostics.hint,
-  DiagnosticSignInfo = icons.diagnostics.info,
-}
 
-for name, icon in pairs(diagnostic_symbols) do
-  vim.fn.sign_define(name, { text = icon, texthl = name })
-end
+vim.diagnostic.config({
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = icons.diagnostics.error,
+      [vim.diagnostic.severity.WARN] = icons.diagnostics.warn,
+      [vim.diagnostic.severity.HINT] = icons.diagnostics.hint,
+      [vim.diagnostic.severity.INFO] = icons.diagnostics.info,
+    },
+  },
+})
