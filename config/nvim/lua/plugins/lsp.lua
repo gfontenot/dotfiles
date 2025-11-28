@@ -42,6 +42,7 @@ return {
       require('mason-lspconfig').setup()
       require('mason-tool-installer').setup({
         ensure_installed = {
+          'codelldb',
           'copilot',
           'lua_ls',
           'rust-analyzer',

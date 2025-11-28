@@ -18,4 +18,8 @@ M.diagnostics_spaced = vim.tbl_map(function(icon)
   return icon .. ' '
 end, M.diagnostics)
 
+M.debugger = {
+  breakpoint = '',
+}
+
 return M
