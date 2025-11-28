@@ -9,11 +9,41 @@ return {
       'julianolf/nvim-dap-lldb',
     },
     keys = {
-      { '<Leader>dt', '<Cmd>DapViewToggle<Cr>', desc = '[D]ebugger: [T]oggle view' },
-      { '<Leader>db', '<Cmd>DapToggleBreakpoint<Cr>', desc = '[D]ebugger: Toggle [B]reakpoint' },
-      { '<Leader>dc', '<Cmd>DapContinue<Cr>', desc = '[D]ebugger: [C]ontinue' },
-      { '<Leader>dw', '<Cmd>DapViewWatch<Cr>', desc = '[D]ebugger: [W]atch variable' },
-      { '<Leader>dq', '<Cmd>DapTerminate<Cr>', desc = '[D]ebugger: [Q]uit (terminate)' },
+      {
+        '<Leader>dt',
+        function()
+          require('dap-view').toggle()
+        end,
+        desc = '[D]ebugger: [T]oggle view',
+      },
+      {
+        '<Leader>db',
+        function()
+          require('dap').toggle_breakpoint()
+        end,
+        desc = '[D]ebugger: Toggle [B]reakpoint',
+      },
+      {
+        '<Leader>dc',
+        function()
+          require('dap').continue()
+        end,
+        desc = '[D]ebugger: [C]ontinue',
+      },
+      {
+        '<Leader>dw',
+        function()
+          require('dap-view').add_expr()
+        end,
+        desc = '[D]ebugger: [W]atch variable',
+      },
+      {
+        '<Leader>dq',
+        function()
+          require('dap').terminate()
+        end,
+        desc = '[D]ebugger: [Q]uit (terminate)',
+      },
     },
     config = function()
       require('dap-view').setup({
