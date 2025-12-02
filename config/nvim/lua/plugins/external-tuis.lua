@@ -6,10 +6,10 @@ return {
   config = function()
     local external_tui = require('external-tui')
 
-    local config = external_tui.add({
+    external_tui.add({
       user_cmd = 'Scooter',
       cmd = 'scooter',
-      text_arg = '--search-text',
+      text_flag = '--search-text',
       editor_flag = '--editor-command',
     })
   end,
