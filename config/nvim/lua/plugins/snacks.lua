@@ -142,7 +142,7 @@ local function configure_keymaps(Snacks)
 end
 
 -- Config for the dashboard
-local function dashboard(Snacks)
+local function dashboard()
   return {
     enabled = true,
     preset = {
@@ -198,7 +198,7 @@ local function dashboard(Snacks)
 end
 
 -- Config for the picker
-local function picker(snacks)
+local function picker()
   return {
     enabled = true,
     sources = {
@@ -211,18 +211,8 @@ local function picker(snacks)
           },
         },
         actions = {
-          copy_path_to_clipboard = function(picker)
-            local files = {} ---@type string[]
-            if vim.fn.mode():find('^[vV]') then
-              picker.list:select()
-            end
-            for _, item in ipairs(picker:selected({ fallback = true })) do
-              table.insert(files, Snacks.picker.util.path(item))
-            end
-            picker.list:set_selected() -- clear selection
-            local value = table.concat(files, '\n')
-            vim.fn.setreg('+', value, 'l')
-            Snacks.notify.info('Yanked ' .. #files .. ' files')
+          copy_path_to_clipboard = function()
+            vim.cmd([[ normal "+y ]])
           end,
         },
       },
@@ -249,6 +239,7 @@ return {
   'folke/snacks.nvim',
   dependencies = {
     'folke/which-key.nvim',
+    'folke/trouble.nvim',
   },
   priority = 1000,
   lazy = false,
@@ -256,7 +247,7 @@ return {
     local Snacks = require('snacks')
     Snacks.setup({
       bigfile = { enabled = true },
-      dashboard = dashboard(Snacks),
+      dashboard = dashboard(),
       explorer = { enabled = true },
       image = {
         doc = {
@@ -267,7 +258,7 @@ return {
       indent = { enabled = true },
       input = { enabled = true },
       notifier = { enabled = true },
-      picker = picker(Snacks),
+      picker = picker(),
       quickfile = { enabled = true },
       scope = { enabled = true },
       scroll = { enabled = true },
