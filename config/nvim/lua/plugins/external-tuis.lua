@@ -10,6 +10,7 @@ return {
       user_cmd = 'Scooter',
       cmd = 'scooter',
       text_arg = '--search-text',
+      editor_flag = '--editor-command',
     })
   end,
 }
