@@ -70,7 +70,7 @@ return {
     ins_left({
       -- mode component
       function()
-        return custom_icons.status
+        return custom_icons.status.main
       end,
       color = function()
         -- auto change color according to neovims mode
@@ -98,7 +98,7 @@ return {
     ins_right({
       function()
         local status = require('sidekick.status').cli()
-        return ' ' .. (#status > 1 and #status or '')
+        return custom_icons.status.sidekick .. ' ' .. (#status > 1 and #status or '')
       end,
       cond = function()
         return #require('sidekick.status').cli() > 0

@@ -3,7 +3,10 @@ local M = {}
 M.left_spacer = '▊'
 M.right_spacer = '▊'
 
-M.status = ''
+M.status = {
+  main = '',
+  sidekick = '',
+}
 
 -- Base diagnostic icons (without trailing spaces)
 M.diagnostics = {
