@@ -28,8 +28,6 @@
 	<string>0.321569 0.545098 1 1</string>
 	<key>DVTConsoleTextSelectionColor</key>
 	<string>0.239216 0.262745 0.313725 1</string>
-	<key>DVTDebuggerInstructionPointerColor</key>
-	<string>0.454902 0.45098 0.411765 1</string>
 	<key>DVTFontAndColorVersion</key>
 	<integer>1</integer>
 	<key>DVTLineSpacing</key>
@@ -148,6 +146,16 @@
 		<string>0.65098 0.698039 0.752941 1</string>
 		<key>xcode.syntax.preprocessor</key>
 		<string>0.680619 0.503594 0.999973 1</string>
+		<key>xcode.syntax.regex</key>
+		<string>0.564706 0.764706 0.470588 1</string>
+		<key>xcode.syntax.regex.capturename</key>
+		<string>0.776471 0.47451 0.866667 1</string>
+		<key>xcode.syntax.regex.charname</key>
+		<string>0.776471 0.47451 0.866667 1</string>
+		<key>xcode.syntax.regex.number</key>
+		<string>0.823529 0.580392 0.364706 1</string>
+		<key>xcode.syntax.regex.other</key>
+		<string>0.65098 0.698039 0.752941 1</string>
 		<key>xcode.syntax.string</key>
 		<string>0.564706 0.764706 0.470588 1</string>
 		<key>xcode.syntax.url</key>
@@ -204,6 +212,16 @@
 		<key>xcode.syntax.plain</key>
 		<string>MonoLisa-Regular - 14.0</string>
 		<key>xcode.syntax.preprocessor</key>
+		<string>MonoLisa-Regular - 14.0</string>
+		<key>xcode.syntax.regex</key>
+		<string>MonoLisa-Regular - 14.0</string>
+		<key>xcode.syntax.regex.capturename</key>
+		<string>MonoLisa-Regular - 14.0</string>
+		<key>xcode.syntax.regex.charname</key>
+		<string>MonoLisa-Regular - 14.0</string>
+		<key>xcode.syntax.regex.number</key>
+		<string>MonoLisa-Regular - 14.0</string>
+		<key>xcode.syntax.regex.other</key>
 		<string>MonoLisa-Regular - 14.0</string>
 		<key>xcode.syntax.string</key>
 		<string>MonoLisa-Regular - 14.0</string>
